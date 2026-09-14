@@ -1,0 +1,1424 @@
+{
+  "generated_at": "2026-09-14T03:03:32.211207+00:00",
+  "source": "/Users/suryap/Documents/Codex/2026-09-11/i/capstone/source_baseline",
+  "source_zip_sha256": "74d31dc4694d52b0e9a9fb337e6ccda1086ad430b19287f9ca2b4b4e650ca979",
+  "summary": {
+    "csv_datasets": 23,
+    "csv_rows": 27507,
+    "duplicate_key_groups": 0,
+    "relationship_checks": 25,
+    "relationship_issues": 188,
+    "knowledge_items": 24,
+    "event_rows": 6407,
+    "event_types": 8,
+    "email_files": 60
+  },
+  "csv_profiles": [
+    {
+      "path": "data/raw/batches.csv",
+      "sha256": "3d9d6b034483c51a58f5b10009f0e0b3a7482e0c4220c36af678920218a637aa",
+      "size_bytes": 103514,
+      "rows": 800,
+      "columns": [
+        "batch_id",
+        "patient_key",
+        "collection_id",
+        "coi_id",
+        "site_id",
+        "product_code",
+        "mfg_start",
+        "mfg_end",
+        "mes_status",
+        "erp_status",
+        "qms_release_status"
+      ],
+      "declared_profile_key": [
+        "batch_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "batch_id": 0,
+        "patient_key": 0,
+        "collection_id": 0,
+        "coi_id": 0,
+        "site_id": 0,
+        "product_code": 0,
+        "mfg_start": 0,
+        "mfg_end": 0,
+        "mes_status": 0,
+        "erp_status": 0,
+        "qms_release_status": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {
+        "mfg_start": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "2026-01-14T05:00:00+00:00",
+          "max": "2026-09-10T05:00:00+00:00"
+        },
+        "mfg_end": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "2026-01-22T13:00:00+00:00",
+          "max": "2026-09-21T12:00:00+00:00"
+        }
+      },
+      "numeric_fields": {}
+    },
+    {
+      "path": "data/raw/clinical_patient_export.csv",
+      "sha256": "be52fdfdd65b5041bacadc44780c3db584f8bd11c45b54112fbfd52db847a7bf",
+      "size_bytes": 72679,
+      "rows": 800,
+      "columns": [
+        "patient_key",
+        "clinical_subject_id",
+        "mrn",
+        "dob",
+        "center_id",
+        "status",
+        "source_system",
+        "patient_alias"
+      ],
+      "declared_profile_key": [
+        "patient_key"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "patient_key": 0,
+        "clinical_subject_id": 0,
+        "mrn": 0,
+        "dob": 0,
+        "center_id": 0,
+        "status": 0,
+        "source_system": 0,
+        "patient_alias": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {
+        "dob": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "1958-01-19T00:00:00",
+          "max": "2007-03-15T00:00:00"
+        }
+      },
+      "numeric_fields": {}
+    },
+    {
+      "path": "data/raw/collections.csv",
+      "sha256": "b7d76c6640b527db60c0521cf17d7ef282f0a188d472fe83b099456bad8ba4bc",
+      "size_bytes": 83707,
+      "rows": 800,
+      "columns": [
+        "collection_id",
+        "patient_key",
+        "coi_id",
+        "bag_id",
+        "center_id",
+        "collection_time",
+        "volume_ml",
+        "cell_count_10e9",
+        "viability_pct",
+        "quality_flag"
+      ],
+      "declared_profile_key": [
+        "collection_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "collection_id": 0,
+        "patient_key": 0,
+        "coi_id": 0,
+        "bag_id": 0,
+        "center_id": 0,
+        "collection_time": 0,
+        "volume_ml": 0,
+        "cell_count_10e9": 0,
+        "viability_pct": 0,
+        "quality_flag": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {
+        "collection_time": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "2026-01-10T00:00:00+00:00",
+          "max": "2026-09-05T21:00:00+00:00"
+        }
+      },
+      "numeric_fields": {
+        "volume_ml": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": 120.1,
+          "max": 319.7
+        },
+        "cell_count_10e9": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": 1.21,
+          "max": 8.8
+        },
+        "viability_pct": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": 62.1,
+          "max": 98.0
+        }
+      }
+    },
+    {
+      "path": "data/raw/consents.csv",
+      "sha256": "b08eaf0777ba0646ac41c758b330a7b29ebdccbb6ba9443cc53c154cfed07d4a",
+      "size_bytes": 39709,
+      "rows": 800,
+      "columns": [
+        "consent_id",
+        "patient_key",
+        "version",
+        "signed_at",
+        "status"
+      ],
+      "declared_profile_key": [
+        "consent_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "consent_id": 0,
+        "patient_key": 0,
+        "version": 0,
+        "signed_at": 0,
+        "status": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {
+        "signed_at": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "2026-01-07T03:00:00+00:00",
+          "max": "2026-08-29T08:00:00+00:00"
+        }
+      },
+      "numeric_fields": {}
+    },
+    {
+      "path": "data/raw/crm_patient_export.csv",
+      "sha256": "d2ee95d5a5dfd28aa8eb8cada4397205e87dbd0c88c299715ef249d082da072f",
+      "size_bytes": 101535,
+      "rows": 800,
+      "columns": [
+        "patient_key",
+        "crm_patient_id",
+        "clinical_subject_id",
+        "mrn",
+        "synthetic_name",
+        "dob",
+        "center_id",
+        "country",
+        "product_code",
+        "journey_status",
+        "enrolled_at",
+        "source_system"
+      ],
+      "declared_profile_key": [
+        "patient_key"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "patient_key": 0,
+        "crm_patient_id": 0,
+        "clinical_subject_id": 0,
+        "mrn": 0,
+        "synthetic_name": 0,
+        "dob": 0,
+        "center_id": 0,
+        "country": 0,
+        "product_code": 0,
+        "journey_status": 0,
+        "enrolled_at": 0,
+        "source_system": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {
+        "dob": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "1958-01-19T00:00:00",
+          "max": "2007-03-15T00:00:00"
+        },
+        "enrolled_at": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "2026-01-06T11:00:00+00:00",
+          "max": "2026-08-28T13:00:00+00:00"
+        }
+      },
+      "numeric_fields": {}
+    },
+    {
+      "path": "data/raw/cryogenic_telemetry.csv",
+      "sha256": "c2a2468ec29637ad30fbbb026fb9d440cad312efe5e20c5cb39a9659add6e863",
+      "size_bytes": 988792,
+      "rows": 12800,
+      "columns": [
+        "shipment_id",
+        "patient_key",
+        "direction",
+        "sensor_id",
+        "timestamp",
+        "temperature_c",
+        "quality",
+        "gps_zone"
+      ],
+      "declared_profile_key": [
+        "shipment_id",
+        "sensor_id",
+        "timestamp"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "shipment_id": 0,
+        "patient_key": 0,
+        "direction": 0,
+        "sensor_id": 0,
+        "timestamp": 0,
+        "temperature_c": 10,
+        "quality": 0,
+        "gps_zone": 0
+      },
+      "total_null_cells": 10,
+      "temporal_fields": {
+        "timestamp": {
+          "nonempty": 12800,
+          "invalid": 0,
+          "min": "2026-01-10T05:00:00+00:00",
+          "max": "2026-09-25T22:00:00+00:00"
+        }
+      },
+      "numeric_fields": {
+        "temperature_c": {
+          "nonempty": 12790,
+          "invalid": 0,
+          "min": -170.7,
+          "max": -112.3
+        }
+      }
+    },
+    {
+      "path": "data/raw/deviations.csv",
+      "sha256": "625f11f0f13bdfd54ab5c9240e179d7ce697b11959651c351bf01fa4a4884506",
+      "size_bytes": 18168,
+      "rows": 188,
+      "columns": [
+        "deviation_id",
+        "patient_key",
+        "batch_id",
+        "type",
+        "severity",
+        "status",
+        "opened_at",
+        "linked_event_id"
+      ],
+      "declared_profile_key": [
+        "deviation_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "deviation_id": 0,
+        "patient_key": 0,
+        "batch_id": 0,
+        "type": 0,
+        "severity": 0,
+        "status": 0,
+        "opened_at": 0,
+        "linked_event_id": 36
+      },
+      "total_null_cells": 36,
+      "temporal_fields": {
+        "opened_at": {
+          "nonempty": 188,
+          "invalid": 0,
+          "min": "2026-01-16T10:00:00+00:00",
+          "max": "2026-09-08T04:00:00+00:00"
+        }
+      },
+      "numeric_fields": {}
+    },
+    {
+      "path": "data/raw/insurance_authorizations.csv",
+      "sha256": "69a5aec8aa344313679a6c3e9a86bbac1fa53322f8029547b3631650f27664d8",
+      "size_bytes": 49158,
+      "rows": 800,
+      "columns": [
+        "auth_id",
+        "patient_key",
+        "status",
+        "valid_until",
+        "updated_at"
+      ],
+      "declared_profile_key": [
+        "auth_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "auth_id": 0,
+        "patient_key": 0,
+        "status": 0,
+        "valid_until": 0,
+        "updated_at": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {
+        "valid_until": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "2026-02-09T00:00:00",
+          "max": "2027-01-18T00:00:00"
+        },
+        "updated_at": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "2026-01-09T00:00:00+00:00",
+          "max": "2026-09-02T01:00:00+00:00"
+        }
+      },
+      "numeric_fields": {}
+    },
+    {
+      "path": "data/raw/manufacturing_slots.csv",
+      "sha256": "4e27bbada77ef105a6ab594cde6a11db78b09fcfc37679e5e8a1b87b0dc12c1e",
+      "size_bytes": 55931,
+      "rows": 800,
+      "columns": [
+        "slot_id",
+        "patient_key",
+        "site_id",
+        "scheduled_start",
+        "scheduler_state",
+        "mes_state",
+        "priority"
+      ],
+      "declared_profile_key": [
+        "slot_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "slot_id": 0,
+        "patient_key": 0,
+        "site_id": 0,
+        "scheduled_start": 0,
+        "scheduler_state": 0,
+        "mes_state": 0,
+        "priority": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {
+        "scheduled_start": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "2026-01-14T00:00:00+00:00",
+          "max": "2026-09-09T21:00:00+00:00"
+        }
+      },
+      "numeric_fields": {
+        "priority": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": 1.0,
+          "max": 3.0
+        }
+      }
+    },
+    {
+      "path": "data/raw/patients.csv",
+      "sha256": "2f4410dfb0de49b6230e20150a0c23c024a7885d7c1051dcf7a91024346837ca",
+      "size_bytes": 98322,
+      "rows": 800,
+      "columns": [
+        "patient_key",
+        "crm_patient_id",
+        "clinical_subject_id",
+        "mrn",
+        "synthetic_name",
+        "dob",
+        "center_id",
+        "country",
+        "product_code",
+        "journey_status",
+        "enrolled_at"
+      ],
+      "declared_profile_key": [
+        "patient_key"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "patient_key": 0,
+        "crm_patient_id": 0,
+        "clinical_subject_id": 0,
+        "mrn": 0,
+        "synthetic_name": 0,
+        "dob": 0,
+        "center_id": 0,
+        "country": 0,
+        "product_code": 0,
+        "journey_status": 0,
+        "enrolled_at": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {
+        "dob": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "1958-01-19T00:00:00",
+          "max": "2007-03-15T00:00:00"
+        },
+        "enrolled_at": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "2026-01-06T11:00:00+00:00",
+          "max": "2026-08-28T13:00:00+00:00"
+        }
+      },
+      "numeric_fields": {}
+    },
+    {
+      "path": "data/raw/qc_results.csv",
+      "sha256": "eee637b290f8b8996572254c7894808fd4eb285a2d156cfeb6eae6013ee8d41b",
+      "size_bytes": 452458,
+      "rows": 4800,
+      "columns": [
+        "qc_id",
+        "batch_id",
+        "assay",
+        "result",
+        "value",
+        "unit",
+        "sampled_at",
+        "reported_at"
+      ],
+      "declared_profile_key": [
+        "qc_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "qc_id": 0,
+        "batch_id": 0,
+        "assay": 0,
+        "result": 0,
+        "value": 0,
+        "unit": 3200,
+        "sampled_at": 0,
+        "reported_at": 0
+      },
+      "total_null_cells": 3200,
+      "temporal_fields": {
+        "sampled_at": {
+          "nonempty": 4800,
+          "invalid": 0,
+          "min": "2026-01-21T17:00:00+00:00",
+          "max": "2026-09-21T09:00:00+00:00"
+        },
+        "reported_at": {
+          "nonempty": 4800,
+          "invalid": 0,
+          "min": "2026-01-22T17:00:00+00:00",
+          "max": "2026-09-22T14:00:00+00:00"
+        }
+      },
+      "numeric_fields": {}
+    },
+    {
+      "path": "data/raw/shipments.csv",
+      "sha256": "10f55c21f2439ff5148ff7fe3a296d666ccde4f80985c00e32900c8b2b96c2af",
+      "size_bytes": 218023,
+      "rows": 1600,
+      "columns": [
+        "shipment_id",
+        "direction",
+        "patient_key",
+        "coi_id",
+        "batch_id",
+        "courier_id",
+        "origin",
+        "destination",
+        "departed_at",
+        "arrived_at",
+        "status",
+        "temp_excursion"
+      ],
+      "declared_profile_key": [
+        "shipment_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "shipment_id": 0,
+        "direction": 0,
+        "patient_key": 0,
+        "coi_id": 0,
+        "batch_id": 800,
+        "courier_id": 0,
+        "origin": 0,
+        "destination": 0,
+        "departed_at": 0,
+        "arrived_at": 0,
+        "status": 0,
+        "temp_excursion": 0
+      },
+      "total_null_cells": 800,
+      "temporal_fields": {
+        "departed_at": {
+          "nonempty": 1600,
+          "invalid": 0,
+          "min": "2026-01-10T05:00:00+00:00",
+          "max": "2026-09-24T12:00:00+00:00"
+        },
+        "arrived_at": {
+          "nonempty": 1600,
+          "invalid": 0,
+          "min": "2026-01-11T06:00:00+00:00",
+          "max": "2026-09-25T22:00:00+00:00"
+        }
+      },
+      "numeric_fields": {}
+    },
+    {
+      "path": "data/raw/site_qualifications.csv",
+      "sha256": "7d29d77cda1a63bfa304f977b2fe36681ac557c6dbc13fdfe7c43772bd485eec",
+      "size_bytes": 1470,
+      "rows": 24,
+      "columns": [
+        "center_id",
+        "training_status",
+        "equipment_status",
+        "quality_agreement",
+        "qualified_until",
+        "system_status"
+      ],
+      "declared_profile_key": [
+        "center_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "center_id": 0,
+        "training_status": 0,
+        "equipment_status": 0,
+        "quality_agreement": 0,
+        "qualified_until": 0,
+        "system_status": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {
+        "qualified_until": {
+          "nonempty": 24,
+          "invalid": 0,
+          "min": "2026-09-01T00:00:00",
+          "max": "2026-12-31T00:00:00"
+        }
+      },
+      "numeric_fields": {}
+    },
+    {
+      "path": "data/reference/baseline_kpis.csv",
+      "sha256": "094dbe0724daf1b8a97f98bbd9128309f097f2a2ac8c76e90bd457bae7e50f2f",
+      "size_bytes": 670,
+      "rows": 10,
+      "columns": [
+        "metric",
+        "baseline",
+        "target_direction",
+        "note"
+      ],
+      "declared_profile_key": [
+        "metric"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "metric": 0,
+        "baseline": 0,
+        "target_direction": 0,
+        "note": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {},
+      "numeric_fields": {
+        "baseline": {
+          "nonempty": 10,
+          "invalid": 0,
+          "min": 12.7,
+          "max": 186.0
+        }
+      }
+    },
+    {
+      "path": "data/reference/couriers.csv",
+      "sha256": "b431172977053d9295dda233272b74c4f4c7f5008e6c9ad495e4ba840e6cae85",
+      "size_bytes": 234,
+      "rows": 5,
+      "columns": [
+        "courier_id",
+        "name",
+        "regions",
+        "sla_hours"
+      ],
+      "declared_profile_key": [
+        "courier_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "courier_id": 0,
+        "name": 0,
+        "regions": 0,
+        "sla_hours": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {},
+      "numeric_fields": {
+        "sla_hours": {
+          "nonempty": 5,
+          "invalid": 0,
+          "min": 24.0,
+          "max": 32.0
+        }
+      }
+    },
+    {
+      "path": "data/reference/manufacturing_sites.csv",
+      "sha256": "ac1df81c8738377ae958983a3ee08c94b63a48ca3bd77dea3c6dfbe24828a63f",
+      "size_bytes": 478,
+      "rows": 6,
+      "columns": [
+        "site_id",
+        "name",
+        "country",
+        "timezone",
+        "suites",
+        "qc_capacity_day"
+      ],
+      "declared_profile_key": [
+        "site_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "site_id": 0,
+        "name": 0,
+        "country": 0,
+        "timezone": 0,
+        "suites": 0,
+        "qc_capacity_day": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {},
+      "numeric_fields": {
+        "suites": {
+          "nonempty": 6,
+          "invalid": 0,
+          "min": 4.0,
+          "max": 8.0
+        },
+        "qc_capacity_day": {
+          "nonempty": 6,
+          "invalid": 0,
+          "min": 16.0,
+          "max": 28.0
+        }
+      }
+    },
+    {
+      "path": "data/reference/products.csv",
+      "sha256": "a981a45dd60605633fff4daeb7759450bc9d9b1f57883052017d914ffb936758",
+      "size_bytes": 281,
+      "rows": 3,
+      "columns": [
+        "product_code",
+        "therapy_family",
+        "indication",
+        "nominal_mfg_days",
+        "target_v2v_days"
+      ],
+      "declared_profile_key": [
+        "product_code"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "product_code": 0,
+        "therapy_family": 0,
+        "indication": 0,
+        "nominal_mfg_days": 0,
+        "target_v2v_days": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {},
+      "numeric_fields": {}
+    },
+    {
+      "path": "data/reference/treatment_centers.csv",
+      "sha256": "a0f9e5893453687152133821a618817f38f431691e825659f4ef28ad69965ba3",
+      "size_bytes": 1990,
+      "rows": 24,
+      "columns": [
+        "center_id",
+        "canonical_name",
+        "country",
+        "timezone",
+        "qualification_status",
+        "cryogenic_capacity",
+        "apheresis_chairs"
+      ],
+      "declared_profile_key": [
+        "center_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "center_id": 0,
+        "canonical_name": 0,
+        "country": 0,
+        "timezone": 0,
+        "qualification_status": 0,
+        "cryogenic_capacity": 0,
+        "apheresis_chairs": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {},
+      "numeric_fields": {
+        "cryogenic_capacity": {
+          "nonempty": 24,
+          "invalid": 0,
+          "min": 6.0,
+          "max": 14.0
+        },
+        "apheresis_chairs": {
+          "nonempty": 24,
+          "invalid": 0,
+          "min": 2.0,
+          "max": 5.0
+        }
+      }
+    },
+    {
+      "path": "evals/cases.csv",
+      "sha256": "947678613b337ca0d213c5bdfbcd66f5566267261602bead48d43b1aacfeb7e3",
+      "size_bytes": 791,
+      "rows": 6,
+      "columns": [
+        "case_id",
+        "bucket",
+        "patient_key",
+        "question",
+        "expected_property"
+      ],
+      "declared_profile_key": [
+        "case_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "case_id": 0,
+        "bucket": 0,
+        "patient_key": 0,
+        "question": 0,
+        "expected_property": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {},
+      "numeric_fields": {}
+    },
+    {
+      "path": "scenarios/inject_catalog.csv",
+      "sha256": "174e1a185aa60222f7c56cfcb93eca2946cfa55fbff34443da97fc858ff40427",
+      "size_bytes": 952,
+      "rows": 10,
+      "columns": [
+        "inject_id",
+        "name",
+        "trigger",
+        "affected",
+        "severity"
+      ],
+      "declared_profile_key": [
+        "inject_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "inject_id": 0,
+        "name": 0,
+        "trigger": 0,
+        "affected": 0,
+        "severity": 0
+      },
+      "total_null_cells": 0,
+      "temporal_fields": {},
+      "numeric_fields": {}
+    },
+    {
+      "path": "shadow_ops/CourierEscalations.csv",
+      "sha256": "bfff55ca446f157eeecaae0af0dafc6dca19171ca5098db7ac81993a3f6b8168",
+      "size_bytes": 1014,
+      "rows": 31,
+      "columns": [
+        "shipment_id",
+        "issue",
+        "status",
+        "owner"
+      ],
+      "declared_profile_key": [
+        "shipment_id",
+        "issue"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "shipment_id": 0,
+        "issue": 0,
+        "status": 0,
+        "owner": 8
+      },
+      "total_null_cells": 8,
+      "temporal_fields": {},
+      "numeric_fields": {}
+    },
+    {
+      "path": "shadow_ops/ManufacturingSlots_FINAL_v7.csv",
+      "sha256": "4b5de8dbc8e5821fa6c46d22e290085a5e5b2415a8005c317d0a116e0c20ed67",
+      "size_bytes": 57056,
+      "rows": 800,
+      "columns": [
+        "slot_id",
+        "patient_key",
+        "site_id",
+        "scheduled_start",
+        "scheduler_state",
+        "mes_state",
+        "priority",
+        "planner_note"
+      ],
+      "declared_profile_key": [
+        "slot_id"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "slot_id": 0,
+        "patient_key": 0,
+        "site_id": 0,
+        "scheduled_start": 0,
+        "scheduler_state": 0,
+        "mes_state": 0,
+        "priority": 0,
+        "planner_note": 788
+      },
+      "total_null_cells": 788,
+      "temporal_fields": {
+        "scheduled_start": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": "2026-01-14T00:00:00+00:00",
+          "max": "2026-09-09T21:00:00+00:00"
+        }
+      },
+      "numeric_fields": {
+        "priority": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": 1.0,
+          "max": 3.0
+        }
+      }
+    },
+    {
+      "path": "shadow_ops/PatientPriority_MASTER.csv",
+      "sha256": "cfef100a13148a01f34878d6cfc663b60b1abcd4f332df0c971c5cff84cddc4a",
+      "size_bytes": 18865,
+      "rows": 800,
+      "columns": [
+        "patient_key",
+        "priority",
+        "reason",
+        "updated_by"
+      ],
+      "declared_profile_key": [
+        "patient_key"
+      ],
+      "duplicate_key_groups": 0,
+      "excess_duplicate_rows": 0,
+      "null_counts": {
+        "patient_key": 0,
+        "priority": 0,
+        "reason": 640,
+        "updated_by": 0
+      },
+      "total_null_cells": 640,
+      "temporal_fields": {},
+      "numeric_fields": {
+        "priority": {
+          "nonempty": 800,
+          "invalid": 0,
+          "min": 1.0,
+          "max": 3.0
+        }
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "relationship": "collection.patient_key -> patient",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Collection patient reference resolves"
+    },
+    {
+      "relationship": "batch.patient_key -> patient",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Batch patient reference resolves"
+    },
+    {
+      "relationship": "batch.collection_id -> collection",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Batch collection reference resolves"
+    },
+    {
+      "relationship": "shipment.patient_key -> patient",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Shipment patient reference resolves"
+    },
+    {
+      "relationship": "return_shipment.batch_id -> batch",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Return shipment batch reference resolves"
+    },
+    {
+      "relationship": "qc.batch_id -> batch",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "QC batch reference resolves"
+    },
+    {
+      "relationship": "deviation.batch_id -> batch",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Deviation batch reference resolves"
+    },
+    {
+      "relationship": "slot.patient_key -> patient",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Slot patient reference resolves"
+    },
+    {
+      "relationship": "consent.patient_key -> patient",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Consent patient reference resolves"
+    },
+    {
+      "relationship": "authorization.patient_key -> patient",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Authorization patient reference resolves"
+    },
+    {
+      "relationship": "telemetry.shipment_id -> shipment",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Telemetry shipment reference resolves"
+    },
+    {
+      "relationship": "event.patient_key -> patient",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Event patient reference resolves"
+    },
+    {
+      "relationship": "event.batch_id -> batch",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Nonblank event batch reference resolves"
+    },
+    {
+      "relationship": "deviation.linked_event_id -> event",
+      "issue_count": 188,
+      "expected": "0",
+      "meaning": "Deviation evidence link resolves"
+    },
+    {
+      "relationship": "patient.center_id -> treatment_center",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Patient center reference resolves"
+    },
+    {
+      "relationship": "site_qualification.center_id -> treatment_center",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Qualification center reference resolves"
+    },
+    {
+      "relationship": "batch.site_id -> manufacturing_site",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Batch site reference resolves"
+    },
+    {
+      "relationship": "slot.site_id -> manufacturing_site",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Slot site reference resolves"
+    },
+    {
+      "relationship": "shipment.courier_id -> courier",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Courier reference resolves"
+    },
+    {
+      "relationship": "patient.product_code -> product",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Patient product reference resolves"
+    },
+    {
+      "relationship": "batch.product_code -> product",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Batch product reference resolves"
+    },
+    {
+      "relationship": "batch.patient_key = collection.patient_key",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Declared linkage fields agree; not independent identity proof"
+    },
+    {
+      "relationship": "batch.coi_id = collection.coi_id",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Declared COI strings agree; not independent COI proof"
+    },
+    {
+      "relationship": "telemetry.patient_key = shipment.patient_key",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Telemetry and shipment patient-key strings agree"
+    },
+    {
+      "relationship": "telemetry.direction = shipment.direction",
+      "issue_count": 0,
+      "expected": "0",
+      "meaning": "Telemetry and shipment direction agree"
+    }
+  ],
+  "events": {
+    "path": "data/raw/events.jsonl",
+    "sha256": "9a313e7adb6a1ad246edfc0535b40336bee86262704e04489a6bdc25154124a7",
+    "rows": 6407,
+    "event_types": {
+      "COLLECTION_COMPLETED": 800,
+      "MANUFACTURING_COMPLETED": 800,
+      "MANUFACTURING_STARTED": 807,
+      "PATIENT_ENROLLED": 800,
+      "RETURN_SHIPMENT_ARRIVED": 800,
+      "RETURN_SHIPMENT_DISPATCHED": 800,
+      "SHIPMENT_DISPATCHED": 800,
+      "SHIPMENT_RECEIVED": 800
+    },
+    "sources": {
+      "CLINICAL": 800,
+      "CRM": 800,
+      "INTEGRATION_RETRY": 7,
+      "LOGISTICS": 3200,
+      "MES": 1600
+    },
+    "duplicate_event_id_groups": 0,
+    "excess_semantic_duplicate_rows": 7,
+    "missing_required_field_rows": 0,
+    "negative_recording_lag_rows": 0,
+    "max_recording_lag_hours": 12.0,
+    "occurred_at_min": "2026-01-06T11:00:00Z",
+    "occurred_at_max": "2026-09-25T22:00:00Z"
+  },
+  "emails": {
+    "files": 60,
+    "missing_required_header_files": 0,
+    "subjects": [
+      "Courier route [P-00664]",
+      "Slot moved [P-00194]",
+      "QA exception [P-00118]",
+      "Identity reconciliation [P-00021]",
+      "Slot moved [P-00133]",
+      "Courier route [P-00656]",
+      "Identity reconciliation [P-00082]",
+      "QA exception [P-00367]",
+      "Identity reconciliation [P-00397]",
+      "Courier route [P-00330]",
+      "QA exception [P-00146]",
+      "Identity reconciliation [P-00333]",
+      "Courier route [P-00423]",
+      "Slot moved [P-00640]",
+      "Courier route [P-00324]",
+      "Identity reconciliation [P-00156]",
+      "Courier route [P-00369]",
+      "Slot moved [P-00617]",
+      "QA exception [P-00658]",
+      "Site readiness [P-00058]",
+      "Slot moved [P-00567]",
+      "Courier route [P-00354]",
+      "Identity reconciliation [P-00521]",
+      "Site readiness [P-00242]",
+      "Site readiness [P-00188]",
+      "Courier route [P-00547]",
+      "Identity reconciliation [P-00163]",
+      "Identity reconciliation [P-00116]",
+      "Identity reconciliation [P-00326]",
+      "Courier route [P-00192]",
+      "Site readiness [P-00339]",
+      "Slot moved [P-00745]",
+      "Site readiness [P-00745]",
+      "Identity reconciliation [P-00493]",
+      "QA exception [P-00288]",
+      "Site readiness [P-00482]",
+      "Slot moved [P-00624]",
+      "Identity reconciliation [P-00736]",
+      "Slot moved [P-00183]",
+      "QA exception [P-00229]",
+      "Courier route [P-00488]",
+      "Site readiness [P-00332]",
+      "Identity reconciliation [P-00746]",
+      "Site readiness [P-00552]",
+      "Slot moved [P-00254]",
+      "Site readiness [P-00291]",
+      "Slot moved [P-00429]",
+      "Courier route [P-00247]",
+      "Slot moved [P-00225]",
+      "Site readiness [P-00010]",
+      "Courier route [P-00014]",
+      "Slot moved [P-00414]",
+      "Slot moved [P-00327]",
+      "Identity reconciliation [P-00032]",
+      "Slot moved [P-00558]",
+      "Identity reconciliation [P-00468]",
+      "QA exception [P-00524]",
+      "Slot moved [P-00405]",
+      "Slot moved [P-00438]",
+      "Slot moved [P-00522]"
+    ],
+    "classification": "synthetic_untrusted_shadow_operations_evidence"
+  },
+  "knowledge": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "57613239e4e2bc0adaebf091cc8442bbf5bd3476e7090f9b25397db5962a3025",
+      "title": "AGENTS.md \u2014 Instructions for coding agents",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "LICENSE-SYNTHETIC-TRAINING.txt",
+      "sha256": "b1ebbbebf0a435f5f88a4fd8b68c664c03a20c3ff2493f2731eea5686bc1b7c6",
+      "title": "LICENSE-SYNTHETIC-TRAINING.txt",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "README.md",
+      "sha256": "24269986420d446905b5cf216eb1bef6b125979475d085da770d36977992e00f",
+      "title": "AI FDE Brownfield Capstone \u2014 Cell & Gene Therapy Patient-to-Batch Orchestration (v2)",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "VERIFICATION.md",
+      "sha256": "22adb1766f58bbd5a9efb314a61e5a26fadff82267c4fa53dd510a335a703bb6",
+      "title": "V2 Verification Evidence",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "contracts/api_v1.yaml",
+      "sha256": "65e5568d037f0b05a770875f8a8a0c4a2f0306db4be6b17f3e2ec48d4116ef97",
+      "title": "api_v1.yaml",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "interface_evidence"
+    },
+    {
+      "path": "contracts/api_v2.yaml",
+      "sha256": "d26d140f7035bf6a20c7b58b25ca121b2d0c4e6cb1a1c86b28b07e6f595dec83",
+      "title": "api_v2.yaml",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "interface_evidence"
+    },
+    {
+      "path": "contracts/api_v3.yaml",
+      "sha256": "ba0d4490b20df550a032f3301c670a335b6686c7fd62b16fc173b04bd790c050",
+      "title": "api_v3.yaml",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "interface_evidence"
+    },
+    {
+      "path": "docs/01_problem_context.md",
+      "sha256": "03ed66fa15df3bcb6bc7b248a17051940762134204cd5f2838048923565a6170",
+      "title": "Problem Context",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "docs/02_imperfection_layers.md",
+      "sha256": "3b9a4d9e058734180f4830396114be65d46c65961d8afc48f91ee51d626e6e2d",
+      "title": "11 Layers of Inherent Brownfield Imperfection",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "docs/03_architecture_current_state.md",
+      "sha256": "230ac544dcd49a5ecc4daaea863876eeca24f70ccac70404a6e08c8bc06ecb54",
+      "title": "Current-State Architecture (Intentionally Incomplete)",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "docs/04_target_capabilities_not_prescribed_solutions.md",
+      "sha256": "b7dee922cad61c65acc08122ec9d490740252f2ec95a7ba38f9e1a9a156086e5",
+      "title": "Target Capabilities, Not Prescribed Technologies",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "docs/05_data_map.md",
+      "sha256": "68e319a29cb5bb991fdfcceb3c76f3514870c5d5a8c55882a2c9cdaacbecb4e2",
+      "title": "Data Map",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "docs/06_security_privacy_assurance.md",
+      "sha256": "003a9e1b228f127407d681164143cf31d8dbda402d3a48c54b9d0d2d03364709",
+      "title": "Security, Privacy and Assurance Seed Questions",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "docs/07_v2_audit_and_changelog.md",
+      "sha256": "bc4375ec34508cb8b9ba3a530dc8cde25e1871d883264f27c40b94dfc43054b7",
+      "title": "V2 Engineering Audit and Changelog",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "docs/sops/SOP-LOG-007-v6.md",
+      "sha256": "509f4d483b32f06f4f01227f9bc06511093cf97f0b382b9c537dc1621a27e41f",
+      "title": "SOP-LOG-007 v6 \u2014 Synthetic Logistics Excursion Rule",
+      "status": "Superseded",
+      "effective": "NOT_STATED",
+      "role": "controlled_rule_evidence"
+    },
+    {
+      "path": "docs/sops/SOP-LOG-007-v7.md",
+      "sha256": "2570d475684eb81f6b8d0c7ca23a25463daa8c869b0eafd8f8f1bd7f6656d7d9",
+      "title": "SOP-LOG-007 v7 \u2014 Synthetic Logistics Excursion Rule",
+      "status": "Effective",
+      "effective": "2026-05-01",
+      "role": "controlled_rule_evidence"
+    },
+    {
+      "path": "docs/sops/SOP-QA-014-v4.md",
+      "sha256": "3529a55b638bd12048fc83b48e2312362b082f1a4be6aeca752c612da62d5673",
+      "title": "SOP-QA-014 v4 \u2014 Synthetic Product Release",
+      "status": "Effective",
+      "effective": "NOT_STATED",
+      "role": "controlled_rule_evidence"
+    },
+    {
+      "path": "docs/sops/SOP-SCHED-003-v2.md",
+      "sha256": "551befb6d1e292dc04836cfdb9c8bd48b0419b4d057f172dde9786979ae91be7",
+      "title": "SOP-SCHED-003 v2 \u2014 Synthetic Scheduling",
+      "status": "Draft",
+      "effective": "NOT_STATED",
+      "role": "controlled_rule_evidence"
+    },
+    {
+      "path": "evals/README.md",
+      "sha256": "11bbf5bf9496ec6551480fbf436f01fc0ea53d214f67379643264389a15e321c",
+      "title": "Evaluation / TEVV Seed Pack",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "evaluation_evidence"
+    },
+    {
+      "path": "evals/cases.csv",
+      "sha256": "947678613b337ca0d213c5bdfbcd66f5566267261602bead48d43b1aacfeb7e3",
+      "title": "cases.csv",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "evaluation_evidence"
+    },
+    {
+      "path": "participant/CHALLENGE_BRIEF.md",
+      "sha256": "d44a2c04fb704eda74e9ba924f36d3028a8acedb4ee6b0f4b890991c58915508",
+      "title": "Participant Challenge Brief",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "participant/DISCOVERY_CHECKLIST.md",
+      "sha256": "72f3b112e628db1727d0b444471c74cbae784d7af651ff69e96f9512f9b65f58",
+      "title": "Discovery Checklist",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "context_or_requirement_evidence"
+    },
+    {
+      "path": "scenarios/README.md",
+      "sha256": "afc12c8196804c4a0c9e04a3c916c6f2642b04681c0e56c5ddffd06646e0d778",
+      "title": "Failure Injects",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "evaluation_evidence"
+    },
+    {
+      "path": "scenarios/inject_catalog.csv",
+      "sha256": "174e1a185aa60222f7c56cfcb93eca2946cfa55fbff34443da97fc858ff40427",
+      "title": "inject_catalog.csv",
+      "status": "NOT_STATED",
+      "effective": "NOT_STATED",
+      "role": "evaluation_evidence"
+    }
+  ]
+}

@@ -1,0 +1,801 @@
+patient_key,priority,reason,updated_by
+P-00001,3,clinical urgency,planner2
+P-00002,1,,ops_mgr
+P-00003,1,,planner2
+P-00004,1,,unknown
+P-00005,2,,planner2
+P-00006,1,clinical urgency,ops_mgr
+P-00007,1,,unknown
+P-00008,1,,unknown
+P-00009,2,,unknown
+P-00010,1,,ops_mgr
+P-00011,1,clinical urgency,planner2
+P-00012,3,,planner2
+P-00013,3,,unknown
+P-00014,1,,unknown
+P-00015,2,,planner2
+P-00016,1,clinical urgency,ops_mgr
+P-00017,2,,ops_mgr
+P-00018,1,,planner2
+P-00019,1,,planner2
+P-00020,2,,planner2
+P-00021,3,clinical urgency,ops_mgr
+P-00022,2,,unknown
+P-00023,1,,ops_mgr
+P-00024,1,,unknown
+P-00025,1,,unknown
+P-00026,2,clinical urgency,ops_mgr
+P-00027,3,,unknown
+P-00028,2,,planner2
+P-00029,3,,unknown
+P-00030,3,,unknown
+P-00031,2,clinical urgency,ops_mgr
+P-00032,1,,planner2
+P-00033,1,,unknown
+P-00034,1,,ops_mgr
+P-00035,3,,ops_mgr
+P-00036,1,clinical urgency,unknown
+P-00037,1,,unknown
+P-00038,2,,planner2
+P-00039,2,,unknown
+P-00040,3,,unknown
+P-00041,1,clinical urgency,planner2
+P-00042,1,,ops_mgr
+P-00043,1,,planner2
+P-00044,3,,planner2
+P-00045,2,,planner2
+P-00046,1,clinical urgency,ops_mgr
+P-00047,2,,unknown
+P-00048,1,,planner2
+P-00049,2,,planner2
+P-00050,3,,planner2
+P-00051,2,clinical urgency,ops_mgr
+P-00052,1,,planner2
+P-00053,3,,unknown
+P-00054,2,,ops_mgr
+P-00055,3,,unknown
+P-00056,3,clinical urgency,ops_mgr
+P-00057,1,,unknown
+P-00058,1,,planner2
+P-00059,3,,planner2
+P-00060,1,,planner2
+P-00061,3,clinical urgency,planner2
+P-00062,1,,planner2
+P-00063,3,,ops_mgr
+P-00064,1,,unknown
+P-00065,2,,unknown
+P-00066,1,clinical urgency,ops_mgr
+P-00067,3,,planner2
+P-00068,2,,unknown
+P-00069,1,,ops_mgr
+P-00070,3,,ops_mgr
+P-00071,3,clinical urgency,unknown
+P-00072,2,,planner2
+P-00073,3,,planner2
+P-00074,1,,planner2
+P-00075,2,,unknown
+P-00076,3,clinical urgency,ops_mgr
+P-00077,3,,unknown
+P-00078,2,,planner2
+P-00079,3,,planner2
+P-00080,3,,unknown
+P-00081,2,clinical urgency,unknown
+P-00082,1,,planner2
+P-00083,2,,ops_mgr
+P-00084,1,,unknown
+P-00085,3,,ops_mgr
+P-00086,1,clinical urgency,planner2
+P-00087,3,,ops_mgr
+P-00088,2,,planner2
+P-00089,2,,planner2
+P-00090,3,,unknown
+P-00091,1,clinical urgency,planner2
+P-00092,2,,unknown
+P-00093,2,,ops_mgr
+P-00094,2,,planner2
+P-00095,3,,planner2
+P-00096,3,clinical urgency,unknown
+P-00097,3,,unknown
+P-00098,2,,ops_mgr
+P-00099,3,,planner2
+P-00100,3,,unknown
+P-00101,3,clinical urgency,ops_mgr
+P-00102,1,,planner2
+P-00103,2,,unknown
+P-00104,1,,unknown
+P-00105,2,,planner2
+P-00106,3,clinical urgency,planner2
+P-00107,1,,planner2
+P-00108,3,,unknown
+P-00109,1,,planner2
+P-00110,1,,ops_mgr
+P-00111,1,clinical urgency,planner2
+P-00112,3,,planner2
+P-00113,3,,ops_mgr
+P-00114,1,,ops_mgr
+P-00115,2,,unknown
+P-00116,3,clinical urgency,unknown
+P-00117,3,,unknown
+P-00118,2,,unknown
+P-00119,2,,unknown
+P-00120,1,,ops_mgr
+P-00121,3,clinical urgency,planner2
+P-00122,2,,unknown
+P-00123,2,,ops_mgr
+P-00124,1,,planner2
+P-00125,2,,planner2
+P-00126,3,clinical urgency,planner2
+P-00127,3,,ops_mgr
+P-00128,3,,unknown
+P-00129,2,,ops_mgr
+P-00130,2,,planner2
+P-00131,1,clinical urgency,ops_mgr
+P-00132,1,,ops_mgr
+P-00133,2,,planner2
+P-00134,2,,unknown
+P-00135,2,,planner2
+P-00136,2,clinical urgency,planner2
+P-00137,3,,ops_mgr
+P-00138,2,,ops_mgr
+P-00139,1,,ops_mgr
+P-00140,1,,ops_mgr
+P-00141,2,clinical urgency,unknown
+P-00142,2,,unknown
+P-00143,2,,planner2
+P-00144,2,,planner2
+P-00145,1,,ops_mgr
+P-00146,2,clinical urgency,unknown
+P-00147,2,,planner2
+P-00148,1,,unknown
+P-00149,3,,unknown
+P-00150,1,,ops_mgr
+P-00151,1,clinical urgency,ops_mgr
+P-00152,2,,ops_mgr
+P-00153,2,,planner2
+P-00154,3,,planner2
+P-00155,1,,planner2
+P-00156,1,clinical urgency,planner2
+P-00157,2,,planner2
+P-00158,2,,unknown
+P-00159,3,,ops_mgr
+P-00160,2,,unknown
+P-00161,3,clinical urgency,unknown
+P-00162,3,,planner2
+P-00163,1,,planner2
+P-00164,1,,unknown
+P-00165,1,,ops_mgr
+P-00166,3,clinical urgency,unknown
+P-00167,3,,unknown
+P-00168,1,,planner2
+P-00169,1,,planner2
+P-00170,1,,ops_mgr
+P-00171,1,clinical urgency,ops_mgr
+P-00172,3,,unknown
+P-00173,3,,ops_mgr
+P-00174,1,,unknown
+P-00175,2,,unknown
+P-00176,1,clinical urgency,unknown
+P-00177,3,,planner2
+P-00178,1,,planner2
+P-00179,1,,planner2
+P-00180,2,,unknown
+P-00181,2,clinical urgency,planner2
+P-00182,1,,unknown
+P-00183,3,,planner2
+P-00184,3,,unknown
+P-00185,3,,planner2
+P-00186,1,clinical urgency,unknown
+P-00187,1,,planner2
+P-00188,2,,ops_mgr
+P-00189,2,,planner2
+P-00190,1,,planner2
+P-00191,2,clinical urgency,planner2
+P-00192,3,,ops_mgr
+P-00193,1,,ops_mgr
+P-00194,1,,ops_mgr
+P-00195,2,,unknown
+P-00196,1,clinical urgency,ops_mgr
+P-00197,3,,ops_mgr
+P-00198,1,,unknown
+P-00199,2,,planner2
+P-00200,2,,unknown
+P-00201,3,clinical urgency,planner2
+P-00202,1,,planner2
+P-00203,1,,planner2
+P-00204,3,,unknown
+P-00205,3,,ops_mgr
+P-00206,2,clinical urgency,unknown
+P-00207,2,,ops_mgr
+P-00208,2,,unknown
+P-00209,2,,planner2
+P-00210,2,,planner2
+P-00211,1,clinical urgency,planner2
+P-00212,1,,unknown
+P-00213,1,,ops_mgr
+P-00214,3,,planner2
+P-00215,2,,ops_mgr
+P-00216,3,clinical urgency,ops_mgr
+P-00217,2,,planner2
+P-00218,2,,unknown
+P-00219,2,,planner2
+P-00220,2,,planner2
+P-00221,1,clinical urgency,planner2
+P-00222,2,,planner2
+P-00223,2,,ops_mgr
+P-00224,2,,unknown
+P-00225,1,,ops_mgr
+P-00226,1,clinical urgency,ops_mgr
+P-00227,2,,planner2
+P-00228,2,,unknown
+P-00229,2,,planner2
+P-00230,1,,ops_mgr
+P-00231,3,clinical urgency,ops_mgr
+P-00232,3,,ops_mgr
+P-00233,1,,ops_mgr
+P-00234,2,,planner2
+P-00235,3,,unknown
+P-00236,1,clinical urgency,ops_mgr
+P-00237,2,,ops_mgr
+P-00238,1,,unknown
+P-00239,2,,ops_mgr
+P-00240,1,,ops_mgr
+P-00241,1,clinical urgency,planner2
+P-00242,3,,ops_mgr
+P-00243,2,,planner2
+P-00244,2,,planner2
+P-00245,3,,unknown
+P-00246,2,clinical urgency,ops_mgr
+P-00247,2,,unknown
+P-00248,2,,ops_mgr
+P-00249,3,,planner2
+P-00250,1,,planner2
+P-00251,1,clinical urgency,ops_mgr
+P-00252,3,,unknown
+P-00253,3,,planner2
+P-00254,1,,ops_mgr
+P-00255,1,,planner2
+P-00256,2,clinical urgency,ops_mgr
+P-00257,1,,unknown
+P-00258,3,,ops_mgr
+P-00259,1,,unknown
+P-00260,2,,planner2
+P-00261,1,clinical urgency,ops_mgr
+P-00262,1,,ops_mgr
+P-00263,1,,unknown
+P-00264,1,,ops_mgr
+P-00265,3,,ops_mgr
+P-00266,2,clinical urgency,unknown
+P-00267,1,,unknown
+P-00268,3,,unknown
+P-00269,1,,unknown
+P-00270,2,,unknown
+P-00271,2,clinical urgency,unknown
+P-00272,1,,planner2
+P-00273,2,,unknown
+P-00274,1,,ops_mgr
+P-00275,1,,unknown
+P-00276,2,clinical urgency,ops_mgr
+P-00277,3,,planner2
+P-00278,3,,ops_mgr
+P-00279,2,,planner2
+P-00280,1,,planner2
+P-00281,3,clinical urgency,planner2
+P-00282,3,,unknown
+P-00283,2,,unknown
+P-00284,2,,planner2
+P-00285,3,,ops_mgr
+P-00286,1,clinical urgency,ops_mgr
+P-00287,2,,unknown
+P-00288,1,,planner2
+P-00289,3,,unknown
+P-00290,2,,planner2
+P-00291,3,clinical urgency,planner2
+P-00292,2,,unknown
+P-00293,3,,unknown
+P-00294,2,,unknown
+P-00295,3,,unknown
+P-00296,1,clinical urgency,ops_mgr
+P-00297,3,,planner2
+P-00298,3,,unknown
+P-00299,3,,planner2
+P-00300,1,,planner2
+P-00301,2,clinical urgency,planner2
+P-00302,2,,unknown
+P-00303,2,,unknown
+P-00304,1,,planner2
+P-00305,1,,unknown
+P-00306,1,clinical urgency,unknown
+P-00307,2,,ops_mgr
+P-00308,1,,unknown
+P-00309,3,,unknown
+P-00310,3,,unknown
+P-00311,3,clinical urgency,unknown
+P-00312,1,,planner2
+P-00313,1,,ops_mgr
+P-00314,1,,ops_mgr
+P-00315,3,,unknown
+P-00316,3,clinical urgency,planner2
+P-00317,2,,ops_mgr
+P-00318,1,,ops_mgr
+P-00319,1,,planner2
+P-00320,2,,planner2
+P-00321,1,clinical urgency,unknown
+P-00322,2,,unknown
+P-00323,3,,unknown
+P-00324,1,,ops_mgr
+P-00325,1,,ops_mgr
+P-00326,3,clinical urgency,planner2
+P-00327,3,,unknown
+P-00328,1,,planner2
+P-00329,1,,planner2
+P-00330,2,,ops_mgr
+P-00331,2,clinical urgency,unknown
+P-00332,2,,ops_mgr
+P-00333,1,,ops_mgr
+P-00334,2,,unknown
+P-00335,2,,planner2
+P-00336,1,clinical urgency,planner2
+P-00337,3,,ops_mgr
+P-00338,2,,unknown
+P-00339,1,,unknown
+P-00340,3,,ops_mgr
+P-00341,1,clinical urgency,ops_mgr
+P-00342,2,,unknown
+P-00343,1,,planner2
+P-00344,1,,planner2
+P-00345,3,,unknown
+P-00346,1,clinical urgency,unknown
+P-00347,1,,unknown
+P-00348,2,,unknown
+P-00349,1,,unknown
+P-00350,1,,planner2
+P-00351,3,clinical urgency,ops_mgr
+P-00352,1,,ops_mgr
+P-00353,1,,planner2
+P-00354,3,,ops_mgr
+P-00355,1,,unknown
+P-00356,2,clinical urgency,ops_mgr
+P-00357,1,,unknown
+P-00358,2,,ops_mgr
+P-00359,2,,planner2
+P-00360,3,,unknown
+P-00361,2,clinical urgency,ops_mgr
+P-00362,3,,unknown
+P-00363,1,,planner2
+P-00364,1,,ops_mgr
+P-00365,1,,planner2
+P-00366,3,clinical urgency,ops_mgr
+P-00367,3,,unknown
+P-00368,2,,ops_mgr
+P-00369,2,,planner2
+P-00370,1,,planner2
+P-00371,1,clinical urgency,planner2
+P-00372,1,,ops_mgr
+P-00373,3,,planner2
+P-00374,2,,ops_mgr
+P-00375,3,,planner2
+P-00376,2,clinical urgency,unknown
+P-00377,1,,ops_mgr
+P-00378,3,,planner2
+P-00379,1,,ops_mgr
+P-00380,2,,unknown
+P-00381,2,clinical urgency,planner2
+P-00382,1,,ops_mgr
+P-00383,1,,unknown
+P-00384,2,,unknown
+P-00385,2,,ops_mgr
+P-00386,1,clinical urgency,unknown
+P-00387,3,,ops_mgr
+P-00388,3,,ops_mgr
+P-00389,3,,ops_mgr
+P-00390,1,,planner2
+P-00391,1,clinical urgency,unknown
+P-00392,1,,planner2
+P-00393,3,,unknown
+P-00394,1,,ops_mgr
+P-00395,2,,planner2
+P-00396,1,clinical urgency,unknown
+P-00397,2,,planner2
+P-00398,2,,planner2
+P-00399,1,,planner2
+P-00400,3,,unknown
+P-00401,2,clinical urgency,ops_mgr
+P-00402,2,,unknown
+P-00403,3,,ops_mgr
+P-00404,1,,ops_mgr
+P-00405,3,,planner2
+P-00406,1,clinical urgency,planner2
+P-00407,3,,planner2
+P-00408,2,,unknown
+P-00409,2,,planner2
+P-00410,3,,unknown
+P-00411,1,clinical urgency,planner2
+P-00412,1,,ops_mgr
+P-00413,3,,ops_mgr
+P-00414,1,,planner2
+P-00415,3,,ops_mgr
+P-00416,1,clinical urgency,unknown
+P-00417,1,,planner2
+P-00418,2,,unknown
+P-00419,3,,unknown
+P-00420,3,,planner2
+P-00421,2,clinical urgency,unknown
+P-00422,2,,ops_mgr
+P-00423,1,,planner2
+P-00424,2,,planner2
+P-00425,1,,ops_mgr
+P-00426,2,clinical urgency,planner2
+P-00427,2,,unknown
+P-00428,3,,planner2
+P-00429,2,,unknown
+P-00430,2,,planner2
+P-00431,1,clinical urgency,unknown
+P-00432,1,,unknown
+P-00433,1,,planner2
+P-00434,2,,planner2
+P-00435,1,,ops_mgr
+P-00436,3,clinical urgency,unknown
+P-00437,3,,unknown
+P-00438,1,,ops_mgr
+P-00439,1,,unknown
+P-00440,2,,planner2
+P-00441,3,clinical urgency,unknown
+P-00442,3,,unknown
+P-00443,3,,unknown
+P-00444,2,,planner2
+P-00445,1,,unknown
+P-00446,1,clinical urgency,unknown
+P-00447,1,,ops_mgr
+P-00448,1,,unknown
+P-00449,1,,planner2
+P-00450,3,,ops_mgr
+P-00451,1,clinical urgency,planner2
+P-00452,3,,planner2
+P-00453,3,,ops_mgr
+P-00454,2,,ops_mgr
+P-00455,1,,ops_mgr
+P-00456,1,clinical urgency,ops_mgr
+P-00457,3,,ops_mgr
+P-00458,2,,unknown
+P-00459,2,,ops_mgr
+P-00460,1,,unknown
+P-00461,2,clinical urgency,unknown
+P-00462,2,,unknown
+P-00463,3,,ops_mgr
+P-00464,1,,unknown
+P-00465,1,,unknown
+P-00466,3,clinical urgency,unknown
+P-00467,3,,unknown
+P-00468,2,,planner2
+P-00469,3,,ops_mgr
+P-00470,3,,ops_mgr
+P-00471,2,clinical urgency,planner2
+P-00472,3,,unknown
+P-00473,2,,planner2
+P-00474,2,,unknown
+P-00475,1,,unknown
+P-00476,3,clinical urgency,unknown
+P-00477,3,,unknown
+P-00478,1,,planner2
+P-00479,3,,ops_mgr
+P-00480,1,,unknown
+P-00481,2,clinical urgency,ops_mgr
+P-00482,3,,ops_mgr
+P-00483,1,,unknown
+P-00484,2,,unknown
+P-00485,1,,ops_mgr
+P-00486,1,clinical urgency,unknown
+P-00487,2,,planner2
+P-00488,1,,unknown
+P-00489,2,,unknown
+P-00490,2,,unknown
+P-00491,1,clinical urgency,unknown
+P-00492,3,,planner2
+P-00493,2,,ops_mgr
+P-00494,3,,ops_mgr
+P-00495,1,,unknown
+P-00496,3,clinical urgency,ops_mgr
+P-00497,3,,unknown
+P-00498,3,,unknown
+P-00499,3,,ops_mgr
+P-00500,1,,unknown
+P-00501,1,clinical urgency,unknown
+P-00502,3,,unknown
+P-00503,2,,ops_mgr
+P-00504,1,,unknown
+P-00505,1,,planner2
+P-00506,2,clinical urgency,planner2
+P-00507,2,,ops_mgr
+P-00508,2,,unknown
+P-00509,1,,ops_mgr
+P-00510,3,,unknown
+P-00511,3,clinical urgency,unknown
+P-00512,2,,planner2
+P-00513,3,,planner2
+P-00514,1,,unknown
+P-00515,2,,planner2
+P-00516,2,clinical urgency,ops_mgr
+P-00517,2,,planner2
+P-00518,1,,ops_mgr
+P-00519,2,,unknown
+P-00520,2,,unknown
+P-00521,3,clinical urgency,planner2
+P-00522,2,,planner2
+P-00523,3,,unknown
+P-00524,1,,unknown
+P-00525,3,,ops_mgr
+P-00526,1,clinical urgency,ops_mgr
+P-00527,3,,ops_mgr
+P-00528,1,,ops_mgr
+P-00529,2,,ops_mgr
+P-00530,1,,planner2
+P-00531,3,clinical urgency,ops_mgr
+P-00532,1,,unknown
+P-00533,3,,unknown
+P-00534,3,,unknown
+P-00535,1,,unknown
+P-00536,2,clinical urgency,unknown
+P-00537,3,,planner2
+P-00538,1,,ops_mgr
+P-00539,3,,ops_mgr
+P-00540,2,,unknown
+P-00541,1,clinical urgency,ops_mgr
+P-00542,1,,ops_mgr
+P-00543,2,,ops_mgr
+P-00544,3,,unknown
+P-00545,2,,planner2
+P-00546,3,clinical urgency,planner2
+P-00547,3,,unknown
+P-00548,1,,unknown
+P-00549,1,,planner2
+P-00550,2,,unknown
+P-00551,2,clinical urgency,planner2
+P-00552,2,,planner2
+P-00553,1,,planner2
+P-00554,2,,planner2
+P-00555,3,,ops_mgr
+P-00556,2,clinical urgency,unknown
+P-00557,3,,unknown
+P-00558,3,,ops_mgr
+P-00559,2,,ops_mgr
+P-00560,1,,planner2
+P-00561,3,clinical urgency,unknown
+P-00562,1,,ops_mgr
+P-00563,2,,ops_mgr
+P-00564,1,,planner2
+P-00565,2,,unknown
+P-00566,2,clinical urgency,unknown
+P-00567,3,,planner2
+P-00568,3,,ops_mgr
+P-00569,3,,unknown
+P-00570,1,,planner2
+P-00571,3,clinical urgency,unknown
+P-00572,1,,ops_mgr
+P-00573,3,,ops_mgr
+P-00574,3,,unknown
+P-00575,2,,ops_mgr
+P-00576,1,clinical urgency,ops_mgr
+P-00577,1,,ops_mgr
+P-00578,3,,planner2
+P-00579,1,,unknown
+P-00580,1,,unknown
+P-00581,1,clinical urgency,unknown
+P-00582,2,,unknown
+P-00583,2,,ops_mgr
+P-00584,1,,planner2
+P-00585,3,,unknown
+P-00586,1,clinical urgency,ops_mgr
+P-00587,2,,ops_mgr
+P-00588,1,,planner2
+P-00589,2,,ops_mgr
+P-00590,2,,ops_mgr
+P-00591,3,clinical urgency,planner2
+P-00592,3,,ops_mgr
+P-00593,3,,planner2
+P-00594,1,,unknown
+P-00595,2,,unknown
+P-00596,2,clinical urgency,planner2
+P-00597,2,,ops_mgr
+P-00598,1,,planner2
+P-00599,3,,unknown
+P-00600,2,,ops_mgr
+P-00601,2,clinical urgency,ops_mgr
+P-00602,1,,unknown
+P-00603,2,,ops_mgr
+P-00604,3,,unknown
+P-00605,1,,planner2
+P-00606,3,clinical urgency,unknown
+P-00607,1,,ops_mgr
+P-00608,1,,ops_mgr
+P-00609,3,,planner2
+P-00610,1,,ops_mgr
+P-00611,1,clinical urgency,ops_mgr
+P-00612,1,,unknown
+P-00613,3,,ops_mgr
+P-00614,1,,ops_mgr
+P-00615,2,,planner2
+P-00616,2,clinical urgency,unknown
+P-00617,1,,ops_mgr
+P-00618,1,,unknown
+P-00619,3,,planner2
+P-00620,2,,planner2
+P-00621,1,clinical urgency,planner2
+P-00622,3,,planner2
+P-00623,2,,ops_mgr
+P-00624,3,,unknown
+P-00625,2,,unknown
+P-00626,2,clinical urgency,planner2
+P-00627,1,,planner2
+P-00628,3,,ops_mgr
+P-00629,3,,planner2
+P-00630,3,,ops_mgr
+P-00631,2,clinical urgency,ops_mgr
+P-00632,2,,unknown
+P-00633,2,,ops_mgr
+P-00634,3,,planner2
+P-00635,3,,unknown
+P-00636,1,clinical urgency,unknown
+P-00637,3,,planner2
+P-00638,1,,ops_mgr
+P-00639,3,,ops_mgr
+P-00640,3,,ops_mgr
+P-00641,2,clinical urgency,ops_mgr
+P-00642,3,,ops_mgr
+P-00643,3,,ops_mgr
+P-00644,1,,ops_mgr
+P-00645,1,,unknown
+P-00646,3,clinical urgency,ops_mgr
+P-00647,1,,planner2
+P-00648,2,,ops_mgr
+P-00649,1,,unknown
+P-00650,1,,unknown
+P-00651,3,clinical urgency,planner2
+P-00652,3,,ops_mgr
+P-00653,3,,unknown
+P-00654,1,,planner2
+P-00655,2,,ops_mgr
+P-00656,3,clinical urgency,unknown
+P-00657,2,,planner2
+P-00658,3,,planner2
+P-00659,1,,ops_mgr
+P-00660,3,,unknown
+P-00661,2,clinical urgency,unknown
+P-00662,1,,unknown
+P-00663,3,,ops_mgr
+P-00664,1,,ops_mgr
+P-00665,1,,unknown
+P-00666,1,clinical urgency,planner2
+P-00667,2,,unknown
+P-00668,1,,planner2
+P-00669,2,,unknown
+P-00670,1,,planner2
+P-00671,2,clinical urgency,planner2
+P-00672,1,,ops_mgr
+P-00673,3,,unknown
+P-00674,2,,unknown
+P-00675,1,,unknown
+P-00676,1,clinical urgency,unknown
+P-00677,3,,planner2
+P-00678,2,,planner2
+P-00679,2,,ops_mgr
+P-00680,2,,unknown
+P-00681,1,clinical urgency,planner2
+P-00682,3,,unknown
+P-00683,3,,ops_mgr
+P-00684,2,,unknown
+P-00685,3,,unknown
+P-00686,2,clinical urgency,planner2
+P-00687,1,,unknown
+P-00688,2,,ops_mgr
+P-00689,3,,planner2
+P-00690,2,,ops_mgr
+P-00691,2,clinical urgency,planner2
+P-00692,3,,ops_mgr
+P-00693,3,,planner2
+P-00694,3,,unknown
+P-00695,3,,ops_mgr
+P-00696,1,clinical urgency,unknown
+P-00697,1,,unknown
+P-00698,2,,unknown
+P-00699,1,,planner2
+P-00700,3,,planner2
+P-00701,2,clinical urgency,planner2
+P-00702,2,,ops_mgr
+P-00703,2,,planner2
+P-00704,2,,ops_mgr
+P-00705,3,,ops_mgr
+P-00706,2,clinical urgency,unknown
+P-00707,2,,planner2
+P-00708,1,,unknown
+P-00709,3,,planner2
+P-00710,3,,planner2
+P-00711,1,clinical urgency,unknown
+P-00712,1,,ops_mgr
+P-00713,2,,unknown
+P-00714,3,,ops_mgr
+P-00715,3,,ops_mgr
+P-00716,3,clinical urgency,unknown
+P-00717,1,,ops_mgr
+P-00718,2,,ops_mgr
+P-00719,2,,unknown
+P-00720,2,,planner2
+P-00721,3,clinical urgency,planner2
+P-00722,2,,unknown
+P-00723,1,,planner2
+P-00724,2,,unknown
+P-00725,1,,ops_mgr
+P-00726,2,clinical urgency,unknown
+P-00727,2,,ops_mgr
+P-00728,1,,unknown
+P-00729,1,,planner2
+P-00730,3,,ops_mgr
+P-00731,1,clinical urgency,planner2
+P-00732,1,,planner2
+P-00733,2,,planner2
+P-00734,2,,unknown
+P-00735,3,,planner2
+P-00736,2,clinical urgency,planner2
+P-00737,2,,planner2
+P-00738,1,,planner2
+P-00739,2,,ops_mgr
+P-00740,2,,unknown
+P-00741,3,clinical urgency,ops_mgr
+P-00742,2,,ops_mgr
+P-00743,3,,planner2
+P-00744,2,,ops_mgr
+P-00745,3,,ops_mgr
+P-00746,1,clinical urgency,unknown
+P-00747,3,,ops_mgr
+P-00748,1,,ops_mgr
+P-00749,3,,unknown
+P-00750,1,,ops_mgr
+P-00751,1,clinical urgency,planner2
+P-00752,3,,ops_mgr
+P-00753,3,,ops_mgr
+P-00754,3,,ops_mgr
+P-00755,1,,unknown
+P-00756,1,clinical urgency,planner2
+P-00757,2,,ops_mgr
+P-00758,1,,planner2
+P-00759,3,,unknown
+P-00760,3,,unknown
+P-00761,1,clinical urgency,unknown
+P-00762,1,,planner2
+P-00763,1,,unknown
+P-00764,2,,planner2
+P-00765,1,,unknown
+P-00766,2,clinical urgency,planner2
+P-00767,2,,planner2
+P-00768,1,,unknown
+P-00769,1,,planner2
+P-00770,1,,ops_mgr
+P-00771,2,clinical urgency,planner2
+P-00772,3,,ops_mgr
+P-00773,1,,ops_mgr
+P-00774,3,,planner2
+P-00775,3,,unknown
+P-00776,2,clinical urgency,planner2
+P-00777,2,,unknown
+P-00778,3,,planner2
+P-00779,3,,ops_mgr
+P-00780,1,,planner2
+P-00781,1,clinical urgency,planner2
+P-00782,1,,unknown
+P-00783,3,,ops_mgr
+P-00784,1,,planner2
+P-00785,2,,planner2
+P-00786,2,clinical urgency,unknown
+P-00787,2,,planner2
+P-00788,2,,ops_mgr
+P-00789,2,,unknown
+P-00790,3,,unknown
+P-00791,2,clinical urgency,planner2
+P-00792,2,,ops_mgr
+P-00793,2,,unknown
+P-00794,3,,planner2
+P-00795,3,,unknown
+P-00796,2,clinical urgency,planner2
+P-00797,2,,unknown
+P-00798,3,,unknown
+P-00799,2,,ops_mgr
+P-00800,3,,planner2

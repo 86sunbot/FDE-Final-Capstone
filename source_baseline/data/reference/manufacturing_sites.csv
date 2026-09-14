@@ -1,0 +1,7 @@
+site_id,name,country,timezone,suites,qc_capacity_day
+MFG-US-NJ-01,Asterion Cell Manufacturing NJ,US,America/New_York,8,28
+MFG-US-CA-02,Asterion Cell Manufacturing California,US,America/Los_Angeles,6,22
+MFG-DE-01,Asterion Cellular Manufacturing Germany,DE,Europe/Berlin,7,24
+MFG-GB-01,Asterion Advanced Therapy UK,GB,Europe/London,5,18
+MFG-SG-01,Asterion Cellular Manufacturing Singapore,SG,Asia/Singapore,5,20
+MFG-JP-01,Asterion Advanced Therapy Japan,JP,Asia/Tokyo,4,16

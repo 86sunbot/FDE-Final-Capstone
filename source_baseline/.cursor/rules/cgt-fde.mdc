@@ -1,0 +1,11 @@
+---
+description: AI FDE rules for the CGT brownfield capstone
+alwaysApply: true
+---
+1. Treat every patient/material/batch relationship as evidence-bearing and potentially inconsistent.
+2. Do not assume latest timestamp equals latest real-world event.
+3. Do not collapse QC complete, QA released, product ready, and infusion ready into one status.
+4. Prefer bounded autonomy: observe/correlate/recommend before consequential action.
+5. Every cross-system write must consider idempotency, compensation and audit evidence.
+6. Keep fixes narrow; do not clean intentional challenge data without a requirement.
+7. Add or update tests and document any changed assumptions.

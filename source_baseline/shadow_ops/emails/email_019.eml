@@ -1,0 +1,6 @@
+From: ops5@synthetic.example
+To: cgt-control@synthetic.example
+Subject: QA exception [P-00658]
+Date: Sat, 04 Jul 2026 23:00:00 +0000
+
+Batch BAT-00658 remains on hold pending investigation. Do not interpret MES complete as released.

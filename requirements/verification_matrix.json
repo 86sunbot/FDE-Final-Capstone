@@ -1,0 +1,307 @@
+{
+  "summary": {
+    "total": 27,
+    "verified_internal_poc": 25,
+    "inconclusive_external_evidence_required": 2,
+    "production_verified": 0
+  },
+  "requirements": [
+    {
+      "requirement_id": "REQ-FDN-001",
+      "type": "foundation",
+      "severity": "P0",
+      "statement": "Original challenge evidence remains immutable",
+      "acceptance": "All 132 extracted file hashes and the ZIP hash match inventory",
+      "test_reference": "tests/test_evidence_integrity.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/test_evidence_integrity.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-FDN-002",
+      "type": "foundation",
+      "severity": "P0",
+      "statement": "Every material decision fact carries evidence provenance",
+      "acceptance": "No P0 projection/decision material fact lacks evidence IDs",
+      "test_reference": "tests/unit/test_evidence.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/unit/test_evidence.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-FDN-003",
+      "type": "foundation",
+      "severity": "P0",
+      "statement": "Occurred and recorded time remain distinct",
+      "acceptance": "Known-at replay is stable under late evidence",
+      "test_reference": "tests/unit/test_temporal.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/unit/test_temporal.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-FDN-004",
+      "type": "foundation",
+      "severity": "P0",
+      "statement": "Unknown is distinct from false or satisfied",
+      "acceptance": "Missing/contradictory evidence returns UNKNOWN and blocks progression",
+      "test_reference": "tests/unit/test_readiness.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/unit/test_readiness.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-AUTH-001",
+      "type": "security",
+      "severity": "P0",
+      "statement": "Authority derives from authenticated server policy",
+      "acceptance": "Body-supplied role cannot authorize a decision",
+      "test_reference": "tests/unit/test_authorization.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/unit/test_authorization.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-AUTH-002",
+      "type": "security",
+      "severity": "P0",
+      "statement": "Recommendation approval and execution are separate",
+      "acceptance": "Recommendation cannot emit or apply authority events",
+      "test_reference": "tests/unit/test_assistant.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/unit/test_assistant.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-AUD-001",
+      "type": "assurance",
+      "severity": "P0",
+      "statement": "Audit events are attributable and tamper-evident",
+      "acceptance": "Hash-chain verification passes and mutation is detected",
+      "test_reference": "tests/unit/test_audit.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/unit/test_audit.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-ID-001",
+      "type": "POC1",
+      "severity": "P0",
+      "statement": "Ambiguous identifiers never create identity links",
+      "acceptance": "Conflict opens an owned case and link remains absent",
+      "test_reference": "tests/integration/test_poc1_identity_readiness.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/integration/test_poc1_identity_readiness.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-ID-002",
+      "type": "POC1",
+      "severity": "P0",
+      "statement": "Identity approval binds exact proposal and evidence",
+      "acceptance": "Authorized decision applies once and changed payload is rejected",
+      "test_reference": "tests/integration/test_poc1_identity_readiness.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/integration/test_poc1_identity_readiness.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-GATE-001",
+      "type": "POC1",
+      "severity": "P0",
+      "statement": "Milestone readiness evaluates consent authorization site and identity",
+      "acceptance": "Missing expired or conflicting prerequisite blocks or returns unknown",
+      "test_reference": "tests/integration/test_poc1_identity_readiness.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/integration/test_poc1_identity_readiness.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-CMD-001",
+      "type": "POC2",
+      "severity": "P0",
+      "statement": "Idempotency key binds command type scope and canonical payload",
+      "acceptance": "Replay returns stored result and changed payload conflicts",
+      "test_reference": "tests/integration/test_poc2_slot_orchestration.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/integration/test_poc2_slot_orchestration.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-CMD-002",
+      "type": "POC2",
+      "severity": "P0",
+      "statement": "Ambiguous external outcome is reconciled before retry",
+      "acceptance": "Timeout enters OUTCOME_UNKNOWN and no blind retry occurs",
+      "test_reference": "tests/integration/test_poc2_slot_orchestration.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/integration/test_poc2_slot_orchestration.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-CMD-003",
+      "type": "POC2",
+      "severity": "P0",
+      "statement": "Compensation is explicit and verified",
+      "acceptance": "Partial effect cannot be silently treated as success or failure",
+      "test_reference": "tests/integration/test_poc2_slot_orchestration.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/integration/test_poc2_slot_orchestration.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-QUAL-001",
+      "type": "POC3",
+      "severity": "P0",
+      "statement": "Only authorized Quality evidence establishes release",
+      "acceptance": "MES ERP and AI cannot create PRODUCT_RELEASED",
+      "test_reference": "tests/integration/test_poc3_quality_release.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/integration/test_poc3_quality_release.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-QUAL-002",
+      "type": "POC3",
+      "severity": "P0",
+      "statement": "QC deviation and thermal evidence remain explicit",
+      "acceptance": "Missing or ambiguous disposition remains a blocker or unknown",
+      "test_reference": "tests/integration/test_poc3_quality_release.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/integration/test_poc3_quality_release.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-AI-001",
+      "type": "AI",
+      "severity": "P0",
+      "statement": "AI is optional and failure returns deterministic workflow",
+      "acceptance": "Disabled outage or invalid output preserves deterministic context",
+      "test_reference": "tests/unit/test_assistant.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/unit/test_assistant.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-AI-002",
+      "type": "AI",
+      "severity": "P0",
+      "statement": "AI output is schema and evidence bounded",
+      "acceptance": "Extra authority fields and unknown citations are rejected",
+      "test_reference": "tests/unit/test_assistant.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/unit/test_assistant.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-AI-003",
+      "type": "AI",
+      "severity": "P0",
+      "statement": "AI has no consequential tools",
+      "acceptance": "No assistant interface exposes identity command release or clinical mutation",
+      "test_reference": "tests/unit/test_assistant.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/unit/test_assistant.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-CASE-001",
+      "type": "operations",
+      "severity": "P0",
+      "statement": "Critical exceptions have owner status and history",
+      "acceptance": "Every P0 exception is assigned and auditable",
+      "test_reference": "tests/unit/test_cases.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/unit/test_cases.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-API-001",
+      "type": "interface",
+      "severity": "P1",
+      "statement": "Three POCs share application services and stable contracts",
+      "acceptance": "End-to-end journey uses identity readiness command and quality services",
+      "test_reference": "tests/e2e/test_full_journey.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/e2e/test_full_journey.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-PERF-001",
+      "type": "performance",
+      "severity": "P1",
+      "statement": "Deterministic projection meets local POC latency",
+      "acceptance": "p95 <=250ms under fixed local benchmark",
+      "test_reference": "tests/performance_test.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/performance_test.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-REC-001",
+      "type": "resilience",
+      "severity": "P0",
+      "statement": "Database backup restore and replay preserve state digests",
+      "acceptance": "Restored digest equals pre-backup digest",
+      "test_reference": "tests/recovery_test.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/recovery_test.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-OBS-001",
+      "type": "operations",
+      "severity": "P1",
+      "statement": "Commands decisions recommendations and cases are observable",
+      "acceptance": "Metrics and correlation IDs exist for controlled operations",
+      "test_reference": "tests/unit/test_telemetry.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/unit/test_telemetry.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-SEC-001",
+      "type": "security",
+      "severity": "P0",
+      "statement": "Cross-scope access is denied",
+      "acceptance": "Principal outside journey scope cannot read or mutate it",
+      "test_reference": "tests/unit/test_authorization.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/unit/test_authorization.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-REL-001",
+      "type": "delivery",
+      "severity": "P0",
+      "statement": "Release is reproducible",
+      "acceptance": "Manifest records version data schema and evaluation digests",
+      "test_reference": "tests/test_release_manifest.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/test_release_manifest.py; stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-HUM-001",
+      "type": "human_factors",
+      "severity": "P0",
+      "statement": "Human oversight resists automation bias",
+      "acceptance": "Controlled participants inspect all material P0 evidence and accept zero unsafe trap recommendations",
+      "test_reference": "stage_15/evaluation_results.json::EXT-HUM-001",
+      "status": "SPECIFIED",
+      "verification_status": "INCONCLUSIVE_EXTERNAL_EVIDENCE_REQUIRED",
+      "verification_evidence": "stage_15/evaluation_results.json::EXT-HUM-001"
+    },
+    {
+      "requirement_id": "REQ-HUM-002",
+      "type": "human_factors",
+      "severity": "P1",
+      "statement": "Authorized users can safely override abstain and escalate",
+      "acceptance": "Controlled role study demonstrates usable override and captures rationale",
+      "test_reference": "stage_15/evaluation_results.json::EXT-HUM-002",
+      "status": "SPECIFIED",
+      "verification_status": "INCONCLUSIVE_EXTERNAL_EVIDENCE_REQUIRED",
+      "verification_evidence": "stage_15/evaluation_results.json::EXT-HUM-002"
+    }
+  ]
+}

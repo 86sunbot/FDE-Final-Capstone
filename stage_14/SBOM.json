@@ -1,0 +1,32 @@
+{
+  "format": "academic-capstone-sbom-v1",
+  "generated_at": "2026-09-14T08:11:59.695305+00:00",
+  "runtime": {
+    "python": "3.14.7",
+    "sqlite": "3.53.4",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "application": {
+    "name": "fde-final-capstone",
+    "version": "1.0.0",
+    "source_tree_sha256": "ce6ddf2b3d1e88fe0e8387b20a5f68d16eb6735933bdb54ba997771fc08f711a"
+  },
+  "dependencies": [
+    {
+      "name": "fastapi",
+      "version": "0.141.1",
+      "scope": "optional API"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.52.4",
+      "scope": "optional API server"
+    },
+    {
+      "name": "pytest",
+      "version": "8.4.2",
+      "scope": "test"
+    }
+  ],
+  "limitations": "Not a signed CycloneDX/SPDX production attestation."
+}

@@ -1,0 +1,1350 @@
+{
+  "generated_at": "2026-09-14T02:21:36.239781+00:00",
+  "source_zip": "/Users/suryap/Documents/FDE/Capstone/AI_FDE_CGT_Patient_to_Batch_Orchestration.zip",
+  "source_zip_size_bytes": 992289,
+  "source_zip_sha256": "74d31dc4694d52b0e9a9fb337e6ccda1086ad430b19287f9ca2b4b4e650ca979",
+  "expected_zip_sha256": "74d31dc4694d52b0e9a9fb337e6ccda1086ad430b19287f9ca2b4b4e650ca979",
+  "summary": {
+    "zip_entries_total": 132,
+    "files_total": 132,
+    "directories_total": 0,
+    "internal_manifest_listed": 130,
+    "internal_manifest_verified": 130,
+    "internal_manifest_missing": [],
+    "internal_manifest_mismatched": [],
+    "classification_counts": {
+      "repository_support": 9,
+      "governance_context": 3,
+      "interface_evidence": 3,
+      "structured_evidence": 21,
+      "documentation_or_rule_evidence": 11,
+      "evaluation_evidence": 2,
+      "challenge_requirement": 2,
+      "failure_scenario_evidence": 2,
+      "executable_evidence": 16,
+      "shadow_operations_evidence": 63
+    }
+  },
+  "files": [
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/.cursor/rules/cgt-fde.mdc",
+      "relative_path": ".cursor/rules/cgt-fde.mdc",
+      "classification": "repository_support",
+      "size_bytes": 666,
+      "compressed_bytes": 418,
+      "sha256": "485a8e787745a95f91d72823f9b06b952ef4581519cfadec8729a10efe68e602",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/.env.example",
+      "relative_path": ".env.example",
+      "classification": "repository_support",
+      "size_bytes": 128,
+      "compressed_bytes": 122,
+      "sha256": "0943f32e2fa79051bd46dd8dd3a8fb8ca9b4f2c588ad5a0f45251ea54a3bf043",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/.gitignore",
+      "relative_path": ".gitignore",
+      "classification": "repository_support",
+      "size_bytes": 46,
+      "compressed_bytes": 41,
+      "sha256": "1f2bc61f4a04b87fd1042157cc2c37abf5406cf95fa1a9b68387572c8a4eb98b",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/AGENTS.md",
+      "relative_path": "AGENTS.md",
+      "classification": "governance_context",
+      "size_bytes": 1562,
+      "compressed_bytes": 835,
+      "sha256": "57613239e4e2bc0adaebf091cc8442bbf5bd3476e7090f9b25397db5962a3025",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/Dockerfile",
+      "relative_path": "Dockerfile",
+      "classification": "repository_support",
+      "size_bytes": 238,
+      "compressed_bytes": 185,
+      "sha256": "75c8be01371c848329871b6214eb7a846ff9124bae308dfd2f1cafda26dd9812",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/LICENSE-SYNTHETIC-TRAINING.txt",
+      "relative_path": "LICENSE-SYNTHETIC-TRAINING.txt",
+      "classification": "repository_support",
+      "size_bytes": 122,
+      "compressed_bytes": 95,
+      "sha256": "b1ebbbebf0a435f5f88a4fd8b68c664c03a20c3ff2493f2731eea5686bc1b7c6",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/Makefile",
+      "relative_path": "Makefile",
+      "classification": "repository_support",
+      "size_bytes": 300,
+      "compressed_bytes": 177,
+      "sha256": "43f3148bb222ee9798fd45c80d2a63edf95887bfaaa2f00512dbabb1df1538fe",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/README.md",
+      "relative_path": "README.md",
+      "classification": "governance_context",
+      "size_bytes": 4737,
+      "compressed_bytes": 2340,
+      "sha256": "24269986420d446905b5cf216eb1bef6b125979475d085da770d36977992e00f",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/VERIFICATION.md",
+      "relative_path": "VERIFICATION.md",
+      "classification": "governance_context",
+      "size_bytes": 1307,
+      "compressed_bytes": 719,
+      "sha256": "22adb1766f58bbd5a9efb314a61e5a26fadff82267c4fa53dd510a335a703bb6",
+      "listed_in_internal_manifest": false,
+      "internal_manifest_match": null
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/checksums.sha256",
+      "relative_path": "checksums.sha256",
+      "classification": "repository_support",
+      "size_bytes": 12433,
+      "compressed_bytes": 6340,
+      "sha256": "774654a959ec0bd828abb3ee7fab62e89f65c0d0f882badb6ad93ee3bf0c8375",
+      "listed_in_internal_manifest": false,
+      "internal_manifest_match": null
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/contracts/api_v1.yaml",
+      "relative_path": "contracts/api_v1.yaml",
+      "classification": "interface_evidence",
+      "size_bytes": 265,
+      "compressed_bytes": 175,
+      "sha256": "65e5568d037f0b05a770875f8a8a0c4a2f0306db4be6b17f3e2ec48d4116ef97",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/contracts/api_v2.yaml",
+      "relative_path": "contracts/api_v2.yaml",
+      "classification": "interface_evidence",
+      "size_bytes": 268,
+      "compressed_bytes": 176,
+      "sha256": "d26d140f7035bf6a20c7b58b25ca121b2d0c4e6cb1a1c86b28b07e6f595dec83",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/contracts/api_v3.yaml",
+      "relative_path": "contracts/api_v3.yaml",
+      "classification": "interface_evidence",
+      "size_bytes": 282,
+      "compressed_bytes": 182,
+      "sha256": "ba0d4490b20df550a032f3301c670a335b6686c7fd62b16fc173b04bd790c050",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/cgt_legacy.db",
+      "relative_path": "data/cgt_legacy.db",
+      "classification": "structured_evidence",
+      "size_bytes": 2392064,
+      "compressed_bytes": 450936,
+      "sha256": "ac41411ebbb2bf824df90137f053fe45b3cc5facf13e3555798c173d7e62554a",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/manifest.json",
+      "relative_path": "data/manifest.json",
+      "classification": "structured_evidence",
+      "size_bytes": 736,
+      "compressed_bytes": 397,
+      "sha256": "9a3a22308e4233860f774d67857b8b857a6a6ee50e8094130bf671f042fb1a82",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/batches.csv",
+      "relative_path": "data/raw/batches.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 103514,
+      "compressed_bytes": 18055,
+      "sha256": "3d9d6b034483c51a58f5b10009f0e0b3a7482e0c4220c36af678920218a637aa",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/clinical_patient_export.csv",
+      "relative_path": "data/raw/clinical_patient_export.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 72679,
+      "compressed_bytes": 17020,
+      "sha256": "be52fdfdd65b5041bacadc44780c3db584f8bd11c45b54112fbfd52db847a7bf",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/collections.csv",
+      "relative_path": "data/raw/collections.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 83707,
+      "compressed_bytes": 21146,
+      "sha256": "b7d76c6640b527db60c0521cf17d7ef282f0a188d472fe83b099456bad8ba4bc",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/consents.csv",
+      "relative_path": "data/raw/consents.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 39709,
+      "compressed_bytes": 6374,
+      "sha256": "b08eaf0777ba0646ac41c758b330a7b29ebdccbb6ba9443cc53c154cfed07d4a",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/crm_patient_export.csv",
+      "relative_path": "data/raw/crm_patient_export.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 101535,
+      "compressed_bytes": 22858,
+      "sha256": "d2ee95d5a5dfd28aa8eb8cada4397205e87dbd0c88c299715ef249d082da072f",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/cryogenic_telemetry.csv",
+      "relative_path": "data/raw/cryogenic_telemetry.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 988792,
+      "compressed_bytes": 97868,
+      "sha256": "c2a2468ec29637ad30fbbb026fb9d440cad312efe5e20c5cb39a9659add6e863",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/deviations.csv",
+      "relative_path": "data/raw/deviations.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 18168,
+      "compressed_bytes": 3388,
+      "sha256": "625f11f0f13bdfd54ab5c9240e179d7ce697b11959651c351bf01fa4a4884506",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/events.jsonl",
+      "relative_path": "data/raw/events.jsonl",
+      "classification": "structured_evidence",
+      "size_bytes": 1561820,
+      "compressed_bytes": 146813,
+      "sha256": "9a313e7adb6a1ad246edfc0535b40336bee86262704e04489a6bdc25154124a7",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/insurance_authorizations.csv",
+      "relative_path": "data/raw/insurance_authorizations.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 49158,
+      "compressed_bytes": 8626,
+      "sha256": "69a5aec8aa344313679a6c3e9a86bbac1fa53322f8029547b3631650f27664d8",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/manufacturing_slots.csv",
+      "relative_path": "data/raw/manufacturing_slots.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 55931,
+      "compressed_bytes": 8206,
+      "sha256": "4e27bbada77ef105a6ab594cde6a11db78b09fcfc37679e5e8a1b87b0dc12c1e",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/patients.csv",
+      "relative_path": "data/raw/patients.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 98322,
+      "compressed_bytes": 22762,
+      "sha256": "2f4410dfb0de49b6230e20150a0c23c024a7885d7c1051dcf7a91024346837ca",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/qc_results.csv",
+      "relative_path": "data/raw/qc_results.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 452458,
+      "compressed_bytes": 56171,
+      "sha256": "eee637b290f8b8996572254c7894808fd4eb285a2d156cfeb6eae6013ee8d41b",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/shipments.csv",
+      "relative_path": "data/raw/shipments.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 218023,
+      "compressed_bytes": 33452,
+      "sha256": "10f55c21f2439ff5148ff7fe3a296d666ccde4f80985c00e32900c8b2b96c2af",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/raw/site_qualifications.csv",
+      "relative_path": "data/raw/site_qualifications.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 1470,
+      "compressed_bytes": 322,
+      "sha256": "7d29d77cda1a63bfa304f977b2fe36681ac557c6dbc13fdfe7c43772bd485eec",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/reference/baseline_kpis.csv",
+      "relative_path": "data/reference/baseline_kpis.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 670,
+      "compressed_bytes": 295,
+      "sha256": "094dbe0724daf1b8a97f98bbd9128309f097f2a2ac8c76e90bd457bae7e50f2f",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/reference/couriers.csv",
+      "relative_path": "data/reference/couriers.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 234,
+      "compressed_bytes": 170,
+      "sha256": "b431172977053d9295dda233272b74c4f4c7f5008e6c9ad495e4ba840e6cae85",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/reference/manufacturing_sites.csv",
+      "relative_path": "data/reference/manufacturing_sites.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 478,
+      "compressed_bytes": 263,
+      "sha256": "ac1df81c8738377ae958983a3ee08c94b63a48ca3bd77dea3c6dfbe24828a63f",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/reference/products.csv",
+      "relative_path": "data/reference/products.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 281,
+      "compressed_bytes": 177,
+      "sha256": "a981a45dd60605633fff4daeb7759450bc9d9b1f57883052017d914ffb936758",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/data/reference/treatment_centers.csv",
+      "relative_path": "data/reference/treatment_centers.csv",
+      "classification": "structured_evidence",
+      "size_bytes": 1990,
+      "compressed_bytes": 771,
+      "sha256": "a0f9e5893453687152133821a618817f38f431691e825659f4ef28ad69965ba3",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/docs/01_problem_context.md",
+      "relative_path": "docs/01_problem_context.md",
+      "classification": "documentation_or_rule_evidence",
+      "size_bytes": 1097,
+      "compressed_bytes": 601,
+      "sha256": "03ed66fa15df3bcb6bc7b248a17051940762134204cd5f2838048923565a6170",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/docs/02_imperfection_layers.md",
+      "relative_path": "docs/02_imperfection_layers.md",
+      "classification": "documentation_or_rule_evidence",
+      "size_bytes": 1990,
+      "compressed_bytes": 1030,
+      "sha256": "3b9a4d9e058734180f4830396114be65d46c65961d8afc48f91ee51d626e6e2d",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/docs/03_architecture_current_state.md",
+      "relative_path": "docs/03_architecture_current_state.md",
+      "classification": "documentation_or_rule_evidence",
+      "size_bytes": 580,
+      "compressed_bytes": 369,
+      "sha256": "230ac544dcd49a5ecc4daaea863876eeca24f70ccac70404a6e08c8bc06ecb54",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/docs/04_target_capabilities_not_prescribed_solutions.md",
+      "relative_path": "docs/04_target_capabilities_not_prescribed_solutions.md",
+      "classification": "documentation_or_rule_evidence",
+      "size_bytes": 672,
+      "compressed_bytes": 401,
+      "sha256": "b7dee922cad61c65acc08122ec9d490740252f2ec95a7ba38f9e1a9a156086e5",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/docs/05_data_map.md",
+      "relative_path": "docs/05_data_map.md",
+      "classification": "documentation_or_rule_evidence",
+      "size_bytes": 1041,
+      "compressed_bytes": 582,
+      "sha256": "68e319a29cb5bb991fdfcceb3c76f3514870c5d5a8c55882a2c9cdaacbecb4e2",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/docs/06_security_privacy_assurance.md",
+      "relative_path": "docs/06_security_privacy_assurance.md",
+      "classification": "documentation_or_rule_evidence",
+      "size_bytes": 559,
+      "compressed_bytes": 326,
+      "sha256": "003a9e1b228f127407d681164143cf31d8dbda402d3a48c54b9d0d2d03364709",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/docs/07_v2_audit_and_changelog.md",
+      "relative_path": "docs/07_v2_audit_and_changelog.md",
+      "classification": "documentation_or_rule_evidence",
+      "size_bytes": 1548,
+      "compressed_bytes": 831,
+      "sha256": "bc4375ec34508cb8b9ba3a530dc8cde25e1871d883264f27c40b94dfc43054b7",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/docs/sops/SOP-LOG-007-v6.md",
+      "relative_path": "docs/sops/SOP-LOG-007-v6.md",
+      "classification": "documentation_or_rule_evidence",
+      "size_bytes": 164,
+      "compressed_bytes": 144,
+      "sha256": "509f4d483b32f06f4f01227f9bc06511093cf97f0b382b9c537dc1621a27e41f",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/docs/sops/SOP-LOG-007-v7.md",
+      "relative_path": "docs/sops/SOP-LOG-007-v7.md",
+      "classification": "documentation_or_rule_evidence",
+      "size_bytes": 328,
+      "compressed_bytes": 235,
+      "sha256": "2570d475684eb81f6b8d0c7ca23a25463daa8c869b0eafd8f8f1bd7f6656d7d9",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/docs/sops/SOP-QA-014-v4.md",
+      "relative_path": "docs/sops/SOP-QA-014-v4.md",
+      "classification": "documentation_or_rule_evidence",
+      "size_bytes": 227,
+      "compressed_bytes": 175,
+      "sha256": "3529a55b638bd12048fc83b48e2312362b082f1a4be6aeca752c612da62d5673",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/docs/sops/SOP-SCHED-003-v2.md",
+      "relative_path": "docs/sops/SOP-SCHED-003-v2.md",
+      "classification": "documentation_or_rule_evidence",
+      "size_bytes": 254,
+      "compressed_bytes": 189,
+      "sha256": "551befb6d1e292dc04836cfdb9c8bd48b0419b4d057f172dde9786979ae91be7",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/evals/README.md",
+      "relative_path": "evals/README.md",
+      "classification": "evaluation_evidence",
+      "size_bytes": 382,
+      "compressed_bytes": 231,
+      "sha256": "11bbf5bf9496ec6551480fbf436f01fc0ea53d214f67379643264389a15e321c",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/evals/cases.csv",
+      "relative_path": "evals/cases.csv",
+      "classification": "evaluation_evidence",
+      "size_bytes": 791,
+      "compressed_bytes": 470,
+      "sha256": "947678613b337ca0d213c5bdfbcd66f5566267261602bead48d43b1aacfeb7e3",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/participant/CHALLENGE_BRIEF.md",
+      "relative_path": "participant/CHALLENGE_BRIEF.md",
+      "classification": "challenge_requirement",
+      "size_bytes": 1005,
+      "compressed_bytes": 610,
+      "sha256": "d44a2c04fb704eda74e9ba924f36d3028a8acedb4ee6b0f4b890991c58915508",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/participant/DISCOVERY_CHECKLIST.md",
+      "relative_path": "participant/DISCOVERY_CHECKLIST.md",
+      "classification": "challenge_requirement",
+      "size_bytes": 866,
+      "compressed_bytes": 483,
+      "sha256": "72f3b112e628db1727d0b444471c74cbae784d7af651ff69e96f9512f9b65f58",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/pyproject.toml",
+      "relative_path": "pyproject.toml",
+      "classification": "repository_support",
+      "size_bytes": 549,
+      "compressed_bytes": 330,
+      "sha256": "752cdce8b6c9eae090375b36ae1bf511a11175684b2050bf1ab27caaf2a28036",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/requirements.txt",
+      "relative_path": "requirements.txt",
+      "classification": "repository_support",
+      "size_bytes": 48,
+      "compressed_bytes": 45,
+      "sha256": "f421875ccdd1bbc80cb9c50d941cb0e4e9b8f8ba9d6e57753824ac035c084306",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/scenarios/README.md",
+      "relative_path": "scenarios/README.md",
+      "classification": "failure_scenario_evidence",
+      "size_bytes": 187,
+      "compressed_bytes": 134,
+      "sha256": "afc12c8196804c4a0c9e04a3c916c6f2642b04681c0e56c5ddffd06646e0d778",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/scenarios/inject_catalog.csv",
+      "relative_path": "scenarios/inject_catalog.csv",
+      "classification": "failure_scenario_evidence",
+      "size_bytes": 952,
+      "compressed_bytes": 540,
+      "sha256": "174e1a185aa60222f7c56cfcb93eca2946cfa55fbff34443da97fc858ff40427",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/scripts/generate_synthetic_data.py",
+      "relative_path": "scripts/generate_synthetic_data.py",
+      "classification": "executable_evidence",
+      "size_bytes": 878,
+      "compressed_bytes": 493,
+      "sha256": "7c295bf5cf2338aed59d0dc92ca69ab6213bee7d86981a96178306070f424479",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/scripts/regenerate_v1.py",
+      "relative_path": "scripts/regenerate_v1.py",
+      "classification": "executable_evidence",
+      "size_bytes": 410,
+      "compressed_bytes": 277,
+      "sha256": "6e7fdd475f4daa2d920c49dc8214d7b19451fdec69f8dbe54291cf7738a0ab65",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/scripts/repo_summary.py",
+      "relative_path": "scripts/repo_summary.py",
+      "classification": "executable_evidence",
+      "size_bytes": 413,
+      "compressed_bytes": 265,
+      "sha256": "3fdf8a8f00e1ff7586325b2861955c36b26f01a4c2c84652e9124bb505bc22b2",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/scripts/verify_repo.py",
+      "relative_path": "scripts/verify_repo.py",
+      "classification": "executable_evidence",
+      "size_bytes": 2126,
+      "compressed_bytes": 922,
+      "sha256": "b590edcd10ab58876fee9948c01bc245c2cf6fe0e289507a914a620a4e1ea6ec",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/CourierEscalations.csv",
+      "relative_path": "shadow_ops/CourierEscalations.csv",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 1014,
+      "compressed_bytes": 269,
+      "sha256": "bfff55ca446f157eeecaae0af0dafc6dca19171ca5098db7ac81993a3f6b8168",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/ManufacturingSlots_FINAL_v7.csv",
+      "relative_path": "shadow_ops/ManufacturingSlots_FINAL_v7.csv",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 57056,
+      "compressed_bytes": 8297,
+      "sha256": "4b5de8dbc8e5821fa6c46d22e290085a5e5b2415a8005c317d0a116e0c20ed67",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/PatientPriority_MASTER.csv",
+      "relative_path": "shadow_ops/PatientPriority_MASTER.csv",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 18865,
+      "compressed_bytes": 2482,
+      "sha256": "cfef100a13148a01f34878d6cfc663b60b1abcd4f332df0c971c5cff84cddc4a",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_001.eml",
+      "relative_path": "shadow_ops/emails/email_001.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 229,
+      "compressed_bytes": 177,
+      "sha256": "a2bac024cbcddc42359fd4b83d2016153ef13a982977d790e667d74642b54666",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_002.eml",
+      "relative_path": "shadow_ops/emails/email_002.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 175,
+      "sha256": "68c0ad8b1669334d16c3607ae4e49789938874276ee2babae9c7c49cbd6cfaaf",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_003.eml",
+      "relative_path": "shadow_ops/emails/email_003.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 232,
+      "compressed_bytes": 179,
+      "sha256": "68903ec1217003a866b3aeb742714759792efcd29d74c15b40bce58e01a12894",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_004.eml",
+      "relative_path": "shadow_ops/emails/email_004.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 172,
+      "sha256": "622fab8523ed679f92a8b3b63afa785bfa2b67c02987457ef4ead01bec262a47",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_005.eml",
+      "relative_path": "shadow_ops/emails/email_005.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 171,
+      "sha256": "249700f639118cbd78c06646bf95fa49f2df4adbd0d673f7d53947f2a31150ac",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_006.eml",
+      "relative_path": "shadow_ops/emails/email_006.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 229,
+      "compressed_bytes": 175,
+      "sha256": "6d6da3b5c18de7aa91bf54c74d28ff84f781bccd81e62f5785263a0e19a3b8f0",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_007.eml",
+      "relative_path": "shadow_ops/emails/email_007.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 172,
+      "sha256": "4d1545c56e2f3a5dd5ad703d58a6e187d9afbb70d7c381eaf96adec3ef4f1b85",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_008.eml",
+      "relative_path": "shadow_ops/emails/email_008.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 232,
+      "compressed_bytes": 178,
+      "sha256": "338e14d6f9472cace5a9d008c761b00bfb2e40146eae771580a3a8ab6b548107",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_009.eml",
+      "relative_path": "shadow_ops/emails/email_009.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 172,
+      "sha256": "74a86401534e6c98fba0ba56f8632891c09cf25030ba33beb7ec163f6812e2c9",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_010.eml",
+      "relative_path": "shadow_ops/emails/email_010.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 229,
+      "compressed_bytes": 175,
+      "sha256": "78659ee799607717b74ab83ef8be79c837ad645fa5f773b40ed2ff98ee6d7d70",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_011.eml",
+      "relative_path": "shadow_ops/emails/email_011.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 232,
+      "compressed_bytes": 177,
+      "sha256": "01185f7593dbbe2dfd096d149c25d9ea8fb613142d14718d5a51a69baec36750",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_012.eml",
+      "relative_path": "shadow_ops/emails/email_012.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 172,
+      "sha256": "099d6b150c9ec0cb1332553778f1ce83992c8d98aef4033c9d0b62939136b936",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_013.eml",
+      "relative_path": "shadow_ops/emails/email_013.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 229,
+      "compressed_bytes": 176,
+      "sha256": "f7491fcb1e9f1675be5ce07d5a9808ccd3cc0a3a387130bde3d0d05cbc4aa87b",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_014.eml",
+      "relative_path": "shadow_ops/emails/email_014.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 174,
+      "sha256": "5564af433e7b8d62943586426da76dae049520017b5b0bccb10e2a6a83b54f15",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_015.eml",
+      "relative_path": "shadow_ops/emails/email_015.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 229,
+      "compressed_bytes": 175,
+      "sha256": "430b80ff5ad8d13d374c4d38ea2103f9a5333d2ad6c07036606f946b4f2311bf",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_016.eml",
+      "relative_path": "shadow_ops/emails/email_016.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 176,
+      "sha256": "eab07bef6294648d5cf851530e95c0a35cfbd0b66cca712ca8fb1c5d5b21a92c",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_017.eml",
+      "relative_path": "shadow_ops/emails/email_017.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 229,
+      "compressed_bytes": 176,
+      "sha256": "ee4af69594e43a411ae38abdaf25f7e90ee8fd431e22fbd83caf1cf26331a47d",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_018.eml",
+      "relative_path": "shadow_ops/emails/email_018.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 172,
+      "sha256": "5272e93f324689c38d504f663b4a7e78e1d6849079f7f525704beb4c16d52296",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_019.eml",
+      "relative_path": "shadow_ops/emails/email_019.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 232,
+      "compressed_bytes": 178,
+      "sha256": "4799ed1fe165df957eedc5d9a8561974f35273f1a1c020a66c8ea541637eadb7",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_020.eml",
+      "relative_path": "shadow_ops/emails/email_020.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 198,
+      "compressed_bytes": 160,
+      "sha256": "07c61092fc449b7851a47ebd6b5be73d427bae4e8056c38d59b3c6d43a377389",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_021.eml",
+      "relative_path": "shadow_ops/emails/email_021.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 174,
+      "sha256": "8793ec1e140d1fd5b64a988ecf45317a9dba052f55301523f3f25094a07d12d4",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_022.eml",
+      "relative_path": "shadow_ops/emails/email_022.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 229,
+      "compressed_bytes": 176,
+      "sha256": "d85835efea22a64a8caab8a7dcd2e9238d0bd7f743b52d559ca7819474d038b2",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_023.eml",
+      "relative_path": "shadow_ops/emails/email_023.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 172,
+      "sha256": "1b137eaaf17921ecaf3d26c72017f933babf30544bc304cc05a7e30d69ab0113",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_024.eml",
+      "relative_path": "shadow_ops/emails/email_024.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 197,
+      "compressed_bytes": 157,
+      "sha256": "c00317de4bfa8ea442a6bd79d34311d0f3e14a1fc7b70dcc63e1e29fca157dd9",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_025.eml",
+      "relative_path": "shadow_ops/emails/email_025.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 198,
+      "compressed_bytes": 160,
+      "sha256": "f7f5a1defbd1acb65b262527e2798bb0e9db5eeacf707ec56662cecd56ce18a7",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_026.eml",
+      "relative_path": "shadow_ops/emails/email_026.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 229,
+      "compressed_bytes": 176,
+      "sha256": "9ee60576874ec3a66e8cfef59af73d9c92f88fac243b6ce747dfa073511649cb",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_027.eml",
+      "relative_path": "shadow_ops/emails/email_027.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 176,
+      "sha256": "26f621550801af2733391b86ecb8dfca84d778b8bb6ad0212e9b413adebe213e",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_028.eml",
+      "relative_path": "shadow_ops/emails/email_028.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 171,
+      "sha256": "4a3c3e7478f1cfae4e3a617dd58faad00065c0298c12819e126f564afaf1b74a",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_029.eml",
+      "relative_path": "shadow_ops/emails/email_029.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 172,
+      "sha256": "0319d36d9d99d650f8324e636dfea5372da2ae6a30da8cb23a40cb727aeab295",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_030.eml",
+      "relative_path": "shadow_ops/emails/email_030.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 229,
+      "compressed_bytes": 175,
+      "sha256": "8ab7f8d817af5835556bfc1a2b33fda54667422d6bb3533c0461b0e7ed0435f6",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_031.eml",
+      "relative_path": "shadow_ops/emails/email_031.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 198,
+      "compressed_bytes": 160,
+      "sha256": "fd3077889f6b7b6c97f7002d0511ab8faa078284f85706cc27c5052fcd096db4",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_032.eml",
+      "relative_path": "shadow_ops/emails/email_032.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 175,
+      "sha256": "b77c2581a49e87be141e32a8de5e7f2b944676ef5aa61730ee3031170948e54c",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_033.eml",
+      "relative_path": "shadow_ops/emails/email_033.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 198,
+      "compressed_bytes": 161,
+      "sha256": "468b92ba7aab84671033e9fe9f39cd5aa837d243da85b782389122123cf608dd",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_034.eml",
+      "relative_path": "shadow_ops/emails/email_034.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 173,
+      "sha256": "63f4670b1256fb0f542fbec0442585d62acfc16e924cc29f0597bb3598eff8b7",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_035.eml",
+      "relative_path": "shadow_ops/emails/email_035.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 232,
+      "compressed_bytes": 179,
+      "sha256": "5cfeb674ba09f213492f8ce9dd06761df39f7269da2d0f6f9a1a2624503ad956",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_036.eml",
+      "relative_path": "shadow_ops/emails/email_036.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 198,
+      "compressed_bytes": 161,
+      "sha256": "811cb00a1563309e9ef3f3b150a117617b22bdbeac8f80967becb5d895efee1d",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_037.eml",
+      "relative_path": "shadow_ops/emails/email_037.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 177,
+      "sha256": "3075cc01f32a2b6b9afc42557a10a03ae8c46b6c07bdd9452fbe1f15afcaa26b",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_038.eml",
+      "relative_path": "shadow_ops/emails/email_038.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 173,
+      "sha256": "76368df7f5daa8d47833e2ee0d379cbc1c98ac4a31d896852618823d19fdbebf",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_039.eml",
+      "relative_path": "shadow_ops/emails/email_039.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 175,
+      "sha256": "760a000248d7da9a064d1222c34e758f84233856341479cb08da9d5d5ed1bdad",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_040.eml",
+      "relative_path": "shadow_ops/emails/email_040.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 232,
+      "compressed_bytes": 178,
+      "sha256": "14b0d6aa1a817f197bc91781649a4907dcc7dfe0697e526ebfb1d5beb3d18a3b",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_041.eml",
+      "relative_path": "shadow_ops/emails/email_041.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 229,
+      "compressed_bytes": 177,
+      "sha256": "4bb535455e33b54dbaf4adec81458db1f0704b618c9624fce2bf7ebcec64aab5",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_042.eml",
+      "relative_path": "shadow_ops/emails/email_042.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 198,
+      "compressed_bytes": 160,
+      "sha256": "dbcc8aadb1db833b6557d29f52df9d14e234d46b15c3471c40da9ad3d2f7c6a6",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_043.eml",
+      "relative_path": "shadow_ops/emails/email_043.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 173,
+      "sha256": "887910b0892b92c1aae56936e13901067723cb51f4b06e6cee0c50aed313390a",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_044.eml",
+      "relative_path": "shadow_ops/emails/email_044.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 198,
+      "compressed_bytes": 159,
+      "sha256": "a9b5c92b38fe3965059ab40266a03b07259147f54fdc0a871ff60a50487cf2ff",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_045.eml",
+      "relative_path": "shadow_ops/emails/email_045.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 176,
+      "sha256": "14cc42be7f1376cbecf9326a8a10f4685826c611e55976c223a20db5dc3296ba",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_046.eml",
+      "relative_path": "shadow_ops/emails/email_046.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 198,
+      "compressed_bytes": 161,
+      "sha256": "df24e0b764d372530c6f2ca85b2ea9b27f98ec1c8702eeb57252748fef69cfda",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_047.eml",
+      "relative_path": "shadow_ops/emails/email_047.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 176,
+      "sha256": "abf5ccabbe3230f4dd2d4727dfcd722e375cb68b7650c2e7fd3bebe04660ea9e",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_048.eml",
+      "relative_path": "shadow_ops/emails/email_048.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 229,
+      "compressed_bytes": 175,
+      "sha256": "a11ac97bfddcae18d5001fbb5cf6ed2cf60e8fcfe85ae7f7b0b9e60a2af0f2dd",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_049.eml",
+      "relative_path": "shadow_ops/emails/email_049.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 171,
+      "sha256": "06b9eaaac460a3bf26eb9c2eeb087111d944be2fc28e4bbbcc68ed45d4cc9e0d",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_050.eml",
+      "relative_path": "shadow_ops/emails/email_050.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 198,
+      "compressed_bytes": 158,
+      "sha256": "1c5c6cd2d4cd684b93077093f6dc3e1a6dc217b272d838af59850be914dfc188",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_051.eml",
+      "relative_path": "shadow_ops/emails/email_051.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 229,
+      "compressed_bytes": 176,
+      "sha256": "7cbccee9b0f491fe82e3fb961669d1ce0170dad636afca189ff805e97562327d",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_052.eml",
+      "relative_path": "shadow_ops/emails/email_052.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 172,
+      "sha256": "a681f38bfc34abaa04eb077dfbc15aa863c7a12c57f9cb9cc9515e68631b86bd",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_053.eml",
+      "relative_path": "shadow_ops/emails/email_053.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 176,
+      "sha256": "0104f72524a60efd298ab9e985c983ad2a440649ea5941981c05b446258a5a10",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_054.eml",
+      "relative_path": "shadow_ops/emails/email_054.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 173,
+      "sha256": "d2f28c9945394aa3acfbf2adf5994eaf2c4542813894519e3aa74828e1e50d8d",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_055.eml",
+      "relative_path": "shadow_ops/emails/email_055.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 174,
+      "sha256": "698e9e91931470c64f04d40c38d1d3e699989825afa7d8e152a9928153ce5466",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_056.eml",
+      "relative_path": "shadow_ops/emails/email_056.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 224,
+      "compressed_bytes": 172,
+      "sha256": "94ca94ebb5a5cc156620b03a70210aaea059ad6aa1e274f08d01e091120ba31a",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_057.eml",
+      "relative_path": "shadow_ops/emails/email_057.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 232,
+      "compressed_bytes": 178,
+      "sha256": "0c2c2428069187ed35284ec2c3777a4d0d0cbf20af2d563b02a0075e68395bb0",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_058.eml",
+      "relative_path": "shadow_ops/emails/email_058.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 176,
+      "sha256": "267fd529a4227dc2c9d7db07dd6e9f003f2abbbf9aeee8b4db76ac79b9d6098d",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_059.eml",
+      "relative_path": "shadow_ops/emails/email_059.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 177,
+      "sha256": "0dc5f96d16c1fa77a8382242672972ebad7089471abe2b1cb1fdd0338485b89b",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/shadow_ops/emails/email_060.eml",
+      "relative_path": "shadow_ops/emails/email_060.eml",
+      "classification": "shadow_operations_evidence",
+      "size_bytes": 228,
+      "compressed_bytes": 177,
+      "sha256": "a62bb927802f4f60ca493892d45883ba91c3dd67915a522f4eacf9839d8a83f0",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/src/cgt_orchestrator/__init__.py",
+      "relative_path": "src/cgt_orchestrator/__init__.py",
+      "classification": "executable_evidence",
+      "size_bytes": 22,
+      "compressed_bytes": 24,
+      "sha256": "27e8febb48ada44153ea2add9969a2c50a9831a74d9755fdd53c549a888b1cc2",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/src/cgt_orchestrator/api.py",
+      "relative_path": "src/cgt_orchestrator/api.py",
+      "classification": "executable_evidence",
+      "size_bytes": 1164,
+      "compressed_bytes": 510,
+      "sha256": "d31125cb617da345c07be5ec42f51a09a7e2710fa0ac7655cc6def435e2bacc5",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/src/cgt_orchestrator/cli.py",
+      "relative_path": "src/cgt_orchestrator/cli.py",
+      "classification": "executable_evidence",
+      "size_bytes": 406,
+      "compressed_bytes": 232,
+      "sha256": "ce168f615610caae3a9320362e2af4a92c94d70db7bd2b8112e826aa06c01c5e",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/src/cgt_orchestrator/diagnostics.py",
+      "relative_path": "src/cgt_orchestrator/diagnostics.py",
+      "classification": "executable_evidence",
+      "size_bytes": 1622,
+      "compressed_bytes": 621,
+      "sha256": "540cb0f41bb08d3b9da160b311e9d496d73102040b052d9fcf616e75d1ec9e66",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/src/cgt_orchestrator/legacy/slot_service.py",
+      "relative_path": "src/cgt_orchestrator/legacy/slot_service.py",
+      "classification": "executable_evidence",
+      "size_bytes": 491,
+      "compressed_bytes": 259,
+      "sha256": "d66825b5188ba5ea4975a2252127a2aab4f2576f3ace0d0828bf481c194e12d4",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/src/cgt_orchestrator/legacy/status_rules.py",
+      "relative_path": "src/cgt_orchestrator/legacy/status_rules.py",
+      "classification": "executable_evidence",
+      "size_bytes": 949,
+      "compressed_bytes": 519,
+      "sha256": "99c6bb2f8702c7d7faa6b8b29971ea64d493e1fd264c096a553004c7d50487d4",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/src/cgt_orchestrator/paths.py",
+      "relative_path": "src/cgt_orchestrator/paths.py",
+      "classification": "executable_evidence",
+      "size_bytes": 172,
+      "compressed_bytes": 123,
+      "sha256": "b9018f91247b1848542f42bd76daef61a1c9cdbc97c43a0bc416105489a1f73a",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/src/cgt_orchestrator/repository.py",
+      "relative_path": "src/cgt_orchestrator/repository.py",
+      "classification": "executable_evidence",
+      "size_bytes": 1432,
+      "compressed_bytes": 475,
+      "sha256": "e4d2e5e093c79ac9f86a45235eca14425477b418f254e7d598cd8adcf96ac6a3",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/tests/test_diagnostics.py",
+      "relative_path": "tests/test_diagnostics.py",
+      "classification": "executable_evidence",
+      "size_bytes": 259,
+      "compressed_bytes": 153,
+      "sha256": "3b2fb8eea5da679a4550f89e6b3b52afdccc826818850cc13ce697da80893d5f",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/tests/test_legacy_expected_failures.py",
+      "relative_path": "tests/test_legacy_expected_failures.py",
+      "classification": "executable_evidence",
+      "size_bytes": 939,
+      "compressed_bytes": 456,
+      "sha256": "1489ea0162cb2d4e8725c15cba3402ede7feae843e340695fcb72efc10df4fd6",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/tests/test_repository.py",
+      "relative_path": "tests/test_repository.py",
+      "classification": "executable_evidence",
+      "size_bytes": 293,
+      "compressed_bytes": 169,
+      "sha256": "bce7bbfb209875505553d76264873991cdc6d8698142ce715769f361e814edff",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    },
+    {
+      "entry_path": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/tools/v1_dataset_builder.py",
+      "relative_path": "tools/v1_dataset_builder.py",
+      "classification": "executable_evidence",
+      "size_bytes": 575,
+      "compressed_bytes": 360,
+      "sha256": "b5aac5fc71c51335f4cfcb6076eefc0a6d3addf98a689ead282ecf65661c9fd4",
+      "listed_in_internal_manifest": true,
+      "internal_manifest_match": true
+    }
+  ]
+}

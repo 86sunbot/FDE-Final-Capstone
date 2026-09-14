@@ -1,0 +1,1 @@
+Synthetic training repository generated for educational and engineering simulation use. No real patient data is included.

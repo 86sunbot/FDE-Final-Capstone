@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fde-capstone:event-envelope:v1",
+  "title": "EventEnvelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "event_type", "schema_version", "aggregate_type", "aggregate_id", "sequence", "occurred_at", "recorded_at", "source_system", "evidence_refs", "correlation_id", "actor", "data_quality", "payload", "payload_digest", "classification", "trace_id"],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1},
+    "event_type": {"type": "string", "minLength": 1},
+    "schema_version": {"const": "1.0"},
+    "aggregate_type": {"type": "string", "minLength": 1},
+    "aggregate_id": {"type": "string", "minLength": 1},
+    "sequence": {"type": "integer", "minimum": 1},
+    "occurred_at": {"type": "string", "format": "date-time"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "source_system": {"type": "string", "minLength": 1},
+    "source_record_id": {"type": "string"},
+    "evidence_refs": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true},
+    "correlation_id": {"type": "string", "minLength": 1},
+    "causation_id": {"type": "string"},
+    "actor": {"type": "string", "minLength": 1},
+    "authority": {"type": "string"},
+    "policy_versions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "data_quality": {"enum": ["VALID", "WARNING", "CONFLICT", "UNKNOWN"]},
+    "classification": {"enum": ["PUBLIC", "INTERNAL", "SYNTHETIC_SENSITIVE", "RESTRICTED"]},
+    "payload": {"type": "object"},
+    "payload_digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "trace_id": {"type": "string", "minLength": 1}
+  }
+}

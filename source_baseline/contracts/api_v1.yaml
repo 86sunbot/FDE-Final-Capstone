@@ -1,0 +1,11 @@
+openapi: 3.0.0
+info: {title: Legacy Patient API v1, version: '1.0'}
+paths:
+  /patient/{patientId}:
+    get:
+      parameters:
+      - in: path
+        name: patientId
+        required: true
+        schema: {type: string}
+      responses: {'200': {description: OK}}

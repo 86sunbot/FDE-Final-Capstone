@@ -1,0 +1,11 @@
+openapi: 3.0.0
+info: {title: Legacy Patient API v3, version: '3.0'}
+paths:
+  /subjects/{subjectIdentifier}:
+    get:
+      parameters:
+      - in: path
+        name: subjectIdentifier
+        required: true
+        schema: {type: string}
+      responses: {'200': {description: OK}}

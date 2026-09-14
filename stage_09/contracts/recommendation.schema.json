@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fde-capstone:recommendation:v1",
+  "title": "BoundedRecommendation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary", "evidence_refs", "uncertainty", "next_actions"],
+  "properties": {
+    "summary": {"type": "string", "minLength": 1},
+    "evidence_refs": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true},
+    "uncertainty": {"type": "array", "items": {"type": "string"}},
+    "next_actions": {"type": "array", "items": {"type": "string"}}
+  }
+}

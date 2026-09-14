@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "original_zip_sha256",
+      "status": "PASS",
+      "details": "74d31dc4694d52b0e9a9fb337e6ccda1086ad430b19287f9ca2b4b4e650ca979"
+    },
+    {
+      "check": "source_baseline_exact",
+      "status": "PASS",
+      "details": {
+        "expected": 132,
+        "actual": 132
+      }
+    },
+    {
+      "check": "all_21_stage_directories_have_artifacts",
+      "status": "PASS",
+      "details": {
+        "1": 7,
+        "2": 9,
+        "3": 7,
+        "4": 7,
+        "5": 8,
+        "6": 11,
+        "7": 10,
+        "8": 15,
+        "9": 6,
+        "10": 4,
+        "11": 2,
+        "12": 4,
+        "13": 5,
+        "14": 10,
+        "15": 8,
+        "16": 7,
+        "17": 4,
+        "18": 5,
+        "19": 4,
+        "20": 5,
+        "21": 5
+      }
+    },
+    {
+      "check": "automated_test_summary",
+      "status": "PASS",
+      "details": {
+        "scope": "clean capstone automated pytest suite",
+        "tests": 73,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 73,
+        "time_seconds": 0.298,
+        "junit_evidence": "reports/generated/pytest-results.xml"
+      }
+    },
+    {
+      "check": "evaluation_summary",
+      "status": "PASS",
+      "details": {
+        "catalog_cases": 57,
+        "executed": 57,
+        "pass": 55,
+        "fail": 0,
+        "inconclusive": 2,
+        "scope": "Synthetic internal structural evaluation; not independent, human-factor, live-model or production validation",
+        "catalog_digest": "706365b29d3be971ba7282fda6f7ad5821e217730d136226e5a0623b0d5594b8"
+      }
+    },
+    {
+      "check": "requirement_verification",
+      "status": "PASS",
+      "details": {
+        "total": 27,
+        "verified_internal_poc": 25,
+        "inconclusive_external_evidence_required": 2,
+        "production_verified": 0
+      }
+    },
+    {
+      "check": "performance",
+      "status": "PASS",
+      "details": "stage_15/performance_results.json"
+    },
+    {
+      "check": "recovery",
+      "status": "PASS",
+      "details": "stage_16/recovery_drill_results.json"
+    },
+    {
+      "check": "deployment_simulation",
+      "status": "PASS",
+      "details": "stage_17/deployment_simulation_results.json"
+    },
+    {
+      "check": "monitoring_simulation",
+      "status": "PASS",
+      "details": "stage_18/monitoring_simulation_results.json"
+    },
+    {
+      "check": "retirement_scan",
+      "status": "PASS",
+      "details": "stage_21/retirement_scan.json"
+    },
+    {
+      "check": "release_source_digest",
+      "status": "PASS",
+      "details": "ce6ddf2b3d1e88fe0e8387b20a5f68d16eb6735933bdb54ba997771fc08f711a"
+    },
+    {
+      "check": "release_evaluation_digest",
+      "status": "PASS",
+      "details": "40f0bf990619dc4076c56a9b9d6bcfa1527fba26490e3a2ced65a3ec275e2110"
+    },
+    {
+      "check": "release_requirements_digest",
+      "status": "PASS",
+      "details": "03cb3936cebc5d30aea77af367e15c1c0d72d0c5304d66d1098af87f45a72152"
+    },
+    {
+      "check": "no_disposable_runtime_database",
+      "status": "PASS",
+      "details": []
+    },
+    {
+      "check": "final_handoff_artifacts",
+      "status": "PASS",
+      "details": true
+    }
+  ]
+}

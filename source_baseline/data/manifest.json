@@ -1,0 +1,27 @@
+{
+  "repo_name": "AI_FDE_CGT_Patient_to_Batch_Orchestration_v1",
+  "version": "1.0.0",
+  "seed": 42001,
+  "synthetic_only": true,
+  "counts": {
+    "patients": 800,
+    "collections": 800,
+    "shipments": 1600,
+    "batches": 800,
+    "qc_results": 4800,
+    "deviations": 188,
+    "manufacturing_slots": 800,
+    "consents": 800,
+    "authorizations": 800,
+    "events": 6407,
+    "telemetry_points": 12800,
+    "treatment_centers": 24,
+    "manufacturing_sites": 6
+  },
+  "notes": [
+    "Runnability is preserved while contradictions are seeded across layers.",
+    "Some tests are expected failures documenting known legacy defects.",
+    "restricted_answer_key/ should be removed for release use."
+  ],
+  "repo_version": "2.0.0"
+}

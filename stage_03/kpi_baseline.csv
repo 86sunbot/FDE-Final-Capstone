@@ -1,0 +1,29 @@
+kpi_id,category,name,baseline,unit,target_direction,evidence_status,formula,source,caveat
+REF-001,supplied_business_baseline,median_vein_to_vein_days,21.8,days,DOWN,PROVIDED_NOT_REPRODUCED,Not supplied in challenge package,data/reference/baseline_kpis.csv,Synthetic reference baseline; Stage 6/19 must define or validate the calculation method before before/after use.
+REF-002,supplied_business_baseline,journeys_requiring_manual_reconciliation_pct,31.5,percent,DOWN,PROVIDED_NOT_REPRODUCED,Not supplied in challenge package,data/reference/baseline_kpis.csv,Synthetic reference baseline; Stage 6/19 must define or validate the calculation method before before/after use.
+REF-003,supplied_business_baseline,avoidable_delay_hours_per_100_journeys,186.0,hours,DOWN,PROVIDED_NOT_REPRODUCED,Not supplied in challenge package,data/reference/baseline_kpis.csv,Synthetic reference baseline; Stage 6/19 must define or validate the calculation method before before/after use.
+REF-004,supplied_business_baseline,on_time_infusion_probability_pct,78.0,percent,UP,PROVIDED_NOT_REPRODUCED,Not supplied in challenge package,data/reference/baseline_kpis.csv,Synthetic reference baseline; Stage 6/19 must define or validate the calculation method before before/after use.
+REF-005,supplied_business_baseline,identity_reconciliation_exceptions_per_1000,17.0,count_or_rate,DOWN,PROVIDED_NOT_REPRODUCED,Not supplied in challenge package,data/reference/baseline_kpis.csv,Synthetic reference baseline; Stage 6/19 must define or validate the calculation method before before/after use.
+REF-006,supplied_business_baseline,open_exception_mean_age_hours,29.4,hours,DOWN,PROVIDED_NOT_REPRODUCED,Not supplied in challenge package,data/reference/baseline_kpis.csv,Synthetic reference baseline; Stage 6/19 must define or validate the calculation method before before/after use.
+REF-007,supplied_business_baseline,slot_utilization_pct,71.0,percent,UP,PROVIDED_NOT_REPRODUCED,Not supplied in challenge package,data/reference/baseline_kpis.csv,Synthetic reference baseline; Stage 6/19 must define or validate the calculation method before before/after use.
+REF-008,supplied_business_baseline,qa_release_forecast_mae_hours,27.5,hours,DOWN,PROVIDED_NOT_REPRODUCED,Not supplied in challenge package,data/reference/baseline_kpis.csv,Synthetic reference baseline; Stage 6/19 must define or validate the calculation method before before/after use.
+REF-009,supplied_business_baseline,manual_status_updates_per_journey,12.7,count_or_rate,DOWN,PROVIDED_NOT_REPRODUCED,Not supplied in challenge package,data/reference/baseline_kpis.csv,Synthetic reference baseline; Stage 6/19 must define or validate the calculation method before before/after use.
+REF-010,supplied_business_baseline,cross_system_traceability_complete_pct,82.4,percent,UP,PROVIDED_NOT_REPRODUCED,Not supplied in challenge package,data/reference/baseline_kpis.csv,Synthetic reference baseline; Stage 6/19 must define or validate the calculation method before before/after use.
+SAFE-001,safety,legacy_ready_not_qms_released_pct,30.661,percent,DOWN,REPRODUCED,153 / 499 * 100,F-READY-003,"Measures defect exposure of the legacy heuristic, not observed patient harm."
+SAFE-002,safety,legacy_ready_invalid_consent_pct,6.012,percent,DOWN,REPRODUCED,30 / 499 * 100,F-READY-003,
+SAFE-003,safety,legacy_ready_authorization_not_approved_pct,41.082,percent,DOWN,REPRODUCED,205 / 499 * 100,F-READY-003,Authorization can be provisional for some early scheduling; milestone-specific policy is required.
+SAFE-004,safety,legacy_ready_site_control_gap_pct,29.058,percent,DOWN,REPRODUCED,145 / 499 * 100,F-READY-003,
+SAFE-005,safety,stored_infused_or_ready_without_qms_release_count,105,records,DOWN,REPRODUCED,INFUSED without QMS release + INFUSION_READY without QMS release,F-READY-004,Stored status contradiction; not proof that infusion actually occurred.
+ID-001,identity,duplicate_mrn_groups,2,groups,DOWN,REPRODUCED,COUNT(MRN groups with more than one patient_key),F-IDENT-001,
+ID-002,identity,cross_source_identity_field_disagreements,52,field_disagreements,DOWN,REPRODUCED,"Sum of duplicate-MRN groups and CRM/clinical DOB, center, MRN and name/alias differences",F-IDENT-001..005,One patient can contribute more than one disagreement.
+QUAL-001,quality,open_or_investigating_deviation_pct,71.809,percent,DOWN,REPRODUCED,135 / 188 * 100,F-QUALITY-001,Open status is not itself proof that a batch should be blocked.
+TRACE-001,traceability,unresolved_deviation_event_link_pct,100.0,percent,DOWN,REPRODUCED,188 / 188 * 100,F-QUALITY-002,
+TIME-001,temporal,impossible_shipment_timeline_pct,0.562,percent,DOWN,REPRODUCED,9 / 1600 * 100,F-TIME-001,
+TIME-002,temporal,maximum_event_recording_lag_hours,12.0,hours,OBSERVE,REPRODUCED,MAX(recorded_at - occurred_at),F-TIME-003,Lag is not automatically a defect; the projection must expose and handle it.
+ORCH-001,orchestration,scheduler_mes_slot_conflict_pct,1.125,percent,DOWN,REPRODUCED,9 / 800 * 100,F-INTEG-002,
+ORCH-002,orchestration,semantic_retry_duplicate_event_count,7,events,DOWN,REPRODUCED,"Excess MANUFACTURING_STARTED events grouped by patient,batch,type,occurred_at,payload_ref",F-INTEG-001,
+OPS-001,operations,formal_shadow_priority_disagreement_pct,65.375,percent,DOWN,REPRODUCED,523 / 800 * 100,F-SHADOW-001,
+OPS-002,operations,open_courier_escalation_pct,67.742,percent,DOWN,REPRODUCED,21 / 31 * 100,F-SHADOW-004,
+OPS-003,operations,unowned_courier_escalation_pct,25.806,percent,DOWN,REPRODUCED,8 / 31 * 100,F-SHADOW-004,
+LOG-001,logistics,arrival_present_while_not_delivered_pct,24.875,percent,DOWN,REPRODUCED,398 / 1600 * 100,F-LOG-001,
+DATA-001,data_quality,missing_or_warning_telemetry_point_pct,0.289,percent,DOWN,REPRODUCED,(10 + 27) / 12800 * 100,F-THERMAL-001,Missing and WARN populations are treated as non-overlapping in the supplied data.

@@ -1,0 +1,490 @@
+{
+  "generated_at": "2026-09-14T02:25:51.610404+00:00",
+  "source_baseline": "/Users/suryap/Documents/Codex/2026-09-11/i/capstone/source_baseline",
+  "findings": [
+    {
+      "finding_id": "F-IDENT-001",
+      "lens": "Inconsistency",
+      "title": "Duplicate MRNs across different patient keys",
+      "value": 2,
+      "severity": "CRITICAL",
+      "evidence": "patients GROUP BY mrn HAVING COUNT(*) > 1",
+      "interpretation": "MRN cannot be used as a unique cross-system identity key.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-IDENT-002",
+      "lens": "Inconsistency",
+      "title": "CRM/clinical dob disagreements",
+      "value": 10,
+      "severity": "CRITICAL",
+      "evidence": "data/raw/crm_patient_export.csv joined to clinical_patient_export.csv on patient_key; compare dob",
+      "interpretation": "Identity evidence differs across source-specific views and requires explainable reconciliation.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-IDENT-003",
+      "lens": "Inconsistency",
+      "title": "CRM/clinical center_id disagreements",
+      "value": 12,
+      "severity": "HIGH",
+      "evidence": "data/raw/crm_patient_export.csv joined to clinical_patient_export.csv on patient_key; compare center_id",
+      "interpretation": "Identity evidence differs across source-specific views and requires explainable reconciliation.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-IDENT-004",
+      "lens": "Inconsistency",
+      "title": "CRM/clinical mrn disagreements",
+      "value": 7,
+      "severity": "CRITICAL",
+      "evidence": "data/raw/crm_patient_export.csv joined to clinical_patient_export.csv on patient_key; compare mrn",
+      "interpretation": "Identity evidence differs across source-specific views and requires explainable reconciliation.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-IDENT-005",
+      "lens": "Inconsistency",
+      "title": "CRM/clinical name_or_alias disagreements",
+      "value": 21,
+      "severity": "HIGH",
+      "evidence": "data/raw/crm_patient_export.csv joined to clinical_patient_export.csv on patient_key; compare name_or_alias",
+      "interpretation": "Identity evidence differs across source-specific views and requires explainable reconciliation.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-READY-001",
+      "lens": "Inconsistency",
+      "title": "MES released while QMS not released",
+      "value": 16,
+      "severity": "CRITICAL",
+      "evidence": "batches: mes_status='RELEASED' AND qms_release_status!='RELEASED'",
+      "interpretation": "Manufacturing/MES state must not substitute for Quality release authority.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-READY-002",
+      "lens": "Hidden Dependency",
+      "title": "ERP available while QMS not released",
+      "value": 158,
+      "severity": "CRITICAL",
+      "evidence": "batches: erp_status='AVAILABLE' AND qms_release_status!='RELEASED'",
+      "interpretation": "Commercial/inventory availability can conceal an unmet Quality gate.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-READY-003",
+      "lens": "Imperfection",
+      "title": "Journeys classified ready by unsafe legacy heuristic",
+      "value": {
+        "legacy_ready_total": 499,
+        "not_qms_released": 153,
+        "invalid_consent": 30,
+        "authorization_not_approved": 205,
+        "expired_or_due_site_controls": 145,
+        "confirmed_cancelled_slot": 7,
+        "no_delivered_return_shipment": 243
+      },
+      "severity": "CRITICAL",
+      "evidence": "Legacy product_ready predicate reproduced against batches and joined gate evidence",
+      "interpretation": "A positive legacy readiness result does not prove patient/product readiness; multiple safety dependencies are omitted.",
+      "caveat": "Categories overlap and must not be summed."
+    },
+    {
+      "finding_id": "F-READY-004",
+      "lens": "Inconsistency",
+      "title": "Stored journey status ahead of Quality release",
+      "value": {
+        "INFUSED": 73,
+        "INFUSION_READY": 32
+      },
+      "severity": "CRITICAL",
+      "evidence": "patients joined to batches; journey_status vs qms_release_status",
+      "interpretation": "Stored journey strings cannot be trusted as authoritative gate decisions.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-GATE-001",
+      "lens": "Hidden Dependency",
+      "title": "Consent states requiring explicit gating",
+      "value": {
+        "EXPIRED_VERSION": 44,
+        "VALID": 751,
+        "WITHDRAWN": 5
+      },
+      "severity": "CRITICAL",
+      "evidence": "consents grouped by status",
+      "interpretation": "Withdrawn and expired-version consent cannot be ignored by downstream readiness.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-GATE-002",
+      "lens": "Hidden Dependency",
+      "title": "Authorization states requiring explicit gating",
+      "value": {
+        "APPROVED": 468,
+        "CONDITIONAL": 161,
+        "DENIED": 5,
+        "PENDING": 166
+      },
+      "severity": "HIGH",
+      "evidence": "insurance_authorizations grouped by status",
+      "interpretation": "Authorization status affects scheduling and downstream commercial/process readiness.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-QUALITY-001",
+      "lens": "Complexity",
+      "title": "Open/investigating deviations and Quality-release coexistence",
+      "value": {
+        "deviations_total": 188,
+        "open_or_investigating": 135,
+        "critical_open_or_investigating": 39,
+        "on_qms_released_batches": 74
+      },
+      "severity": "CRITICAL",
+      "evidence": "deviations joined to batches",
+      "interpretation": "Open deviations require blocking classification and disposition evidence; open status alone does not prove every release invalid.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-QUALITY-002",
+      "lens": "Imperfection",
+      "title": "Deviation links do not resolve to the event log",
+      "value": {
+        "blank": 36,
+        "nonblank_missing": 152,
+        "total_unresolved": 188
+      },
+      "severity": "HIGH",
+      "evidence": "deviations.linked_event_id checked against events.jsonl event_id",
+      "interpretation": "Quality investigations lack resolvable event evidence.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-QUALITY-003",
+      "lens": "Uncertainty",
+      "title": "QMS-released batches with pending/OOS/OOT QC rows",
+      "value": 283,
+      "severity": "HIGH",
+      "evidence": "batches joined to qc_results; qms release with result in PENDING/OOS/OOT",
+      "interpretation": "Explicit assay disposition evidence is required before interpreting these rows.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-SITE-001",
+      "lens": "Hidden Dependency",
+      "title": "Treatment centers with expired training or due equipment",
+      "value": 6,
+      "severity": "HIGH",
+      "evidence": "site_qualifications control fields",
+      "interpretation": "High-level site status can obscure detailed qualification controls.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-TIME-001",
+      "lens": "Inconsistency",
+      "title": "Shipments arriving before departure",
+      "value": 9,
+      "severity": "HIGH",
+      "evidence": "shipments arrived_at < departed_at",
+      "interpretation": "Physical event ordering contradicts recorded shipment timestamps.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-TIME-002",
+      "lens": "Volatility",
+      "title": "Patient histories whose recorded order inverts occurrence order",
+      "value": 10,
+      "severity": "HIGH",
+      "evidence": "events grouped by patient and sorted by recorded_at; adjacent occurred_at inversion",
+      "interpretation": "Recorded order and physical occurrence order are separate concepts.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-TIME-003",
+      "lens": "Uncertainty",
+      "title": "Maximum event recording lag in hours",
+      "value": 12.0,
+      "severity": "MEDIUM",
+      "evidence": "max(recorded_at - occurred_at) across events.jsonl",
+      "interpretation": "Late-arriving evidence can change a derived journey view.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-INTEG-001",
+      "lens": "Imperfection",
+      "title": "Retry-duplicate manufacturing-start events",
+      "value": 7,
+      "severity": "HIGH",
+      "evidence": "events grouped on patient,batch,type,occurred_at,payload_ref",
+      "interpretation": "New event identifiers do not guarantee semantic uniqueness or idempotency.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-INTEG-002",
+      "lens": "Inconsistency",
+      "title": "Scheduler-confirmed slots cancelled in MES",
+      "value": 9,
+      "severity": "HIGH",
+      "evidence": "manufacturing_slots scheduler_state vs mes_state",
+      "interpretation": "Partial distributed state and absent compensation create unreliable capacity state.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-SHADOW-001",
+      "lens": "Friction",
+      "title": "Formal vs shadow patient-priority disagreements",
+      "value": 523,
+      "severity": "HIGH",
+      "evidence": "manufacturing_slots.csv joined to PatientPriority_MASTER.csv on patient_key",
+      "interpretation": "Operational priority is being maintained outside the formal scheduling view.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-SHADOW-002",
+      "lens": "Hidden Dependency",
+      "title": "Manufacturing-slot rows containing planner override notes",
+      "value": 12,
+      "severity": "MEDIUM",
+      "evidence": "ManufacturingSlots_FINAL_v7.csv planner_note nonblank",
+      "interpretation": "Email/manual decisions create downstream dependencies not represented as governed transactions.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-SHADOW-003",
+      "lens": "Friction",
+      "title": "Shadow email categories",
+      "value": {
+        "Courier route": 12,
+        "Identity reconciliation": 14,
+        "QA exception": 7,
+        "Site readiness": 10,
+        "Slot moved": 17
+      },
+      "severity": "HIGH",
+      "evidence": "Subject lines across shadow_ops/emails/*.eml",
+      "interpretation": "Unstructured email carries slot, courier, identity, Quality and site-readiness coordination.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-SHADOW-004",
+      "lens": "Friction",
+      "title": "Courier escalations requiring closed-loop ownership",
+      "value": {
+        "total": 31,
+        "open": 21,
+        "unowned": 8
+      },
+      "severity": "HIGH",
+      "evidence": "CourierEscalations.csv status and owner",
+      "interpretation": "Open or unowned escalation work can delay patient/material movement without accountable resolution.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-THERMAL-001",
+      "lens": "Uncertainty",
+      "title": "Telemetry and excursion evidence requiring contextual disposition",
+      "value": {
+        "shipments_flagged": 19,
+        "shipments_with_point_above_minus_120_c": 16,
+        "flagged_without_point_above_minus_120_c": 3,
+        "missing_temperature_values": 10,
+        "warning_quality_values": 27
+      },
+      "severity": "HIGH",
+      "evidence": "shipments joined conceptually to cryogenic_telemetry",
+      "interpretation": "A point threshold is insufficient; effective SOP v7 requires duration, quality, cumulative profile, shipper integrity and human Quality review.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-LOG-001",
+      "lens": "Inconsistency",
+      "title": "Booked/in-transit shipments with arrival timestamps",
+      "value": 398,
+      "severity": "HIGH",
+      "evidence": "shipments status IN (BOOKED,IN_TRANSIT) with arrived_at populated",
+      "interpretation": "Shipment state and event evidence disagree; neither should be silently preferred.",
+      "caveat": ""
+    },
+    {
+      "finding_id": "F-EVENT-001",
+      "lens": "Unknown Unknown",
+      "title": "Event model covers only a narrow set of business events",
+      "value": {
+        "distinct_types": 8,
+        "types": {
+          "COLLECTION_COMPLETED": 800,
+          "MANUFACTURING_COMPLETED": 800,
+          "MANUFACTURING_STARTED": 807,
+          "PATIENT_ENROLLED": 800,
+          "RETURN_SHIPMENT_ARRIVED": 800,
+          "RETURN_SHIPMENT_DISPATCHED": 800,
+          "SHIPMENT_DISPATCHED": 800,
+          "SHIPMENT_RECEIVED": 800
+        }
+      },
+      "severity": "HIGH",
+      "evidence": "events.jsonl event_type",
+      "interpretation": "Consent, authorization, site qualification, slot, QC, deviation, QA release, conditioning and infusion are not first-class events.",
+      "caveat": ""
+    }
+  ],
+  "detail": {
+    "table_counts": {
+      "patients": 800,
+      "collections": 800,
+      "shipments": 1600,
+      "batches": 800,
+      "qc_results": 4800,
+      "deviations": 188,
+      "manufacturing_slots": 800,
+      "consents": 800,
+      "insurance_authorizations": 800,
+      "cryogenic_telemetry": 12800,
+      "site_qualifications": 24
+    },
+    "database_csv_parity": {
+      "patients": {
+        "csv_rows": 800,
+        "db_rows": 800,
+        "exact_ordered_match": true
+      },
+      "collections": {
+        "csv_rows": 800,
+        "db_rows": 800,
+        "exact_ordered_match": true
+      },
+      "shipments": {
+        "csv_rows": 1600,
+        "db_rows": 1600,
+        "exact_ordered_match": true
+      },
+      "batches": {
+        "csv_rows": 800,
+        "db_rows": 800,
+        "exact_ordered_match": true
+      },
+      "qc_results": {
+        "csv_rows": 4800,
+        "db_rows": 4800,
+        "exact_ordered_match": true
+      },
+      "deviations": {
+        "csv_rows": 188,
+        "db_rows": 188,
+        "exact_ordered_match": true
+      },
+      "manufacturing_slots": {
+        "csv_rows": 800,
+        "db_rows": 800,
+        "exact_ordered_match": true
+      },
+      "consents": {
+        "csv_rows": 800,
+        "db_rows": 800,
+        "exact_ordered_match": true
+      },
+      "insurance_authorizations": {
+        "csv_rows": 800,
+        "db_rows": 800,
+        "exact_ordered_match": true
+      },
+      "cryogenic_telemetry": {
+        "csv_rows": 12800,
+        "db_rows": 12800,
+        "exact_ordered_match": true
+      },
+      "site_qualifications": {
+        "csv_rows": 24,
+        "db_rows": 24,
+        "exact_ordered_match": true
+      }
+    },
+    "duplicate_mrns": [
+      {
+        "mrn": "MRN-389336",
+        "count": 2,
+        "patient_keys": "P-00532,P-00713"
+      },
+      {
+        "mrn": "MRN-945144",
+        "count": 2,
+        "patient_keys": "P-00686,P-00755"
+      }
+    ],
+    "identity_difference_patient_keys": {
+      "dob": [
+        "P-00079",
+        "P-00158",
+        "P-00237",
+        "P-00316",
+        "P-00395",
+        "P-00474",
+        "P-00553",
+        "P-00632",
+        "P-00711",
+        "P-00790"
+      ],
+      "center_id": [
+        "P-00061",
+        "P-00122",
+        "P-00183",
+        "P-00305",
+        "P-00366",
+        "P-00427",
+        "P-00488",
+        "P-00549",
+        "P-00610",
+        "P-00671",
+        "P-00732",
+        "P-00793"
+      ],
+      "mrn": [
+        "P-00103",
+        "P-00206",
+        "P-00309",
+        "P-00412",
+        "P-00515",
+        "P-00618",
+        "P-00721"
+      ],
+      "name_or_alias": [
+        "P-00037",
+        "P-00074",
+        "P-00111",
+        "P-00148",
+        "P-00185",
+        "P-00222",
+        "P-00259",
+        "P-00296",
+        "P-00333",
+        "P-00370",
+        "P-00407",
+        "P-00444",
+        "P-00481",
+        "P-00518",
+        "P-00555",
+        "P-00592",
+        "P-00629",
+        "P-00666",
+        "P-00703",
+        "P-00740",
+        "P-00777"
+      ]
+    },
+    "event_count": 6407,
+    "inverted_event_order_patient_keys": [
+      "P-00019",
+      "P-00151",
+      "P-00218",
+      "P-00330",
+      "P-00365",
+      "P-00551",
+      "P-00601",
+      "P-00664",
+      "P-00730",
+      "P-00770"
+    ]
+  }
+}

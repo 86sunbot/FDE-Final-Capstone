@@ -1,0 +1,28 @@
+requirement_id,type,severity,statement,acceptance,test_reference,status
+REQ-FDN-001,foundation,P0,Original challenge evidence remains immutable,All 132 extracted file hashes and the ZIP hash match inventory,tests/test_evidence_integrity.py,SPECIFIED
+REQ-FDN-002,foundation,P0,Every material decision fact carries evidence provenance,No P0 projection/decision material fact lacks evidence IDs,tests/unit/test_evidence.py,SPECIFIED
+REQ-FDN-003,foundation,P0,Occurred and recorded time remain distinct,Known-at replay is stable under late evidence,tests/unit/test_temporal.py,SPECIFIED
+REQ-FDN-004,foundation,P0,Unknown is distinct from false or satisfied,Missing/contradictory evidence returns UNKNOWN and blocks progression,tests/unit/test_readiness.py,SPECIFIED
+REQ-AUTH-001,security,P0,Authority derives from authenticated server policy,Body-supplied role cannot authorize a decision,tests/unit/test_authorization.py,SPECIFIED
+REQ-AUTH-002,security,P0,Recommendation approval and execution are separate,Recommendation cannot emit or apply authority events,tests/unit/test_assistant.py,SPECIFIED
+REQ-AUD-001,assurance,P0,Audit events are attributable and tamper-evident,Hash-chain verification passes and mutation is detected,tests/unit/test_audit.py,SPECIFIED
+REQ-ID-001,POC1,P0,Ambiguous identifiers never create identity links,Conflict opens an owned case and link remains absent,tests/integration/test_poc1_identity_readiness.py,SPECIFIED
+REQ-ID-002,POC1,P0,Identity approval binds exact proposal and evidence,Authorized decision applies once and changed payload is rejected,tests/integration/test_poc1_identity_readiness.py,SPECIFIED
+REQ-GATE-001,POC1,P0,Milestone readiness evaluates consent authorization site and identity,Missing expired or conflicting prerequisite blocks or returns unknown,tests/integration/test_poc1_identity_readiness.py,SPECIFIED
+REQ-CMD-001,POC2,P0,Idempotency key binds command type scope and canonical payload,Replay returns stored result and changed payload conflicts,tests/integration/test_poc2_slot_orchestration.py,SPECIFIED
+REQ-CMD-002,POC2,P0,Ambiguous external outcome is reconciled before retry,Timeout enters OUTCOME_UNKNOWN and no blind retry occurs,tests/integration/test_poc2_slot_orchestration.py,SPECIFIED
+REQ-CMD-003,POC2,P0,Compensation is explicit and verified,Partial effect cannot be silently treated as success or failure,tests/integration/test_poc2_slot_orchestration.py,SPECIFIED
+REQ-QUAL-001,POC3,P0,Only authorized Quality evidence establishes release,MES ERP and AI cannot create PRODUCT_RELEASED,tests/integration/test_poc3_quality_release.py,SPECIFIED
+REQ-QUAL-002,POC3,P0,QC deviation and thermal evidence remain explicit,Missing or ambiguous disposition remains a blocker or unknown,tests/integration/test_poc3_quality_release.py,SPECIFIED
+REQ-AI-001,AI,P0,AI is optional and failure returns deterministic workflow,Disabled outage or invalid output preserves deterministic context,tests/unit/test_assistant.py,SPECIFIED
+REQ-AI-002,AI,P0,AI output is schema and evidence bounded,Extra authority fields and unknown citations are rejected,tests/unit/test_assistant.py,SPECIFIED
+REQ-AI-003,AI,P0,AI has no consequential tools,No assistant interface exposes identity command release or clinical mutation,tests/unit/test_assistant.py,SPECIFIED
+REQ-CASE-001,operations,P0,Critical exceptions have owner status and history,Every P0 exception is assigned and auditable,tests/unit/test_cases.py,SPECIFIED
+REQ-API-001,interface,P1,Three POCs share application services and stable contracts,End-to-end journey uses identity readiness command and quality services,tests/e2e/test_full_journey.py,SPECIFIED
+REQ-PERF-001,performance,P1,Deterministic projection meets local POC latency,p95 <=250ms under fixed local benchmark,tests/performance_test.py,SPECIFIED
+REQ-REC-001,resilience,P0,Database backup restore and replay preserve state digests,Restored digest equals pre-backup digest,tests/recovery_test.py,SPECIFIED
+REQ-OBS-001,operations,P1,Commands decisions recommendations and cases are observable,Metrics and correlation IDs exist for controlled operations,tests/unit/test_telemetry.py,SPECIFIED
+REQ-SEC-001,security,P0,Cross-scope access is denied,Principal outside journey scope cannot read or mutate it,tests/unit/test_authorization.py,SPECIFIED
+REQ-REL-001,delivery,P0,Release is reproducible,Manifest records version data schema and evaluation digests,tests/test_release_manifest.py,SPECIFIED
+REQ-HUM-001,human_factors,P0,Human oversight resists automation bias,Controlled participants inspect all material P0 evidence and accept zero unsafe trap recommendations,stage_15/evaluation_results.json::EXT-HUM-001,SPECIFIED
+REQ-HUM-002,human_factors,P1,Authorized users can safely override abstain and escalate,Controlled role study demonstrates usable override and captures rationale,stage_15/evaluation_results.json::EXT-HUM-002,SPECIFIED

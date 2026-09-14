@@ -1,0 +1,11 @@
+inject_id,name,trigger,affected,severity
+INJ-001,Apheresis delay cascade,collection delayed 5h,logistics;slot;QC;conditioning,HIGH
+INJ-002,Cryogenic sensor ambiguity,47s excursion near threshold,shipment;quality;release,HIGH
+INJ-003,Manufacturing suite outage,suite unavailable 18h,slots;batches;QC capacity,CRITICAL
+INJ-004,Sterility assay backlog,lab queue +36h,QA release;return logistics;infusion,HIGH
+INJ-005,Treatment-center qualification expiry,training expired,collection scheduling,HIGH
+INJ-006,Integration retry duplication,timeout after slot reserve,duplicate reservation,MEDIUM
+INJ-007,Patient identity conflict,MRN and DOB disagreement,COI reconciliation,CRITICAL
+INJ-008,Courier network disruption,regional flight cancellations,outbound;return routes,HIGH
+INJ-009,QMS unavailable,4h outage during release window,release;shipment,CRITICAL
+INJ-010,Authorization withdrawn,payer status change,scheduling;commercial process,MEDIUM

@@ -1,0 +1,4 @@
+product_code,therapy_family,indication,nominal_mfg_days,target_v2v_days
+CGT-A1,Autologous CAR-T,Synthetic Hematologic Indication A,9,18
+CGT-B2,Autologous TCR-T,Synthetic Oncology Indication B,11,21
+CGT-C3,Autologous Gene-Modified Cell,Synthetic Rare Disease Indication C,13,24

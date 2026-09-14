@@ -1,0 +1,25 @@
+center_id,canonical_name,country,timezone,qualification_status,cryogenic_capacity,apheresis_chairs
+TC-US-ATL-01,Northstar Cellular Center Atlanta,US,America/New_York,EXPIRING,6,2
+TC-US-BOS-02,Harborview Cell Therapy Boston,US,America/New_York,QUALIFIED,8,3
+TC-US-SF-03,Pacific Cellular Institute,US,America/Los_Angeles,QUALIFIED,10,4
+TC-US-CHI-04,Lakeshore Advanced Therapy Center,US,America/Chicago,QUALIFIED,12,5
+TC-GB-LON-01,Thames Advanced Therapy Centre,GB,Europe/London,QUALIFIED,14,2
+TC-GB-MAN-02,Northern Cell Therapy Institute,GB,Europe/London,QUALIFIED,6,3
+TC-DE-BER-01,Berlin Advanced Cell Centre,DE,Europe/Berlin,QUALIFIED,8,4
+TC-DE-MUC-02,Bavaria Cellular Medicine Center,DE,Europe/Berlin,EXPIRING,10,5
+TC-FR-PAR-01,Paris Cellular Therapy Institute,FR,Europe/Paris,QUALIFIED,12,2
+TC-NL-AMS-01,Amsterdam Advanced Therapy Centre,NL,Europe/Amsterdam,QUALIFIED,14,3
+TC-ES-MAD-01,Madrid Cellular Treatment Center,ES,Europe/Madrid,QUALIFIED,6,4
+TC-IT-MIL-01,Milan Advanced Therapy Unit,IT,Europe/Rome,QUALIFIED,8,5
+TC-JP-TYO-01,Tokyo Cellular Medicine Center,JP,Asia/Tokyo,QUALIFIED,10,2
+TC-JP-OSA-02,Osaka Advanced Therapy Institute,JP,Asia/Tokyo,QUALIFIED,12,3
+TC-SG-SIN-01,Singapore Cellular Therapy Centre,SG,Asia/Singapore,EXPIRING,14,4
+TC-AU-SYD-01,Sydney Advanced Therapy Centre,AU,Australia/Sydney,QUALIFIED,6,5
+TC-AU-MEL-02,Melbourne Cell Therapy Institute,AU,Australia/Melbourne,QUALIFIED,8,2
+TC-AE-DXB-01,Dubai Advanced Therapy Center,AE,Asia/Dubai,QUALIFIED,10,3
+TC-CA-TOR-01,Toronto Cellular Medicine Centre,CA,America/Toronto,QUALIFIED,12,4
+TC-CA-VAN-02,Vancouver Advanced Therapy Institute,CA,America/Vancouver,QUALIFIED,14,5
+TC-CH-ZRH-01,Zurich Cellular Therapy Centre,CH,Europe/Zurich,QUALIFIED,6,2
+TC-SE-STO-01,Stockholm Advanced Therapy Centre,SE,Europe/Stockholm,EXPIRING,8,3
+TC-BE-BRU-01,Brussels Cell Therapy Institute,BE,Europe/Brussels,QUALIFIED,10,4
+TC-IN-BLR-01,Bengaluru Advanced Cell Therapy Centre,IN,Asia/Kolkata,QUALIFIED,12,5

@@ -1,0 +1,6 @@
+courier_id,name,regions,sla_hours
+CRYO-01,CryoPath Global,GLOBAL,28
+CRYO-02,PolarBridge BioLogistics,US;EU,24
+CRYO-03,CellRoute Express,APAC;EU,30
+CRYO-04,BlueArc Life Logistics,GLOBAL,32
+CRYO-05,GeneTransit Partners,US;APAC,30

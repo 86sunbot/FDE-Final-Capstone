@@ -1,0 +1,9 @@
+{
+  "scope": "single-process local synthetic micro-benchmark; not production load test",
+  "iterations": 5000,
+  "median_ms": 0.0081,
+  "p95_ms": 0.0097,
+  "p99_ms": 0.0166,
+  "threshold_p95_ms": 250,
+  "pass": true
+}

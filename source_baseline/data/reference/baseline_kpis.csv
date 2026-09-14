@@ -1,0 +1,11 @@
+metric,baseline,target_direction,note
+median_vein_to_vein_days,21.8,DOWN,synthetic baseline
+journeys_requiring_manual_reconciliation_pct,31.5,DOWN,synthetic baseline
+avoidable_delay_hours_per_100_journeys,186,DOWN,synthetic baseline
+on_time_infusion_probability_pct,78.0,UP,synthetic baseline
+identity_reconciliation_exceptions_per_1000,17,DOWN,synthetic baseline
+open_exception_mean_age_hours,29.4,DOWN,synthetic baseline
+slot_utilization_pct,71.0,UP,synthetic baseline
+qa_release_forecast_mae_hours,27.5,DOWN,synthetic baseline
+manual_status_updates_per_journey,12.7,DOWN,synthetic baseline
+cross_system_traceability_complete_pct,82.4,UP,synthetic baseline
