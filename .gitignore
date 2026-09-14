@@ -12,4 +12,5 @@ runtime/
 *.db
 *.db-shm
 *.db-wal
+!source_baseline/data/cgt_legacy.db
 .DS_Store
