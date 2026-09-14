@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fde-final-capstone"
-version = "1.0.0"
+version = "1.1.0"
 description = "Synthetic CGT patient-to-batch evidence and orchestration capstone"
 requires-python = ">=3.11"
 dependencies = []
@@ -21,6 +21,9 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+fde_capstone = ["web/*"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src", "."]

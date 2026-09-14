@@ -24,7 +24,7 @@
 | 12 | Design security and supplier controls | APPROVED FOR POC | `stage_12`; threat/control/SBOM/AIBOM/exit design |
 | 13 | Approve ADRs and delivery specification | APPROVED | `stage_13`; 27 requirements; 12 ADRs; G3 record |
 | 14 | Engineer | COMPLETE | `src`; `tests`; 3 integrated POCs; manifests; CI/container |
-| 15 | Evaluate, attack and assure | COMPLETE WITH 2 INCONCLUSIVE | 73 automated passes; 55/57 structural passes; 0 fails; G4 restricted |
+| 15 | Evaluate, attack and assure | COMPLETE WITH 2 INCONCLUSIVE | 77 automated passes; 55/57 structural passes; 0 fails; G4 restricted |
 | 16 | Prepare operations and recovery | COMPLETE FOR SIMULATION | Runbooks/SLOs; successful local restore; G5 restricted |
 | 17 | Deploy progressively | COMPLETE AS SIMULATION | 20/20 shadow; 10/10 canary; rollback pass |
 | 18 | Monitor operational resilience | COMPLETE AS SIMULATION | Alerts/metrics/reconciliation/fallback exercised |
@@ -47,7 +47,7 @@
 
 | Check | Result |
 |---|---|
-| Clean automated suite | 73 passed; 0 failed/error/skipped |
+| Clean automated suite | 77 passed; 0 failed/error/skipped |
 | Frozen evaluation catalog | 57 executed: 55 pass, 0 fail, 2 inconclusive human studies |
 | P0 catalog | 44 pass, 1 human-study inconclusive |
 | Requirements | 25 verified internal POC, 2 external-human-evidence required, 0 production verified |

@@ -18,16 +18,31 @@ The inherited environment had conflicting patient evidence, unsafe readiness/rel
 
 This is not a production, clinical, regulatory or validated system. It uses synthetic data and simulated authorities/integrations. No live AI model is included. The final lifecycle decision is **restrict and change**: accept the academic POC, keep AI off and do not pilot with real data until the seven CAPAs in Stage 20 are closed.
 
+## Browser demonstration
+
+On macOS, double-click `START_DEMO.command`, keep its terminal window open, and use the Control Tower page that opens automatically. The browser executes all three POCs against isolated synthetic state; it is not a disconnected mockup.
+
+Alternatively, start it from a terminal:
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -e '.[dev,api]'
+FDE_DB=runtime/control-tower.db AI_MODE=off PYTHONPATH=src \
+  .venv/bin/python -m uvicorn fde_capstone.api:app --host 127.0.0.1 --port 8000
+```
+
+Open <http://127.0.0.1:8000> for the Control Tower and <http://127.0.0.1:8000/docs> for the API. See [DEMO_GUIDE.md](DEMO_GUIDE.md) for the five-minute presentation sequence.
+
 ## Results
 
-- 73 automated tests passed.
+- 77 automated tests passed.
 - 57 evaluation cases executed: 55 internal structural passes, 0 failures and 2 human-study cases inconclusive.
 - 20/20 simulated shadow comparisons matched.
 - 10/10 simulated canary journeys succeeded.
 - Backup/restore and AI-off rollback passed locally.
 - Original ZIP and all 132 extracted evidence files remained unchanged.
 
-## Run locally
+## CLI and evaluation
 
 ```bash
 python3 -m venv .venv

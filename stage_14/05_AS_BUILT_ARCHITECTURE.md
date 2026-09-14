@@ -2,7 +2,9 @@
 
 ```mermaid
 flowchart TD
-  CLI[CLI / optional FastAPI] --> APP[CapstoneApplication]
+  WEB[Browser Control Tower] --> API[FastAPI]
+  CLI[CLI] --> APP[CapstoneApplication]
+  API --> APP
   APP --> EV[Evidence + Readiness]
   APP --> ID[Identity Service]
   APP --> CMD[Command Service]

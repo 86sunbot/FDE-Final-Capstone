@@ -15,7 +15,7 @@
 | 11 | Single bounded-assistant topology, tools, handoff and termination |
 | 12 | Threat model, security/privacy controls, SBOM/AIBOM/supplier exit |
 | 13 | 27 requirements, 12 final ADRs, backlog/traceability and G3 |
-| 14 | Source, tests, POC reports, as-built architecture, manifests |
+| 14 | Source, browser Control Tower, tests, POC reports, as-built architecture, manifests |
 | 15 | JUnit/test summary, 57-case results, performance, red team, residual risk, G4 |
 | 16 | SLOs, runbooks, incident/change/recovery, training/evidence index, G5 |
 | 17 | Release, 20-run shadow, 10-run canary and AI-off rollback simulation |
@@ -24,4 +24,4 @@
 | 20 | AIMS review, seven CAPAs, restrict/change management decision and G6 |
 | 21 | Retirement scan, archive record, lessons, reusable IP and closure |
 
-Cross-stage machine-readable artifacts include `TRACEABILITY_MATRIX.csv`, `requirements/verification_matrix.csv`, `stage_14/release_manifest.json` and `evidence/final_verification.json`.
+Cross-stage machine-readable artifacts include `TRACEABILITY_MATRIX.csv`, `requirements/verification_matrix.csv`, `stage_14/release_manifest.json` and `evidence/final_verification.json`. Presentation assets include `DEMO_GUIDE.md`, `START_DEMO.command` and the packaged `src/fde_capstone/web` frontend.

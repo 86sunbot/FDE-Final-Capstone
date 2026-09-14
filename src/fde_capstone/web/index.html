@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Synthetic CGT patient-to-batch orchestration capstone demonstration" />
+    <title>CGT Control Tower · FDE Final Capstone</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <div class="scope-banner" role="note">
+      <span class="scope-dot" aria-hidden="true"></span>
+      Synthetic academic demonstration · No real patient data · Not for clinical use
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="CGT Control Tower home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img">
+            <path d="M16 3.5 27 9.8v12.4L16 28.5 5 22.2V9.8L16 3.5Z" />
+            <path d="M11 13.1h10M11 18.9h10M13.5 10.6v10.8M18.5 10.6v10.8" />
+          </svg>
+        </span>
+        <span>
+          <strong>CGT Control Tower</strong>
+          <small>Patient-to-Batch Orchestration</small>
+        </span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#journey">Journey</a>
+        <a href="#pocs">POCs</a>
+        <a href="#assurance">Assurance</a>
+        <a class="nav-api" href="/docs" target="_blank" rel="noreferrer">API</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <div class="eyebrow"><span>21-stage FDE capstone</span><span>Evidence before status</span></div>
+          <h1>One controlled journey from <em>patient</em> to <em>batch</em>.</h1>
+          <p class="hero-lede">
+            Resolve identity safely, orchestrate manufacturing without duplicate effects,
+            and keep product release with the authorized Quality decision-maker.
+          </p>
+          <div class="hero-actions">
+            <button class="button button-primary" data-run-demo>
+              <span class="button-icon" aria-hidden="true">▶</span>
+              Run end-to-end demo
+            </button>
+            <a class="button button-secondary" href="#pocs">Explore the controls</a>
+          </div>
+          <p class="run-note">Runs locally with disposable synthetic state. AI remains off by default.</p>
+        </div>
+
+        <div class="hero-panel" aria-label="Current synthetic journey status">
+          <div class="panel-head">
+            <div>
+              <span class="panel-kicker">Active demonstration</span>
+              <h2>Journey P-A / BATCH-100</h2>
+            </div>
+            <span class="status-pill status-ready"><span></span> Ready</span>
+          </div>
+          <div class="hero-patient">
+            <div class="patient-avatar" aria-hidden="true">P</div>
+            <div>
+              <small>Synthetic patient key</small>
+              <strong>P-A</strong>
+            </div>
+            <div class="patient-divider"></div>
+            <div>
+              <small>Manufacturing batch</small>
+              <strong>BATCH-100</strong>
+            </div>
+          </div>
+          <div class="control-grid">
+            <div class="control-item">
+              <span class="control-icon control-teal">✓</span>
+              <span><small>Identity</small><strong>Human authorized</strong></span>
+            </div>
+            <div class="control-item">
+              <span class="control-icon control-blue">↻</span>
+              <span><small>Orchestration</small><strong>Idempotent</strong></span>
+            </div>
+            <div class="control-item">
+              <span class="control-icon control-violet">◇</span>
+              <span><small>Quality</small><strong>Authority retained</strong></span>
+            </div>
+            <div class="control-item">
+              <span class="control-icon control-amber">AI</span>
+              <span><small>Assistant</small><strong>Off by default</strong></span>
+            </div>
+          </div>
+          <div class="audit-line">
+            <span class="pulse-dot"></span>
+            <span>Tamper-evident audit chain active</span>
+            <code id="hero-audit">Awaiting run</code>
+          </div>
+        </div>
+      </section>
+
+      <section class="status-band" aria-label="Capstone completion status">
+        <div><strong id="stage-count">21/21</strong><span>FDE stages</span></div>
+        <div><strong id="test-count">—</strong><span>Tests passed</span></div>
+        <div><strong id="evaluation-count">—</strong><span>Evaluations passed</span></div>
+        <div><strong id="requirement-count">—</strong><span>Requirements verified</span></div>
+        <div class="decision-stat"><strong>Restrict &amp; change</strong><span>Lifecycle decision</span></div>
+      </section>
+
+      <section class="section-shell section-block" id="journey">
+        <div class="section-heading">
+          <div>
+            <span class="section-number">01 / CONTROLLED JOURNEY</span>
+            <h2>Every transition requires evidence.</h2>
+          </div>
+          <p>Status labels do not create truth. The orchestrator records what is known, unknown, blocked and authorized.</p>
+        </div>
+
+        <div class="journey-track" id="journey-track">
+          <div class="journey-step" data-step="0"><span class="journey-index">01</span><i></i><strong>Enrollment</strong><small>Evidence registered</small></div>
+          <div class="journey-step" data-step="1"><span class="journey-index">02</span><i></i><strong>Identity</strong><small>Conflict resolved</small></div>
+          <div class="journey-step" data-step="2"><span class="journey-index">03</span><i></i><strong>Authorization</strong><small>Prerequisites met</small></div>
+          <div class="journey-step" data-step="3"><span class="journey-index">04</span><i></i><strong>Slot</strong><small>Effect reconciled</small></div>
+          <div class="journey-step" data-step="4"><span class="journey-index">05</span><i></i><strong>Manufacturing</strong><small>Batch complete</small></div>
+          <div class="journey-step" data-step="5"><span class="journey-index">06</span><i></i><strong>QC &amp; thermal</strong><small>Packet assembled</small></div>
+          <div class="journey-step" data-step="6"><span class="journey-index">07</span><i></i><strong>Quality release</strong><small>Human authorized</small></div>
+          <div class="journey-step" data-step="7"><span class="journey-index">08</span><i></i><strong>Ready</strong><small>Traceable outcome</small></div>
+        </div>
+      </section>
+
+      <section class="demo-section" id="pocs">
+        <div class="section-shell">
+          <div class="section-heading section-heading-light">
+            <div>
+              <span class="section-number">02 / INTEGRATED DEMONSTRATION</span>
+              <h2>Three hard problems. One controlled runtime.</h2>
+            </div>
+            <div class="demo-control">
+              <label for="ai-mode">Assistant mode</label>
+              <select id="ai-mode" aria-label="Assistant mode">
+                <option value="off">AI off · recommended</option>
+                <option value="fake">Bounded fake adapter</option>
+              </select>
+              <button class="button button-bright" data-run-demo>Run demo</button>
+            </div>
+          </div>
+
+          <div class="demo-progress" aria-live="polite">
+            <span id="run-state">Ready to run the synthetic journey</span>
+            <div class="progress-track"><i id="progress-fill"></i></div>
+          </div>
+
+          <div class="poc-grid">
+            <article class="poc-card" id="poc-1">
+              <div class="poc-topline"><span class="poc-number">POC 01</span><span class="result-badge result-idle" id="poc-1-badge">Not run</span></div>
+              <div class="poc-icon poc-icon-teal" aria-hidden="true">ID</div>
+              <h3>Identity &amp; readiness</h3>
+              <p>Conflicting MRN and DOB assertions become an owned case—not an invented patient link.</p>
+              <dl class="result-list">
+                <div><dt>Identity decision</dt><dd id="identity-decision">—</dd></div>
+                <div><dt>Collection readiness</dt><dd id="identity-readiness">—</dd></div>
+                <div><dt>Evidence cited</dt><dd id="identity-evidence">—</dd></div>
+              </dl>
+            </article>
+
+            <article class="poc-card" id="poc-2">
+              <div class="poc-topline"><span class="poc-number">POC 02</span><span class="result-badge result-idle" id="poc-2-badge">Not run</span></div>
+              <div class="poc-icon poc-icon-blue" aria-hidden="true">↻</div>
+              <h3>Safe slot orchestration</h3>
+              <p>A timeout becomes an unknown outcome, is reconciled, and is never dispatched twice.</p>
+              <dl class="result-list">
+                <div><dt>Initial command</dt><dd id="slot-initial">—</dd></div>
+                <div><dt>After reconciliation</dt><dd id="slot-reconciled">—</dd></div>
+                <div><dt>Duplicate dispatch</dt><dd id="slot-replay">—</dd></div>
+              </dl>
+            </article>
+
+            <article class="poc-card" id="poc-3">
+              <div class="poc-topline"><span class="poc-number">POC 03</span><span class="result-badge result-idle" id="poc-3-badge">Not run</span></div>
+              <div class="poc-icon poc-icon-violet" aria-hidden="true">QA</div>
+              <h3>Quality release</h3>
+              <p>MES, QC, deviation and thermal evidence inform release; only Quality can authorize it.</p>
+              <dl class="result-list">
+                <div><dt>Before authority</dt><dd id="quality-before">—</dd></div>
+                <div><dt>Quality decision</dt><dd id="quality-release">—</dd></div>
+                <div><dt>Final outcome</dt><dd id="quality-after">—</dd></div>
+              </dl>
+            </article>
+          </div>
+
+          <div class="evidence-console" id="evidence-console">
+            <div class="console-head">
+              <div><span class="console-light red"></span><span class="console-light amber"></span><span class="console-light green"></span></div>
+              <strong>Evidence &amp; control record</strong>
+              <span id="run-scope">SYNTHETIC</span>
+            </div>
+            <div class="console-body">
+              <div class="console-empty" id="console-empty">
+                Run the demonstration to see cited evidence, audit integrity and runtime metrics.
+              </div>
+              <div class="console-results" id="console-results" hidden>
+                <div>
+                  <small>Evidence references</small>
+                  <div class="evidence-chips" id="evidence-chips"></div>
+                </div>
+                <div class="console-summary">
+                  <div><small>Audit chain</small><strong id="audit-result">—</strong></div>
+                  <div><small>AI boundary</small><strong id="assistant-result">—</strong></div>
+                  <div><small>Control metrics</small><strong id="metric-result">—</strong></div>
+                  <div><small>State digest</small><code id="state-digest">—</code></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell section-block" id="assurance">
+        <div class="section-heading">
+          <div>
+            <span class="section-number">03 / ASSURANCE &amp; BOUNDARIES</span>
+            <h2>Confidence without overclaiming.</h2>
+          </div>
+          <p>The capstone proves technical control feasibility on synthetic data. It does not claim clinical, regulatory or production validation.</p>
+        </div>
+
+        <div class="assurance-layout">
+          <div class="assurance-scorecard">
+            <div class="score-ring" aria-label="25 of 27 requirements internally verified">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle class="ring-base" cx="60" cy="60" r="51"></circle>
+                <circle class="ring-value" cx="60" cy="60" r="51"></circle>
+              </svg>
+              <span><strong>25</strong><small>of 27</small></span>
+            </div>
+            <div>
+              <span class="score-label">Internal POC requirements verified</span>
+              <p>Two controlled human-factor studies remain inconclusive and require external evidence.</p>
+            </div>
+          </div>
+
+          <div class="boundary-grid">
+            <article>
+              <span class="boundary-check">✓</span>
+              <h3>Demonstrated</h3>
+              <p>Evidence lineage, explicit unknowns, human authority, safe retries, audit integrity and recovery.</p>
+            </article>
+            <article>
+              <span class="boundary-lock">!</span>
+              <h3>Restricted</h3>
+              <p>Real patient data, consequential AI, clinical decisions, automated release and production integrations.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="decision-banner">
+          <div><span>G6 LIFECYCLE DECISION</span><strong>RESTRICT AND CHANGE</strong></div>
+          <p>Academic POC accepted. AI stays off and real-world use remains prohibited until the seven CAPAs are closed.</p>
+          <a href="/docs" target="_blank" rel="noreferrer">Inspect API <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand"><span class="brand-mark small" aria-hidden="true"></span><strong>FDE Final Capstone</strong></div>
+      <p>Cell &amp; Gene Therapy · Patient-to-Batch Orchestration</p>
+      <span>v1.1 · Synthetic academic scope</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>

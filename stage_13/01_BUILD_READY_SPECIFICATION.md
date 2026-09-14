@@ -14,7 +14,7 @@ Build one local modular monolith with:
 6. POC2 simulated slot reservation/recovery;
 7. POC3 Quality evidence packet and authorized release;
 8. optional provider-neutral bounded assistant, disabled by default;
-9. CLI/API demo, telemetry, evaluation runner, backup/restore and release manifest.
+9. browser Control Tower plus CLI/API demo, telemetry, evaluation runner, backup/restore and release manifest.
 
 ## Definition of done
 

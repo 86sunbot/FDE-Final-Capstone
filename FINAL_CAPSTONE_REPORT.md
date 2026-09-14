@@ -10,7 +10,7 @@ The organization cannot safely answer “what is the current patient-to-batch st
 
 ## 3. Achievement
 
-The capstone delivers an evidence-driven modular orchestration POC with one common domain model and three vertical journeys:
+The capstone delivers an evidence-driven modular orchestration POC with one common domain model, a responsive browser Control Tower and three vertical journeys:
 
 1. patient identity conflict, authorized resolution and milestone readiness;
 2. manufacturing-slot reservation, idempotent replay, unknown outcome reconciliation and compensation;
@@ -31,7 +31,7 @@ AI is placed outside the authority boundary. It can only return a cited recommen
 
 ## 5. Evidence
 
-- Clean suite: 73 passed, 0 failed/error/skipped.
+- Clean suite: 77 passed, 0 failed/error/skipped.
 - Frozen catalog: 57 executed; 55 pass; 0 fail; 2 inconclusive external human studies.
 - P0 catalog: 44 pass; one human-factor case inconclusive.
 - Requirements: 25 verified for internal POC; two require external human evidence; zero production verified.

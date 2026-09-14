@@ -2,7 +2,7 @@
 
 ## Inputs
 
-The academic review considered mandate, baseline defects, value/CTQs, risk/impact, architecture, 73 passing automated tests, 55 structural evaluation passes, two inconclusive human cases, local performance/recovery, simulated shadow/canary/monitoring and explicit production gaps.
+The academic review considered mandate, baseline defects, value/CTQs, risk/impact, architecture, 77 passing automated tests, 55 structural evaluation passes, two inconclusive human cases, local performance/recovery, simulated shadow/canary/monitoring and explicit production gaps.
 
 ## Decision
 

@@ -7,7 +7,7 @@
 
 | Evidence | Result |
 |---|---:|
-| Clean automated pytest suite | 73 passed; 0 failed/error/skipped |
+| Clean automated pytest suite | 77 passed; 0 failed/error/skipped |
 | Frozen catalog | 57 executed |
 | Catalog structural passes | 55 |
 | Catalog failures | 0 |

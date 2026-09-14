@@ -1,0 +1,43 @@
+# CGT Control Tower Demo Guide
+
+## Fastest start on macOS
+
+Double-click `START_DEMO.command` in Finder. On first use it creates the local `.venv` and installs the project dependencies. Keep the terminal window open while presenting. The Control Tower opens automatically at <http://127.0.0.1:8000>.
+
+The application uses disposable synthetic data only. Stop it with `Control-C` in the terminal.
+
+## Terminal start
+
+```bash
+cd /Users/suryap/Documents/Codex/2026-09-11/i/FDE-Final-Capstone
+python3 -m venv .venv
+.venv/bin/pip install -e '.[dev,api]'
+FDE_DB=runtime/control-tower.db AI_MODE=off PYTHONPATH=src \
+  .venv/bin/python -m uvicorn fde_capstone.api:app --host 127.0.0.1 --port 8000
+```
+
+Open <http://127.0.0.1:8000>. API documentation remains available at <http://127.0.0.1:8000/docs>.
+
+## Five-minute presentation sequence
+
+1. Start at the hero and state the problem: fragmented systems cannot safely answer the current patient-to-batch state, why it is true, who can decide and what must happen next.
+2. Point to the four controls: human-authorized identity, idempotent orchestration, retained Quality authority and AI off by default.
+3. Select **AI off · recommended**, then choose **Run end-to-end demo**.
+4. Explain POC 1: conflicting identity evidence creates an owned case; an authorized human applies the exact reviewed proposal; readiness becomes `SATISFIED` with citations.
+5. Explain POC 2: the simulated external reservation succeeds but times out. The system records `OUTCOME_UNKNOWN`, reconciles it to `SUCCEEDED`, and prevents a second dispatch.
+6. Explain POC 3: manufacturing, QC, deviation and thermal evidence still leave release `UNKNOWN`; only the simulated Quality-authority decision makes it `SATISFIED`.
+7. Show the evidence console: ten evidence references, a valid audit chain, deterministic AI-off mode, metrics and a state digest.
+8. Close on assurance: 21/21 stages complete, 77 tests pass, 55/57 structural evaluations pass and 25/27 requirements are internally verified. The two remaining cases require controlled human studies.
+9. State the honest decision: **RESTRICT AND CHANGE**. The academic POC is accepted; production and real-data use remain prohibited until the seven CAPAs are closed.
+
+## Optional bounded-assistant demonstration
+
+Choose **Bounded fake adapter** and run again. This exercises the recommendation contract without calling a live model. Domain outcomes must remain the same. It is not evidence of live-model quality or production AI readiness.
+
+## What the demo must not claim
+
+- No real patient, clinical, manufacturing or Quality data is used.
+- The demo principals are not enterprise IAM or electronic signatures.
+- External systems and decision authorities are simulated.
+- No live AI provider or model is connected.
+- The project does not establish clinical benefit, regulatory compliance, production safety, savings or ROI.

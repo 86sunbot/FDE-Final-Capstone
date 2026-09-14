@@ -46,7 +46,7 @@ def main() -> None:
         "format": "academic-capstone-sbom-v1",
         "generated_at": generated_at,
         "runtime": {"python": platform.python_version(), "sqlite": __import__("sqlite3").sqlite_version, "platform": platform.platform()},
-        "application": {"name": "fde-final-capstone", "version": "1.0.0", "source_tree_sha256": source_digest},
+        "application": {"name": "fde-final-capstone", "version": "1.1.0", "source_tree_sha256": source_digest},
         "dependencies": [
             {"name": "fastapi", "version": version("fastapi"), "scope": "optional API"},
             {"name": "uvicorn", "version": version("uvicorn"), "scope": "optional API server"},
@@ -71,7 +71,7 @@ def main() -> None:
     }
     manifest = {
         "format": "academic-capstone-release-manifest-v1",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "generated_at": generated_at,
         "scope": "synthetic local academic POC",
         "source_tree_sha256": source_digest,

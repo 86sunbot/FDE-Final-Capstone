@@ -4,9 +4,10 @@
 
 1. Confirm Python version and release-manifest digests.
 2. Ensure `AI_MODE=off` unless running the labelled fake-adapter demonstration.
-3. Initialize a disposable database with `fde-capstone init`.
-4. Run health, audit verification and one read-only deterministic query.
-5. Do not proceed if evidence/catalog/source digests differ.
+3. Start the browser demonstration with `make app`, or double-click `START_DEMO.command` on macOS.
+4. Open `http://127.0.0.1:8000`, confirm the synthetic-use banner and run the three-POC walkthrough.
+5. Confirm the evidence console reports a valid audit chain and AI is deterministic/off.
+6. Do not proceed if evidence/catalog/source digests differ.
 
 ## RB-02 Unknown external command outcome
 

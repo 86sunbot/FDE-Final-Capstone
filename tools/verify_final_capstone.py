@@ -51,7 +51,7 @@ def main() -> None:
     check(all(value > 0 for value in stage_counts.values()), "all_21_stage_directories_have_artifacts", stage_counts, checks)
 
     test_summary = json.loads((ROOT / "stage_15/test_summary.json").read_text(encoding="utf-8"))
-    check(test_summary["passed"] == 73 and test_summary["failures"] == test_summary["errors"] == 0, "automated_test_summary", test_summary, checks)
+    check(test_summary["passed"] == 77 and test_summary["failures"] == test_summary["errors"] == 0, "automated_test_summary", test_summary, checks)
     evaluation = json.loads((ROOT / "stage_15/evaluation_results.json").read_text(encoding="utf-8"))["summary"]
     check(evaluation["executed"] == 57 and evaluation["pass"] == 55 and evaluation["fail"] == 0 and evaluation["inconclusive"] == 2, "evaluation_summary", evaluation, checks)
 

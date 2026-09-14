@@ -14,7 +14,8 @@
 - Payload-bound semantic idempotency, unknown outcome, reconciliation and compensation.
 - Quality evidence packet and authority-separated release.
 - Provider-neutral assistant gateway; `off` by default; deterministic fake for tests only.
-- CLI, optional FastAPI surface, Dockerfile, CI workflow, SBOM/AIBOM and release manifest.
+- Responsive browser Control Tower, CLI, FastAPI surface, Dockerfile, CI workflow, SBOM/AIBOM and release manifest.
+- The Control Tower runs the same isolated three-POC orchestration path as the CLI, displays evidence/audit results and preserves the synthetic-only and AI-off boundaries.
 
 ## Verification
 

@@ -1,9 +1,9 @@
 {
   "format": "academic-capstone-release-manifest-v1",
-  "version": "1.0.0",
-  "generated_at": "2026-09-14T08:11:59.695305+00:00",
+  "version": "1.1.0",
+  "generated_at": "2026-09-14T09:00:41.469047+00:00",
   "scope": "synthetic local academic POC",
-  "source_tree_sha256": "ce6ddf2b3d1e88fe0e8387b20a5f68d16eb6735933bdb54ba997771fc08f711a",
+  "source_tree_sha256": "be112474485d4fab098fbbcf3b74e1ff47a549df2acfb93551e9a77500cbaf2b",
   "contract_tree_sha256": "9277339e51f6d95e85fca1112bb958b06f7c38c6e2049384bd68a99f3e430a16",
   "evaluation_catalog_sha256": "40f0bf990619dc4076c56a9b9d6bcfa1527fba26490e3a2ced65a3ec275e2110",
   "requirements_sha256": "03cb3936cebc5d30aea77af367e15c1c0d72d0c5304d66d1098af87f45a72152",
@@ -33,8 +33,8 @@
     },
     {
       "path": "src/fde_capstone/api.py",
-      "sha256": "a14086fd50b7054d30adc7ae9fb80e0c5dfab49ba00e6a088c294556290b0608",
-      "size_bytes": 2105
+      "sha256": "7ab92647fdc15024317d6fc8f5d1fe4476dc54c067cc9bda0ad9791bf561ea0a",
+      "size_bytes": 3776
     },
     {
       "path": "src/fde_capstone/application.py",
@@ -115,6 +115,26 @@
       "path": "src/fde_capstone/storage.py",
       "sha256": "47be5e9e8db90fb925fc3004b7e760394b6dd0f3f1fdefd37ee89ac1768417a5",
       "size_bytes": 12448
+    },
+    {
+      "path": "src/fde_capstone/web/app.js",
+      "sha256": "908b96f5a7ede0c1b251fdcfb9012325b5ec74de14cce86bf278839e16576569",
+      "size_bytes": 6097
+    },
+    {
+      "path": "src/fde_capstone/web/favicon.svg",
+      "sha256": "6be52758a3974a769ca14b97320f896ac0923f378068a41292aca812c2d4615c",
+      "size_bytes": 343
+    },
+    {
+      "path": "src/fde_capstone/web/index.html",
+      "sha256": "3c2201f2629c338809d15c7616c8fdfa6eaa10b225c6a44a3c7c10437921f328",
+      "size_bytes": 13979
+    },
+    {
+      "path": "src/fde_capstone/web/styles.css",
+      "sha256": "f201b14fa4afd30beb6b99bb3d883461b864b66c497fa82a00bc76a6994f2ed9",
+      "size_bytes": 20487
     }
   ],
   "contract_files": [

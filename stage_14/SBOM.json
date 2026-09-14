@@ -1,6 +1,6 @@
 {
   "format": "academic-capstone-sbom-v1",
-  "generated_at": "2026-09-14T08:11:59.695305+00:00",
+  "generated_at": "2026-09-14T09:00:41.469047+00:00",
   "runtime": {
     "python": "3.14.7",
     "sqlite": "3.53.4",
@@ -8,8 +8,8 @@
   },
   "application": {
     "name": "fde-final-capstone",
-    "version": "1.0.0",
-    "source_tree_sha256": "ce6ddf2b3d1e88fe0e8387b20a5f68d16eb6735933bdb54ba997771fc08f711a"
+    "version": "1.1.0",
+    "source_tree_sha256": "be112474485d4fab098fbbcf3b74e1ff47a549df2acfb93551e9a77500cbaf2b"
   },
   "dependencies": [
     {
