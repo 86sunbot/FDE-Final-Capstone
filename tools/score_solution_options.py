@@ -9,8 +9,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "stage_08/option_scores.json"
-OUTPUT = ROOT / "stage_08/option_scores.csv"
+SOURCE = ROOT / "docs/stages/stage_08/option_scores.json"
+OUTPUT = ROOT / "docs/stages/stage_08/option_scores.csv"
 
 
 def calculate() -> list[dict]:
@@ -46,7 +46,7 @@ def calculate() -> list[dict]:
 def main() -> None:
     rows = calculate()
     with OUTPUT.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=rows[0])
+        writer = csv.DictWriter(handle, fieldnames=rows[0], lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     print(json.dumps(rows, indent=2))

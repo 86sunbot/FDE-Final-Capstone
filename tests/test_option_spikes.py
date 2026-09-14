@@ -1,4 +1,4 @@
-from stage_08.spikes.decision_kernel import (
+from docs.stages.stage_08.spikes.decision_kernel import (
     assist_or_fallback,
     known_assertions_at,
     may_retry,

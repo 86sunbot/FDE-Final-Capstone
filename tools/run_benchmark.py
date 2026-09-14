@@ -37,7 +37,7 @@ def main() -> None:
         "pass": statistics.quantiles(samples, n=100)[94] <= 250,
     }
     app.close()
-    output = ROOT / "stage_15/performance_results.json"
+    output = ROOT / "docs/stages/stage_15/performance_results.json"
     output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
 

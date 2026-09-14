@@ -43,7 +43,7 @@ def main() -> None:
         "pass": before == after and audit_valid and seconds <= 60,
         "production_claim": False
     }
-    output = ROOT / "stage_16/recovery_drill_results.json"
+    output = ROOT / "docs/stages/stage_16/recovery_drill_results.json"
     output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
 

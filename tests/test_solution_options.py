@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_option_weights_total_one_hundred_and_scores_are_bounded():
-    document = json.loads((ROOT / "stage_08/option_scores.json").read_text(encoding="utf-8"))
+    document = json.loads((ROOT / "docs/stages/stage_08/option_scores.json").read_text(encoding="utf-8"))
     assert sum(item["weight"] for item in document["criteria"]) == 100
     assert all(1 <= value <= 5 for option in document["options"] for value in option["scores"].values())
 

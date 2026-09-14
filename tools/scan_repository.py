@@ -38,7 +38,7 @@ def main() -> None:
         "live_model_credentials_expected": False,
         "pass": not findings and not runtime_databases,
     }
-    output = ROOT / "stage_21/retirement_scan.json"
+    output = ROOT / "docs/stages/stage_21/retirement_scan.json"
     output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
     raise SystemExit(0 if report["pass"] else 1)

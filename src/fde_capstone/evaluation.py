@@ -16,7 +16,7 @@ from .services.assistant import AssistantGateway
 
 
 ROOT = Path(__file__).resolve().parents[2]
-CATALOG_PATH = ROOT / "stage_07/evaluation_catalog.json"
+CATALOG_PATH = ROOT / "docs/stages/stage_07/evaluation_catalog.json"
 T0 = "2026-01-01T00:00:00+00:00"
 
 

@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-INVENTORY = json.loads((ROOT / "stage_02" / "evidence_inventory.json").read_text(encoding="utf-8"))
+INVENTORY = json.loads((ROOT / "docs/stages/stage_02" / "evidence_inventory.json").read_text(encoding="utf-8"))
 
 
 def digest(path: Path) -> str:

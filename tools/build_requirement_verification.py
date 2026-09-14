@@ -16,11 +16,11 @@ def main() -> None:
     for requirement in requirements:
         human = requirement["requirement_id"].startswith("REQ-HUM-")
         status = "INCONCLUSIVE_EXTERNAL_EVIDENCE_REQUIRED" if human else "VERIFIED_INTERNAL_POC"
-        evidence = requirement["test_reference"] if human else f'{requirement["test_reference"]}; stage_15/test_summary.json'
+        evidence = requirement["test_reference"] if human else f'{requirement["test_reference"]}; docs/stages/stage_15/test_summary.json'
         rows.append(requirement | {"verification_status": status, "verification_evidence": evidence})
     output_csv = ROOT / "requirements/verification_matrix.csv"
     with output_csv.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=rows[0])
+        writer = csv.DictWriter(handle, fieldnames=rows[0], lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     summary = {

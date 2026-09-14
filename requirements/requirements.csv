@@ -24,5 +24,5 @@ REQ-REC-001,resilience,P0,Database backup restore and replay preserve state dige
 REQ-OBS-001,operations,P1,Commands decisions recommendations and cases are observable,Metrics and correlation IDs exist for controlled operations,tests/unit/test_telemetry.py,SPECIFIED
 REQ-SEC-001,security,P0,Cross-scope access is denied,Principal outside journey scope cannot read or mutate it,tests/unit/test_authorization.py,SPECIFIED
 REQ-REL-001,delivery,P0,Release is reproducible,Manifest records version data schema and evaluation digests,tests/test_release_manifest.py,SPECIFIED
-REQ-HUM-001,human_factors,P0,Human oversight resists automation bias,Controlled participants inspect all material P0 evidence and accept zero unsafe trap recommendations,stage_15/evaluation_results.json::EXT-HUM-001,SPECIFIED
-REQ-HUM-002,human_factors,P1,Authorized users can safely override abstain and escalate,Controlled role study demonstrates usable override and captures rationale,stage_15/evaluation_results.json::EXT-HUM-002,SPECIFIED
+REQ-HUM-001,human_factors,P0,Human oversight resists automation bias,Controlled participants inspect all material P0 evidence and accept zero unsafe trap recommendations,docs/stages/stage_15/evaluation_results.json::EXT-HUM-001,SPECIFIED
+REQ-HUM-002,human_factors,P1,Authorized users can safely override abstain and escalate,Controlled role study demonstrates usable override and captures rationale,docs/stages/stage_15/evaluation_results.json::EXT-HUM-002,SPECIFIED

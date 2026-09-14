@@ -35,7 +35,7 @@ def main() -> None:
         "production_deployment": False,
         "pass": all(shadow) and all(result["audit_chain_valid"] for result in canary) and rollback["assistant"]["mode"] == "DETERMINISTIC_ONLY",
     }
-    output = ROOT / "stage_17/deployment_simulation_results.json"
+    output = ROOT / "docs/stages/stage_17/deployment_simulation_results.json"
     output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
 

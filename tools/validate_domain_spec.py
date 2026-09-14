@@ -127,7 +127,7 @@ def validate(spec: dict) -> list[str]:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("spec", nargs="?", type=Path, default=Path("stage_05/domain_spec.json"))
+    parser.add_argument("spec", nargs="?", type=Path, default=Path("docs/stages/stage_05/domain_spec.json"))
     return parser.parse_args()
 
 

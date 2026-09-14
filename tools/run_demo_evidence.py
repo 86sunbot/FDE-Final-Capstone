@@ -21,7 +21,7 @@ def main() -> None:
             "bounded_fake": run_demo(directory / "fake.db", "fake"),
             "limitations": ["synthetic data", "simulated authorities/adapters", "fake assistant is not live-model evidence"]
         }
-    output = ROOT / "stage_14/integrated_demo_results.json"
+    output = ROOT / "docs/stages/stage_14/integrated_demo_results.json"
     output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"ai_off_audit": report["ai_off"]["audit_chain_valid"], "fake_audit": report["bounded_fake"]["audit_chain_valid"]}, indent=2))
 

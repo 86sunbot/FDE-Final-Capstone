@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE = json.loads((ROOT / "stage_06" / "data_knowledge_profile.json").read_text(encoding="utf-8"))
+PROFILE = json.loads((ROOT / "docs/stages/stage_06" / "data_knowledge_profile.json").read_text(encoding="utf-8"))
 
 
 def digest(path: Path) -> str:

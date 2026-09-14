@@ -45,8 +45,8 @@ def version(name: str) -> str | None:
 def main() -> None:
     generated_at = datetime.now(timezone.utc).isoformat()
     source_digest, source_files = tree_digest([ROOT / "src"])
-    contract_digest, contract_files = tree_digest([ROOT / "stage_09/contracts"])
-    evaluation_catalog = ROOT / "stage_07/evaluation_catalog.json"
+    contract_digest, contract_files = tree_digest([ROOT / "docs/stages/stage_09/contracts"])
+    evaluation_catalog = ROOT / "docs/stages/stage_07/evaluation_catalog.json"
     requirements = ROOT / "requirements/requirements.csv"
     sbom = {
         "format": "academic-capstone-sbom-v1",
@@ -72,7 +72,7 @@ def main() -> None:
         "default_mode": "off",
         "tools": ["read scoped deterministic context"],
         "consequential_tools": [],
-        "output_contract_sha256": sha(ROOT / "stage_09/contracts/recommendation.schema.json"),
+        "output_contract_sha256": sha(ROOT / "docs/stages/stage_09/contracts/recommendation.schema.json"),
         "limitations": "No live-model quality, safety, privacy, latency or cost evidence."
     }
     manifest = {
@@ -92,9 +92,9 @@ def main() -> None:
         "known_limits": ["synthetic data", "simulated external systems and authorities", "no live model", "no independent assurance", "not production validated"]
     }
     for path, payload in [
-        (ROOT / "stage_14/SBOM.json", sbom),
-        (ROOT / "stage_14/AIBOM.json", aibom),
-        (ROOT / "stage_14/release_manifest.json", manifest),
+        (ROOT / "docs/stages/stage_14/SBOM.json", sbom),
+        (ROOT / "docs/stages/stage_14/AIBOM.json", aibom),
+        (ROOT / "docs/stages/stage_14/release_manifest.json", manifest),
     ]:
         path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"source_tree_sha256": source_digest, "contract_tree_sha256": contract_digest, "source_files": len(source_files), "contract_files": len(contract_files)}, indent=2))

@@ -12,9 +12,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_EVALS = ROOT / "source_baseline/evals/cases.csv"
 SOURCE_INJECTS = ROOT / "source_baseline/scenarios/inject_catalog.csv"
-EXTENSIONS = ROOT / "stage_07/evaluation_extensions.json"
-OUTPUT_JSON = ROOT / "stage_07/evaluation_catalog.json"
-OUTPUT_CSV = ROOT / "stage_07/evaluation_catalog.csv"
+EXTENSIONS = ROOT / "docs/stages/stage_07/evaluation_extensions.json"
+OUTPUT_JSON = ROOT / "docs/stages/stage_07/evaluation_catalog.json"
+OUTPUT_CSV = ROOT / "docs/stages/stage_07/evaluation_catalog.csv"
 
 
 EVAL_METADATA = {
@@ -167,7 +167,7 @@ def write_csv(catalog: dict) -> None:
         "prohibited_outcomes", "status", "result",
     ]
     with OUTPUT_CSV.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for source in catalog["cases"]:
             row = {field: source.get(field) for field in fields}

@@ -50,7 +50,7 @@ def main() -> None:
         "pass": app.db.verify_audit_chain() and authorization_denied,
     }
     app.close()
-    output = ROOT / "stage_18/monitoring_simulation_results.json"
+    output = ROOT / "docs/stages/stage_18/monitoring_simulation_results.json"
     output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
 

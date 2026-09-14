@@ -9,10 +9,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main() -> None:
-    baseline = json.loads((ROOT / "stage_03/kpi_baseline.json").read_text(encoding="utf-8"))
-    evaluation = json.loads((ROOT / "stage_15/evaluation_results.json").read_text(encoding="utf-8"))
-    performance = json.loads((ROOT / "stage_15/performance_results.json").read_text(encoding="utf-8"))
-    deployment = json.loads((ROOT / "stage_17/deployment_simulation_results.json").read_text(encoding="utf-8"))
+    baseline = json.loads((ROOT / "docs/stages/stage_03/kpi_baseline.json").read_text(encoding="utf-8"))
+    evaluation = json.loads((ROOT / "docs/stages/stage_15/evaluation_results.json").read_text(encoding="utf-8"))
+    performance = json.loads((ROOT / "docs/stages/stage_15/performance_results.json").read_text(encoding="utf-8"))
+    deployment = json.loads((ROOT / "docs/stages/stage_17/deployment_simulation_results.json").read_text(encoding="utf-8"))
     report = {
         "scope": "synthetic academic evidence; not real-world benefit or ROI",
         "baseline": baseline["summary"],
@@ -33,7 +33,7 @@ def main() -> None:
         "ai_increment_decision": "NOT PROVEN; keep AI off until controlled human and live-model comparison passes",
         "claim_decision": "The POC demonstrates deterministic safety/control feasibility on synthetic cases; it does not demonstrate clinical, operational, regulatory or financial outcomes."
     }
-    output = ROOT / "stage_19/value_report.json"
+    output = ROOT / "docs/stages/stage_19/value_report.json"
     output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
 

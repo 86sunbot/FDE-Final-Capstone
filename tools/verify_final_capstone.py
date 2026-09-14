@@ -39,7 +39,7 @@ def check(condition: bool, name: str, details: object, checks: list[dict]) -> No
 
 def main() -> None:
     checks: list[dict] = []
-    inventory = json.loads((ROOT / "stage_02/evidence_inventory.json").read_text(encoding="utf-8"))
+    inventory = json.loads((ROOT / "docs/stages/stage_02/evidence_inventory.json").read_text(encoding="utf-8"))
     if ZIP.is_file():
         zip_ok = sha(ZIP) == EXPECTED_ZIP
         zip_details = {"sha256": EXPECTED_ZIP, "verification": "DIRECT_ARCHIVE_HASH", "archive_present": True}
@@ -63,36 +63,36 @@ def main() -> None:
 
     stage_counts = {}
     for number in range(1, 22):
-        path = ROOT / f"stage_{number:02d}"
+        path = ROOT / "docs" / "stages" / f"stage_{number:02d}"
         stage_counts[str(number)] = sum(1 for item in path.rglob("*") if item.is_file()) if path.is_dir() else 0
     check(all(value > 0 for value in stage_counts.values()), "all_21_stage_directories_have_artifacts", stage_counts, checks)
 
-    test_summary = json.loads((ROOT / "stage_15/test_summary.json").read_text(encoding="utf-8"))
+    test_summary = json.loads((ROOT / "docs/stages/stage_15/test_summary.json").read_text(encoding="utf-8"))
     check(test_summary["passed"] == 77 and test_summary["failures"] == test_summary["errors"] == 0, "automated_test_summary", test_summary, checks)
-    evaluation = json.loads((ROOT / "stage_15/evaluation_results.json").read_text(encoding="utf-8"))["summary"]
+    evaluation = json.loads((ROOT / "docs/stages/stage_15/evaluation_results.json").read_text(encoding="utf-8"))["summary"]
     check(evaluation["executed"] == 57 and evaluation["pass"] == 55 and evaluation["fail"] == 0 and evaluation["inconclusive"] == 2, "evaluation_summary", evaluation, checks)
 
     verification = json.loads((ROOT / "requirements/verification_matrix.json").read_text(encoding="utf-8"))["summary"]
     check(verification == {"total": 27, "verified_internal_poc": 25, "inconclusive_external_evidence_required": 2, "production_verified": 0}, "requirement_verification", verification, checks)
 
     for file, key in [
-        ("stage_15/performance_results.json", "performance"),
-        ("stage_16/recovery_drill_results.json", "recovery"),
-        ("stage_17/deployment_simulation_results.json", "deployment_simulation"),
-        ("stage_18/monitoring_simulation_results.json", "monitoring_simulation"),
-        ("stage_21/retirement_scan.json", "retirement_scan"),
+        ("docs/stages/stage_15/performance_results.json", "performance"),
+        ("docs/stages/stage_16/recovery_drill_results.json", "recovery"),
+        ("docs/stages/stage_17/deployment_simulation_results.json", "deployment_simulation"),
+        ("docs/stages/stage_18/monitoring_simulation_results.json", "monitoring_simulation"),
+        ("docs/stages/stage_21/retirement_scan.json", "retirement_scan"),
     ]:
         payload = json.loads((ROOT / file).read_text(encoding="utf-8"))
         check(payload.get("pass") is True, key, file, checks)
 
-    manifest = json.loads((ROOT / "stage_14/release_manifest.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / "docs/stages/stage_14/release_manifest.json").read_text(encoding="utf-8"))
     check(manifest["source_tree_sha256"] == tree_digest(ROOT / "src"), "release_source_digest", manifest["source_tree_sha256"], checks)
-    check(manifest["evaluation_catalog_sha256"] == sha(ROOT / "stage_07/evaluation_catalog.json"), "release_evaluation_digest", manifest["evaluation_catalog_sha256"], checks)
+    check(manifest["evaluation_catalog_sha256"] == sha(ROOT / "docs/stages/stage_07/evaluation_catalog.json"), "release_evaluation_digest", manifest["evaluation_catalog_sha256"], checks)
     check(manifest["requirements_sha256"] == sha(ROOT / "requirements/requirements.csv"), "release_requirements_digest", manifest["requirements_sha256"], checks)
 
     runtime_databases = [path.relative_to(ROOT).as_posix() for path in ROOT.rglob("*.db") if "source_baseline" not in path.parts and ".git" not in path.parts]
     check(not runtime_databases, "no_disposable_runtime_database", runtime_databases, checks)
-    check((ROOT / "FINAL_CAPSTONE_REPORT.md").is_file() and (ROOT / "ARTIFACT_INDEX.md").is_file(), "final_handoff_artifacts", True, checks)
+    check((ROOT / "docs/FINAL_CAPSTONE_REPORT.md").is_file() and (ROOT / "docs/ARTIFACT_INDEX.md").is_file(), "final_handoff_artifacts", True, checks)
 
     report = {"status": "PASS" if all(item["status"] == "PASS" for item in checks) else "FAIL", "checks": checks}
     output = ROOT / "evidence/final_verification.json"

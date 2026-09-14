@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CATALOG_PATH = ROOT / "stage_07/evaluation_catalog.json"
+CATALOG_PATH = ROOT / "docs/stages/stage_07/evaluation_catalog.json"
 REQUIRED_FIELDS = {
     "case_id", "origin", "assessment_layer", "poc", "category", "severity",
     "mode", "executor", "requirement_ids", "stimulus", "expected_properties",

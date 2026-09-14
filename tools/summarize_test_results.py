@@ -22,7 +22,7 @@ def main() -> None:
         "time_seconds": round(total_time, 6),
         "junit_evidence": "reports/generated/pytest-results.xml",
     }
-    output = ROOT / "stage_15/test_summary.json"
+    output = ROOT / "docs/stages/stage_15/test_summary.json"
     output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
 

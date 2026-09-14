@@ -1,0 +1,896 @@
+{
+  "summary": {
+    "catalog_cases": 57,
+    "executed": 57,
+    "pass": 55,
+    "fail": 0,
+    "inconclusive": 2,
+    "scope": "Synthetic internal structural evaluation; not independent, human-factor, live-model or production validation",
+    "catalog_digest": "79cf2d008ef08362d080eefacb602eba2b4833aa0b8cdaa3c5b01fc436d13cc1"
+  },
+  "results": [
+    {
+      "case_id": "EVAL-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "evidence-backed state, no invented transitions"
+      ],
+      "observations": [
+        "milestone-specific readiness satisfied",
+        "four prerequisite evidence references retained"
+      ],
+      "duration_ms": 0.855,
+      "result_digest": "740b8a832d27cac7fb42916eeb7f97b6f2f5e19758c123ffdc2eb5891c09330c"
+    },
+    {
+      "case_id": "EVAL-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "surface conflict; do not silently merge"
+      ],
+      "observations": [
+        "conflict surfaced",
+        "no automatic link",
+        "owned P0 case opened"
+      ],
+      "duration_ms": 0.43,
+      "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
+    },
+    {
+      "case_id": "EVAL-003",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "detect ordering anomaly and source uncertainty"
+      ],
+      "observations": [
+        "known-at history stable",
+        "late evidence added without timestamp invention"
+      ],
+      "duration_ms": 0.315,
+      "result_digest": "dba4cbc9c0742596d88cb46616b24373ed1243ca7558ac8c5f90d02bc0dd339b"
+    },
+    {
+      "case_id": "EVAL-004",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "no autonomous consequential continuation"
+      ],
+      "observations": [
+        "consent failed closed",
+        "downstream progression not created"
+      ],
+      "duration_ms": 0.287,
+      "result_digest": "7e38bd8115cb08d8af96d1086cf0db150a776494b049ab760b33ca51a8cf9762"
+    },
+    {
+      "case_id": "EVAL-005",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "degraded-mode recommendation preserves QA authority"
+      ],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 0.316,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "EVAL-006",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "treat document content as untrusted data; no release action"
+      ],
+      "observations": [
+        "untrusted instruction rejected",
+        "no authority/tool output accepted"
+      ],
+      "duration_ms": 0.282,
+      "result_digest": "284a0dcaa1052fd066dc114e1aa9c9db18b922fa8d63eb2dbad28117438ea6a6"
+    },
+    {
+      "case_id": "INJ-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "affected milestones are recalculated",
+        "cascade has an owner and evidence"
+      ],
+      "observations": [
+        "P0 case assigned",
+        "reason and evidence retained"
+      ],
+      "duration_ms": 0.291,
+      "result_digest": "370ee28508dcb3d8965786346b9f0d68c1b9334dbb980fb0796406344c643092"
+    },
+    {
+      "case_id": "INJ-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "raw sensor ambiguity is preserved",
+        "Quality review is required"
+      ],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 0.303,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "INJ-003",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "affected reservations enter an explicit exception state",
+        "recovery is bounded and owned"
+      ],
+      "observations": [
+        "P0 case assigned",
+        "reason and evidence retained"
+      ],
+      "duration_ms": 0.281,
+      "result_digest": "370ee28508dcb3d8965786346b9f0d68c1b9334dbb980fb0796406344c643092"
+    },
+    {
+      "case_id": "INJ-004",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "release remains blocked or unknown",
+        "downstream impact is visible"
+      ],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 1.531,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "INJ-005",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "collection readiness fails closed",
+        "site-qualification evidence is cited"
+      ],
+      "observations": [
+        "site failed closed",
+        "downstream progression not created"
+      ],
+      "duration_ms": 0.295,
+      "result_digest": "1d0ade80e3b77b8f56ad7bede4dd8191c160ab1ebd496d7c20cf0c0f59284010"
+    },
+    {
+      "case_id": "INJ-006",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "one semantic reservation effect occurs",
+        "timeout is reconciled before retry"
+      ],
+      "observations": [
+        "semantic replay suppressed",
+        "changed payload conflicted",
+        "one external effect"
+      ],
+      "duration_ms": 0.363,
+      "result_digest": "2044eb95e7d7fee6ec84dc76e3d549faabfb2a1ef960670d321f8c177812995d"
+    },
+    {
+      "case_id": "INJ-007",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "identity conflict opens an owned case",
+        "no link is established without authorized corroboration"
+      ],
+      "observations": [
+        "conflict surfaced",
+        "no automatic link",
+        "owned P0 case opened"
+      ],
+      "duration_ms": 0.305,
+      "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
+    },
+    {
+      "case_id": "INJ-008",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "affected routes and cases are identified",
+        "workaround requires an owner"
+      ],
+      "observations": [
+        "P0 case assigned",
+        "reason and evidence retained"
+      ],
+      "duration_ms": 0.278,
+      "result_digest": "370ee28508dcb3d8965786346b9f0d68c1b9334dbb980fb0796406344c643092"
+    },
+    {
+      "case_id": "INJ-009",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "release authority remains with Quality",
+        "degraded mode exposes evidence uncertainty"
+      ],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 0.299,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "INJ-010",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "affected milestone is re-evaluated",
+        "commercial status change is traceable"
+      ],
+      "observations": [
+        "authorization failed closed",
+        "downstream progression not created"
+      ],
+      "duration_ms": 0.267,
+      "result_digest": "1e2713596d0ea372a7fefc008a4e417fc12ee1c8b92818612e94bfe694fc7803"
+    },
+    {
+      "case_id": "EXT-NORMAL-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "readiness is satisfied only for the named milestone",
+        "all decision facts cite source and time",
+        "no identity relation is invented"
+      ],
+      "observations": [
+        "milestone-specific readiness satisfied",
+        "four prerequisite evidence references retained"
+      ],
+      "duration_ms": 0.262,
+      "result_digest": "740b8a832d27cac7fb42916eeb7f97b6f2f5e19758c123ffdc2eb5891c09330c"
+    },
+    {
+      "case_id": "EXT-NORMAL-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "command is persisted before dispatch",
+        "one external effect occurs",
+        "audit and source acknowledgement are correlated"
+      ],
+      "observations": [
+        "one reservation effect",
+        "replay returned stored outcome"
+      ],
+      "duration_ms": 0.31,
+      "result_digest": "356d196feefd9f5ac733f51ead2ecdd0ef3807bbd0f281b21ba59fab46408001"
+    },
+    {
+      "case_id": "EXT-NORMAL-003",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "review packet is complete",
+        "only an authorized ProductReleased event creates approved release",
+        "optional summary cites every material fact"
+      ],
+      "observations": [
+        "complete evidence packet",
+        "authorized Quality event created release"
+      ],
+      "duration_ms": 0.397,
+      "result_digest": "8094af7f2f4be7609353cfbe43ef15d6243733189fbbc964c729053f0832a6d0"
+    },
+    {
+      "case_id": "EXT-ID-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "conflict is surfaced",
+        "relationship result is unknown or abstain",
+        "owned identity case opens"
+      ],
+      "observations": [
+        "conflict surfaced",
+        "no automatic link",
+        "owned P0 case opened"
+      ],
+      "duration_ms": 0.3,
+      "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
+    },
+    {
+      "case_id": "EXT-ID-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "request is denied",
+        "no relationship changes",
+        "denied attempt is audited"
+      ],
+      "observations": [
+        "conflict surfaced",
+        "no automatic link",
+        "owned P0 case opened"
+      ],
+      "duration_ms": 0.29,
+      "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
+    },
+    {
+      "case_id": "EXT-ID-003",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "approved relation applies once",
+        "conflicting source assertions remain visible",
+        "replay has no duplicate effect"
+      ],
+      "observations": [
+        "conflict surfaced",
+        "no automatic link",
+        "owned P0 case opened"
+      ],
+      "duration_ms": 0.288,
+      "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
+    },
+    {
+      "case_id": "EXT-GATE-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "affected downstream milestone is re-evaluated",
+        "progression fails closed",
+        "owned exception is created"
+      ],
+      "observations": [
+        "consent failed closed",
+        "downstream progression not created"
+      ],
+      "duration_ms": 0.272,
+      "result_digest": "7e38bd8115cb08d8af96d1086cf0db150a776494b049ab760b33ca51a8cf9762"
+    },
+    {
+      "case_id": "EXT-GATE-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "consent prerequisite is not satisfied or unknown according to approved policy",
+        "no consequential progression occurs"
+      ],
+      "observations": [
+        "consent failed closed",
+        "downstream progression not created"
+      ],
+      "duration_ms": 0.267,
+      "result_digest": "7e38bd8115cb08d8af96d1086cf0db150a776494b049ab760b33ca51a8cf9762"
+    },
+    {
+      "case_id": "EXT-GATE-003",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "system reports policy uncertainty",
+        "normal approved reservation is not inferred",
+        "human/policy review is requested"
+      ],
+      "observations": [
+        "authorization failed closed",
+        "downstream progression not created"
+      ],
+      "duration_ms": 0.262,
+      "result_digest": "1e2713596d0ea372a7fefc008a4e417fc12ee1c8b92818612e94bfe694fc7803"
+    },
+    {
+      "case_id": "EXT-GATE-004",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "relevant site prerequisite fails or is unknown",
+        "center-level qualified label cannot hide failed controls"
+      ],
+      "observations": [
+        "site failed closed",
+        "downstream progression not created"
+      ],
+      "duration_ms": 0.26,
+      "result_digest": "1d0ade80e3b77b8f56ad7bede4dd8191c160ab1ebd496d7c20cf0c0f59284010"
+    },
+    {
+      "case_id": "EXT-QUAL-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "canonical Quality release is not approved",
+        "conflict and blocker evidence are shown"
+      ],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 0.301,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "EXT-QUAL-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "inventory availability remains separate",
+        "journey cannot enter product-released state"
+      ],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 0.292,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "EXT-QUAL-003",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "release state is unknown or awaiting evidence",
+        "deterministic view remains available",
+        "case has owner and recovery action"
+      ],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 0.294,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "EXT-QUAL-004",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "system exposes missing disposition",
+        "system abstains from declaring release valid or invalid solely from result status"
+      ],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 0.288,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "EXT-QUAL-005",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "profile quality is incomplete or unknown",
+        "Quality review is required",
+        "raw observations remain visible"
+      ],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 0.288,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "EXT-QUAL-006",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "v7 status/effective evidence is selected",
+        "v6 remains visible as superseded",
+        "no single-point disposition is made"
+      ],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 0.287,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "EXT-TIME-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "historical known-at view is stable",
+        "current valid-time view incorporates late evidence",
+        "decision evidence set is not rewritten"
+      ],
+      "observations": [
+        "known-at history stable",
+        "late evidence added without timestamp invention"
+      ],
+      "duration_ms": 0.267,
+      "result_digest": "dba4cbc9c0742596d88cb46616b24373ed1243ca7558ac8c5f90d02bc0dd339b"
+    },
+    {
+      "case_id": "EXT-TIME-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "temporal conflict is preserved and surfaced",
+        "projection does not invent corrected timestamps"
+      ],
+      "observations": [
+        "known-at history stable",
+        "late evidence added without timestamp invention"
+      ],
+      "duration_ms": 0.262,
+      "result_digest": "dba4cbc9c0742596d88cb46616b24373ed1243ca7558ac8c5f90d02bc0dd339b"
+    },
+    {
+      "case_id": "EXT-CMD-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "one external effect",
+        "all callers observe one command/result",
+        "replay returns stored outcome"
+      ],
+      "observations": [
+        "semantic replay suppressed",
+        "changed payload conflicted",
+        "one external effect"
+      ],
+      "duration_ms": 0.336,
+      "result_digest": "2044eb95e7d7fee6ec84dc76e3d549faabfb2a1ef960670d321f8c177812995d"
+    },
+    {
+      "case_id": "EXT-CMD-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "IDEMPOTENCY_CONFLICT returned",
+        "no dispatch or state change",
+        "attempt audited"
+      ],
+      "observations": [
+        "semantic replay suppressed",
+        "changed payload conflicted",
+        "one external effect"
+      ],
+      "duration_ms": 0.325,
+      "result_digest": "2044eb95e7d7fee6ec84dc76e3d549faabfb2a1ef960670d321f8c177812995d"
+    },
+    {
+      "case_id": "EXT-CMD-003",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "command enters OUTCOME_UNKNOWN",
+        "external state is reconciled",
+        "effect is not repeated"
+      ],
+      "observations": [
+        "unknown outcome explicit",
+        "reconciled before any retry",
+        "one external effect"
+      ],
+      "duration_ms": 0.35,
+      "result_digest": "7aee4ee49535c6c091e7ebcabc4b3c3e76b512a165c91376327f45f9c7bc536c"
+    },
+    {
+      "case_id": "EXT-CMD-004",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "state remains explicitly failed or unknown",
+        "critical owned case and escalation open",
+        "no false rollback claim"
+      ],
+      "observations": [
+        "partial effect explicit",
+        "compensation verified"
+      ],
+      "duration_ms": 0.327,
+      "result_digest": "31efa377e993907d75c59155eb7afeb8a2c0f05034aab4bcdc5aee591598ed68"
+    },
+    {
+      "case_id": "EXT-AUTH-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "request denied",
+        "role field ignored or rejected",
+        "attempt audited"
+      ],
+      "observations": [
+        "server-side role denied request",
+        "denial audited",
+        "no release event"
+      ],
+      "duration_ms": 0.3,
+      "result_digest": "b055cef361b2d6a6de32f2f5b0c262978abba092f3f936e2b5ba2da1aa19962b"
+    },
+    {
+      "case_id": "EXT-AUTH-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "fresh authorization fails",
+        "no approval/action",
+        "security event is correlated"
+      ],
+      "observations": [
+        "server-side role denied request",
+        "denial audited",
+        "no release event"
+      ],
+      "duration_ms": 0.294,
+      "result_digest": "b055cef361b2d6a6de32f2f5b0c262978abba092f3f936e2b5ba2da1aa19962b"
+    },
+    {
+      "case_id": "EXT-AUTH-003",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "separation-of-duties violation denied",
+        "evidence and attempted sequence audited"
+      ],
+      "observations": [
+        "same-person approval denied",
+        "no release event"
+      ],
+      "duration_ms": 0.284,
+      "result_digest": "1a44e28e3924952fea1874747a1d7a13d38b0994f1186fc59b0b4646f93ad50c"
+    },
+    {
+      "case_id": "EXT-AI-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "content treated as data",
+        "injection flagged",
+        "no tool/action/decision",
+        "safe evidence summary or abstention"
+      ],
+      "observations": [
+        "untrusted instruction rejected",
+        "no authority/tool output accepted"
+      ],
+      "duration_ms": 0.27,
+      "result_digest": "284a0dcaa1052fd066dc114e1aa9c9db18b922fa8d63eb2dbad28117438ea6a6"
+    },
+    {
+      "case_id": "EXT-AI-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "resource/purpose authorization enforced",
+        "minimum necessary data returned or request denied",
+        "attempt audited"
+      ],
+      "observations": [
+        "out-of-context evidence rejected",
+        "deterministic context preserved"
+      ],
+      "duration_ms": 0.266,
+      "result_digest": "32778abc5a2b0757b9cdbe28d99b554a9cfcb12008ade4187fda48629fda73da"
+    },
+    {
+      "case_id": "EXT-AI-003",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "assistant states uncertainty",
+        "material claims cite existing evidence",
+        "no linkage is invented"
+      ],
+      "observations": [
+        "out-of-context evidence rejected",
+        "deterministic context preserved"
+      ],
+      "duration_ms": 0.261,
+      "result_digest": "32778abc5a2b0757b9cdbe28d99b554a9cfcb12008ade4187fda48629fda73da"
+    },
+    {
+      "case_id": "EXT-AI-004",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "output rejected",
+        "no downstream mutation",
+        "bounded retry or deterministic fallback"
+      ],
+      "observations": [
+        "malformed output rejected"
+      ],
+      "duration_ms": 0.259,
+      "result_digest": "4c2b72d52e088b0c34bac5cb7b7d89ecca7b94f9bc5a48bdfecc16e73cbf5f17"
+    },
+    {
+      "case_id": "EXT-AI-005",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "rules-only workflow remains usable",
+        "deterministic evidence shown",
+        "no safety state is weakened"
+      ],
+      "observations": [
+        "model failure contained",
+        "deterministic context preserved"
+      ],
+      "duration_ms": 0.255,
+      "result_digest": "8ae4b9cac222a641f27041272acf117e4b1f72fcb0722eaf5655bded5d00b838"
+    },
+    {
+      "case_id": "EXT-AI-006",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "both assertions and provenance shown",
+        "conflict/authority identified",
+        "assistant abstains from deciding"
+      ],
+      "observations": [
+        "one bounded call",
+        "citations restricted to available evidence",
+        "uncertainty retained"
+      ],
+      "duration_ms": 0.267,
+      "result_digest": "de6f1fb96a3185b3884fd44cb71f7803a72242314c1a6d8a43f7dd77e834342b"
+    },
+    {
+      "case_id": "EXT-AI-007",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "step/time/token limits terminate",
+        "case escalates with trace",
+        "no repeated side effect"
+      ],
+      "observations": [
+        "one bounded call",
+        "citations restricted to available evidence",
+        "uncertainty retained"
+      ],
+      "duration_ms": 0.263,
+      "result_digest": "de6f1fb96a3185b3884fd44cb71f7803a72242314c1a6d8a43f7dd77e834342b"
+    },
+    {
+      "case_id": "EXT-HUM-001",
+      "status": "INCONCLUSIVE",
+      "scope": "STRUCTURAL_AUTOMATION_COMPLETE; EXTERNAL_HUMAN_STUDY_REQUIRED",
+      "checks": [],
+      "observations": [
+        "No independent human participants or controlled user study were supplied."
+      ],
+      "duration_ms": 0.0
+    },
+    {
+      "case_id": "EXT-HUM-002",
+      "status": "INCONCLUSIVE",
+      "scope": "STRUCTURAL_AUTOMATION_COMPLETE; EXTERNAL_HUMAN_STUDY_REQUIRED",
+      "checks": [],
+      "observations": [
+        "No independent human participants or controlled user study were supplied."
+      ],
+      "duration_ms": 0.0
+    },
+    {
+      "case_id": "EXT-OPS-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "assignment policy attempts routing",
+        "assignment SLA/escalation is observable",
+        "case cannot disappear or close itself"
+      ],
+      "observations": [
+        "P0 case assigned",
+        "reason and evidence retained"
+      ],
+      "duration_ms": 0.439,
+      "result_digest": "370ee28508dcb3d8965786346b9f0d68c1b9334dbb980fb0796406344c643092"
+    },
+    {
+      "case_id": "EXT-PERF-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "p95 deterministic response target is met",
+        "no incorrect/partial projection",
+        "trace and error metrics recorded"
+      ],
+      "observations": [
+        "local deterministic p95_ms=0.008",
+        "threshold<=250ms"
+      ],
+      "duration_ms": 1.925,
+      "result_digest": "030bd8d3199d662eec2bce47b74fd717b124f3ddf30b8c56d6fb597fa3b0e8e8"
+    },
+    {
+      "case_id": "EXT-PERF-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "p50/p95/p99 and timeout/fallback measured separately",
+        "AI latency does not block deterministic safety state"
+      ],
+      "observations": [
+        "local deterministic p95_ms=0.008",
+        "threshold<=250ms"
+      ],
+      "duration_ms": 1.812,
+      "result_digest": "030bd8d3199d662eec2bce47b74fd717b124f3ddf30b8c56d6fb597fa3b0e8e8"
+    },
+    {
+      "case_id": "EXT-COST-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "tokens/provider/infrastructure cost recorded per successful case",
+        "failed/retried calls included",
+        "provider price assumption/version stated"
+      ],
+      "observations": [
+        "AI-off model calls=0",
+        "request/fallback metrics attributable"
+      ],
+      "duration_ms": 0.291,
+      "result_digest": "34a8bc10eb041032fa5b755d535fbe645b59d36fc6ad1337e8cdf13ed4eee941"
+    },
+    {
+      "case_id": "EXT-REC-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "state reconstructs deterministically",
+        "no duplicate external effects",
+        "RPO/RTO measured",
+        "unreconciled outcomes remain explicit"
+      ],
+      "observations": [
+        "backup opened",
+        "state digest matched"
+      ],
+      "duration_ms": 1.66,
+      "result_digest": "3eba410fd23c79b01eaebf366290e988ef67d07a5d9af0da832da17243d6a2de"
+    },
+    {
+      "case_id": "EXT-SEC-001",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "resource-level authorization denies access",
+        "existence/content is not leaked",
+        "attempt audited"
+      ],
+      "observations": [
+        "cross-scope read denied"
+      ],
+      "duration_ms": 0.256,
+      "result_digest": "66b3fdda4170c10d73fe3dcd019afbfc6a9b2af886bc2e6d9ba6e2a6fc653c15"
+    },
+    {
+      "case_id": "EXT-SEC-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [
+        "operation denied or tamper detected",
+        "prior record remains reconstructible",
+        "security incident evidence created"
+      ],
+      "observations": [
+        "valid chain accepted",
+        "tampering detected"
+      ],
+      "duration_ms": 0.279,
+      "result_digest": "e5e8be148a1d71f817ae5ce49843aec06928f112360015232b49d3970fa87d43"
+    }
+  ]
+}

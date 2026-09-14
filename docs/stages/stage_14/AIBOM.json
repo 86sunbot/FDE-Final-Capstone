@@ -1,0 +1,20 @@
+{
+  "format": "academic-capstone-aibom-v1",
+  "generated_at": "2026-09-14T12:09:03.973161+00:00",
+  "live_model_provider": null,
+  "live_model": null,
+  "training_or_fine_tuning": null,
+  "embedding_or_vector_store": null,
+  "test_adapter": "DeterministicAssistantFake v1",
+  "ai_modes": [
+    "off",
+    "fake"
+  ],
+  "default_mode": "off",
+  "tools": [
+    "read scoped deterministic context"
+  ],
+  "consequential_tools": [],
+  "output_contract_sha256": "876141c09d41042d923c54c315916b09b774518e7dface9508fa74908f3def2e",
+  "limitations": "No live-model quality, safety, privacy, latency or cost evidence."
+}

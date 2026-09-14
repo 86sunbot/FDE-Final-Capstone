@@ -15,7 +15,7 @@
       "test_reference": "tests/test_evidence_integrity.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/test_evidence_integrity.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/test_evidence_integrity.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-FDN-002",
@@ -26,7 +26,7 @@
       "test_reference": "tests/unit/test_evidence.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/unit/test_evidence.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/unit/test_evidence.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-FDN-003",
@@ -37,7 +37,7 @@
       "test_reference": "tests/unit/test_temporal.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/unit/test_temporal.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/unit/test_temporal.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-FDN-004",
@@ -48,7 +48,7 @@
       "test_reference": "tests/unit/test_readiness.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/unit/test_readiness.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/unit/test_readiness.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-AUTH-001",
@@ -59,7 +59,7 @@
       "test_reference": "tests/unit/test_authorization.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/unit/test_authorization.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/unit/test_authorization.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-AUTH-002",
@@ -70,7 +70,7 @@
       "test_reference": "tests/unit/test_assistant.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/unit/test_assistant.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/unit/test_assistant.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-AUD-001",
@@ -81,7 +81,7 @@
       "test_reference": "tests/unit/test_audit.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/unit/test_audit.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/unit/test_audit.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-ID-001",
@@ -92,7 +92,7 @@
       "test_reference": "tests/integration/test_poc1_identity_readiness.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/integration/test_poc1_identity_readiness.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/integration/test_poc1_identity_readiness.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-ID-002",
@@ -103,7 +103,7 @@
       "test_reference": "tests/integration/test_poc1_identity_readiness.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/integration/test_poc1_identity_readiness.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/integration/test_poc1_identity_readiness.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-GATE-001",
@@ -114,7 +114,7 @@
       "test_reference": "tests/integration/test_poc1_identity_readiness.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/integration/test_poc1_identity_readiness.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/integration/test_poc1_identity_readiness.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-CMD-001",
@@ -125,7 +125,7 @@
       "test_reference": "tests/integration/test_poc2_slot_orchestration.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/integration/test_poc2_slot_orchestration.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/integration/test_poc2_slot_orchestration.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-CMD-002",
@@ -136,7 +136,7 @@
       "test_reference": "tests/integration/test_poc2_slot_orchestration.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/integration/test_poc2_slot_orchestration.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/integration/test_poc2_slot_orchestration.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-CMD-003",
@@ -147,7 +147,7 @@
       "test_reference": "tests/integration/test_poc2_slot_orchestration.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/integration/test_poc2_slot_orchestration.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/integration/test_poc2_slot_orchestration.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-QUAL-001",
@@ -158,7 +158,7 @@
       "test_reference": "tests/integration/test_poc3_quality_release.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/integration/test_poc3_quality_release.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/integration/test_poc3_quality_release.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-QUAL-002",
@@ -169,7 +169,7 @@
       "test_reference": "tests/integration/test_poc3_quality_release.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/integration/test_poc3_quality_release.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/integration/test_poc3_quality_release.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-AI-001",
@@ -180,7 +180,7 @@
       "test_reference": "tests/unit/test_assistant.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/unit/test_assistant.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/unit/test_assistant.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-AI-002",
@@ -191,7 +191,7 @@
       "test_reference": "tests/unit/test_assistant.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/unit/test_assistant.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/unit/test_assistant.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-AI-003",
@@ -202,7 +202,7 @@
       "test_reference": "tests/unit/test_assistant.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/unit/test_assistant.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/unit/test_assistant.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-CASE-001",
@@ -213,7 +213,7 @@
       "test_reference": "tests/unit/test_cases.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/unit/test_cases.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/unit/test_cases.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-API-001",
@@ -224,7 +224,7 @@
       "test_reference": "tests/e2e/test_full_journey.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/e2e/test_full_journey.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/e2e/test_full_journey.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-PERF-001",
@@ -235,7 +235,7 @@
       "test_reference": "tests/performance_test.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/performance_test.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/performance_test.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-REC-001",
@@ -246,7 +246,7 @@
       "test_reference": "tests/recovery_test.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/recovery_test.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/recovery_test.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-OBS-001",
@@ -257,7 +257,7 @@
       "test_reference": "tests/unit/test_telemetry.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/unit/test_telemetry.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/unit/test_telemetry.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-SEC-001",
@@ -268,7 +268,7 @@
       "test_reference": "tests/unit/test_authorization.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/unit/test_authorization.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/unit/test_authorization.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-REL-001",
@@ -279,7 +279,7 @@
       "test_reference": "tests/test_release_manifest.py",
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
-      "verification_evidence": "tests/test_release_manifest.py; stage_15/test_summary.json"
+      "verification_evidence": "tests/test_release_manifest.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-HUM-001",
@@ -287,10 +287,10 @@
       "severity": "P0",
       "statement": "Human oversight resists automation bias",
       "acceptance": "Controlled participants inspect all material P0 evidence and accept zero unsafe trap recommendations",
-      "test_reference": "stage_15/evaluation_results.json::EXT-HUM-001",
+      "test_reference": "docs/stages/stage_15/evaluation_results.json::EXT-HUM-001",
       "status": "SPECIFIED",
       "verification_status": "INCONCLUSIVE_EXTERNAL_EVIDENCE_REQUIRED",
-      "verification_evidence": "stage_15/evaluation_results.json::EXT-HUM-001"
+      "verification_evidence": "docs/stages/stage_15/evaluation_results.json::EXT-HUM-001"
     },
     {
       "requirement_id": "REQ-HUM-002",
@@ -298,10 +298,10 @@
       "severity": "P1",
       "statement": "Authorized users can safely override abstain and escalate",
       "acceptance": "Controlled role study demonstrates usable override and captures rationale",
-      "test_reference": "stage_15/evaluation_results.json::EXT-HUM-002",
+      "test_reference": "docs/stages/stage_15/evaluation_results.json::EXT-HUM-002",
       "status": "SPECIFIED",
       "verification_status": "INCONCLUSIVE_EXTERNAL_EVIDENCE_REQUIRED",
-      "verification_evidence": "stage_15/evaluation_results.json::EXT-HUM-002"
+      "verification_evidence": "docs/stages/stage_15/evaluation_results.json::EXT-HUM-002"
     }
   ]
 }

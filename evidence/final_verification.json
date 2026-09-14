@@ -55,7 +55,7 @@
         "errors": 0,
         "skipped": 0,
         "passed": 77,
-        "time_seconds": 0.28,
+        "time_seconds": 0.303,
         "junit_evidence": "reports/generated/pytest-results.xml"
       }
     },
@@ -69,7 +69,7 @@
         "fail": 0,
         "inconclusive": 2,
         "scope": "Synthetic internal structural evaluation; not independent, human-factor, live-model or production validation",
-        "catalog_digest": "706365b29d3be971ba7282fda6f7ad5821e217730d136226e5a0623b0d5594b8"
+        "catalog_digest": "79cf2d008ef08362d080eefacb602eba2b4833aa0b8cdaa3c5b01fc436d13cc1"
       }
     },
     {
@@ -85,42 +85,42 @@
     {
       "check": "performance",
       "status": "PASS",
-      "details": "stage_15/performance_results.json"
+      "details": "docs/stages/stage_15/performance_results.json"
     },
     {
       "check": "recovery",
       "status": "PASS",
-      "details": "stage_16/recovery_drill_results.json"
+      "details": "docs/stages/stage_16/recovery_drill_results.json"
     },
     {
       "check": "deployment_simulation",
       "status": "PASS",
-      "details": "stage_17/deployment_simulation_results.json"
+      "details": "docs/stages/stage_17/deployment_simulation_results.json"
     },
     {
       "check": "monitoring_simulation",
       "status": "PASS",
-      "details": "stage_18/monitoring_simulation_results.json"
+      "details": "docs/stages/stage_18/monitoring_simulation_results.json"
     },
     {
       "check": "retirement_scan",
       "status": "PASS",
-      "details": "stage_21/retirement_scan.json"
+      "details": "docs/stages/stage_21/retirement_scan.json"
     },
     {
       "check": "release_source_digest",
       "status": "PASS",
-      "details": "be112474485d4fab098fbbcf3b74e1ff47a549df2acfb93551e9a77500cbaf2b"
+      "details": "85218ba40b4cfa8363c2b214b536fe450c750029f52cbb5e1ea0175e414f40a2"
     },
     {
       "check": "release_evaluation_digest",
       "status": "PASS",
-      "details": "40f0bf990619dc4076c56a9b9d6bcfa1527fba26490e3a2ced65a3ec275e2110"
+      "details": "6ab4b54354a0a6f2aa6c5182e2e5fb266700b147ad73149079dbc1519acd9535"
     },
     {
       "check": "release_requirements_digest",
       "status": "PASS",
-      "details": "03cb3936cebc5d30aea77af367e15c1c0d72d0c5304d66d1098af87f45a72152"
+      "details": "00a59350dcbcef8604cd0efc8c5132b4ca0a24bdd16789fcb936c05b09762910"
     },
     {
       "check": "no_disposable_runtime_database",
