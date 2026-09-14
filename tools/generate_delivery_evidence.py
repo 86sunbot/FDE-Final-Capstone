@@ -23,7 +23,13 @@ def sha(path: Path) -> str:
 def tree_digest(paths: list[Path]) -> tuple[str, list[dict]]:
     records = []
     for base in paths:
-        for path in sorted(item for item in base.rglob("*") if item.is_file() and "__pycache__" not in item.parts):
+        for path in sorted(
+            item
+            for item in base.rglob("*")
+            if item.is_file()
+            and "__pycache__" not in item.parts
+            and not any(part.endswith(".egg-info") for part in item.parts)
+        ):
             records.append({"path": path.relative_to(ROOT).as_posix(), "sha256": sha(path), "size_bytes": path.stat().st_size})
     value = hashlib.sha256(json.dumps(records, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
     return value, records

@@ -54,4 +54,8 @@ PYTHONPATH=src .venv/bin/python -m fde_capstone.cli evaluate --db runtime/eval.d
 
 Delete `runtime/` after the demo; it contains disposable synthetic state.
 
+## Verification provenance
+
+Local verification directly hashes the original external ZIP when it is available at its recorded path. GitHub Actions intentionally does not receive that external archive; it verifies the recorded ZIP digest plus all 132 committed frozen extraction files against their individual inventory hashes. Generated package metadata such as `*.egg-info` is excluded from the signed application-source digest.
+
 Start with [FINAL_CAPSTONE_REPORT.md](FINAL_CAPSTONE_REPORT.md), then use [CAPSTONE_PROGRESS_TRACKER.md](CAPSTONE_PROGRESS_TRACKER.md) and [ARTIFACT_INDEX.md](ARTIFACT_INDEX.md).

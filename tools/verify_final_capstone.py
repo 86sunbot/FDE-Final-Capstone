@@ -22,7 +22,13 @@ def sha(path: Path) -> str:
 
 def tree_digest(base: Path) -> str:
     records = []
-    for path in sorted(item for item in base.rglob("*") if item.is_file() and "__pycache__" not in item.parts):
+    for path in sorted(
+        item
+        for item in base.rglob("*")
+        if item.is_file()
+        and "__pycache__" not in item.parts
+        and not any(part.endswith(".egg-info") for part in item.parts)
+    ):
         records.append({"path": path.relative_to(ROOT).as_posix(), "sha256": sha(path), "size_bytes": path.stat().st_size})
     return hashlib.sha256(json.dumps(records, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
 
@@ -33,9 +39,20 @@ def check(condition: bool, name: str, details: object, checks: list[dict]) -> No
 
 def main() -> None:
     checks: list[dict] = []
-    check(ZIP.is_file() and sha(ZIP) == EXPECTED_ZIP, "original_zip_sha256", EXPECTED_ZIP, checks)
-
     inventory = json.loads((ROOT / "stage_02/evidence_inventory.json").read_text(encoding="utf-8"))
+    if ZIP.is_file():
+        zip_ok = sha(ZIP) == EXPECTED_ZIP
+        zip_details = {"sha256": EXPECTED_ZIP, "verification": "DIRECT_ARCHIVE_HASH", "archive_present": True}
+    else:
+        zip_ok = inventory["source_zip_sha256"] == inventory["expected_zip_sha256"] == EXPECTED_ZIP
+        zip_details = {
+            "sha256": EXPECTED_ZIP,
+            "verification": "RECORDED_ARCHIVE_DIGEST_PLUS_EXTRACTED_FILE_HASHES",
+            "archive_present": False,
+            "note": "The external source archive is not committed; CI verifies its recorded digest and every frozen extracted file.",
+        }
+    check(zip_ok, "original_zip_provenance", zip_details, checks)
+
     expected = {item["relative_path"]: item for item in inventory["files"]}
     actual = {
         path.relative_to(ROOT / "source_baseline").as_posix(): path

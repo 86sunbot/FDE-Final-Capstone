@@ -2,9 +2,13 @@
   "status": "PASS",
   "checks": [
     {
-      "check": "original_zip_sha256",
+      "check": "original_zip_provenance",
       "status": "PASS",
-      "details": "74d31dc4694d52b0e9a9fb337e6ccda1086ad430b19287f9ca2b4b4e650ca979"
+      "details": {
+        "sha256": "74d31dc4694d52b0e9a9fb337e6ccda1086ad430b19287f9ca2b4b4e650ca979",
+        "verification": "DIRECT_ARCHIVE_HASH",
+        "archive_present": true
+      }
     },
     {
       "check": "source_baseline_exact",

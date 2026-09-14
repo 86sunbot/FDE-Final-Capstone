@@ -1,7 +1,7 @@
 {
   "format": "academic-capstone-release-manifest-v1",
   "version": "1.1.0",
-  "generated_at": "2026-09-14T09:00:41.469047+00:00",
+  "generated_at": "2026-09-14T09:41:59.761838+00:00",
   "scope": "synthetic local academic POC",
   "source_tree_sha256": "be112474485d4fab098fbbcf3b74e1ff47a549df2acfb93551e9a77500cbaf2b",
   "contract_tree_sha256": "9277339e51f6d95e85fca1112bb958b06f7c38c6e2049384bd68a99f3e430a16",
