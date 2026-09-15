@@ -217,9 +217,9 @@ The 21 stages are executed in six gated waves. Work may be prepared ahead, but n
 
 ## Final execution result
 
-All 21 stages were executed in `FDE-Final-Capstone`. Stages 9–13 produced build-ready contracts and controls; Stage 14 produced one shared foundation, a browser Control Tower and three integrated POCs; Stage 15 recorded 77 automated passes and 55 structural catalog passes with two external human-study cases inconclusive; Stages 16–19 completed local recovery, release, monitoring and value simulations; Stages 20–21 recorded the restrict/change decision, seven open CAPAs, retirement and reusable IP.
+All 21 stages have academic artifacts in `FDE-Final-Capstone`; this does **not** mean every external stage gate was executed or approved. Stages 9–13 produced contracts, C4, PRD, migration and 31 requirements; Stage 14 produced one shared foundation, a browser Control Tower, three integrated POCs and six read-only v2 source-timestamp journeys/inject views; Stage 15 now records 92 automated passes and 55 structural catalog passes, with 7 original full scoped, 9 partial and 39 extension structural-only property results plus two external human-study inconclusives. Stages 16–19 contain local recovery, release, monitoring and value simulations; Stages 20–21 record restrict/change, seven open CAPAs, retirement of local runtime instances and reusable IP.
 
-No immediate engineering work remains for the academic deliverable. Any real pilot begins a new controlled programme by addressing the seven CAPAs in `docs/stages/stage_20/02_INTERNAL_AUDIT_AND_CAPA.md`.
+The academic demo is built, but Capstone Owner review, registered full-dataset load evidence and stronger original/extension scenario TEVV remain open. Any real pilot begins a new controlled programme by addressing the seven CAPAs in `docs/stages/stage_20/02_INTERNAL_AUDIT_AND_CAPA.md`.
 
 ## Progress-control rules
 

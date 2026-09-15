@@ -1,7 +1,7 @@
 {
   "summary": {
-    "total": 27,
-    "verified_internal_poc": 25,
+    "total": 31,
+    "verified_internal_poc": 29,
     "inconclusive_external_evidence_required": 2,
     "production_verified": 0
   },
@@ -280,6 +280,50 @@
       "status": "SPECIFIED",
       "verification_status": "VERIFIED_INTERNAL_POC",
       "verification_evidence": "tests/test_release_manifest.py; docs/stages/stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-SRC-001",
+      "type": "source_evidence",
+      "severity": "P0",
+      "statement": "Original v2 evaluation patients remain read-only and source-located",
+      "acceptance": "EVAL-001 through EVAL-006 show exact frozen patient assertions with file and row locators",
+      "test_reference": "tests/test_source_cases.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/test_source_cases.py; docs/stages/stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-SRC-002",
+      "type": "source_evidence",
+      "severity": "P1",
+      "statement": "Hypothetical injects are not presented as recorded patient facts",
+      "acceptance": "EVAL-005 and EVAL-006 separate supplied stimulus from observed source rows",
+      "test_reference": "tests/test_source_cases.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/test_source_cases.py; docs/stages/stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-SRC-003",
+      "type": "source_reconstruction",
+      "severity": "P0",
+      "statement": "Current-state journey order preserves source assertions and unresolved transitions",
+      "acceptance": "All six EVAL patients show cited timestamp-order events and explicit identity lineage Quality clinical unknowns without approved transition inference",
+      "test_reference": "tests/test_source_cases.py; tests/test_api_surface.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/test_source_cases.py; tests/test_api_surface.py; docs/stages/stage_15/test_summary.json"
+    },
+    {
+      "requirement_id": "REQ-INJ-001",
+      "type": "disruption_preview",
+      "severity": "P1",
+      "statement": "Original disruption injects produce a non-authoritative dependency preview",
+      "acceptance": "INJ-001 through INJ-010 expose trigger affected domains and owner without committing a plan",
+      "test_reference": "tests/test_disruption_preview.py; tests/test_api_surface.py",
+      "status": "SPECIFIED",
+      "verification_status": "VERIFIED_INTERNAL_POC",
+      "verification_evidence": "tests/test_disruption_preview.py; tests/test_api_surface.py; docs/stages/stage_15/test_summary.json"
     },
     {
       "requirement_id": "REQ-HUM-001",

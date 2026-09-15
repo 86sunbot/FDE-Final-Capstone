@@ -2,7 +2,7 @@
 
 **Deployment type:** Local synthetic simulation; no production deployment occurred.
 
-Release 1.0.0 is bound by `docs/stages/stage_14/release_manifest.json`, defaults to AI off and contains no credential. The deployment simulation executed:
+The current academic build 1.2.0 is bound by `docs/stages/stage_14/release_manifest.json`, defaults to AI off and contains no credential. The inherited deployment simulation was exercised on the earlier local build; it must be rerun before claiming 1.2.0 deployment evidence. It previously recorded:
 
 - 20 paired AI-off/bounded-fake shadow runs with 20 matching domain outcomes;
 - 10 AI-off canary runs with 10 successful controlled journeys and valid audit chains;

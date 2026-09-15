@@ -62,10 +62,13 @@ async function loadStatus() {
     const response = await fetch('/api/capstone/status');
     if (!response.ok) throw new Error(`Status request failed (${response.status})`);
     const status = await response.json();
-    $('#stage-count').textContent = `${status.stages.complete}/${status.stages.total}`;
+    $('#stage-count').textContent = `${status.stages.documented}/${status.stages.total}`;
     $('#test-count').textContent = status.tests.passed;
-    $('#evaluation-count').textContent = `${status.evaluations.passed}/57`;
+    $('#evaluation-count').textContent = `${status.evaluations.structural_passes}/57`;
     $('#requirement-count').textContent = `${status.requirements.verified_internal_poc}/${status.requirements.total}`;
+    $('#score-requirement-verified').textContent = status.requirements.verified_internal_poc;
+    $('#score-requirement-total').textContent = `of ${status.requirements.total}`;
+    $('#requirement-score-ring').setAttribute('aria-label', `${status.requirements.verified_internal_poc} of ${status.requirements.total} requirements internally verified`);
   } catch (error) {
     showToast('Status unavailable. Start the FastAPI server and refresh.');
   }
@@ -149,5 +152,135 @@ async function runDemo() {
   }
 }
 
+function appendText(parent, tag, value, className = '') {
+  const element = document.createElement(tag);
+  element.textContent = value;
+  if (className) element.className = className;
+  parent.appendChild(element);
+  return element;
+}
+
+async function loadSourceChoices() {
+  try {
+    const [caseResponse, injectResponse] = await Promise.all([
+      fetch('/api/source/cases'), fetch('/api/source/injects'),
+    ]);
+    if (!caseResponse.ok || !injectResponse.ok) throw new Error('Frozen source fixtures unavailable');
+    const [caseList, injectList] = await Promise.all([caseResponse.json(), injectResponse.json()]);
+    const caseSelect = $('#source-case');
+    const injectSelect = $('#source-inject');
+    caseSelect.replaceChildren();
+    injectSelect.replaceChildren();
+    caseList.cases.forEach((item) => {
+      const option = document.createElement('option');
+      option.value = item.case_id;
+      option.textContent = `${item.case_id} · ${item.patient_key}`;
+      caseSelect.appendChild(option);
+    });
+    injectList.injects.forEach((item) => {
+      const option = document.createElement('option');
+      option.value = item.inject_id;
+      option.textContent = `${item.inject_id} · ${item.name}`;
+      injectSelect.appendChild(option);
+    });
+  } catch (error) {
+    $('#source-case-output').textContent = error.message || 'Source evidence unavailable';
+    $('#source-inject-output').textContent = error.message || 'Disruption catalog unavailable';
+  }
+}
+
+async function inspectSourceCase() {
+  const caseId = $('#source-case').value;
+  if (!caseId) return;
+  const output = $('#source-case-output');
+  output.textContent = 'Loading exact v2 source rows…';
+  try {
+    const response = await fetch(`/api/source/cases/${encodeURIComponent(caseId)}`);
+    if (!response.ok) throw new Error(`Source case request failed (${response.status})`);
+    const result = await response.json();
+    output.replaceChildren();
+    appendText(output, 'h4', `${result.case_id} · ${result.patient_key}`);
+    appendText(output, 'p', result.question);
+    appendText(output, 'p', 'Source assertions only · no identity or Quality disposition', 'scope-note');
+    const observations = document.createElement('ul');
+    result.observations.forEach((item) => {
+      appendText(observations, 'li', `${item.property}: ${item.status}. ${item.explanation}`);
+    });
+    output.appendChild(observations);
+    const journey = result.timestamp_order_reconstruction;
+    const reconstruction = document.createElement('details');
+    appendText(reconstruction, 'summary', `Source-timestamp journey order · ${journey.timeline.length} assertions`);
+    appendText(reconstruction, 'p', 'Timestamp order is not causal truth, known-at replay, approved COI/COC or Quality release.', 'scope-note');
+    const gates = document.createElement('ul');
+    Object.entries(journey.control_gates).forEach(([gate, status]) => {
+      appendText(gates, 'li', `${gate.replaceAll('_', ' ')}: ${status}`);
+    });
+    reconstruction.appendChild(gates);
+    const eventList = document.createElement('ol');
+    journey.timeline.forEach((event) => {
+      appendText(eventList, 'li', `${event.occurred_at} · ${event.event_kind} · ${event.asserted_state} · ${event.source_locator}`);
+    });
+    reconstruction.appendChild(eventList);
+    if (journey.temporal_conflicts.length) {
+      appendText(reconstruction, 'p', `Temporal conflicts: ${journey.temporal_conflicts.map((item) => item.shipment_id).join(', ')}. No times corrected.`, 'scope-note');
+    }
+    output.appendChild(reconstruction);
+    Object.entries(result.source_records).forEach(([table, rows]) => {
+      if (!rows.length) return;
+      const details = document.createElement('details');
+      appendText(details, 'summary', `${table.replaceAll('_', ' ')} · ${rows.length} source row${rows.length === 1 ? '' : 's'}`);
+      const content = rows.map((item) => `${item.source_locator}\n${JSON.stringify(item.row, null, 2)}`).join('\n\n');
+      appendText(details, 'pre', content);
+      output.appendChild(details);
+    });
+  } catch (error) {
+    output.textContent = error.message || 'Source case unavailable';
+  }
+}
+
+async function inspectSourceInject() {
+  const injectId = $('#source-inject').value;
+  const patientKey = $('#representative-patient').value.trim();
+  const output = $('#source-inject-output');
+  if (!injectId) return;
+  if (!/^P-\d{5}$/.test(patientKey)) {
+    output.textContent = 'Enter a synthetic key such as P-00001.';
+    return;
+  }
+  output.textContent = 'Building non-authoritative impact preview…';
+  try {
+    const response = await fetch(`/api/source/injects/${encodeURIComponent(injectId)}/preview?patient_key=${encodeURIComponent(patientKey)}`);
+    if (!response.ok) throw new Error(`Disruption preview failed (${response.status})`);
+    const result = await response.json();
+    output.replaceChildren();
+    appendText(output, 'h4', `${result.inject_id} · ${result.name}`);
+    appendText(output, 'p', `Trigger: ${result.trigger}; representative patient: ${result.representative_patient_key}`);
+    appendText(output, 'p', `Owner: ${result.owner_role}; side effects: ${result.side_effects}; not an approved plan`, 'scope-note');
+    const impact = document.createElement('ul');
+    result.impact_preview.forEach((item) => {
+      const timing = item.hypothetical_zero_slack_time ? `zero-slack scenario ${item.hypothetical_zero_slack_time}` : 'timing unknown';
+      appendText(impact, 'li', `${item.milestone}: ${item.status}; ${timing}; source ${item.source_locator || 'not supplied'}`);
+    });
+    output.appendChild(impact);
+    if (result.affected_routes.length) {
+      appendText(output, 'h4', 'Routes requiring owner review');
+      result.affected_routes.forEach((route) => appendText(output, 'p', `${route.shipment_id} ${route.origin} → ${route.destination}: ${route.delivery_assurance}`));
+    }
+    if (result.affected_reservations.length) {
+      appendText(output, 'h4', 'Reservations at risk');
+      result.affected_reservations.forEach((slot) => appendText(output, 'p', `${slot.slot_id} · ${slot.state} · ${slot.owner}`));
+    }
+    const assumptions = document.createElement('details');
+    appendText(assumptions, 'summary', 'Assumptions and limits');
+    appendText(assumptions, 'pre', result.assumptions.join('\n'));
+    output.appendChild(assumptions);
+  } catch (error) {
+    output.textContent = error.message || 'Disruption preview unavailable';
+  }
+}
+
 elements.runButtons.forEach((button) => button.addEventListener('click', runDemo));
+$('#show-source-case').addEventListener('click', inspectSourceCase);
+$('#show-source-inject').addEventListener('click', inspectSourceInject);
 loadStatus();
+loadSourceChoices();

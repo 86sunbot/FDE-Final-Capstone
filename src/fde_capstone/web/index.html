@@ -29,6 +29,7 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#journey">Journey</a>
+        <a href="#source-evidence">Source evidence</a>
         <a href="#pocs">POCs</a>
         <a href="#assurance">Assurance</a>
         <a class="nav-api" href="/docs" target="_blank" rel="noreferrer">API</a>
@@ -60,7 +61,7 @@
               <span class="panel-kicker">Active demonstration</span>
               <h2>Journey P-A / BATCH-100</h2>
             </div>
-            <span class="status-pill status-ready"><span></span> Ready</span>
+            <span class="status-pill status-ready"><span></span> Demo ready</span>
           </div>
           <div class="hero-patient">
             <div class="patient-avatar" aria-hidden="true">P</div>
@@ -100,11 +101,11 @@
         </div>
       </section>
 
-      <section class="status-band" aria-label="Capstone completion status">
-        <div><strong id="stage-count">21/21</strong><span>FDE stages</span></div>
+      <section class="status-band" aria-label="Academic capstone evidence status">
+        <div><strong id="stage-count">21/21</strong><span>Stages documented</span></div>
         <div><strong id="test-count">—</strong><span>Tests passed</span></div>
-        <div><strong id="evaluation-count">—</strong><span>Evaluations passed</span></div>
-        <div><strong id="requirement-count">—</strong><span>Requirements verified</span></div>
+        <div><strong id="evaluation-count">—</strong><span>Structural probes passed</span></div>
+        <div><strong id="requirement-count">—</strong><span>Requirements verified locally</span></div>
         <div class="decision-stat"><strong>Restrict &amp; change</strong><span>Lifecycle decision</span></div>
       </section>
 
@@ -129,11 +130,45 @@
         </div>
       </section>
 
+      <section class="section-shell section-block source-explorer" id="source-evidence">
+        <div class="section-heading">
+          <div>
+            <span class="section-number">02 / FROZEN V2 EVIDENCE</span>
+            <h2>Inspect the original challenge cases.</h2>
+          </div>
+          <p>These are read-only source assertions from the supplied v2 package. They are not identity adjudication, Quality disposition or a migrated production journey.</p>
+        </div>
+        <div class="source-grid">
+          <article class="source-panel">
+            <h3>Six source evaluation cases</h3>
+            <p>Choose an original patient case to see the conflicting rows, exact file/row locators and what remains unproven.</p>
+            <div class="source-controls">
+              <label for="source-case">Source case</label>
+              <select id="source-case"></select>
+              <button class="button button-primary" id="show-source-case" type="button">Inspect case</button>
+            </div>
+            <div class="source-output" id="source-case-output" aria-live="polite">Select a case to inspect its frozen source evidence.</div>
+          </article>
+          <article class="source-panel" id="disruptions">
+            <h3>Ten disruption previews</h3>
+            <p>See the declared trigger, affected dependencies, owner and explicit uncertainty. A preview cannot commit a route, slot or clinical plan.</p>
+            <div class="source-controls">
+              <label for="source-inject">Disruption</label>
+              <select id="source-inject"></select>
+              <label for="representative-patient">Representative synthetic patient key</label>
+              <input id="representative-patient" value="P-00001" pattern="P-[0-9]{5}" maxlength="7" />
+              <button class="button button-primary" id="show-source-inject" type="button">Preview impact</button>
+            </div>
+            <div class="source-output" id="source-inject-output" aria-live="polite">Select a disruption to preview source-backed dependencies.</div>
+          </article>
+        </div>
+      </section>
+
       <section class="demo-section" id="pocs">
         <div class="section-shell">
           <div class="section-heading section-heading-light">
             <div>
-              <span class="section-number">02 / INTEGRATED DEMONSTRATION</span>
+              <span class="section-number">03 / INTEGRATED DEMONSTRATION</span>
               <h2>Three hard problems. One controlled runtime.</h2>
             </div>
             <div class="demo-control">
@@ -219,7 +254,7 @@
       <section class="section-shell section-block" id="assurance">
         <div class="section-heading">
           <div>
-            <span class="section-number">03 / ASSURANCE &amp; BOUNDARIES</span>
+            <span class="section-number">04 / ASSURANCE &amp; BOUNDARIES</span>
             <h2>Confidence without overclaiming.</h2>
           </div>
           <p>The capstone proves technical control feasibility on synthetic data. It does not claim clinical, regulatory or production validation.</p>
@@ -227,12 +262,12 @@
 
         <div class="assurance-layout">
           <div class="assurance-scorecard">
-            <div class="score-ring" aria-label="25 of 27 requirements internally verified">
+            <div class="score-ring" id="requirement-score-ring" aria-label="29 of 31 requirements internally verified">
               <svg viewBox="0 0 120 120" aria-hidden="true">
                 <circle class="ring-base" cx="60" cy="60" r="51"></circle>
                 <circle class="ring-value" cx="60" cy="60" r="51"></circle>
               </svg>
-              <span><strong>25</strong><small>of 27</small></span>
+              <span><strong id="score-requirement-verified">29</strong><small id="score-requirement-total">of 31</small></span>
             </div>
             <div>
               <span class="score-label">Internal POC requirements verified</span>
@@ -265,7 +300,7 @@
     <footer>
       <div class="footer-brand"><span class="brand-mark small" aria-hidden="true"></span><strong>FDE Final Capstone</strong></div>
       <p>Cell &amp; Gene Therapy · Patient-to-Batch Orchestration</p>
-      <span>v1.1 · Synthetic academic scope</span>
+      <span>v1.2 · Synthetic academic scope</span>
     </footer>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>

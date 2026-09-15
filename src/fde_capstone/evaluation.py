@@ -10,9 +10,11 @@ from typing import Any, Callable
 
 from .adapters.assistant_fake import DeterministicAssistantFake, FailingAssistantFake
 from .application import CapstoneApplication
+from .disruption_preview import preview_inject
 from .model import Outcome, Principal, digest_json
 from .security import AuthorizationError
 from .services.assistant import AssistantGateway
+from .source_cases import load_eval_case
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -228,6 +230,87 @@ class ProbeHarness:
         return ["valid chain accepted", "tampering detected"]
 
 
+def supplied_property_checks(case: dict[str, Any], observations: list[str]) -> tuple[list[str], list[str], list[str]]:
+    """Grade only source-seed properties actually asserted by this runner.
+
+    A structural probe may pass while a broader scenario property remains
+    unverified. The expected-property text is never copied into `checks`
+    without an independent assertion over observed behavior/source evidence.
+    """
+    case_id = case["case_id"]
+    expected = list(case["expected_properties"])
+    verified: list[str] = []
+    evidence: list[str] = []
+    supplemental: list[str] = []
+
+    if case_id.startswith("EVAL-"):
+        source = load_eval_case(case_id)
+        evidence.append(source["case_source_locator"])
+        evidence.extend(ref for item in source["observations"] for ref in item["evidence_locators"])
+        status = source["observations"][0]["status"]
+        supplemental.append(f"frozen v2 source observation={status}; patient={source['patient_key']}")
+        if case_id == "EVAL-002":
+            assert status == "OBSERVED_CONFLICT" and "no automatic link" in observations
+            verified.append(expected[0])
+        elif case_id == "EVAL-003":
+            assert status == "OBSERVED_CONFLICT" and "late evidence added without timestamp invention" in observations
+            verified.append(expected[0])
+        elif case_id == "EVAL-004":
+            assert status == "OBSERVED_BLOCKER" and "downstream progression not created" in observations
+            verified.append(expected[0])
+        elif case_id == "EVAL-006":
+            assert status == "SCENARIO_STIMULUS_ONLY" and "no authority/tool output accepted" in observations
+            verified.append(expected[0])
+        # EVAL-001 lacks a source-backed canonical journey reconstruction.
+        # EVAL-005 lacks a simulated unavailable-QMS adapter and full degraded-mode trajectory.
+    elif case_id.startswith("INJ-"):
+        preview = preview_inject(case_id)
+        assert preview["side_effects"] == 0 and preview["owner_role"]
+        evidence.extend([preview["inject_source_locator"], preview["representative_patient_source"]])
+        supplemental.append(f"inject preview={preview['scope']}; representative={preview['representative_patient_key']}")
+        if case_id == "INJ-001":
+            assert [item["milestone"] for item in preview["impact_preview"]][-2:] == ["conditioning", "infusion"]
+            assert "P0 case assigned" in observations and preview["owner_role"]
+            verified.append(expected[1])
+            # Zero-slack shifted timestamps are not a governed schedule recalculation.
+        elif case_id == "INJ-002":
+            assert "release not inferred" in observations
+            verified.append(expected[1])
+            # The 47-second raw sensor profile is not ingested/graded here.
+        elif case_id == "INJ-003":
+            assert preview["affected_reservations"] and "P0 case assigned" in observations
+            # An exception preview is not an actual reservation state transition or recovery.
+        elif case_id == "INJ-004":
+            names = [item["milestone"] for item in preview["impact_preview"]]
+            assert "release not inferred" in observations and all(name in names for name in ("qa_release", "return_logistics", "infusion"))
+            verified.extend(expected)
+        elif case_id == "INJ-005":
+            assert "site failed closed" in observations
+            verified.append(expected[0])
+            # The current EV-SITE probe is not a cited controlled site-qualification source row.
+        elif case_id == "INJ-006":
+            assert "one external effect" in observations and "reconciled before any retry" in observations
+            verified.extend(expected)
+        elif case_id == "INJ-007":
+            assert "conflict surfaced" in observations and "no automatic link" in observations
+            verified.extend(expected)
+        elif case_id == "INJ-008":
+            assert {route["direction"] for route in preview["affected_routes"]} == {"OUTBOUND", "RETURN"}
+            assert "P0 case assigned" in observations and preview["owner_role"] == "LOGISTICS_OWNER"
+            verified.append(expected[1])
+            # The route preview and generic owned-case probe are not one committed, linked disruption case.
+        elif case_id == "INJ-009":
+            assert "release not inferred" in observations and "Quality evidence ambiguity/blocker surfaced" in observations
+            verified.append(expected[0])
+            # No unavailable-QMS adapter or four-hour degraded-mode run was exercised.
+        elif case_id == "INJ-010":
+            assert "authorization failed closed" in observations
+            verified.append(expected[0])
+            # A hypothetical payer withdrawal has no actual versioned source change history.
+
+    return verified, sorted(set(evidence)), supplemental
+
+
 def execute_case(case: dict[str, Any], directory: Path) -> dict[str, Any]:
     started = time.perf_counter()
     if case["category"] in {"human_factors", "human_override"}:
@@ -236,6 +319,8 @@ def execute_case(case: dict[str, Any], directory: Path) -> dict[str, Any]:
             "status": "INCONCLUSIVE",
             "scope": "STRUCTURAL_AUTOMATION_COMPLETE; EXTERNAL_HUMAN_STUDY_REQUIRED",
             "checks": [],
+            "unverified_properties": list(case["expected_properties"]),
+            "property_coverage": "EXTERNAL_NOT_RUN",
             "observations": ["No independent human participants or controlled user study were supplied."],
             "duration_ms": 0.0,
         }
@@ -257,7 +342,7 @@ def execute_case(case: dict[str, Any], directory: Path) -> dict[str, Any]:
         elif case_id == "INJ-005":
             observations = harness.negative_gate("site")
         elif case_id == "INJ-006":
-            observations = harness.command("idempotency")
+            observations = harness.command("unknown_outcome")
         elif case_id == "INJ-007":
             observations = harness.identity_conflict()
         elif category == "normal":
@@ -293,22 +378,33 @@ def execute_case(case: dict[str, Any], directory: Path) -> dict[str, Any]:
             observations = harness.audit_integrity()
         else:
             raise NotImplementedError(f"No probe for {case_id}/{category}")
+        verified, source_refs, source_observations = supplied_property_checks(case, observations)
+        unverified = [item for item in case["expected_properties"] if item not in verified]
+        if case_id.startswith(("EVAL-", "INJ-")):
+            coverage = "FULL_SCOPED_PROPERTY_ASSERTIONS" if not unverified else "PARTIAL_SCOPED_PROPERTY_ASSERTIONS"
+        else:
+            coverage = "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED"
         elapsed = (time.perf_counter() - started) * 1000
         return {
             "case_id": case_id,
             "status": "PASS",
             "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-            "checks": list(case["expected_properties"]),
-            "observations": observations,
+            "checks": verified,
+            "unverified_properties": unverified,
+            "property_coverage": coverage,
+            "source_evidence_refs": source_refs,
+            "observations": observations + source_observations,
             "duration_ms": round(elapsed, 3),
-            "result_digest": digest_json(observations),
+            "result_digest": digest_json(observations + source_observations),
         }
     except Exception as exc:
         return {
             "case_id": case["case_id"],
             "status": "FAIL",
             "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-            "checks": list(case["expected_properties"]),
+            "checks": [],
+            "unverified_properties": list(case["expected_properties"]),
+            "property_coverage": "FAILURE",
             "observations": [f"{type(exc).__name__}: {exc}"],
             "duration_ms": round((time.perf_counter() - started) * 1000, 3),
         }
@@ -325,12 +421,17 @@ def run_catalog(database_path: str | Path, output_path: str | Path) -> dict[str,
         directory = Path(temp)
         results = [execute_case(case, directory) for case in catalog["cases"]]
     counts = Counter(result["status"] for result in results)
+    coverage = Counter(result["property_coverage"] for result in results)
     summary = {
         "catalog_cases": len(catalog["cases"]),
         "executed": len(results),
         "pass": counts["PASS"],
         "fail": counts["FAIL"],
         "inconclusive": counts["INCONCLUSIVE"],
+        "property_coverage": dict(sorted(coverage.items())),
+        "fully_graded_supplied_cases": coverage["FULL_SCOPED_PROPERTY_ASSERTIONS"],
+        "partially_graded_supplied_cases": coverage["PARTIAL_SCOPED_PROPERTY_ASSERTIONS"],
+        "structural_probe_only_cases": coverage["STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED"],
         "scope": "Synthetic internal structural evaluation; not independent, human-factor, live-model or production validation",
         "catalog_digest": digest_json(catalog),
     }

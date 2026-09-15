@@ -2,7 +2,7 @@
 
 ## Inputs
 
-The academic review considered mandate, baseline defects, value/CTQs, risk/impact, architecture, 77 passing automated tests, 55 structural evaluation passes, two inconclusive human cases, local performance/recovery, simulated shadow/canary/monitoring and explicit production gaps.
+The internal academic review considered mandate, baseline defects, value/CTQs, risk/impact, architecture, 92 current passing automated tests, 55 structural evaluation passes (7 original fully scoped assertions, 9 partial, 39 extension structural-only), two inconclusive human cases, a micro-benchmark that does not verify the registered 20-client/full-dataset NFR, local recovery, simulated shadow/canary/monitoring and explicit production gaps. This page is not evidence of a real management review or independent sign-off.
 
 ## Decision
 

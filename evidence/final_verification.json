@@ -1,5 +1,13 @@
 {
   "status": "PASS",
+  "scope": "SYNTHETIC_LOCAL_ACADEMIC_CHECKS_ONLY",
+  "production_authorized": false,
+  "open_evidence": [
+    "REGISTERED_20_CLIENT_27507_ROW_JOURNEY_PROJECTION_NFR_NOT_VERIFIED",
+    "TWO_CONTROLLED_HUMAN_STUDIES_NOT_RUN",
+    "39_EXTENSION_CASES_STRUCTURAL_PROBE_ONLY",
+    "LIVE_MODEL_SUPPLIER_AND_INDEPENDENT_ASSURANCE_ABSENT"
+  ],
   "checks": [
     {
       "check": "original_zip_provenance",
@@ -19,11 +27,19 @@
       }
     },
     {
+      "check": "attached_v2_directory_read_only_parity",
+      "status": "PASS",
+      "details": {
+        "source_files": 132,
+        "baseline_files": 132
+      }
+    },
+    {
       "check": "all_21_stage_directories_have_artifacts",
       "status": "PASS",
       "details": {
         "1": 7,
-        "2": 9,
+        "2": 10,
         "3": 7,
         "4": 7,
         "5": 8,
@@ -31,17 +47,17 @@
         "7": 10,
         "8": 15,
         "9": 6,
-        "10": 4,
+        "10": 5,
         "11": 2,
-        "12": 4,
-        "13": 5,
-        "14": 10,
-        "15": 8,
+        "12": 6,
+        "13": 8,
+        "14": 11,
+        "15": 9,
         "16": 7,
         "17": 4,
         "18": 5,
         "19": 4,
-        "20": 5,
+        "20": 7,
         "21": 5
       }
     },
@@ -50,12 +66,12 @@
       "status": "PASS",
       "details": {
         "scope": "clean capstone automated pytest suite",
-        "tests": 77,
+        "tests": 92,
         "failures": 0,
         "errors": 0,
         "skipped": 0,
-        "passed": 77,
-        "time_seconds": 0.303,
+        "passed": 92,
+        "time_seconds": 2.374,
         "junit_evidence": "reports/generated/pytest-results.xml"
       }
     },
@@ -68,22 +84,41 @@
         "pass": 55,
         "fail": 0,
         "inconclusive": 2,
+        "property_coverage": {
+          "EXTERNAL_NOT_RUN": 2,
+          "FULL_SCOPED_PROPERTY_ASSERTIONS": 7,
+          "PARTIAL_SCOPED_PROPERTY_ASSERTIONS": 9,
+          "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED": 39
+        },
+        "fully_graded_supplied_cases": 7,
+        "partially_graded_supplied_cases": 9,
+        "structural_probe_only_cases": 39,
         "scope": "Synthetic internal structural evaluation; not independent, human-factor, live-model or production validation",
         "catalog_digest": "79cf2d008ef08362d080eefacb602eba2b4833aa0b8cdaa3c5b01fc436d13cc1"
+      }
+    },
+    {
+      "check": "property_coverage_calibration",
+      "status": "PASS",
+      "details": {
+        "EXTERNAL_NOT_RUN": 2,
+        "FULL_SCOPED_PROPERTY_ASSERTIONS": 7,
+        "PARTIAL_SCOPED_PROPERTY_ASSERTIONS": 9,
+        "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED": 39
       }
     },
     {
       "check": "requirement_verification",
       "status": "PASS",
       "details": {
-        "total": 27,
-        "verified_internal_poc": 25,
+        "total": 31,
+        "verified_internal_poc": 29,
         "inconclusive_external_evidence_required": 2,
         "production_verified": 0
       }
     },
     {
-      "check": "performance",
+      "check": "in_process_microbenchmark_only",
       "status": "PASS",
       "details": "docs/stages/stage_15/performance_results.json"
     },
@@ -110,7 +145,7 @@
     {
       "check": "release_source_digest",
       "status": "PASS",
-      "details": "85218ba40b4cfa8363c2b214b536fe450c750029f52cbb5e1ea0175e414f40a2"
+      "details": "768b77f8f15096e1318728d92a0eb0fc21a8fd672fc990b74f25b565c40840c8"
     },
     {
       "check": "release_evaluation_digest",
@@ -120,7 +155,7 @@
     {
       "check": "release_requirements_digest",
       "status": "PASS",
-      "details": "00a59350dcbcef8604cd0efc8c5132b4ca0a24bdd16789fcb936c05b09762910"
+      "details": "826220533aa1535e46f0ff3eccb8ca094f181d1954fe94d73f6f74b7d2e89e95"
     },
     {
       "check": "no_disposable_runtime_database",
@@ -128,9 +163,18 @@
       "details": []
     },
     {
-      "check": "final_handoff_artifacts",
+      "check": "architect_handoff_artifacts",
       "status": "PASS",
-      "details": true
+      "details": [
+        "docs/FINAL_CAPSTONE_REPORT.md",
+        "docs/CLIENT_DELIVERABLE_ACCEPTANCE_MATRIX.md",
+        "docs/21_STAGE_ARTIFACT_REGISTER.csv",
+        "docs/stages/stage_02/07_SUPPLIED_PATIENT_JOURNEY_SOURCE_RECONSTRUCTION.md",
+        "docs/stages/stage_13/06_PRODUCT_REQUIREMENTS_DOCUMENT.md",
+        "docs/stages/stage_13/07_PRODUCT_TO_CODE_TEST_DEMO_TRACE.md",
+        "docs/stages/stage_13/08_BROWNFIELD_MIGRATION_STRATEGY.md",
+        "docs/stages/stage_20/06_PRODUCTION_GAP_AND_90_DAY_ROADMAP.md"
+      ]
     }
   ]
 }

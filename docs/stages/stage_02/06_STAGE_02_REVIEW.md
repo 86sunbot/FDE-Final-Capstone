@@ -51,7 +51,7 @@
 
 ## Limitations
 
-- The current-state reconstruction is based on synthetic package evidence, not interviews with real operational users.
+- The current-state reconstruction is based on synthetic package evidence, not interviews with real operational users. The six original evaluation-patient timestamp examples are now documented separately in `07_SUPPLIED_PATIENT_JOURNEY_SOURCE_RECONSTRUCTION.md`; they are source assertion order only, not governed present-tense state or known-at replay.
 - Counts prove contradictions and missing evidence; they do not prove that every flagged record is an actual patient-safety incident.
 - “QMS released plus open deviation” requires a blocking classification and disposition model before declaring a release invalid.
 - The supplied system-flow diagram remains a hypothesis pending stakeholder validation.

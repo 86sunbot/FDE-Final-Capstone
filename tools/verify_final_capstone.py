@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ZIP = Path("/Users/suryap/Documents/FDE/Capstone/AI_FDE_CGT_Patient_to_Batch_Orchestration.zip")
+SOURCE_V2 = Path("/Users/suryap/Documents/FDE/Capstone/AI_FDE_CGT_Patient_to_Batch_Orchestration_v2")
 EXPECTED_ZIP = "74d31dc4694d52b0e9a9fb337e6ccda1086ad430b19287f9ca2b4b4e650ca979"
 
 
@@ -60,6 +61,13 @@ def main() -> None:
     }
     source_ok = set(expected) == set(actual) and all(sha(actual[name]) == record["sha256"] for name, record in expected.items())
     check(source_ok, "source_baseline_exact", {"expected": 132, "actual": len(actual)}, checks)
+    if SOURCE_V2.is_dir():
+        v2 = {
+            path.relative_to(SOURCE_V2).as_posix(): path
+            for path in SOURCE_V2.rglob("*") if path.is_file() and path.name != ".DS_Store"
+        }
+        v2_ok = set(v2) == set(actual) and all(sha(v2[name]) == sha(actual[name]) for name in actual if name in v2)
+        check(v2_ok, "attached_v2_directory_read_only_parity", {"source_files": len(v2), "baseline_files": len(actual)}, checks)
 
     stage_counts = {}
     for number in range(1, 22):
@@ -68,15 +76,21 @@ def main() -> None:
     check(all(value > 0 for value in stage_counts.values()), "all_21_stage_directories_have_artifacts", stage_counts, checks)
 
     test_summary = json.loads((ROOT / "docs/stages/stage_15/test_summary.json").read_text(encoding="utf-8"))
-    check(test_summary["passed"] == 77 and test_summary["failures"] == test_summary["errors"] == 0, "automated_test_summary", test_summary, checks)
+    check(test_summary["passed"] == 92 and test_summary["failures"] == test_summary["errors"] == 0, "automated_test_summary", test_summary, checks)
     evaluation = json.loads((ROOT / "docs/stages/stage_15/evaluation_results.json").read_text(encoding="utf-8"))["summary"]
     check(evaluation["executed"] == 57 and evaluation["pass"] == 55 and evaluation["fail"] == 0 and evaluation["inconclusive"] == 2, "evaluation_summary", evaluation, checks)
+    check(evaluation.get("property_coverage") == {
+        "EXTERNAL_NOT_RUN": 2,
+        "FULL_SCOPED_PROPERTY_ASSERTIONS": 7,
+        "PARTIAL_SCOPED_PROPERTY_ASSERTIONS": 9,
+        "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED": 39,
+    }, "property_coverage_calibration", evaluation.get("property_coverage"), checks)
 
     verification = json.loads((ROOT / "requirements/verification_matrix.json").read_text(encoding="utf-8"))["summary"]
-    check(verification == {"total": 27, "verified_internal_poc": 25, "inconclusive_external_evidence_required": 2, "production_verified": 0}, "requirement_verification", verification, checks)
+    check(verification == {"total": 31, "verified_internal_poc": 29, "inconclusive_external_evidence_required": 2, "production_verified": 0}, "requirement_verification", verification, checks)
 
     for file, key in [
-        ("docs/stages/stage_15/performance_results.json", "performance"),
+        ("docs/stages/stage_15/performance_results.json", "in_process_microbenchmark_only"),
         ("docs/stages/stage_16/recovery_drill_results.json", "recovery"),
         ("docs/stages/stage_17/deployment_simulation_results.json", "deployment_simulation"),
         ("docs/stages/stage_18/monitoring_simulation_results.json", "monitoring_simulation"),
@@ -92,9 +106,30 @@ def main() -> None:
 
     runtime_databases = [path.relative_to(ROOT).as_posix() for path in ROOT.rglob("*.db") if "source_baseline" not in path.parts and ".git" not in path.parts]
     check(not runtime_databases, "no_disposable_runtime_database", runtime_databases, checks)
-    check((ROOT / "docs/FINAL_CAPSTONE_REPORT.md").is_file() and (ROOT / "docs/ARTIFACT_INDEX.md").is_file(), "final_handoff_artifacts", True, checks)
+    handoff_files = [
+        "docs/FINAL_CAPSTONE_REPORT.md",
+        "docs/CLIENT_DELIVERABLE_ACCEPTANCE_MATRIX.md",
+        "docs/21_STAGE_ARTIFACT_REGISTER.csv",
+        "docs/stages/stage_02/07_SUPPLIED_PATIENT_JOURNEY_SOURCE_RECONSTRUCTION.md",
+        "docs/stages/stage_13/06_PRODUCT_REQUIREMENTS_DOCUMENT.md",
+        "docs/stages/stage_13/07_PRODUCT_TO_CODE_TEST_DEMO_TRACE.md",
+        "docs/stages/stage_13/08_BROWNFIELD_MIGRATION_STRATEGY.md",
+        "docs/stages/stage_20/06_PRODUCTION_GAP_AND_90_DAY_ROADMAP.md",
+    ]
+    check(all((ROOT / file).is_file() for file in handoff_files), "architect_handoff_artifacts", handoff_files, checks)
 
-    report = {"status": "PASS" if all(item["status"] == "PASS" for item in checks) else "FAIL", "checks": checks}
+    report = {
+        "status": "PASS" if all(item["status"] == "PASS" for item in checks) else "FAIL",
+        "scope": "SYNTHETIC_LOCAL_ACADEMIC_CHECKS_ONLY",
+        "production_authorized": False,
+        "open_evidence": [
+            "REGISTERED_20_CLIENT_27507_ROW_JOURNEY_PROJECTION_NFR_NOT_VERIFIED",
+            "TWO_CONTROLLED_HUMAN_STUDIES_NOT_RUN",
+            "39_EXTENSION_CASES_STRUCTURAL_PROBE_ONLY",
+            "LIVE_MODEL_SUPPLIER_AND_INDEPENDENT_ASSURANCE_ABSENT",
+        ],
+        "checks": checks,
+    }
     output = ROOT / "evidence/final_verification.json"
     output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))

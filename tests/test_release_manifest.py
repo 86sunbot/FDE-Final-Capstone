@@ -12,7 +12,7 @@ def sha(path):
 
 def test_release_manifest_binds_source_contracts_catalog_and_requirements():
     manifest = json.loads((ROOT / "docs/stages/stage_14/release_manifest.json").read_text(encoding="utf-8"))
-    assert manifest["version"] == "1.1.0"
+    assert manifest["version"] == "1.2.0"
     assert manifest["ai_default"] == "off"
     assert manifest["original_zip_sha256"] == "74d31dc4694d52b0e9a9fb337e6ccda1086ad430b19287f9ca2b4b4e650ca979"
     assert manifest["evaluation_catalog_sha256"] == sha(ROOT / "docs/stages/stage_07/evaluation_catalog.json")

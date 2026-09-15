@@ -1,0 +1,21 @@
+{
+  "registry_version": "2026-09-15.1",
+  "scope": "synthetic-local-academic",
+  "default_mode": "off",
+  "approved_modes": {
+    "off": {
+      "adapter": "none",
+      "prompt_version": "not-applicable",
+      "authority": "deterministic-domain-only",
+      "production_provider": false
+    },
+    "fake": {
+      "adapter": "deterministic-fake-v1",
+      "prompt_version": "bounded-summary-fixture-v1",
+      "authority": "non-binding-recommendation-only",
+      "production_provider": false
+    }
+  },
+  "unselected": ["live-provider", "rag", "persistent-memory", "autonomous-tools", "multi-agent"],
+  "change_control": "Selecting a live provider or changing tool/authority/data scope requires owner approval and reopened Stage 12/15 evaluation."
+}

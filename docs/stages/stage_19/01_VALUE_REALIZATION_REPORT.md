@@ -5,7 +5,7 @@
 ## Measured POC evidence
 
 - 55/57 frozen evaluation cases pass internal structural execution; zero fail; two human cases inconclusive.
-- 77/77 automated tests pass.
+- 92/92 current local automated tests pass (this is engineering evidence, not a measured business outcome).
 - 20/20 paired shadow runs preserve the same domain outcomes with AI off versus fake assistant.
 - 10/10 simulated AI-off canary journeys complete with valid audit.
 - Local deterministic p95 is below the pre-registered 250 ms micro-benchmark threshold.

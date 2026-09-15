@@ -1,0 +1,186 @@
+stage,artifact_id,pdf_essential_artifact,canonical_path,status,accountable_role,exit_evidence
+01,S01-A01,Engagement charter,docs/stages/stage_01/01_ENGAGEMENT_CHARTER.md,PRESENT_INTERNAL,Capstone Owner,Human mandate confirmation pending
+01,S01-A02,Scope,docs/stages/stage_01/01_ENGAGEMENT_CHARTER.md,PRESENT_INTERNAL,Capstone Owner,Scope and exclusions stated
+01,S01-A03,Outcome statement,docs/stages/stage_01/01_ENGAGEMENT_CHARTER.md,PRESENT_INTERNAL,Capstone Owner,Synthetic outcome stated
+01,S01-A04,Sponsor and owner,docs/stages/stage_01/01_ENGAGEMENT_CHARTER.md,EXTERNAL_REQUIRED,Sponsor,Named owner and signoff pending
+01,S01-A05,Governance RACI,docs/stages/stage_01/04_GOVERNANCE_RACI_AND_DECISION_RIGHTS.md,PARTIAL,Capstone Owner,Role hypotheses require confirmation
+01,S01-A06,Stakeholder and affected-groups maps,docs/stages/stage_01/03_STAKEHOLDER_AND_AFFECTED_GROUPS_MAP.md,PARTIAL,Capstone Owner,No field stakeholder interviews
+01,S01-A07,Field-evidence register,docs/stages/stage_01/05_FIELD_EVIDENCE_REGISTER.md,PRESENT_INTERNAL,Evidence Owner,Frozen source locators recorded
+02,S02-A01,SIPOC,docs/stages/stage_02/03_CURRENT_STATE_PROCESS_AND_ARCHITECTURE.md,PRESENT_INTERNAL,Architecture Owner,Synthetic process reconstruction
+02,S02-A02,Process and value-stream maps,docs/stages/stage_02/03_CURRENT_STATE_PROCESS_AND_ARCHITECTURE.md,PRESENT_INTERNAL,Architecture Owner,Journey and exceptions shown
+02,S02-A03,Waste register,docs/stages/stage_02/04_WASTE_DEPENDENCY_AND_RISK_REGISTER.md,PRESENT_INTERNAL,Operations Owner,Shadow work and waste evidenced
+02,S02-A04,System landscape,docs/stages/stage_02/03_CURRENT_STATE_PROCESS_AND_ARCHITECTURE.md,PRESENT_INTERNAL,Architecture Owner,Source boundaries described
+02,S02-A05,Brownfield assessment,docs/stages/stage_02/02_BROWNFIELD_8_LENS_ASSESSMENT.md,PRESENT_INTERNAL,Architecture Owner,Eight-lens evidence baseline
+02,S02-A06,Current-state C4 views,docs/stages/stage_02/03_CURRENT_STATE_PROCESS_AND_ARCHITECTURE.md,PARTIAL,Architecture Owner,Context view only and no field topology validation
+02,S02-A07,Dependencies,docs/stages/stage_02/04_WASTE_DEPENDENCY_AND_RISK_REGISTER.md,PRESENT_INTERNAL,Architecture Owner,Cross-domain dependency register
+02,S02-A08,Data flows,docs/stages/stage_02/03_CURRENT_STATE_PROCESS_AND_ARCHITECTURE.md,PRESENT_INTERNAL,Data Owner,Source flow assessment
+02,S02-A09,Trust boundaries,docs/stages/stage_02/03_CURRENT_STATE_PROCESS_AND_ARCHITECTURE.md,PRESENT_INTERNAL,Security Owner,Preliminary trust-boundary table
+03,S03-A01,SCQA problem frame,docs/stages/stage_03/01_SCQA_AND_PRIORITIZED_PROBLEM.md,PRESENT_INTERNAL,Product Owner,Evidence-backed priority statement
+03,S03-A02,Root-cause analysis,docs/stages/stage_03/02_ROOT_CAUSE_ANALYSIS.md,PRESENT_INTERNAL,Product Owner,Causal hypotheses linked to source findings
+03,S03-A03,Baseline dataset,docs/stages/stage_03/kpi_baseline.csv,PARTIAL,Analytics Owner,Reproduced forensic metrics but business formulas absent
+03,S03-A04,KPI tree,docs/stages/stage_03/03_KPI_TREE_AND_BASELINE.md,PRESENT_INTERNAL,Analytics Owner,North-star and counter-metrics defined
+03,S03-A05,CTQs,docs/stages/stage_03/04_VALUE_CTQ_AND_SUCCESS_CRITERIA.md,PRESENT_INTERNAL,Product Owner,P0 and value-critical qualities defined
+03,S03-A06,Value hypothesis,docs/stages/stage_03/04_VALUE_CTQ_AND_SUCCESS_CRITERIA.md,PRESENT_INTERNAL,Product Owner,Hypothesis not claimed achieved
+03,S03-A07,Counter-metrics,docs/stages/stage_03/04_VALUE_CTQ_AND_SUCCESS_CRITERIA.md,PRESENT_INTERNAL,Analytics Owner,False-block and burden guards
+03,S03-A08,Success and failure criteria,docs/stages/stage_03/04_VALUE_CTQ_AND_SUCCESS_CRITERIA.md,PRESENT_INTERNAL,Product Owner,POC thresholds distinct from outcome
+04,S04-A01,Impact and regulatory screen,docs/stages/stage_04/01_INTENDED_PURPOSE_AND_APPLICABILITY_SCREEN.md,PARTIAL,Legal Regulatory Privacy,Expert applicability determination open
+04,S04-A02,Prohibited-use check,docs/stages/stage_04/04_AUTHORITY_AND_PROHIBITED_USE_POLICY.md,PRESENT_INTERNAL,AI Governance Owner,Academic prohibited actions defined
+04,S04-A03,AI suitability assessment,docs/stages/stage_04/03_AI_SUITABILITY_AND_NON_AI_ALTERNATIVE.md,PRESENT_INTERNAL,Product Owner,Deterministic first choice documented
+04,S04-A04,Non-AI alternative,docs/stages/stage_04/03_AI_SUITABILITY_AND_NON_AI_ALTERNATIVE.md,PRESENT_INTERNAL,Product Owner,AI-off path preserved
+04,S04-A05,Use-case card,docs/stages/stage_04/02_USE_CASE_CARDS_AND_AI_BOUNDARIES.md,PRESENT_INTERNAL,Product Owner,Three POC cards and AI boundary
+04,S04-A06,Value-risk-feasibility matrix,docs/stages/stage_04/05_VALUE_RISK_FEASIBILITY_AND_G1_DECISION.md,PRESENT_INTERNAL,Product Owner,Internal academic decision only
+04,S04-A07,Go-no-go and kill criteria,docs/stages/stage_04/05_VALUE_RISK_FEASIBILITY_AND_G1_DECISION.md,PRESENT_INTERNAL,Capstone Owner,P0 containment rules documented
+05,S05-A01,Glossary,docs/stages/stage_05/01_DOMAIN_GLOSSARY.md,PRESENT_INTERNAL,Domain Owner,Ubiquitous language defined
+05,S05-A02,Domain capability map,docs/stages/stage_05/02_CAPABILITY_BOUNDED_CONTEXT_AND_CONTEXT_MAP.md,PRESENT_INTERNAL,Domain Owner,Capabilities and seams mapped
+05,S05-A03,Business rules,docs/stages/stage_05/04_BUSINESS_RULES_AND_DECISION_TABLES.md,PARTIAL,Clinical Quality Owners,Synthetic rules need controlled owner policy
+05,S05-A04,Decision model,docs/stages/stage_05/04_BUSINESS_RULES_AND_DECISION_TABLES.md,PRESENT_INTERNAL,Domain Owner,Decision tables separate authority
+05,S05-A05,Domain events,docs/stages/stage_05/05_DOMAIN_EVENTS_AND_TEMPORAL_MODEL.md,PRESENT_INTERNAL,Domain Owner,Occurred and recorded times explicit
+05,S05-A06,Ownership map,docs/stages/stage_05/03_AGGREGATES_OWNERSHIP_AND_AUTHORITY.md,PARTIAL,Clinical Quality Owners,Real decision owners unconfirmed
+05,S05-A07,DDD context map,docs/stages/stage_05/02_CAPABILITY_BOUNDED_CONTEXT_AND_CONTEXT_MAP.md,PRESENT_INTERNAL,Domain Owner,Context relationships described
+05,S05-A08,Bounded contexts,docs/stages/stage_05/02_CAPABILITY_BOUNDED_CONTEXT_AND_CONTEXT_MAP.md,PRESENT_INTERNAL,Domain Owner,Context contracts defined
+06,S06-A01,Data and knowledge inventories,docs/stages/stage_06/01_DATA_AND_KNOWLEDGE_INVENTORY.md,PRESENT_INTERNAL,Data Owner,Frozen synthetic sources inventoried
+06,S06-A02,Lineage,docs/stages/stage_06/03_LINEAGE_PROVENANCE_AND_SOURCE_TRUST.md,PRESENT_INTERNAL,Data Owner,Source-to-decision chain designed
+06,S06-A03,Quality profile,docs/stages/stage_06/02_DATA_QUALITY_PROFILE_AND_ISSUE_REGISTER.md,PRESENT_INTERNAL,Data Owner,Measured source anomalies
+06,S06-A04,Provenance,docs/stages/stage_06/03_LINEAGE_PROVENANCE_AND_SOURCE_TRUST.md,PRESENT_INTERNAL,Data Owner,Locator and digest rules
+06,S06-A05,Access matrix,docs/stages/stage_06/04_ACCESS_AND_PERMISSIBLE_USE_REGISTER.md,PARTIAL,Privacy Security Owners,Real data and provider use unresolved
+06,S06-A06,Representativeness assessment,docs/stages/stage_06/05_REPRESENTATIVENESS_AND_DATA_GAP_REGISTER.md,PARTIAL,Data Owner,Synthetic data cannot prove external representativeness
+06,S06-A07,Data-gap register,docs/stages/stage_06/05_REPRESENTATIVENESS_AND_DATA_GAP_REGISTER.md,PRESENT_INTERNAL,Data Owner,Unresolved ground truth and policy gaps recorded
+06,S06-A08,Dataset datasheets,docs/stages/stage_06/06_DATASET_DATASHEETS_AND_SOP_REGISTER.md,PRESENT_INTERNAL,Data Owner,Grouped datasheets and controlled SOP status
+07,S07-A01,Evaluation strategy,docs/stages/stage_07/01_EVALUATION_STRATEGY_AND_THRESHOLDS.md,PRESENT_INTERNAL,TEVV Owner,Frozen case strategy
+07,S07-A02,Golden-set specification,docs/stages/stage_07/02_SCENARIO_CATALOG_AND_GOLDEN_SET.md,PRESENT_INTERNAL,TEVV Owner,Public synthetic seeds and label governance
+07,S07-A03,Scenarios,docs/stages/stage_07/evaluation_catalog.json,PRESENT_INTERNAL,TEVV Owner,57 specified cases
+07,S07-A04,Acceptance thresholds,docs/stages/stage_07/01_EVALUATION_STRATEGY_AND_THRESHOLDS.md,PARTIAL,TEVV Owner,Registered 20-client load not yet verified
+07,S07-A05,AI impact assessment,docs/stages/stage_07/03_AI_SYSTEM_IMPACT_ASSESSMENT.md,PARTIAL,AI Governance Owner,Production intended-use review open
+07,S07-A06,Risk and harms registers,docs/stages/stage_07/04_RISK_HARMS_AND_TREATMENT_REGISTER.md,PRESENT_INTERNAL,AI Governance Owner,Synthetic harm scenarios recorded
+07,S07-A07,Risk treatment,docs/stages/stage_07/04_RISK_HARMS_AND_TREATMENT_REGISTER.md,PARTIAL,Clinical Quality Owners,Real residual risk acceptance unavailable
+07,S07-A08,Oversight and transparency requirements,docs/stages/stage_07/05_HUMAN_OVERSIGHT_AND_REVIEW_PROTOCOL.md,PARTIAL,Human Factors Owner,Human-study evidence still inconclusive
+08,S08-A01,Solution catalogue,docs/stages/stage_08/01_SOLUTION_OPTION_CATALOGUE.md,PRESENT_INTERNAL,Architecture Owner,Six solution options described
+08,S08-A02,Reference-architecture comparison,docs/stages/stage_08/03_REFERENCE_AND_MODEL_PROVIDER_COMPARISON.md,PRESENT_INTERNAL,Architecture Owner,Patterns compared with safety trade-offs
+08,S08-A03,PoC model and RAG results,docs/stages/stage_08/02_TECHNICAL_SPIKE_REPORT.md,PARTIAL,Architecture Owner,Deterministic spike results only; live model and RAG not selected
+08,S08-A04,Weighted trade-off matrix,docs/stages/stage_08/06_WEIGHTED_TRADEOFF_AND_SELECTION.md,PRESENT_INTERNAL,Architecture Owner,Option score and selection recorded
+08,S08-A05,Build-buy assessment,docs/stages/stage_08/04_BUILD_BUY_PARTNER_ANALYSIS.md,PRESENT_INTERNAL,Product Owner,No procurement decision claimed
+08,S08-A06,Provider comparison,docs/stages/stage_08/03_REFERENCE_AND_MODEL_PROVIDER_COMPARISON.md,PARTIAL,Product Privacy Owners,Profiles only; no dated supplier diligence
+08,S08-A07,Preliminary ADRs,docs/stages/stage_08/07_PRELIMINARY_ADRS.md,PRESENT_INTERNAL,Architecture Owner,Reversible decisions recorded
+08,S08-A08,Selected solution,docs/stages/stage_08/09_G2_DECISION_RECORD.md,PRESENT_INTERNAL,Capstone Owner,Academic internal G2 only
+09,S09-A01,Target data architecture,docs/stages/stage_09/01_INFORMATION_ARCHITECTURE.md,PRESENT_INTERNAL,Data Architecture Owner,Assertion and projection model
+09,S09-A02,Data contracts,docs/stages/stage_09/02_DATA_EVENT_AND_EVIDENCE_CONTRACTS.md,PRESENT_INTERNAL,Data Architecture Owner,Machine-readable schema links
+09,S09-A03,Semantic model,docs/stages/stage_09/01_INFORMATION_ARCHITECTURE.md,PRESENT_INTERNAL,Domain Data Owners,Typed IDs time authority and state
+09,S09-A04,Metadata and provenance design,docs/stages/stage_09/02_DATA_EVENT_AND_EVIDENCE_CONTRACTS.md,PRESENT_INTERNAL,Data Architecture Owner,Envelope and provenance chain
+09,S09-A05,Retrieval architecture,docs/stages/stage_10/03_AI_CONTEXT_AND_OUTPUT_DESIGN.md,CONDITIONAL_NOT_SELECTED,Architecture Owner,No RAG or vector retrieval selected
+09,S09-A06,Data ADRs,docs/stages/stage_13/02_FINAL_ADRS.md,PARTIAL,Architecture Owner,Data decisions dispersed; full ADR rationale limited
+09,S09-A07,Conditional ontology and graph-vector schemas,-,CONDITIONAL_NOT_SELECTED,Architecture Owner,Graph and vector store rejected for current POC
+10,S10-A01,Target C4 Context Container Component views,docs/stages/stage_10/05_TARGET_C4_BASELINE_AND_AS_BUILT_DELTA.md,PRESENT_INTERNAL,Architecture Owner,All three target levels explicitly drawn
+10,S10-A02,AI and RAG architecture,docs/stages/stage_10/01_APPLICATION_AND_AI_ARCHITECTURE.md,CONDITIONAL_NOT_SELECTED,Architecture Owner,Bounded AI gateway present; RAG rejected
+10,S10-A03,Model-routing design,docs/stages/stage_10/01_APPLICATION_AND_AI_ARCHITECTURE.md,PARTIAL,AI Governance Owner,Off and fake only; live provider not selected
+10,S10-A04,API contracts,docs/stages/stage_10/02_API_COMPONENT_AND_FAILURE_DESIGN.md,PARTIAL,API Owner,Designed target routes exceed as-built API
+10,S10-A05,Prompt and context design,docs/stages/stage_10/03_AI_CONTEXT_AND_OUTPUT_DESIGN.md,PRESENT_INTERNAL,AI Governance Owner,Bounded evidence allowlist and schema
+10,S10-A06,Deployment topology,docs/stages/stage_10/01_APPLICATION_AND_AI_ARCHITECTURE.md,PARTIAL,Platform Owner,Local single-process only; production topology open
+10,S10-A07,Failure-mode design,docs/stages/stage_10/02_API_COMPONENT_AND_FAILURE_DESIGN.md,PRESENT_INTERNAL,Architecture Owner,Unknown outage and fallback states
+10,S10-A08,Architecture ADRs,docs/stages/stage_13/02_FINAL_ADRS.md,PARTIAL,Architecture Owner,Academic ADR decisions need fuller production rationale
+11,S11-A01,Agent-suitability assessment,docs/stages/stage_11/02_AGENT_SUITABILITY_AND_STAGE_REVIEW.md,PRESENT_INTERNAL,AI Governance Owner,Multi-agent explicitly rejected
+11,S11-A02,Autonomy-level ADR,docs/stages/stage_13/02_FINAL_ADRS.md,PRESENT_INTERNAL,AI Governance Owner,Read-recommend only
+11,S11-A03,Agent responsibility map,docs/stages/stage_11/01_AGENTIC_ORCHESTRATION_DESIGN.md,PRESENT_INTERNAL,AI Governance Owner,One assistant and human/service responsibilities
+11,S11-A04,Orchestration topology,docs/stages/stage_11/01_AGENTIC_ORCHESTRATION_DESIGN.md,PRESENT_INTERNAL,Architecture Owner,Assistant outside authority path
+11,S11-A05,Agent interaction and sequence diagram,docs/stages/stage_11/01_AGENTIC_ORCHESTRATION_DESIGN.md,PRESENT_INTERNAL,Architecture Owner,Human-orchestrator-assistant sequence
+11,S11-A06,State-machine model,docs/stages/stage_05/06_CANONICAL_STATE_MACHINES.md,PARTIAL,Domain Owner,Domain machines exist; assistant loop is single-call only
+11,S11-A07,Tool and action catalogue,docs/stages/stage_11/01_AGENTIC_ORCHESTRATION_DESIGN.md,PRESENT_INTERNAL,AI Governance Owner,Consequential tools denied
+11,S11-A08,Identity and permission matrix,docs/stages/stage_12/02_SECURITY_PRIVACY_AND_GUARDRAIL_CONTROLS.md,PARTIAL,Security Owner,Roles and scopes dispersed across policy and code
+11,S11-A09,Shared-memory design,docs/stages/stage_11/01_AGENTIC_ORCHESTRATION_DESIGN.md,CONDITIONAL_NOT_SELECTED,AI Governance Owner,Request-scoped context only; no shared long-term memory
+11,S11-A10,Handoff protocol,docs/stages/stage_11/01_AGENTIC_ORCHESTRATION_DESIGN.md,PRESENT_INTERNAL,Operations Owner,Assistant suggestion cannot execute handoff
+11,S11-A11,Termination and loop controls,docs/stages/stage_11/01_AGENTIC_ORCHESTRATION_DESIGN.md,PRESENT_INTERNAL,AI Governance Owner,One call schema check and deterministic fallback
+11,S11-A12,Human approval override and escalation matrix,docs/stages/stage_07/05_HUMAN_OVERSIGHT_AND_REVIEW_PROTOCOL.md,PARTIAL,Human Factors Owner,Policy defined; independent human study absent
+12,S12-A01,Threat model,docs/stages/stage_12/01_THREAT_MODEL.md,PRESENT_INTERNAL,Security Owner,Twelve local POC threats
+12,S12-A02,Agentic attack-surface map,docs/stages/stage_12/01_THREAT_MODEL.md,PARTIAL,Security Owner,Single assistant surface; no standalone map
+12,S12-A03,Trust boundaries,docs/stages/stage_12/01_THREAT_MODEL.md,PRESENT_INTERNAL,Security Owner,Six boundaries listed
+12,S12-A04,Abuse cases,docs/stages/stage_12/01_THREAT_MODEL.md,PRESENT_INTERNAL,Security Owner,Prompt role replay and tamper abuse
+12,S12-A05,OWASP mapping,docs/stages/stage_12/05_OWASP_2026_RISK_MAPPING.md,PARTIAL,Security Owner,Academic mapping exists; independent review and live-model testing needed
+12,S12-A06,Guardrail architecture,docs/stages/stage_12/02_SECURITY_PRIVACY_AND_GUARDRAIL_CONTROLS.md,PRESENT_INTERNAL,Security Owner,Schema authority evidence and fallback controls
+12,S12-A07,Control matrix,docs/stages/stage_12/02_SECURITY_PRIVACY_AND_GUARDRAIL_CONTROLS.md,PRESENT_INTERNAL,Security Owner,POC implementation versus production gap
+12,S12-A08,Supplier and model assessment,docs/stages/stage_12/03_SUPPLIER_SBOM_AIBOM_AND_EXIT_PLAN.md,CONDITIONAL_NOT_SELECTED,Supplier Privacy Owners,No live model or SaaS supplier selected
+12,S12-A09,Model and system cards,docs/stages/stage_12/06_ACADEMIC_AI_SYSTEM_CARD.md,PARTIAL,AI Governance Owner,Academic system card exists; provider model card and governance approval absent
+12,S12-A10,Component register,docs/stages/stage_14/SBOM.json,PRESENT_INTERNAL,Platform Owner,Academic dependency manifest
+12,S12-A11,SBOM and AIBOM,docs/stages/stage_14/AIBOM.json,PRESENT_INTERNAL,Platform AI Owners,Unsigned academic SBOM and AIBOM
+12,S12-A12,Exit plan,docs/stages/stage_12/03_SUPPLIER_SBOM_AIBOM_AND_EXIT_PLAN.md,PRESENT_INTERNAL,Supplier Owner,AI-off portability and future credential revocation
+13,S13-A01,Final ADR register,docs/stages/stage_13/02_FINAL_ADRS.md,PARTIAL,Architecture Owner,Twelve concise academic decisions; full rationale limited
+13,S13-A02,Approved C4 baseline,docs/stages/stage_10/05_TARGET_C4_BASELINE_AND_AS_BUILT_DELTA.md,PARTIAL,Capstone Owner,Target views present; human approval pending
+13,S13-A03,Delivery specification,docs/stages/stage_13/01_BUILD_READY_SPECIFICATION.md,PRESENT_INTERNAL,Engineering Owner,Approved only for synthetic academic build
+13,S13-A04,NFRs,requirements/requirements.csv,PARTIAL,Engineering SRE Owners,20-client registered condition not verified
+13,S13-A05,API and data contracts,docs/stages/stage_09/02_DATA_EVENT_AND_EVIDENCE_CONTRACTS.md,PARTIAL,API Data Owners,Target API routes not all built
+13,S13-A06,Agent specifications,docs/stages/stage_11/01_AGENTIC_ORCHESTRATION_DESIGN.md,CONDITIONAL_NOT_SELECTED,AI Governance Owner,Single bounded assistant specified; multi-agent rejected
+13,S13-A07,Evaluation cases,docs/stages/stage_07/evaluation_catalog.json,PRESENT_INTERNAL,TEVV Owner,Frozen 57-case catalog
+13,S13-A08,Telemetry and logging specification,docs/stages/stage_16/01_SLOS_TELEMETRY_AND_ALERTS.md,PRESENT_INTERNAL,SRE Owner,Synthetic monitoring spec
+13,S13-A09,Rollback requirements,docs/stages/stage_13/08_BROWNFIELD_MIGRATION_STRATEGY.md,PRESENT_INTERNAL,Architecture SRE Owners,External-effect reversal and cutover gates
+13,S13-A10,Traceability matrix,requirements/TRACEABILITY_MATRIX.csv,PARTIAL,Product Owner,Cross-lifecycle CSV and Stage 13 product-to-demo trace exist; source-specific consolidation and owner review pending
+13,S13-A11,Backlog,docs/stages/stage_13/03_DELIVERY_BACKLOG_AND_TRACEABILITY.md,PRESENT_INTERNAL,Product Owner,POC increments listed
+13,S13-X01,Training-sequence PRD,docs/stages/stage_13/06_PRODUCT_REQUIREMENTS_DOCUMENT.md,PRESENT_INTERNAL,Capstone Owner,Additional training artifact; review pending
+14,S14-A01,Source and IaC,src/fde_capstone/application.py,PARTIAL,Engineering Platform Owners,Python app Docker and CI exist; no enterprise IaC
+14,S14-A02,Prompt and configuration registry,docs/stages/stage_14/assistant_config_registry.json,PRESENT_INTERNAL,AI Governance Owner,Versioned off/fake registry; live provider remains unselected
+14,S14-A03,Model and tool versions,docs/stages/stage_14/AIBOM.json,PARTIAL,AI Governance Owner,Fake adapter version only; live provider conditional
+14,S14-A04,Data pipelines,src/fde_capstone/source_cases.py,PARTIAL,Data Engineering Owner,Read-only v2 case access not full estate ingest
+14,S14-A05,Agent definitions,-,CONDITIONAL_NOT_SELECTED,AI Governance Owner,No autonomous or multi-agent implementation
+14,S14-A06,Orchestration workflows,src/fde_capstone/application.py,PRESENT_INTERNAL,Engineering Owner,Three shared-service POCs
+14,S14-A07,Unit and integration tests,tests/e2e/test_full_journey.py,PRESENT_INTERNAL,Engineering Owner,Unit integration e2e suites
+14,S14-A08,CI and CD evidence,.github/workflows/ci.yml,PARTIAL,Platform Owner,CI only; no production CD
+14,S14-A09,As-built C4 views,docs/stages/stage_14/05_AS_BUILT_ARCHITECTURE.md,PARTIAL,Architecture Owner,Component flow only and no enterprise runtime
+15,S15-A01,Evaluation harness,src/fde_capstone/evaluation.py,PRESENT_INTERNAL,TEVV Owner,Fifty-seven isolated structural probes
+15,S15-A02,Golden datasets,docs/stages/stage_07/evaluation_catalog.json,PARTIAL,TEVV Owner,Public seed specs and source fixtures; no full adjudicated gold truth
+15,S15-A03,Model and RAG results,-,CONDITIONAL_NOT_SELECTED,AI Governance Owner,No live model or RAG; fake boundary tests only
+15,S15-A04,Agent task-completion results,docs/stages/stage_15/evaluation_results.json,PARTIAL,AI Governance Owner,Single assistant boundary only; no autonomous task
+15,S15-A05,Inter-agent handoff tests,-,CONDITIONAL_NOT_SELECTED,AI Governance Owner,Multi-agent architecture rejected
+15,S15-A06,Coordination and conflict tests,tests/unit/test_assistant.py,PARTIAL,AI Governance Owner,Assistant output conflict only; no inter-agent coordination
+15,S15-A07,Loop and termination tests,tests/unit/test_assistant.py,PRESENT_INTERNAL,AI Governance Owner,One-call assistant path and fallback
+15,S15-A08,Prompt-injection and tool-misuse tests,docs/stages/stage_15/02_RED_TEAM_AND_ADVERSARIAL_REPORT.md,PRESENT_INTERNAL,Security Owner,Fake malicious fixtures tested
+15,S15-A09,Assurance report,docs/stages/stage_15/01_TEVV_REPORT.md,PARTIAL,Independent Assurance Owner,Internal Codex review only; independent report absent
+15,S15-A10,Residual-risk acceptance,docs/stages/stage_15/03_RESIDUAL_RISK_DECISIONS.md,PARTIAL,Clinical Quality Owners,Restricted academic decision; real owner signoff unavailable
+16,S16-A01,Operational RACI,docs/stages/stage_01/04_GOVERNANCE_RACI_AND_DECISION_RIGHTS.md,PARTIAL,Service Owner,Proposed governance not accepted service operations
+16,S16-A02,Agent and LLM telemetry,docs/stages/stage_16/01_SLOS_TELEMETRY_AND_ALERTS.md,PARTIAL,SRE AI Governance Owners,Fake and off metrics only; no live model
+16,S16-A03,Dashboards and alerts,docs/stages/stage_16/01_SLOS_TELEMETRY_AND_ALERTS.md,PARTIAL,SRE Owner,Design and local exercise only
+16,S16-A04,Runbooks,docs/stages/stage_16/02_OPERATIONAL_RUNBOOKS.md,PRESENT_INTERNAL,Service Owner,Synthetic local procedures
+16,S16-A05,Incident and rollback plans,docs/stages/stage_16/03_INCIDENT_CHANGE_AND_RECOVERY_PLAN.md,PARTIAL,SRE Owner,External-effect rollback untested
+16,S16-A06,SOPs and training,docs/stages/stage_16/04_TRAINING_SOP_AND_EVIDENCE_INDEX.md,PARTIAL,Operations Quality Owners,Academic briefing; no accepted training record
+16,S16-A07,Recovery evidence,docs/stages/stage_16/recovery_drill_results.json,PARTIAL,SRE Owner,Local SQLite restore not production DR
+16,S16-A08,AI-system record,docs/stages/stage_12/06_ACADEMIC_AI_SYSTEM_CARD.md,PARTIAL,AI Governance Owner,Academic record exists; formal owner approval and external registration absent
+16,S16-A09,Technical documentation,docs/stages/stage_16/04_TRAINING_SOP_AND_EVIDENCE_INDEX.md,PARTIAL,Architecture Regulatory Owners,Dispersed source and technical docs; no controlled regulated pack
+16,S16-A10,Transparency and oversight records,docs/stages/stage_07/05_HUMAN_OVERSIGHT_AND_REVIEW_PROTOCOL.md,PARTIAL,Human Factors Owner,Protocol only; actual human records absent
+17,S17-A01,Release manifest,docs/stages/stage_14/release_manifest.json,PRESENT_INTERNAL,Platform Owner,Academic source and catalog digests
+17,S17-A02,Deployment record,docs/stages/stage_17/01_RELEASE_DEPLOYMENT_AND_ADOPTION_RECORD.md,PARTIAL,Platform Owner,Local simulation not live deployment
+17,S17-A03,Pilot and canary results,docs/stages/stage_17/deployment_simulation_results.json,PARTIAL,Product SRE Owners,Disposable fixture canary only
+17,S17-A04,Autonomy-expansion record,-,CONDITIONAL_NOT_SELECTED,AI Governance Owner,AI off and no consequential agent autonomy
+17,S17-A05,Rollback decision,docs/stages/stage_17/02_SHADOW_CANARY_AND_ROLLBACK.md,PARTIAL,SRE Owner,Feature flag exercise not source/infrastructure rollback
+17,S17-A06,Adoption dashboard,-,EXTERNAL_REQUIRED,Product Operations Owner,No real users or adoption population
+17,S17-A07,Override and workaround logs,-,EXTERNAL_REQUIRED,Human Factors Owner,No real operator study or workflow
+17,S17-A08,Updated SOPs,-,EXTERNAL_REQUIRED,Operations Quality Owners,No organizational procedure adoption
+18,S18-A01,Operational dashboards,docs/stages/stage_18/02_DASHBOARD_AND_ALERT_SPECIFICATION.md,PARTIAL,SRE Owner,Specification not live dashboard
+18,S18-A02,Model tool and agent traces,docs/stages/stage_18/01_MONITORING_AND_RESILIENCE_REPORT.md,PARTIAL,SRE AI Governance Owners,Local audit metrics only; no live provider traces
+18,S18-A03,Inter-agent interaction logs,-,CONDITIONAL_NOT_SELECTED,AI Governance Owner,No multi-agent system
+18,S18-A04,Drift reports,-,EXTERNAL_REQUIRED,Data SRE Owners,Fixed fixture has no production drift population
+18,S18-A05,Cost and availability reports,-,EXTERNAL_REQUIRED,Finance SRE Owners,No real model supplier or service uptime
+18,S18-A06,Incident records,docs/stages/stage_18/03_INCIDENT_AND_DRILL_RECORD.md,PARTIAL,SRE Owner,Synthetic exercise only
+18,S18-A07,Agent-loop alerts,docs/stages/stage_18/02_DASHBOARD_AND_ALERT_SPECIFICATION.md,CONDITIONAL_NOT_SELECTED,AI Governance Owner,One-call no-loop assistant; alert design only
+18,S18-A08,Chaos and recovery results,docs/stages/stage_18/monitoring_simulation_results.json,PARTIAL,SRE Owner,Local fixture exercise not representative outage
+18,S18-A09,Updated runbooks,docs/stages/stage_16/02_OPERATIONAL_RUNBOOKS.md,PARTIAL,Service Owner,No post-live-incident revision evidence
+19,S19-A01,Benefits-realisation report,docs/stages/stage_19/01_VALUE_REALIZATION_REPORT.md,PARTIAL,Product Analytics Owners,Technical feasibility only
+19,S19-A02,Before and after KPIs,-,EXTERNAL_REQUIRED,Analytics Owner,No real after cohort or baseline formulas
+19,S19-A03,Cost-to-value analysis,docs/stages/stage_08/05_TCO_AND_COST_MODEL.md,PARTIAL,Finance Owner,Scenario TCO not measured cost per successful outcome
+19,S19-A04,Counter-metrics,docs/stages/stage_03/04_VALUE_CTQ_AND_SUCCESS_CRITERIA.md,PARTIAL,Analytics Owner,Defined but not observed after intervention
+19,S19-A05,Waste reduction,-,EXTERNAL_REQUIRED,Operations Owner,No real manual-labor before/after measure
+19,S19-A06,Unintended effects,-,EXTERNAL_REQUIRED,Human Factors Owner,No real false-block or bias observation
+19,S19-A07,Executive SCQA paper,docs/stages/stage_19/02_EXECUTIVE_DECISION_STORY.md,PARTIAL,Product Owner,Decision story exists; full executive SCQA packaging limited
+19,S19-A08,C4 executive view,docs/stages/stage_10/05_TARGET_C4_BASELINE_AND_AS_BUILT_DELTA.md,PARTIAL,Architecture Owner,Technical C4 exists; executive simplified view absent
+19,S19-A09,Decision recommendation,docs/stages/stage_19/02_EXECUTIVE_DECISION_STORY.md,PRESENT_INTERNAL,Product Owner,Restrict/change funding choice
+20,S20-A01,AIMS performance report,docs/stages/stage_20/01_AIMS_LIFECYCLE_CONTROL_REVIEW.md,PARTIAL,AI Governance Owner,Internal academic review not certified AIMS
+20,S20-A02,Audit findings,docs/stages/stage_20/02_INTERNAL_AUDIT_AND_CAPA.md,PARTIAL,Independent Assurance Owner,Internal Codex audit only
+20,S20-A03,CAPA register,docs/stages/stage_20/02_INTERNAL_AUDIT_AND_CAPA.md,PRESENT_INTERNAL,Capstone Owner,Seven open CAPAs and containment
+20,S20-A04,Management-review decision,docs/stages/stage_20/03_MANAGEMENT_REVIEW_AND_LIFECYCLE_DECISION.md,PARTIAL,Sponsor,Internal academic decision; sponsor review pending
+20,S20-A05,Control plan,docs/stages/stage_20/07_CONTROL_PLAN_AND_CHANGE_REASSESSMENT.md,PRESENT_INTERNAL,Service AI Governance Owners,Academic trigger response and owner table
+20,S20-A06,Updated impact risk C4 ADRs and evaluations,docs/stages/stage_20/07_CONTROL_PLAN_AND_CHANGE_REASSESSMENT.md,PARTIAL,Architecture AI Governance Owners,Change triggers defined; future reassessment evidence open
+20,S20-A07,Scale change restrict suspend retire decision,docs/stages/stage_20/04_G6_DECISION_RECORD.md,PRESENT_INTERNAL,Capstone Owner,Restrict and change for synthetic POC
+21,S21-A01,Retirement plan,docs/stages/stage_21/01_RETIREMENT_AND_ARCHIVE_RECORD.md,PARTIAL,Service Owner,Disposable local runtime only
+21,S21-A02,Notifications,-,CONDITIONAL_NOT_SELECTED,Service Owner,No real users or external service retired
+21,S21-A03,Access revocation,-,CONDITIONAL_NOT_SELECTED,Security Owner,No real enterprise access granted
+21,S21-A04,Data model and memory disposition,docs/stages/stage_21/01_RETIREMENT_AND_ARCHIVE_RECORD.md,PARTIAL,Records AI Governance Owners,Temporary POC databases disposed; real records N/A
+21,S21-A05,Agent and tool credential revocation,-,CONDITIONAL_NOT_SELECTED,Security Owner,No live credential or agent tool granted
+21,S21-A06,Supplier and dependency closure,-,CONDITIONAL_NOT_SELECTED,Supplier Owner,No live supplier procured
+21,S21-A07,Reusable ADR and C4 templates,docs/stages/stage_21/03_REUSABLE_IP_CATALOG.md,PARTIAL,Architecture Owner,Catalog lists assets; standalone templates absent
+21,S21-A08,Updated reference architectures,docs/stages/stage_21/03_REUSABLE_IP_CATALOG.md,PARTIAL,Architecture Owner,Reuse guidance not versioned reference architecture
+21,S21-A09,Eval and guardrail templates,docs/stages/stage_21/03_REUSABLE_IP_CATALOG.md,PARTIAL,TEVV Security Owners,Reusable patterns listed but not packaged as templates

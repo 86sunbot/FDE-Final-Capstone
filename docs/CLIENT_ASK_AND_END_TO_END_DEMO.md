@@ -74,6 +74,8 @@ The solution includes:
 - three integrated proofs of concept; and
 - an optional recommendation-only assistant that is off by default.
 
+The current academic increment also provides a read-only explorer for the original v2 `EVAL-001..006` synthetic source patients, a source-timestamp journey sequence for each, a non-authoritative preview of `INJ-001..010` disruption scenarios, a standalone PRD, a source-by-source brownfield migration plan, a one-to-one 21-stage artifact register and a 90-day production-gap roadmap. The six timestamp sequences are not governed current state or known-at replay; the explorer and preview are **not** a migrated enterprise platform or an autonomous re-planner. The three runnable POCs use a separate scripted fixture.
+
 ## 6. End-to-end flow
 
 ```text
@@ -178,12 +180,13 @@ There is no live-model mode in this capstone. AI cannot establish patient identi
 
 ## 11. Demonstrated assurance
 
-- 21 of 21 FDE operating-model stages contain artifacts.
-- 77 of 77 automated tests pass.
+- 21 of 21 FDE operating-model stages contain documented artifacts; this does not mean external stage approval.
+- 92 of 92 local automated tests pass.
 - 57 evaluation cases were executed.
-- 55 evaluation cases passed and none failed.
+- 55 evaluation cases passed **structural probes** and none failed. Only 7 original cases have full scoped property assertions, 9 are partial, and 39 extension cases have ungraded expected properties.
 - Two controlled human-study cases remain inconclusive.
-- 25 of 27 requirements are internally verified.
+- 29 of 31 requirements are internally verified; zero are production verified.
+- The registered 20-client/27,507-row journey-projection NFR remains unverified despite a passing in-process micro-benchmark.
 - The original ZIP and all 132 frozen extracted evidence files remain unchanged.
 
 ## 12. Business value demonstrated

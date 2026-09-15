@@ -5,6 +5,15 @@
     "pass": 55,
     "fail": 0,
     "inconclusive": 2,
+    "property_coverage": {
+      "EXTERNAL_NOT_RUN": 2,
+      "FULL_SCOPED_PROPERTY_ASSERTIONS": 7,
+      "PARTIAL_SCOPED_PROPERTY_ASSERTIONS": 9,
+      "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED": 39
+    },
+    "fully_graded_supplied_cases": 7,
+    "partially_graded_supplied_cases": 9,
+    "structural_probe_only_cases": 39,
     "scope": "Synthetic internal structural evaluation; not independent, human-factor, live-model or production validation",
     "catalog_digest": "79cf2d008ef08362d080eefacb602eba2b4833aa0b8cdaa3c5b01fc436d13cc1"
   },
@@ -13,15 +22,26 @@
       "case_id": "EVAL-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "evidence-backed state, no invented transitions"
+      ],
+      "property_coverage": "PARTIAL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/batches.csv#row=2",
+        "source_baseline/data/raw/collections.csv#row=2",
+        "source_baseline/data/raw/patients.csv#row=2",
+        "source_baseline/data/raw/shipments.csv#row=2",
+        "source_baseline/data/raw/shipments.csv#row=3",
+        "source_baseline/evals/cases.csv#row=2"
       ],
       "observations": [
         "milestone-specific readiness satisfied",
-        "four prerequisite evidence references retained"
+        "four prerequisite evidence references retained",
+        "frozen v2 source observation=OBSERVED_SOURCE_ASSERTIONS; patient=P-00001"
       ],
-      "duration_ms": 0.855,
-      "result_digest": "740b8a832d27cac7fb42916eeb7f97b6f2f5e19758c123ffdc2eb5891c09330c"
+      "duration_ms": 35.294,
+      "result_digest": "c66f93b2dc2afd6c1f504eb2d0f17d6267018445fffb893864ecdfe7e1dd6a4c"
     },
     {
       "case_id": "EVAL-002",
@@ -30,13 +50,21 @@
       "checks": [
         "surface conflict; do not silently merge"
       ],
+      "unverified_properties": [],
+      "property_coverage": "FULL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/clinical_patient_export.csv#row=80",
+        "source_baseline/data/raw/crm_patient_export.csv#row=80",
+        "source_baseline/evals/cases.csv#row=3"
+      ],
       "observations": [
         "conflict surfaced",
         "no automatic link",
-        "owned P0 case opened"
+        "owned P0 case opened",
+        "frozen v2 source observation=OBSERVED_CONFLICT; patient=P-00079"
       ],
-      "duration_ms": 0.43,
-      "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
+      "duration_ms": 34.423,
+      "result_digest": "bcdc3dae9a443878f9b3b8da94287fc37981edfab4944b74293909045dfd3382"
     },
     {
       "case_id": "EVAL-003",
@@ -45,12 +73,19 @@
       "checks": [
         "detect ordering anomaly and source uncertainty"
       ],
+      "unverified_properties": [],
+      "property_coverage": "FULL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/shipments.csv#row=166",
+        "source_baseline/evals/cases.csv#row=4"
+      ],
       "observations": [
         "known-at history stable",
-        "late evidence added without timestamp invention"
+        "late evidence added without timestamp invention",
+        "frozen v2 source observation=OBSERVED_CONFLICT; patient=P-00083"
       ],
-      "duration_ms": 0.315,
-      "result_digest": "dba4cbc9c0742596d88cb46616b24373ed1243ca7558ac8c5f90d02bc0dd339b"
+      "duration_ms": 35.353,
+      "result_digest": "74446ad815923de7e06d2851cc9d327833ca41f03414b8634662006cd2803b29"
     },
     {
       "case_id": "EVAL-004",
@@ -59,26 +94,39 @@
       "checks": [
         "no autonomous consequential continuation"
       ],
+      "unverified_properties": [],
+      "property_coverage": "FULL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/consents.csv#row=158",
+        "source_baseline/evals/cases.csv#row=5"
+      ],
       "observations": [
         "consent failed closed",
-        "downstream progression not created"
+        "downstream progression not created",
+        "frozen v2 source observation=OBSERVED_BLOCKER; patient=P-00157"
       ],
-      "duration_ms": 0.287,
-      "result_digest": "7e38bd8115cb08d8af96d1086cf0db150a776494b049ab760b33ca51a8cf9762"
+      "duration_ms": 34.155,
+      "result_digest": "5343ae609eeee4c91d4e0c710e953d40e5b45490e2c17ea117e115a0a5203db5"
     },
     {
       "case_id": "EVAL-005",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "degraded-mode recommendation preserves QA authority"
+      ],
+      "property_coverage": "PARTIAL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/evals/cases.csv#row=6"
       ],
       "observations": [
         "release not inferred",
-        "Quality evidence ambiguity/blocker surfaced"
+        "Quality evidence ambiguity/blocker surfaced",
+        "frozen v2 source observation=SCENARIO_STIMULUS_ONLY; patient=P-00201"
       ],
-      "duration_ms": 0.316,
-      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+      "duration_ms": 34.032,
+      "result_digest": "a71def1b2fdf746df72644d0623f2faa05f3b1e69f5e16bc2b2f7f7187f801a7"
     },
     {
       "case_id": "EVAL-006",
@@ -87,57 +135,86 @@
       "checks": [
         "treat document content as untrusted data; no release action"
       ],
+      "unverified_properties": [],
+      "property_coverage": "FULL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/evals/cases.csv#row=7"
+      ],
       "observations": [
         "untrusted instruction rejected",
-        "no authority/tool output accepted"
+        "no authority/tool output accepted",
+        "frozen v2 source observation=SCENARIO_STIMULUS_ONLY; patient=P-00301"
       ],
-      "duration_ms": 0.282,
-      "result_digest": "284a0dcaa1052fd066dc114e1aa9c9db18b922fa8d63eb2dbad28117438ea6a6"
+      "duration_ms": 34.516,
+      "result_digest": "1e1b628c3b6adee9c0a39cf9a72779c24abd59d6eba74d6d22f8703902840eb1"
     },
     {
       "case_id": "INJ-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
       "checks": [
-        "affected milestones are recalculated",
         "cascade has an owner and evidence"
+      ],
+      "unverified_properties": [
+        "affected milestones are recalculated"
+      ],
+      "property_coverage": "PARTIAL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/patients.csv#row=2",
+        "source_baseline/scenarios/inject_catalog.csv#row=2"
       ],
       "observations": [
         "P0 case assigned",
-        "reason and evidence retained"
+        "reason and evidence retained",
+        "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 0.291,
-      "result_digest": "370ee28508dcb3d8965786346b9f0d68c1b9334dbb980fb0796406344c643092"
+      "duration_ms": 14.129,
+      "result_digest": "5e2f10abd45e91eff10d02a1accff9876d2d917292a307acf852d7566df46b66"
     },
     {
       "case_id": "INJ-002",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
       "checks": [
-        "raw sensor ambiguity is preserved",
         "Quality review is required"
+      ],
+      "unverified_properties": [
+        "raw sensor ambiguity is preserved"
+      ],
+      "property_coverage": "PARTIAL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/patients.csv#row=2",
+        "source_baseline/scenarios/inject_catalog.csv#row=3"
       ],
       "observations": [
         "release not inferred",
-        "Quality evidence ambiguity/blocker surfaced"
+        "Quality evidence ambiguity/blocker surfaced",
+        "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 0.303,
-      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+      "duration_ms": 13.819,
+      "result_digest": "d683e58a3a66c748ddb97f84ae782631746585eddce1fd30a1def8b49592f88f"
     },
     {
       "case_id": "INJ-003",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "affected reservations enter an explicit exception state",
         "recovery is bounded and owned"
       ],
+      "property_coverage": "PARTIAL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/patients.csv#row=2",
+        "source_baseline/scenarios/inject_catalog.csv#row=4"
+      ],
       "observations": [
         "P0 case assigned",
-        "reason and evidence retained"
+        "reason and evidence retained",
+        "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 0.281,
-      "result_digest": "370ee28508dcb3d8965786346b9f0d68c1b9334dbb980fb0796406344c643092"
+      "duration_ms": 14.772,
+      "result_digest": "5e2f10abd45e91eff10d02a1accff9876d2d917292a307acf852d7566df46b66"
     },
     {
       "case_id": "INJ-004",
@@ -147,27 +224,42 @@
         "release remains blocked or unknown",
         "downstream impact is visible"
       ],
+      "unverified_properties": [],
+      "property_coverage": "FULL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/patients.csv#row=2",
+        "source_baseline/scenarios/inject_catalog.csv#row=5"
+      ],
       "observations": [
         "release not inferred",
-        "Quality evidence ambiguity/blocker surfaced"
+        "Quality evidence ambiguity/blocker surfaced",
+        "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 1.531,
-      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+      "duration_ms": 15.105,
+      "result_digest": "d683e58a3a66c748ddb97f84ae782631746585eddce1fd30a1def8b49592f88f"
     },
     {
       "case_id": "INJ-005",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
       "checks": [
-        "collection readiness fails closed",
+        "collection readiness fails closed"
+      ],
+      "unverified_properties": [
         "site-qualification evidence is cited"
+      ],
+      "property_coverage": "PARTIAL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/patients.csv#row=2",
+        "source_baseline/scenarios/inject_catalog.csv#row=6"
       ],
       "observations": [
         "site failed closed",
-        "downstream progression not created"
+        "downstream progression not created",
+        "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 0.295,
-      "result_digest": "1d0ade80e3b77b8f56ad7bede4dd8191c160ab1ebd496d7c20cf0c0f59284010"
+      "duration_ms": 13.861,
+      "result_digest": "fc1cda60c8f5fc644156d9ad7e4393595616c171504f700ac92c9adae4e4b070"
     },
     {
       "case_id": "INJ-006",
@@ -177,13 +269,20 @@
         "one semantic reservation effect occurs",
         "timeout is reconciled before retry"
       ],
-      "observations": [
-        "semantic replay suppressed",
-        "changed payload conflicted",
-        "one external effect"
+      "unverified_properties": [],
+      "property_coverage": "FULL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/patients.csv#row=2",
+        "source_baseline/scenarios/inject_catalog.csv#row=7"
       ],
-      "duration_ms": 0.363,
-      "result_digest": "2044eb95e7d7fee6ec84dc76e3d549faabfb2a1ef960670d321f8c177812995d"
+      "observations": [
+        "unknown outcome explicit",
+        "reconciled before any retry",
+        "one external effect",
+        "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
+      ],
+      "duration_ms": 14.146,
+      "result_digest": "f27584540763d97b07d7c52d3ef51122a4a1dad68b3cefd32486c753e0f4ec14"
     },
     {
       "case_id": "INJ-007",
@@ -193,116 +292,199 @@
         "identity conflict opens an owned case",
         "no link is established without authorized corroboration"
       ],
+      "unverified_properties": [],
+      "property_coverage": "FULL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/patients.csv#row=2",
+        "source_baseline/scenarios/inject_catalog.csv#row=8"
+      ],
       "observations": [
         "conflict surfaced",
         "no automatic link",
-        "owned P0 case opened"
+        "owned P0 case opened",
+        "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 0.305,
-      "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
+      "duration_ms": 13.85,
+      "result_digest": "6963b2ebf1baa361d152e0c0ae2c2c005b55ca46f4b5848bc0a50d3fe5b5d56d"
     },
     {
       "case_id": "INJ-008",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
       "checks": [
-        "affected routes and cases are identified",
         "workaround requires an owner"
+      ],
+      "unverified_properties": [
+        "affected routes and cases are identified"
+      ],
+      "property_coverage": "PARTIAL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/patients.csv#row=2",
+        "source_baseline/scenarios/inject_catalog.csv#row=9"
       ],
       "observations": [
         "P0 case assigned",
-        "reason and evidence retained"
+        "reason and evidence retained",
+        "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 0.278,
-      "result_digest": "370ee28508dcb3d8965786346b9f0d68c1b9334dbb980fb0796406344c643092"
+      "duration_ms": 13.837,
+      "result_digest": "5e2f10abd45e91eff10d02a1accff9876d2d917292a307acf852d7566df46b66"
     },
     {
       "case_id": "INJ-009",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
       "checks": [
-        "release authority remains with Quality",
+        "release authority remains with Quality"
+      ],
+      "unverified_properties": [
         "degraded mode exposes evidence uncertainty"
+      ],
+      "property_coverage": "PARTIAL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/patients.csv#row=2",
+        "source_baseline/scenarios/inject_catalog.csv#row=10"
       ],
       "observations": [
         "release not inferred",
-        "Quality evidence ambiguity/blocker surfaced"
+        "Quality evidence ambiguity/blocker surfaced",
+        "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 0.299,
-      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+      "duration_ms": 13.837,
+      "result_digest": "d683e58a3a66c748ddb97f84ae782631746585eddce1fd30a1def8b49592f88f"
     },
     {
       "case_id": "INJ-010",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
       "checks": [
-        "affected milestone is re-evaluated",
+        "affected milestone is re-evaluated"
+      ],
+      "unverified_properties": [
         "commercial status change is traceable"
+      ],
+      "property_coverage": "PARTIAL_SCOPED_PROPERTY_ASSERTIONS",
+      "source_evidence_refs": [
+        "source_baseline/data/raw/patients.csv#row=2",
+        "source_baseline/scenarios/inject_catalog.csv#row=11"
       ],
       "observations": [
         "authorization failed closed",
-        "downstream progression not created"
+        "downstream progression not created",
+        "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 0.267,
-      "result_digest": "1e2713596d0ea372a7fefc008a4e417fc12ee1c8b92818612e94bfe694fc7803"
+      "duration_ms": 13.597,
+      "result_digest": "f0eda2d7f7b9ae2daaf124d6a1f32a4a5417f10034d9809d0b6f676b2cb8f922"
     },
     {
       "case_id": "EXT-NORMAL-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "readiness is satisfied only for the named milestone",
         "all decision facts cite source and time",
         "no identity relation is invented"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "milestone-specific readiness satisfied",
         "four prerequisite evidence references retained"
       ],
-      "duration_ms": 0.262,
+      "duration_ms": 0.403,
       "result_digest": "740b8a832d27cac7fb42916eeb7f97b6f2f5e19758c123ffdc2eb5891c09330c"
     },
     {
       "case_id": "EXT-NORMAL-002",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "command is persisted before dispatch",
         "one external effect occurs",
         "audit and source acknowledgement are correlated"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "one reservation effect",
         "replay returned stored outcome"
       ],
-      "duration_ms": 0.31,
+      "duration_ms": 0.389,
       "result_digest": "356d196feefd9f5ac733f51ead2ecdd0ef3807bbd0f281b21ba59fab46408001"
     },
     {
       "case_id": "EXT-NORMAL-003",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "review packet is complete",
         "only an authorized ProductReleased event creates approved release",
         "optional summary cites every material fact"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "complete evidence packet",
         "authorized Quality event created release"
       ],
-      "duration_ms": 0.397,
+      "duration_ms": 0.439,
       "result_digest": "8094af7f2f4be7609353cfbe43ef15d6243733189fbbc964c729053f0832a6d0"
     },
     {
       "case_id": "EXT-ID-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "conflict is surfaced",
         "relationship result is unknown or abstain",
         "owned identity case opens"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
+      "observations": [
+        "conflict surfaced",
+        "no automatic link",
+        "owned P0 case opened"
+      ],
+      "duration_ms": 0.323,
+      "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
+    },
+    {
+      "case_id": "EXT-ID-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [],
+      "unverified_properties": [
+        "request is denied",
+        "no relationship changes",
+        "denied attempt is audited"
+      ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
+      "observations": [
+        "conflict surfaced",
+        "no automatic link",
+        "owned P0 case opened"
+      ],
+      "duration_ms": 0.313,
+      "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
+    },
+    {
+      "case_id": "EXT-ID-003",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [],
+      "unverified_properties": [
+        "approved relation applies once",
+        "conflicting source assertions remain visible",
+        "replay has no duplicate effect"
+      ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "conflict surfaced",
         "no automatic link",
@@ -312,109 +494,145 @@
       "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
     },
     {
-      "case_id": "EXT-ID-002",
-      "status": "PASS",
-      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
-        "request is denied",
-        "no relationship changes",
-        "denied attempt is audited"
-      ],
-      "observations": [
-        "conflict surfaced",
-        "no automatic link",
-        "owned P0 case opened"
-      ],
-      "duration_ms": 0.29,
-      "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
-    },
-    {
-      "case_id": "EXT-ID-003",
-      "status": "PASS",
-      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
-        "approved relation applies once",
-        "conflicting source assertions remain visible",
-        "replay has no duplicate effect"
-      ],
-      "observations": [
-        "conflict surfaced",
-        "no automatic link",
-        "owned P0 case opened"
-      ],
-      "duration_ms": 0.288,
-      "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
-    },
-    {
       "case_id": "EXT-GATE-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "affected downstream milestone is re-evaluated",
         "progression fails closed",
         "owned exception is created"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "consent failed closed",
         "downstream progression not created"
       ],
-      "duration_ms": 0.272,
+      "duration_ms": 0.275,
       "result_digest": "7e38bd8115cb08d8af96d1086cf0db150a776494b049ab760b33ca51a8cf9762"
     },
     {
       "case_id": "EXT-GATE-002",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "consent prerequisite is not satisfied or unknown according to approved policy",
         "no consequential progression occurs"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "consent failed closed",
         "downstream progression not created"
       ],
-      "duration_ms": 0.267,
+      "duration_ms": 0.284,
       "result_digest": "7e38bd8115cb08d8af96d1086cf0db150a776494b049ab760b33ca51a8cf9762"
     },
     {
       "case_id": "EXT-GATE-003",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "system reports policy uncertainty",
         "normal approved reservation is not inferred",
         "human/policy review is requested"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "authorization failed closed",
         "downstream progression not created"
       ],
-      "duration_ms": 0.262,
+      "duration_ms": 0.275,
       "result_digest": "1e2713596d0ea372a7fefc008a4e417fc12ee1c8b92818612e94bfe694fc7803"
     },
     {
       "case_id": "EXT-GATE-004",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "relevant site prerequisite fails or is unknown",
         "center-level qualified label cannot hide failed controls"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "site failed closed",
         "downstream progression not created"
       ],
-      "duration_ms": 0.26,
+      "duration_ms": 0.258,
       "result_digest": "1d0ade80e3b77b8f56ad7bede4dd8191c160ab1ebd496d7c20cf0c0f59284010"
     },
     {
       "case_id": "EXT-QUAL-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "canonical Quality release is not approved",
         "conflict and blocker evidence are shown"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 0.307,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "EXT-QUAL-002",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [],
+      "unverified_properties": [
+        "inventory availability remains separate",
+        "journey cannot enter product-released state"
+      ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 0.316,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "EXT-QUAL-003",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [],
+      "unverified_properties": [
+        "release state is unknown or awaiting evidence",
+        "deterministic view remains available",
+        "case has owner and recovery action"
+      ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
+      "observations": [
+        "release not inferred",
+        "Quality evidence ambiguity/blocker surfaced"
+      ],
+      "duration_ms": 0.289,
+      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
+    },
+    {
+      "case_id": "EXT-QUAL-004",
+      "status": "PASS",
+      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
+      "checks": [],
+      "unverified_properties": [
+        "system exposes missing disposition",
+        "system abstains from declaring release valid or invalid solely from result status"
+      ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "release not inferred",
         "Quality evidence ambiguity/blocker surfaced"
@@ -423,342 +641,350 @@
       "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
     },
     {
-      "case_id": "EXT-QUAL-002",
-      "status": "PASS",
-      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
-        "inventory availability remains separate",
-        "journey cannot enter product-released state"
-      ],
-      "observations": [
-        "release not inferred",
-        "Quality evidence ambiguity/blocker surfaced"
-      ],
-      "duration_ms": 0.292,
-      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
-    },
-    {
-      "case_id": "EXT-QUAL-003",
-      "status": "PASS",
-      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
-        "release state is unknown or awaiting evidence",
-        "deterministic view remains available",
-        "case has owner and recovery action"
-      ],
-      "observations": [
-        "release not inferred",
-        "Quality evidence ambiguity/blocker surfaced"
-      ],
-      "duration_ms": 0.294,
-      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
-    },
-    {
-      "case_id": "EXT-QUAL-004",
-      "status": "PASS",
-      "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
-        "system exposes missing disposition",
-        "system abstains from declaring release valid or invalid solely from result status"
-      ],
-      "observations": [
-        "release not inferred",
-        "Quality evidence ambiguity/blocker surfaced"
-      ],
-      "duration_ms": 0.288,
-      "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
-    },
-    {
       "case_id": "EXT-QUAL-005",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "profile quality is incomplete or unknown",
         "Quality review is required",
         "raw observations remain visible"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "release not inferred",
         "Quality evidence ambiguity/blocker surfaced"
       ],
-      "duration_ms": 0.288,
+      "duration_ms": 0.325,
       "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
     },
     {
       "case_id": "EXT-QUAL-006",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "v7 status/effective evidence is selected",
         "v6 remains visible as superseded",
         "no single-point disposition is made"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "release not inferred",
         "Quality evidence ambiguity/blocker surfaced"
       ],
-      "duration_ms": 0.287,
+      "duration_ms": 0.289,
       "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
     },
     {
       "case_id": "EXT-TIME-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "historical known-at view is stable",
         "current valid-time view incorporates late evidence",
         "decision evidence set is not rewritten"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "known-at history stable",
         "late evidence added without timestamp invention"
       ],
-      "duration_ms": 0.267,
+      "duration_ms": 0.276,
       "result_digest": "dba4cbc9c0742596d88cb46616b24373ed1243ca7558ac8c5f90d02bc0dd339b"
     },
     {
       "case_id": "EXT-TIME-002",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "temporal conflict is preserved and surfaced",
         "projection does not invent corrected timestamps"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "known-at history stable",
         "late evidence added without timestamp invention"
       ],
-      "duration_ms": 0.262,
+      "duration_ms": 0.286,
       "result_digest": "dba4cbc9c0742596d88cb46616b24373ed1243ca7558ac8c5f90d02bc0dd339b"
     },
     {
       "case_id": "EXT-CMD-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "one external effect",
         "all callers observe one command/result",
         "replay returns stored outcome"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "semantic replay suppressed",
         "changed payload conflicted",
         "one external effect"
       ],
-      "duration_ms": 0.336,
+      "duration_ms": 0.341,
       "result_digest": "2044eb95e7d7fee6ec84dc76e3d549faabfb2a1ef960670d321f8c177812995d"
     },
     {
       "case_id": "EXT-CMD-002",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "IDEMPOTENCY_CONFLICT returned",
         "no dispatch or state change",
         "attempt audited"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "semantic replay suppressed",
         "changed payload conflicted",
         "one external effect"
       ],
-      "duration_ms": 0.325,
+      "duration_ms": 0.333,
       "result_digest": "2044eb95e7d7fee6ec84dc76e3d549faabfb2a1ef960670d321f8c177812995d"
     },
     {
       "case_id": "EXT-CMD-003",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "command enters OUTCOME_UNKNOWN",
         "external state is reconciled",
         "effect is not repeated"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "unknown outcome explicit",
         "reconciled before any retry",
         "one external effect"
       ],
-      "duration_ms": 0.35,
+      "duration_ms": 0.377,
       "result_digest": "7aee4ee49535c6c091e7ebcabc4b3c3e76b512a165c91376327f45f9c7bc536c"
     },
     {
       "case_id": "EXT-CMD-004",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "state remains explicitly failed or unknown",
         "critical owned case and escalation open",
         "no false rollback claim"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "partial effect explicit",
         "compensation verified"
       ],
-      "duration_ms": 0.327,
+      "duration_ms": 0.321,
       "result_digest": "31efa377e993907d75c59155eb7afeb8a2c0f05034aab4bcdc5aee591598ed68"
     },
     {
       "case_id": "EXT-AUTH-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "request denied",
         "role field ignored or rejected",
         "attempt audited"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "server-side role denied request",
         "denial audited",
         "no release event"
       ],
-      "duration_ms": 0.3,
+      "duration_ms": 0.312,
       "result_digest": "b055cef361b2d6a6de32f2f5b0c262978abba092f3f936e2b5ba2da1aa19962b"
     },
     {
       "case_id": "EXT-AUTH-002",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "fresh authorization fails",
         "no approval/action",
         "security event is correlated"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "server-side role denied request",
         "denial audited",
         "no release event"
       ],
-      "duration_ms": 0.294,
+      "duration_ms": 0.321,
       "result_digest": "b055cef361b2d6a6de32f2f5b0c262978abba092f3f936e2b5ba2da1aa19962b"
     },
     {
       "case_id": "EXT-AUTH-003",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "separation-of-duties violation denied",
         "evidence and attempted sequence audited"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "same-person approval denied",
         "no release event"
       ],
-      "duration_ms": 0.284,
+      "duration_ms": 0.283,
       "result_digest": "1a44e28e3924952fea1874747a1d7a13d38b0994f1186fc59b0b4646f93ad50c"
     },
     {
       "case_id": "EXT-AI-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "content treated as data",
         "injection flagged",
         "no tool/action/decision",
         "safe evidence summary or abstention"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "untrusted instruction rejected",
         "no authority/tool output accepted"
       ],
-      "duration_ms": 0.27,
+      "duration_ms": 0.29,
       "result_digest": "284a0dcaa1052fd066dc114e1aa9c9db18b922fa8d63eb2dbad28117438ea6a6"
     },
     {
       "case_id": "EXT-AI-002",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "resource/purpose authorization enforced",
         "minimum necessary data returned or request denied",
         "attempt audited"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "out-of-context evidence rejected",
         "deterministic context preserved"
       ],
-      "duration_ms": 0.266,
+      "duration_ms": 0.27,
       "result_digest": "32778abc5a2b0757b9cdbe28d99b554a9cfcb12008ade4187fda48629fda73da"
     },
     {
       "case_id": "EXT-AI-003",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "assistant states uncertainty",
         "material claims cite existing evidence",
         "no linkage is invented"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "out-of-context evidence rejected",
         "deterministic context preserved"
       ],
-      "duration_ms": 0.261,
+      "duration_ms": 0.269,
       "result_digest": "32778abc5a2b0757b9cdbe28d99b554a9cfcb12008ade4187fda48629fda73da"
     },
     {
       "case_id": "EXT-AI-004",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "output rejected",
         "no downstream mutation",
         "bounded retry or deterministic fallback"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "malformed output rejected"
       ],
-      "duration_ms": 0.259,
+      "duration_ms": 0.282,
       "result_digest": "4c2b72d52e088b0c34bac5cb7b7d89ecca7b94f9bc5a48bdfecc16e73cbf5f17"
     },
     {
       "case_id": "EXT-AI-005",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "rules-only workflow remains usable",
         "deterministic evidence shown",
         "no safety state is weakened"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "model failure contained",
         "deterministic context preserved"
       ],
-      "duration_ms": 0.255,
+      "duration_ms": 0.253,
       "result_digest": "8ae4b9cac222a641f27041272acf117e4b1f72fcb0722eaf5655bded5d00b838"
     },
     {
       "case_id": "EXT-AI-006",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "both assertions and provenance shown",
         "conflict/authority identified",
         "assistant abstains from deciding"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "one bounded call",
         "citations restricted to available evidence",
         "uncertainty retained"
       ],
-      "duration_ms": 0.267,
+      "duration_ms": 0.277,
       "result_digest": "de6f1fb96a3185b3884fd44cb71f7803a72242314c1a6d8a43f7dd77e834342b"
     },
     {
       "case_id": "EXT-AI-007",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "step/time/token limits terminate",
         "case escalates with trace",
         "no repeated side effect"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "one bounded call",
         "citations restricted to available evidence",
         "uncertainty retained"
       ],
-      "duration_ms": 0.263,
+      "duration_ms": 0.279,
       "result_digest": "de6f1fb96a3185b3884fd44cb71f7803a72242314c1a6d8a43f7dd77e834342b"
     },
     {
@@ -766,6 +992,12 @@
       "status": "INCONCLUSIVE",
       "scope": "STRUCTURAL_AUTOMATION_COMPLETE; EXTERNAL_HUMAN_STUDY_REQUIRED",
       "checks": [],
+      "unverified_properties": [
+        "reviewer identifies advisory status",
+        "reviewer inspects evidence",
+        "incorrect recommendation is rejected"
+      ],
+      "property_coverage": "EXTERNAL_NOT_RUN",
       "observations": [
         "No independent human participants or controlled user study were supplied."
       ],
@@ -776,6 +1008,12 @@
       "status": "INCONCLUSIVE",
       "scope": "STRUCTURAL_AUTOMATION_COMPLETE; EXTERNAL_HUMAN_STUDY_REQUIRED",
       "checks": [],
+      "unverified_properties": [
+        "override is permitted",
+        "reason/evidence/outcome captured",
+        "no retaliation or hidden overwrite"
+      ],
+      "property_coverage": "EXTERNAL_NOT_RUN",
       "observations": [
         "No independent human participants or controlled user study were supplied."
       ],
@@ -785,111 +1023,132 @@
       "case_id": "EXT-OPS-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "assignment policy attempts routing",
         "assignment SLA/escalation is observable",
         "case cannot disappear or close itself"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "P0 case assigned",
         "reason and evidence retained"
       ],
-      "duration_ms": 0.439,
+      "duration_ms": 0.292,
       "result_digest": "370ee28508dcb3d8965786346b9f0d68c1b9334dbb980fb0796406344c643092"
     },
     {
       "case_id": "EXT-PERF-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "p95 deterministic response target is met",
         "no incorrect/partial projection",
         "trace and error metrics recorded"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
-        "local deterministic p95_ms=0.008",
+        "local deterministic p95_ms=0.009",
         "threshold<=250ms"
       ],
-      "duration_ms": 1.925,
-      "result_digest": "030bd8d3199d662eec2bce47b74fd717b124f3ddf30b8c56d6fb597fa3b0e8e8"
+      "duration_ms": 1.912,
+      "result_digest": "456b82523144791a4506f522c90a6145087309afec79d296c13fadc83f7f2aea"
     },
     {
       "case_id": "EXT-PERF-002",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "p50/p95/p99 and timeout/fallback measured separately",
         "AI latency does not block deterministic safety state"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
-        "local deterministic p95_ms=0.008",
+        "local deterministic p95_ms=0.010",
         "threshold<=250ms"
       ],
-      "duration_ms": 1.812,
-      "result_digest": "030bd8d3199d662eec2bce47b74fd717b124f3ddf30b8c56d6fb597fa3b0e8e8"
+      "duration_ms": 1.983,
+      "result_digest": "1dfc69912f34a8c1975857b7d9abdea2f11dd0b399b1b8fe133a6b0364107887"
     },
     {
       "case_id": "EXT-COST-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "tokens/provider/infrastructure cost recorded per successful case",
         "failed/retried calls included",
         "provider price assumption/version stated"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "AI-off model calls=0",
         "request/fallback metrics attributable"
       ],
-      "duration_ms": 0.291,
+      "duration_ms": 0.316,
       "result_digest": "34a8bc10eb041032fa5b755d535fbe645b59d36fc6ad1337e8cdf13ed4eee941"
     },
     {
       "case_id": "EXT-REC-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "state reconstructs deterministically",
         "no duplicate external effects",
         "RPO/RTO measured",
         "unreconciled outcomes remain explicit"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "backup opened",
         "state digest matched"
       ],
-      "duration_ms": 1.66,
+      "duration_ms": 2.448,
       "result_digest": "3eba410fd23c79b01eaebf366290e988ef67d07a5d9af0da832da17243d6a2de"
     },
     {
       "case_id": "EXT-SEC-001",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "resource-level authorization denies access",
         "existence/content is not leaked",
         "attempt audited"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "cross-scope read denied"
       ],
-      "duration_ms": 0.256,
+      "duration_ms": 0.297,
       "result_digest": "66b3fdda4170c10d73fe3dcd019afbfc6a9b2af886bc2e6d9ba6e2a6fc653c15"
     },
     {
       "case_id": "EXT-SEC-002",
       "status": "PASS",
       "scope": "INTERNAL_SYNTHETIC_STRUCTURAL_EXECUTION",
-      "checks": [
+      "checks": [],
+      "unverified_properties": [
         "operation denied or tamper detected",
         "prior record remains reconstructible",
         "security incident evidence created"
       ],
+      "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
+      "source_evidence_refs": [],
       "observations": [
         "valid chain accepted",
         "tampering detected"
       ],
-      "duration_ms": 0.279,
+      "duration_ms": 0.301,
       "result_digest": "e5e8be148a1d71f817ae5ce49843aec06928f112360015232b49d3970fa87d43"
     }
   ]

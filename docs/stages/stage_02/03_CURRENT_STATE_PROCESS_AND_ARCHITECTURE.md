@@ -178,3 +178,5 @@ The baseline provides a read-oriented `LegacyRepository`, diagnostics, skeletal 
 ## 9. Current-state conclusion
 
 The estate needs an evidence-preserving reference and orchestration layer that assigns authority by attribute/decision, reconstructs state bitemporally, exposes conflicts and coordinates reversible commands. It must not overwrite source differences or declare one global database authoritative.
+
+The [six supplied patient examples](07_SUPPLIED_PATIENT_JOURNEY_SOURCE_RECONSTRUCTION.md) now show what can be reconstructed from frozen v2 rows today: a cited occurrence-time order with unresolved controls. That bounded example does **not** deliver the target bitemporal/known-at projection, because source ingest/decision histories are incomplete.

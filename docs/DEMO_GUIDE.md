@@ -18,17 +18,19 @@ FDE_DB=runtime/control-tower.db AI_MODE=off PYTHONPATH=src \
 
 Open <http://127.0.0.1:8000>. API documentation remains available at <http://127.0.0.1:8000/docs>.
 
-## Five-minute presentation sequence
+## Presentation sequence (about eight minutes)
 
 1. Start at the hero and state the problem: fragmented systems cannot safely answer the current patient-to-batch state, why it is true, who can decide and what must happen next.
 2. Point to the four controls: human-authorized identity, idempotent orchestration, retained Quality authority and AI off by default.
-3. Select **AI off · recommended**, then choose **Run end-to-end demo**.
-4. Explain POC 1: conflicting identity evidence creates an owned case; an authorized human applies the exact reviewed proposal; readiness becomes `SATISFIED` with citations.
-5. Explain POC 2: the simulated external reservation succeeds but times out. The system records `OUTCOME_UNKNOWN`, reconciles it to `SUCCEEDED`, and prevents a second dispatch.
-6. Explain POC 3: manufacturing, QC, deviation and thermal evidence still leave release `UNKNOWN`; only the simulated Quality-authority decision makes it `SATISFIED`.
-7. Show the evidence console: ten evidence references, a valid audit chain, deterministic AI-off mode, metrics and a state digest.
-8. Close on assurance: 21/21 stages complete, 77 tests pass, 55/57 structural evaluations pass and 25/27 requirements are internally verified. The two remaining cases require controlled human studies.
-9. State the honest decision: **RESTRICT AND CHANGE**. The academic POC is accepted; production and real-data use remain prohibited until the seven CAPAs are closed.
+3. In **Frozen v2 source evidence**, inspect `EVAL-002`: show original patient rows, contradictory source assertions, file/row locators and the collapsible **source-timestamp journey order**. Open `EVAL-003` to show that sorting a contradictory arrival/departure does not repair it. For `EVAL-005/006`, distinguish the hypothetical stimulus from observed facts. These six examples are read-only occurrence-time ordering, not known-at replay, migration or adjudication.
+4. Select **AI off · recommended**, then choose **Run end-to-end demo**. This run uses a *separate scripted POC fixture*, not the EVAL-002 patient.
+5. Explain POC 1: conflicting identity evidence creates an owned case; an authorized simulated human applies the exact reviewed proposal; readiness becomes `SATISFIED` with citations.
+6. Explain POC 2: the simulated external reservation succeeds but times out. The system records `OUTCOME_UNKNOWN`, reconciles it to `SUCCEEDED`, and prevents a second dispatch.
+7. Explain POC 3: manufacturing, QC, deviation and thermal evidence still leave release `UNKNOWN`; only the simulated Quality-authority decision makes it `SATISFIED`.
+8. Preview `INJ-001` or `INJ-008`: point to downstream dependency/route risk and owner. The zero-slack shift is a stated assumption; no route, slot, quality or clinical plan is committed.
+9. Show the evidence console: cited references, a valid audit chain, deterministic AI-off mode, metrics and a state digest.
+10. Close on calibrated assurance: **21/21 stages documented**, **92 local tests pass**, **55/57 catalog cases structurally pass** (only 7 original cases have full scoped property assertions, 9 partial, 39 extensions structural-only), and **29/31 requirements locally verified**. The two remaining requirements need controlled human studies; the registered 20-client/full-dataset NFR is not verified.
+11. State the honest decision: **RESTRICT AND CHANGE**. The academic demo is built; production and real-data use remain prohibited until the seven CAPAs and accountable gates are closed.
 
 ## Optional bounded-assistant demonstration
 

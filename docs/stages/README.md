@@ -1,6 +1,6 @@
 # 21-Stage AI FDE Operating Model
 
-Each folder contains the narrative and machine-readable evidence for one stage. The review or gate record at the end of each stage states its scope and decision.
+Each folder contains academic narrative and/or machine-readable evidence for one stage. A folder is not proof that every stage output is externally approved or live. For every named essential artifact and its exact status, use the [one-to-one register](../21_STAGE_ARTIFACT_REGISTER.md); review/gate records state their limited scope.
 
 ## Understand and frame
 
