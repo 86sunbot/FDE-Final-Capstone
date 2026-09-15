@@ -19,7 +19,11 @@ def main() -> None:
     findings = []
     scanned = 0
     for path in sorted(ROOT.rglob("*")):
-        if not path.is_file() or EXCLUDED_PARTS & set(path.parts):
+        if (
+            not path.is_file()
+            or EXCLUDED_PARTS & set(path.parts)
+            or any(part.endswith(".egg-info") for part in path.parts)
+        ):
             continue
         try:
             text = path.read_text(encoding="utf-8")

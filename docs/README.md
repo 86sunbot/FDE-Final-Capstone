@@ -5,10 +5,11 @@ This directory contains the human-readable capstone record. Runtime code, tests 
 ## Read in this order
 
 1. [Final Capstone Report](FINAL_CAPSTONE_REPORT.md) — context, problem, achievement, evidence, limitations and lifecycle decision.
-2. [Demo Guide](DEMO_GUIDE.md) — setup and five-minute presentation sequence.
-3. [Artifact Index](ARTIFACT_INDEX.md) — summary of the deliverables created at every stage.
-4. [21-Stage Index](stages/README.md) — direct navigation to all operating-model stages.
-5. [Progress Tracker](CAPSTONE_PROGRESS_TRACKER.md) — final status, evidence and remaining external work.
+2. [Client Ask and End-to-End Demo](CLIENT_ASK_AND_END_TO_END_DEMO.md) — simple business explanation of the client need, solution and demonstrated flow.
+3. [Demo Guide](DEMO_GUIDE.md) — setup and five-minute presentation sequence.
+4. [Artifact Index](ARTIFACT_INDEX.md) — summary of the deliverables created at every stage.
+5. [21-Stage Index](stages/README.md) — direct navigation to all operating-model stages.
+6. [Progress Tracker](CAPSTONE_PROGRESS_TRACKER.md) — final status, evidence and remaining external work.
 
 ## Planning and governance
 

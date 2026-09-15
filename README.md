@@ -2,7 +2,7 @@
 
 This repository is the completed **synthetic academic** Cell and Gene Therapy patient-to-batch orchestration capstone. It follows the 21-stage AI FDE operating model from problem discovery through engineering, assurance, simulated operation, lifecycle decision and retirement.
 
-> **Start here:** [Final report](docs/FINAL_CAPSTONE_REPORT.md) · [Documentation hub](docs/README.md) · [21-stage index](docs/stages/README.md) · [Demo guide](docs/DEMO_GUIDE.md)
+> **Start here:** [Client ask and end-to-end demo](docs/CLIENT_ASK_AND_END_TO_END_DEMO.md) · [Final report](docs/FINAL_CAPSTONE_REPORT.md) · [Documentation hub](docs/README.md) · [21-stage index](docs/stages/README.md) · [Demo guide](docs/DEMO_GUIDE.md)
 
 ## What it solves
 
