@@ -116,7 +116,8 @@ def run_demo(database_path: str | Path, ai_mode: str = "off") -> dict:
                 "rag":"Not required for canonical state. Optional future RAG is limited to unstructured supporting evidence such as SOPs, emails and deviation narratives, with citations and version/freshness controls.",
                 "mcp":"Not implemented in the current POC. MCP is a future enterprise integration option for approved read/tool adapters after identity, authorization and supplier controls are satisfied.",
             },
-            "assistant":{"mode":recommendation["mode"],"rejection_reason":recommendation["rejection_reason"],"recommendation":recommendation["recommendation"]},
+            "assistant":{"mode":recommendation["mode"],"rejection_reason":recommendation["rejection_reason"]},
+            "assistant_output":recommendation["recommendation"],
             "audit_chain_valid":app.db.verify_audit_chain(),"state_digest":app.db.state_digest(),"metrics":app.db.metrics(),
         }
     finally:

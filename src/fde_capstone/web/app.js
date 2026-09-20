@@ -126,7 +126,7 @@ function renderJourneySummary(result) {
     row.textContent = `${item.step}: ${item.automation}. Human boundary: ${item.human_boundary}.`;
     trace.appendChild(row);
   });
-  const rec = result.assistant.recommendation;
+  const rec = result.assistant_output;
   setText('#assistant-explanation', rec?.summary ? `${rec.summary} Evidence: ${rec.evidence_refs.join(', ')}` : 'AI is off. The summary above was generated deterministically from governed state and evidence.');
 }
 
