@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "version": "0.1.0-draft",
+    "scale": "1 poor to 5 strong",
+    "status": "PROPOSED_FOR_G2",
+    "score_rule": "weighted sum divided by 100; safety threshold must also be met"
+  },
+  "criteria": [
+    {"id": "C1", "name": "Safety and authority", "weight": 25},
+    {"id": "C2", "name": "Problem and capstone fit", "weight": 15},
+    {"id": "C3", "name": "Evidence and traceability", "weight": 10},
+    {"id": "C4", "name": "Implementation feasibility", "weight": 10},
+    {"id": "C5", "name": "Operability and resilience", "weight": 8},
+    {"id": "C6", "name": "Time to capstone outcome", "weight": 8},
+    {"id": "C7", "name": "AI-off reversibility", "weight": 8},
+    {"id": "C8", "name": "Low vendor lock-in", "weight": 4},
+    {"id": "C9", "name": "TCO confidence", "weight": 4},
+    {"id": "C10", "name": "Future extensibility", "weight": 4},
+    {"id": "C11", "name": "Evaluation and learning value", "weight": 4}
+  ],
+  "options": [
+    {"id": "O1", "name": "Patch inherited legacy prototype", "scores": {"C1": 1, "C2": 2, "C3": 1, "C4": 4, "C5": 2, "C6": 4, "C7": 2, "C8": 5, "C9": 4, "C10": 1, "C11": 2}, "safety_threshold": "FAIL", "decision": "REJECT"},
+    {"id": "O2", "name": "Clean deterministic rules-only modular monolith", "scores": {"C1": 5, "C2": 3, "C3": 5, "C4": 5, "C5": 5, "C6": 5, "C7": 5, "C8": 5, "C9": 5, "C10": 4, "C11": 3}, "safety_threshold": "PASS_HYPOTHESIS", "decision": "RETAIN_AS_REQUIRED_FALLBACK"},
+    {"id": "O3", "name": "Deterministic modular monolith plus one bounded optional assistant", "scores": {"C1": 5, "C2": 5, "C3": 5, "C4": 4, "C5": 5, "C6": 4, "C7": 5, "C8": 4, "C9": 3, "C10": 5, "C11": 5}, "safety_threshold": "PASS_HYPOTHESIS", "decision": "RECOMMEND"},
+    {"id": "O4", "name": "Agent-first multi-agent orchestration", "scores": {"C1": 2, "C2": 4, "C3": 2, "C4": 1, "C5": 2, "C6": 1, "C7": 2, "C8": 2, "C9": 1, "C10": 5, "C11": 4}, "safety_threshold": "FAIL", "decision": "REJECT"},
+    {"id": "O5", "name": "Buy/partner SaaS workflow platform", "scores": {"C1": 2, "C2": 3, "C3": 2, "C4": 3, "C5": 3, "C6": 3, "C7": 1, "C8": 1, "C9": 2, "C10": 3, "C11": 2}, "safety_threshold": "UNPROVEN", "decision": "DEFER_PRODUCTION_MARKET_SCAN"},
+    {"id": "O6", "name": "Full distributed microservices rebuild", "scores": {"C1": 5, "C2": 5, "C3": 5, "C4": 1, "C5": 4, "C6": 1, "C7": 4, "C8": 5, "C9": 2, "C10": 5, "C11": 3}, "safety_threshold": "PASS_HYPOTHESIS", "decision": "REJECT_FOR_CAPSTONE_SCOPE"}
+  ]
+}

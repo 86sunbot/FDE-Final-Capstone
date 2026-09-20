@@ -1,0 +1,15 @@
+{
+  "scope": "local synthetic deployment simulation only",
+  "release_mode": "AI off",
+  "shadow_runs": 20,
+  "shadow_domain_matches": 20,
+  "canary_runs": 10,
+  "canary_success": 10,
+  "rollback": {
+    "from": "fake assistant enabled",
+    "to": "AI off",
+    "deterministic_service_available": true
+  },
+  "production_deployment": false,
+  "pass": true
+}

@@ -1,0 +1,12 @@
+{
+  "scope": "local temporary SQLite synthetic recovery drill",
+  "state_digest_before": "a0d62e5d312610983caf80e76af454304a5489f8871cd8ec31df09fba4f98511",
+  "state_digest_after": "a0d62e5d312610983caf80e76af454304a5489f8871cd8ec31df09fba4f98511",
+  "digest_match": true,
+  "audit_chain_valid": true,
+  "recovery_seconds": 0.001912,
+  "rto_target_seconds": 60,
+  "rpo_target": "zero committed local transactions at backup boundary",
+  "pass": true,
+  "production_claim": false
+}

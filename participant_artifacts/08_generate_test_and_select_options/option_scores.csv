@@ -1,0 +1,7 @@
+option_id,name,weighted_score,safety_threshold,decision
+O3,Deterministic modular monolith plus one bounded optional assistant,4.70,PASS_HYPOTHESIS,RECOMMEND
+O2,Clean deterministic rules-only modular monolith,4.58,PASS_HYPOTHESIS,RETAIN_AS_REQUIRED_FALLBACK
+O6,Full distributed microservices rebuild,3.92,PASS_HYPOTHESIS,REJECT_FOR_CAPSTONE_SCOPE
+O5,Buy/partner SaaS workflow platform,2.33,UNPROVEN,DEFER_PRODUCTION_MARKET_SCAN
+O4,Agent-first multi-agent orchestration,2.28,FAIL,REJECT
+O1,Patch inherited legacy prototype,2.17,FAIL,REJECT

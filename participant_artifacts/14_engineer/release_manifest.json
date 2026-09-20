@@ -1,0 +1,174 @@
+{
+  "format": "academic-capstone-release-manifest-v1",
+  "version": "1.2.0",
+  "generated_at": "2026-09-15T13:06:51.111497+00:00",
+  "scope": "synthetic local academic POC",
+  "source_tree_sha256": "768b77f8f15096e1318728d92a0eb0fc21a8fd672fc990b74f25b565c40840c8",
+  "contract_tree_sha256": "98ad53553b08dc0e49691131f66c8b5156407c217787a5622293e4b2ac585f82",
+  "evaluation_catalog_sha256": "6ab4b54354a0a6f2aa6c5182e2e5fb266700b147ad73149079dbc1519acd9535",
+  "requirements_sha256": "826220533aa1535e46f0ff3eccb8ca094f181d1954fe94d73f6f74b7d2e89e95",
+  "schema_version": "1",
+  "ai_default": "off",
+  "original_zip_sha256": "74d31dc4694d52b0e9a9fb337e6ccda1086ad430b19287f9ca2b4b4e650ca979",
+  "source_files": [
+    {
+      "path": "src/fde_capstone/__init__.py",
+      "sha256": "e93c6f173dc13a76861ffe296044a5bb3e1a2975858e13a69ee1ea9a2ffd7ca0",
+      "size_bytes": 69
+    },
+    {
+      "path": "src/fde_capstone/adapters/__init__.py",
+      "sha256": "46b508c3853b9565cd0067004b2787a77eea123f0dc7f2faa015e7974dee9ded",
+      "size_bytes": 49
+    },
+    {
+      "path": "src/fde_capstone/adapters/assistant_fake.py",
+      "sha256": "d60e578de09c800c065bf895a375d47abe3e2401cff3f68933ce6072f33dec19",
+      "size_bytes": 1093
+    },
+    {
+      "path": "src/fde_capstone/adapters/slot_simulator.py",
+      "sha256": "c983c4ffe4cb2ddbadbf9eb6f7148622df6d8a3653a49359cdc22d86c7898f28",
+      "size_bytes": 945
+    },
+    {
+      "path": "src/fde_capstone/api.py",
+      "sha256": "631c6051b5c950b06ba8718dc24e515ee6dce34077adb75ca9c473d5112d1015",
+      "size_bytes": 6297
+    },
+    {
+      "path": "src/fde_capstone/application.py",
+      "sha256": "8609795f326b4c90d1a10a12620478b4d6e7f71dea75337aede7354a60735231",
+      "size_bytes": 1328
+    },
+    {
+      "path": "src/fde_capstone/cli.py",
+      "sha256": "360e1d5ee1d83b5dc864dee9f2d1c0cc85210a37a7ae3255b397910bce86cd6d",
+      "size_bytes": 1738
+    },
+    {
+      "path": "src/fde_capstone/demo.py",
+      "sha256": "7de52537495d35c444d4bc7ccfb4c95cbd754e68f821d88a8ee0a72540254f2b",
+      "size_bytes": 5125
+    },
+    {
+      "path": "src/fde_capstone/disruption_preview.py",
+      "sha256": "c877743d7b3d2a548a11b355078dc596bd15a04d85e8f7b5ac5e8656502b5840",
+      "size_bytes": 7698
+    },
+    {
+      "path": "src/fde_capstone/evaluation.py",
+      "sha256": "d21b8ac5bd999f43d625a15dd8bddaee90f2aeabc12ddf6edefe7f65a0b14e22",
+      "size_bytes": 25267
+    },
+    {
+      "path": "src/fde_capstone/model.py",
+      "sha256": "6cedbfdcaef3b4ca12311e95f77f88a6d2ffa6d1df1f52290072d17d8f3f154f",
+      "size_bytes": 1366
+    },
+    {
+      "path": "src/fde_capstone/security.py",
+      "sha256": "c44616e0d785f6ae8d66202405de54544b28ee322d17063ebaec246847db0525",
+      "size_bytes": 1308
+    },
+    {
+      "path": "src/fde_capstone/services/__init__.py",
+      "sha256": "7b82ca1037ba2d3816a308119fa53d52e199a98397321054cb4a54dc74ae1713",
+      "size_bytes": 53
+    },
+    {
+      "path": "src/fde_capstone/services/assistant.py",
+      "sha256": "bb1893b941bbea5e6cbc999c9085f2454719d0f55da7f0ba039d0cb6aadbfce0",
+      "size_bytes": 3346
+    },
+    {
+      "path": "src/fde_capstone/services/cases.py",
+      "sha256": "b2ad452d321e58bb9345ef35182a372ca0d64097e1dda42caa2a14d3f01b470d",
+      "size_bytes": 2574
+    },
+    {
+      "path": "src/fde_capstone/services/commands.py",
+      "sha256": "088c92b3779afd08614dfc0900a879b0d2c1f1d1b321e39667330fd17c452cdf",
+      "size_bytes": 6839
+    },
+    {
+      "path": "src/fde_capstone/services/common.py",
+      "sha256": "ca26dc90dc771bb7f7db64350ee5b91dc6b62629e540ff13e71209d19e845231",
+      "size_bytes": 607
+    },
+    {
+      "path": "src/fde_capstone/services/evidence.py",
+      "sha256": "9b7c8157195db2e3f91f4d4a63c56a1428d47083d86f3ee99334f969f65c19eb",
+      "size_bytes": 2211
+    },
+    {
+      "path": "src/fde_capstone/services/identity.py",
+      "sha256": "b51efcaa886a1ec97ef4d6f407f54fcbbed8173caa6fd5f508157b9543a5439b",
+      "size_bytes": 5286
+    },
+    {
+      "path": "src/fde_capstone/services/quality.py",
+      "sha256": "dec11a119750bc4b5d4752c82a075302f0fc164ae3238ae4def5a13ead79bf56",
+      "size_bytes": 5613
+    },
+    {
+      "path": "src/fde_capstone/services/readiness.py",
+      "sha256": "a30d91660af00ebee3c43026113dd6bdc698b75689c7a2983018ba7e45fe4b9b",
+      "size_bytes": 1570
+    },
+    {
+      "path": "src/fde_capstone/source_cases.py",
+      "sha256": "2b0b54e4d434abc74979c3bc86a79e13d6a69e3b2af3b96d53f22addaff5424c",
+      "size_bytes": 12889
+    },
+    {
+      "path": "src/fde_capstone/storage.py",
+      "sha256": "47be5e9e8db90fb925fc3004b7e760394b6dd0f3f1fdefd37ee89ac1768417a5",
+      "size_bytes": 12448
+    },
+    {
+      "path": "src/fde_capstone/web/app.js",
+      "sha256": "50e14635d031f16a42f7edd9703f80bfd5faaeb0cc31742814629ed846a6d47b",
+      "size_bytes": 13095
+    },
+    {
+      "path": "src/fde_capstone/web/favicon.svg",
+      "sha256": "6be52758a3974a769ca14b97320f896ac0923f378068a41292aca812c2d4615c",
+      "size_bytes": 343
+    },
+    {
+      "path": "src/fde_capstone/web/index.html",
+      "sha256": "4e245d1d79534063d07a5d57aa2b7e7376eda1bf70f7570719f242b52ee78c6d",
+      "size_bytes": 16279
+    },
+    {
+      "path": "src/fde_capstone/web/styles.css",
+      "sha256": "772e4557c61a1d6cc2963d2d2c1b5a120fa6b0e83f1880a74a8c77cce359c892",
+      "size_bytes": 22437
+    }
+  ],
+  "contract_files": [
+    {
+      "path": "docs/stages/stage_09/contracts/command.schema.json",
+      "sha256": "c71bce80b3248b3ceaa65c499c92805705884e4fafbfa60e4f1907f533d9be8b",
+      "size_bytes": 802
+    },
+    {
+      "path": "docs/stages/stage_09/contracts/event-envelope.schema.json",
+      "sha256": "0bbb1acd127c79a169d2679d7de580a18ebf95a8649b516da7dfdee725fad86e",
+      "size_bytes": 1745
+    },
+    {
+      "path": "docs/stages/stage_09/contracts/recommendation.schema.json",
+      "sha256": "876141c09d41042d923c54c315916b09b774518e7dface9508fa74908f3def2e",
+      "size_bytes": 604
+    }
+  ],
+  "known_limits": [
+    "synthetic data",
+    "simulated external systems and authorities",
+    "no live model",
+    "no independent assurance",
+    "not production validated"
+  ]
+}
