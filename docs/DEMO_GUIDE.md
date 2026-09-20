@@ -43,3 +43,9 @@ Choose **Bounded fake adapter** and run again. This exercises the recommendation
 - External systems and decision authorities are simulated.
 - No live AI provider or model is connected.
 - The project does not establish clinical benefit, regulatory compliance, production safety, savings or ROI.
+
+## Role-based and automation demo add-on
+
+Before running the three POCs, open **Role-based operations**. Switch through Patient Operations, Identity Authority, Logistics/Planner, Manufacturing, Lab/QC and Quality Authority. Explain that these are persona lenses over the same governed journey and do not grant new backend permissions.
+
+Run with **AI off · recommended** first. After the run, show the **automated cross-domain summary** and the automation trace. The summary shows the five domains, current blocker, next owner and evidence count. Then optionally run with **Bounded fake adapter** to show that AI explanation is additive: underlying journey state and domain authority do not change.

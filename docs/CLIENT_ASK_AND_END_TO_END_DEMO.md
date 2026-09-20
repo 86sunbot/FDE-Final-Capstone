@@ -178,6 +178,26 @@ The main application does not require AI.
 
 There is no live-model mode in this capstone. AI cannot establish patient identity, make a clinical decision, reserve an external slot independently or release the product.
 
+## Role-based demonstration and automation
+
+The final browser demo includes seven presentation lenses: Patient Operations, Identity Authority, Logistics/Planning, Manufacturing, Lab/QC, Quality Authority and Executive/Operations. These are persona views over one governed journey; backend permissions remain the explicit `COORDINATOR`, `IDENTITY_AUTHORITY`, `PLANNER`, `QUALITY_AUTHORITY` and `VIEWER` roles.
+
+Automation operates with AI off:
+
+| Automated capability | Automated behavior | Human boundary |
+|---|---|---|
+| Identity exception detection | Detect conflict and create an owned case | Identity Authority decides identity outcome |
+| Readiness | Evaluate identity/consent/authorization/site gates | No clinical decision is automated |
+| Slot orchestration | Reconcile unknown outcome and prevent duplicate dispatch | Planner remains command actor |
+| Quality packet | Assemble MES/QC/deviation/thermal evidence | Quality Authority releases product |
+| Journey summary | Produce cross-domain status, blocker, next owner and evidence count | Summary cannot execute or create authority |
+
+The design deliberately separates **automation** from **AI**: deterministic automation reconstructs and coordinates governed state; the assistant only explains or summarizes it.
+
+## Information retrieval position
+
+Authoritative operational facts do not use RAG. They use typed adapters, evidence records and deterministic projections. Optional future RAG is limited to supporting unstructured material such as SOPs, emails and deviation narratives, with provenance/version/freshness and citations. MCP is not implemented in the current POC; it is a future enterprise integration option for approved read/tool adapters after identity, authorization, supplier and audit controls are satisfied.
+
 ## 11. Demonstrated assurance
 
 - 21 of 21 FDE operating-model stages contain documented artifacts; this does not mean external stage approval.

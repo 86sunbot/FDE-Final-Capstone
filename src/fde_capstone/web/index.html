@@ -29,6 +29,7 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#journey">Journey</a>
+        <a href="#roles">Roles</a>
         <a href="#source-evidence">Source evidence</a>
         <a href="#pocs">POCs</a>
         <a href="#assurance">Assurance</a>
@@ -130,10 +131,29 @@
         </div>
       </section>
 
+      <section class="section-shell section-block" id="roles">
+        <div class="section-heading"><div><span class="section-number">02 / ROLE-BASED OPERATIONS</span><h2>One journey. Different responsibilities.</h2></div><p>The persona lens changes what the presenter focuses on; backend authority still follows explicit roles and scopes.</p></div>
+        <div class="role-workspace role-workspace-light">
+          <article class="role-lens-panel"><span class="panel-kicker">ROLE / PERSONA LENS</span><label for="role-lens">Demonstrate as</label>
+            <select id="role-lens"><option value="patient_operations">Patient Operations Coordinator</option><option value="identity_authority">Identity Authority</option><option value="logistics_planner">Logistics / Manufacturing Planner</option><option value="manufacturing">Manufacturing Operations</option><option value="lab_qc">Lab / Quality Control</option><option value="quality_authority">Quality Authority</option><option value="executive">Executive / Operations Viewer</option></select>
+            <h3 id="role-title">Patient Operations Coordinator</h3><p id="role-objective">Run the end-to-end demo to load this role's evidence, responsibilities and boundaries.</p>
+            <dl class="role-facts"><div><dt>Backend authority</dt><dd id="role-backend">COORDINATOR</dd></div><div><dt>Focus</dt><dd id="role-focus">End-to-end journey and owned exceptions</dd></div></dl>
+            <div class="role-boundaries"><div><small>Can</small><p id="role-can-do">Read journey state and coordinate exceptions.</p></div><div><small>Cannot</small><p id="role-cannot-do">Take another domain's consequential authority.</p></div></div>
+          </article>
+          <article class="journey-summary-panel"><span class="panel-kicker">AUTOMATED CROSS-DOMAIN SUMMARY</span>
+            <div class="summary-kpis"><div><small>Status</small><strong id="summary-status">Awaiting run</strong></div><div><small>Current blocker</small><strong id="summary-blocker">—</strong></div><div><small>Next owner</small><strong id="summary-next-owner">—</strong></div><div><small>Evidence</small><strong id="summary-evidence-count">—</strong></div></div>
+            <p class="summary-text" id="journey-summary-text">Run the journey. The deterministic orchestrator will combine patient, logistics, manufacturing, lab and Quality state into one evidence-backed summary.</p><div class="domain-summary-grid" id="domain-summary"></div>
+            <div class="assistant-explanation"><small>Assistant explanation</small><p id="assistant-explanation">AI is optional. With AI off, the deterministic summary remains fully available.</p></div>
+          </article>
+        </div>
+        <div class="automation-panel"><div><span class="panel-kicker">WORKFLOW AUTOMATION</span><h3>Automation coordinates; authority stays human where required.</h3></div><ol id="automation-trace"><li>Run the demo to show automated conflict detection, readiness gates, reconciliation, evidence assembly and journey summarization.</li></ol></div>
+        <div class="architecture-strip"><div><small>Structured operational truth</small><strong>Direct typed retrieval + deterministic projections</strong></div><div><small>RAG</small><strong>Optional for supporting SOP/email/deviation text only</strong></div><div><small>MCP</small><strong>Future enterprise integration option; not required in this POC</strong></div></div>
+      </section>
+
       <section class="section-shell section-block source-explorer" id="source-evidence">
         <div class="section-heading">
           <div>
-            <span class="section-number">02 / FROZEN V2 EVIDENCE</span>
+            <span class="section-number">03 / FROZEN V2 EVIDENCE</span>
             <h2>Inspect the original challenge cases.</h2>
           </div>
           <p>These are read-only source assertions from the supplied v2 package. They are not identity adjudication, Quality disposition or a migrated production journey.</p>
@@ -168,7 +188,7 @@
         <div class="section-shell">
           <div class="section-heading section-heading-light">
             <div>
-              <span class="section-number">03 / INTEGRATED DEMONSTRATION</span>
+              <span class="section-number">04 / INTEGRATED DEMONSTRATION</span>
               <h2>Three hard problems. One controlled runtime.</h2>
             </div>
             <div class="demo-control">
@@ -254,7 +274,7 @@
       <section class="section-shell section-block" id="assurance">
         <div class="section-heading">
           <div>
-            <span class="section-number">04 / ASSURANCE &amp; BOUNDARIES</span>
+            <span class="section-number">05 / ASSURANCE &amp; BOUNDARIES</span>
             <h2>Confidence without overclaiming.</h2>
           </div>
           <p>The capstone proves technical control feasibility on synthetic data. It does not claim clinical, regulatory or production validation.</p>
@@ -300,7 +320,7 @@
     <footer>
       <div class="footer-brand"><span class="brand-mark small" aria-hidden="true"></span><strong>FDE Final Capstone</strong></div>
       <p>Cell &amp; Gene Therapy · Patient-to-Batch Orchestration</p>
-      <span>v1.2 · Synthetic academic scope</span>
+      <span>v1.2 · Role-based demo + automated journey summary</span>
     </footer>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>

@@ -10,13 +10,13 @@ The organization cannot safely answer “what is the current patient-to-batch st
 
 ## 3. Achievement
 
-The capstone delivers an evidence-driven modular orchestration POC with one common domain model, a responsive browser Control Tower and three vertical journeys:
+The capstone delivers an evidence-driven modular orchestration POC with one common domain model, a responsive browser Control Tower, seven role/persona lenses, an automated deterministic cross-domain journey summary and three vertical journeys:
 
 1. patient identity conflict, authorized resolution and milestone readiness;
 2. manufacturing-slot reservation, idempotent replay, unknown outcome reconciliation and compensation;
 3. QC/deviation/thermal evidence packet and Quality-authorized release.
 
-AI is placed outside the authority boundary. It can only return a cited recommendation schema and has no consequential tool. AI off is the default and complete deterministic behavior remains available.
+AI is placed outside the authority boundary. It can only return a cited recommendation schema and has no consequential tool. AI off is the default and complete deterministic behavior remains available. Workflow automation still operates with AI off: readiness gates, command reconciliation, duplicate prevention, Quality evidence assembly and the cross-domain journey summary are deterministic. Authoritative structured facts do not use RAG; optional future RAG is reserved for cited unstructured supporting evidence, while MCP is a future integration option rather than a current dependency.
 
 The current 1.2.0 app also exposes the original v2 `EVAL-001..006` source patients, a bounded source-timestamp journey reconstruction for each, and `INJ-001..010` disruptions as **read-only** source-located explorer/preview views. These are distinct from the scripted three-POC fixture; they are not migrated canonical records, known-at replay or executed replans. A one-to-one 185-row artifact register, standalone PRD, brownfield migration plan, target C4 and 90-day gap roadmap now connect training artifacts to the 21 stages. Capstone Owner and external gate approvals remain pending.
 

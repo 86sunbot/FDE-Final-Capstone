@@ -47,6 +47,16 @@ def test_control_tower_executes_all_three_pocs(tmp_path):
     assert result["poc2"]["initial_state"] == "OUTCOME_UNKNOWN"
     assert result["poc2"]["reconciled_state"] == "SUCCEEDED"
     assert result["poc3"]["released"] is True
+    assert result["journey_summary"]["overall_status"] == "READY_FOR_NEXT_AUTHORIZED_STEP"
+    assert result["journey_summary"]["current_blocker"] == "NONE"
+    assert result["journey_summary"]["evidence_count"] == 10
+    assert len(result["journey_summary"]["domains"]) == 5
+    assert len(result["role_views"]) == 7
+    assert {role["backend_role"] for role in result["role_views"]} >= {"COORDINATOR", "IDENTITY_AUTHORITY", "PLANNER", "QUALITY_AUTHORITY", "VIEWER"}
+    assert len(result["automation_trace"]) == 5
+    assert "deterministic projections" in result["information_architecture"]["structured_retrieval"]
+    assert "Optional future RAG" in result["information_architecture"]["rag"]
+    assert "Not implemented" in result["information_architecture"]["mcp"]
     assert result["audit_chain_valid"] is True
     app.state.service.close()
 

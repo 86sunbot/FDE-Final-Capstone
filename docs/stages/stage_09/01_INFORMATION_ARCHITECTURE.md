@@ -42,3 +42,17 @@ Identifiers are typed and non-interchangeable: JourneyId, PatientKey, namespace-
 ## Authority policy
 
 Authority belongs to a decision/attribute, not a whole system. QMS authority for release does not make every QMS field authoritative. MES manufacturing status, ERP inventory, courier telemetry and model output cannot establish Quality release.
+
+## Retrieval architecture: structured facts, optional RAG and future MCP
+
+The implemented POC does **not** use vector-search RAG or MCP to determine canonical journey state.
+
+| Information need | Current approach | Why |
+|---|---|---|
+| Patient identity, readiness, slot state, MES/QC/QMS/logistics facts | Typed source adapters + evidence registry + deterministic projections | Consequential operational truth must be source-, authority- and time-aware |
+| SOPs, emails, deviation narratives and other unstructured supporting text | Optional future evidence-grounded RAG | Useful for summarization/search, but retrieved text cannot become release, identity or clinical authority |
+| Enterprise tool connectivity | Existing service/adaptor ports in the POC; MCP deferred | MCP may standardize future approved read/tool integrations, but does not replace authentication, authorization, idempotency or domain authority |
+
+If RAG is added, retrieval must preserve source/version/effective date, access policy, provenance and citation. Retrieved content is untrusted evidence, never an instruction to the model. System policy, Quality release authority and clinical/identity rules remain versioned deterministic controls.
+
+MCP is therefore a **future integration option**, not a missing requirement for this capstone. Any MCP server/tool would still sit behind least privilege, role/scope authorization, tool allow-lists, audit, payload validation and human approval for consequential actions.

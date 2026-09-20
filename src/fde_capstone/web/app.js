@@ -9,6 +9,8 @@ const elements = {
   toast: $('#toast'),
 };
 
+let latestDemoResult = null;
+
 const pause = (milliseconds) => new Promise((resolve) => window.setTimeout(resolve, milliseconds));
 
 function setText(selector, value, className = '') {
@@ -74,7 +76,64 @@ async function loadStatus() {
   }
 }
 
+function renderRoleLens() {
+  const select = $('#role-lens');
+  const selectedLabel = select.options[select.selectedIndex]?.textContent || 'Role';
+  if (!latestDemoResult) {
+    setText('#role-title', selectedLabel);
+    setText('#role-objective', 'Run the end-to-end demo to load this role\'s evidence, responsibilities and boundaries.');
+    setText('#role-backend', 'Mapped after run');
+    setText('#role-focus', 'Role-specific operational view');
+    setText('#role-can-do', 'Uses the same governed journey with role-appropriate responsibilities.');
+    setText('#role-cannot-do', 'Cannot take another domain\'s consequential authority.');
+    return;
+  }
+  const role = latestDemoResult.role_views.find((item) => item.id === select.value);
+  if (!role) return;
+  setText('#role-title', role.name);
+  setText('#role-objective', role.focus);
+  setText('#role-backend', role.backend_role);
+  setText('#role-focus', role.focus);
+  setText('#role-can-do', role.can_do.join(' · '));
+  setText('#role-cannot-do', role.cannot_do.join(' · '));
+}
+
+function renderJourneySummary(result) {
+  const summary = result.journey_summary;
+  setText('#summary-status', summary.overall_status, 'value-pass');
+  setText('#summary-blocker', summary.current_blocker, summary.current_blocker === 'NONE' ? 'value-pass' : 'value-warn');
+  setText('#summary-next-owner', summary.next_owner);
+  setText('#summary-evidence-count', String(summary.evidence_count));
+  setText('#journey-summary-text', summary.summary);
+  const domains = $('#domain-summary');
+  domains.replaceChildren();
+  summary.domains.forEach((item) => {
+    const card = document.createElement('article');
+    const heading = document.createElement('strong');
+    const status = document.createElement('span');
+    const detail = document.createElement('p');
+    heading.textContent = item.domain;
+    status.textContent = item.status;
+    status.className = item.status === 'SATISFIED' ? 'value-pass' : 'value-warn';
+    detail.textContent = item.detail;
+    card.append(heading, status, detail);
+    domains.appendChild(card);
+  });
+  const trace = $('#automation-trace');
+  trace.replaceChildren();
+  result.automation_trace.forEach((item) => {
+    const row = document.createElement('li');
+    row.textContent = `${item.step}: ${item.automation}. Human boundary: ${item.human_boundary}.`;
+    trace.appendChild(row);
+  });
+  const rec = result.assistant_output;
+  setText('#assistant-explanation', rec?.summary ? `${rec.summary} Evidence: ${rec.evidence_refs.join(', ')}` : 'AI is off. The summary above was generated deterministically from governed state and evidence.');
+}
+
 async function presentResults(result) {
+  latestDemoResult = result;
+  renderRoleLens();
+  renderJourneySummary(result);
   completeJourneyThrough(0);
   setRunning(1);
   setProgress(25, 'Resolving identity conflict with human authority…');
@@ -280,6 +339,7 @@ async function inspectSourceInject() {
 }
 
 elements.runButtons.forEach((button) => button.addEventListener('click', runDemo));
+$('#role-lens').addEventListener('change', renderRoleLens);
 $('#show-source-case').addEventListener('click', inspectSourceCase);
 $('#show-source-inject').addEventListener('click', inspectSourceInject);
 loadStatus();
