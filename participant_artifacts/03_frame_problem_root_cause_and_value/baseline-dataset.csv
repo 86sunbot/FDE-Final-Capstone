@@ -1,0 +1,11 @@
+metric,baseline,unit,status,source_note
+median_vein_to_vein_time,21.8,days,SYNTHETIC_BASELINE,"Supplied capstone assessment; reproduce against source data where feasible"
+journeys_needing_manual_reconciliation,31.5,percent,SYNTHETIC_BASELINE,"Supplied capstone assessment"
+avoidable_delay_per_100_journeys,186,hours,SYNTHETIC_BASELINE,"Supplied capstone assessment"
+on_time_infusion_probability,78,percent,SYNTHETIC_BASELINE,"Supplied capstone assessment"
+identity_exceptions_per_1000,17,count,SYNTHETIC_BASELINE,"Supplied capstone assessment"
+mean_age_open_exceptions,29.4,hours,SYNTHETIC_BASELINE,"Supplied capstone assessment"
+slot_utilization,71,percent,SYNTHETIC_BASELINE,"Supplied capstone assessment"
+qa_release_forecast_mae,27.5,hours,SYNTHETIC_BASELINE,"Supplied capstone assessment"
+manual_status_updates_per_journey,12.7,count,SYNTHETIC_BASELINE,"Supplied capstone assessment"
+complete_cross_system_traceability,82.4,percent,SYNTHETIC_BASELINE,"Supplied capstone assessment"
