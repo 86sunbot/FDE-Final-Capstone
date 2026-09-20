@@ -15,7 +15,7 @@ The inherited environment had conflicting patient evidence, unsafe readiness/rel
 - owned exceptions and tamper-evident audit;
 - three integrated POCs;
 - six read-only original v2 source-timestamp patient journeys and non-authoritative disruption preview;
-- one optional recommendation-only assistant, disabled by default.
+- seven role/persona demo lenses across Patient Operations, Identity, Logistics/Planning, Manufacturing, Lab/QC, Quality and Executive views;\n- an automated deterministic cross-domain journey summary and visible workflow-automation trace;\n- one optional recommendation-only assistant, disabled by default.
 
 ## Important boundary
 
@@ -77,3 +77,7 @@ The local `runtime/` folder contains disposable synthetic state. Stop the demo s
 Local verification directly hashes the original external ZIP when it is available at its recorded path. GitHub Actions intentionally does not receive that external archive; it verifies the recorded ZIP digest plus all 132 committed frozen extraction files against their individual inventory hashes. Generated package metadata such as `*.egg-info` is excluded from the signed application-source digest.
 
 For the requested training sequence, use [the six source-journey reconstructions](docs/stages/stage_02/07_SUPPLIED_PATIENT_JOURNEY_SOURCE_RECONSTRUCTION.md), [PRD](docs/stages/stage_13/06_PRODUCT_REQUIREMENTS_DOCUMENT.md), [product-to-code-test-demo trace](docs/stages/stage_13/07_PRODUCT_TO_CODE_TEST_DEMO_TRACE.md), [target C4](docs/stages/stage_10/05_TARGET_C4_BASELINE_AND_AS_BUILT_DELTA.md), [migration strategy](docs/stages/stage_13/08_BROWNFIELD_MIGRATION_STRATEGY.md), and [90-day production-gap roadmap](docs/stages/stage_20/06_PRODUCTION_GAP_AND_90_DAY_ROADMAP.md).
+
+## Information retrieval and integration position
+
+Authoritative operational facts use typed adapters, the evidence registry and deterministic projections; canonical state is not produced by vector RAG. Optional future RAG is appropriate for supporting unstructured SOP/email/deviation content only, with provenance, version/freshness and citations. MCP is not required by the current POC; it is a future enterprise integration option for approved read/tool adapters after identity, authorization, audit and supplier controls are satisfied.

@@ -33,7 +33,7 @@ def create_app(database_path: str | None = None) -> FastAPI:
     service = CapstoneApplication(database_path or os.getenv("FDE_DB", "runtime/api.db"), ai_mode=os.getenv("AI_MODE", "off"))
     app = FastAPI(
         title="FDE Final Capstone",
-        version="1.2.0",
+        version="1.3.0",
         description="Synthetic academic CGT patient-to-batch orchestration demonstration.",
     )
     app.state.service = service
