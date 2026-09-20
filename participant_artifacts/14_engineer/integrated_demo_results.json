@@ -1,0 +1,184 @@
+{
+  "ai_off": {
+    "scope": "SYNTHETIC_LOCAL_ACADEMIC_POC",
+    "ai_mode": "off",
+    "poc1": {
+      "case": "CASE-e3ffaa06-c205-4e1a-ab67-b11c8b8f4a3e",
+      "decision": "APPLIED",
+      "readiness": "SATISFIED",
+      "evidence_refs": [
+        "EV-AUTH",
+        "EV-CONSENT",
+        "EV-ID-DOB",
+        "EV-ID-MRN",
+        "EV-SITE"
+      ]
+    },
+    "poc2": {
+      "initial_state": "OUTCOME_UNKNOWN",
+      "reconciled_state": "SUCCEEDED",
+      "replay_dispatch": false
+    },
+    "poc3": {
+      "before": "UNKNOWN",
+      "released": true,
+      "after": "SATISFIED",
+      "evidence_refs": [
+        "EV-DEV",
+        "EV-MES",
+        "EV-QC",
+        "EV-QMS-DECISION",
+        "EV-THERMAL"
+      ]
+    },
+    "assistant": {
+      "mode": "DETERMINISTIC_ONLY",
+      "rejection_reason": "AI_DISABLED"
+    },
+    "audit_chain_valid": true,
+    "state_digest": "d7131c95067c9a43a3258cbce1fa3af16e7ba028d1c2aedba4f7441fd3c90239",
+    "metrics": {
+      "cases_opened": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "command_replays": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "commands_accepted": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "commands_reconciled": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "identity_decisions": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "quality_releases": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "readiness_satisfied": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "recommendation_fallbacks": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "recommendation_requests": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "unknown_outcomes": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      }
+    }
+  },
+  "bounded_fake": {
+    "scope": "SYNTHETIC_LOCAL_ACADEMIC_POC",
+    "ai_mode": "fake",
+    "poc1": {
+      "case": "CASE-7492bbb7-9119-41fa-9078-3dcbe0ae1ebd",
+      "decision": "APPLIED",
+      "readiness": "SATISFIED",
+      "evidence_refs": [
+        "EV-AUTH",
+        "EV-CONSENT",
+        "EV-ID-DOB",
+        "EV-ID-MRN",
+        "EV-SITE"
+      ]
+    },
+    "poc2": {
+      "initial_state": "OUTCOME_UNKNOWN",
+      "reconciled_state": "SUCCEEDED",
+      "replay_dispatch": false
+    },
+    "poc3": {
+      "before": "UNKNOWN",
+      "released": true,
+      "after": "SATISFIED",
+      "evidence_refs": [
+        "EV-DEV",
+        "EV-MES",
+        "EV-QC",
+        "EV-QMS-DECISION",
+        "EV-THERMAL"
+      ]
+    },
+    "assistant": {
+      "mode": "BOUNDED_AI",
+      "rejection_reason": null
+    },
+    "audit_chain_valid": true,
+    "state_digest": "17d521570eef1d007a75e6bfa10326414a15e726f3566e948de618d148260ddc",
+    "metrics": {
+      "cases_opened": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "command_replays": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "commands_accepted": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "commands_reconciled": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "identity_decisions": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "quality_releases": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "readiness_satisfied": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "recommendation_requests": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      },
+      "unknown_outcomes": {
+        "count": 1,
+        "total": 1.0,
+        "last": 1.0
+      }
+    }
+  },
+  "limitations": [
+    "synthetic data",
+    "simulated authorities/adapters",
+    "fake assistant is not live-model evidence"
+  ]
+}

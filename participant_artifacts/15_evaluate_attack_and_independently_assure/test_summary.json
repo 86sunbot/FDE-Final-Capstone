@@ -1,0 +1,10 @@
+{
+  "scope": "clean capstone automated pytest suite",
+  "tests": 92,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": 92,
+  "time_seconds": 2.374,
+  "junit_evidence": "reports/generated/pytest-results.xml"
+}

@@ -1,0 +1,26 @@
+relationship,issue_count,expected,meaning
+collection.patient_key -> patient,0,0,Collection patient reference resolves
+batch.patient_key -> patient,0,0,Batch patient reference resolves
+batch.collection_id -> collection,0,0,Batch collection reference resolves
+shipment.patient_key -> patient,0,0,Shipment patient reference resolves
+return_shipment.batch_id -> batch,0,0,Return shipment batch reference resolves
+qc.batch_id -> batch,0,0,QC batch reference resolves
+deviation.batch_id -> batch,0,0,Deviation batch reference resolves
+slot.patient_key -> patient,0,0,Slot patient reference resolves
+consent.patient_key -> patient,0,0,Consent patient reference resolves
+authorization.patient_key -> patient,0,0,Authorization patient reference resolves
+telemetry.shipment_id -> shipment,0,0,Telemetry shipment reference resolves
+event.patient_key -> patient,0,0,Event patient reference resolves
+event.batch_id -> batch,0,0,Nonblank event batch reference resolves
+deviation.linked_event_id -> event,188,0,Deviation evidence link resolves
+patient.center_id -> treatment_center,0,0,Patient center reference resolves
+site_qualification.center_id -> treatment_center,0,0,Qualification center reference resolves
+batch.site_id -> manufacturing_site,0,0,Batch site reference resolves
+slot.site_id -> manufacturing_site,0,0,Slot site reference resolves
+shipment.courier_id -> courier,0,0,Courier reference resolves
+patient.product_code -> product,0,0,Patient product reference resolves
+batch.product_code -> product,0,0,Batch product reference resolves
+batch.patient_key = collection.patient_key,0,0,Declared linkage fields agree; not independent identity proof
+batch.coi_id = collection.coi_id,0,0,Declared COI strings agree; not independent COI proof
+telemetry.patient_key = shipment.patient_key,0,0,Telemetry and shipment patient-key strings agree
+telemetry.direction = shipment.direction,0,0,Telemetry and shipment direction agree

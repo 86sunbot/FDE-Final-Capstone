@@ -1,0 +1,30 @@
+{
+  "scope": "synthetic academic evidence; not real-world benefit or ROI",
+  "baseline": {
+    "supplied_not_reproduced": 10,
+    "reproduced": 18,
+    "total": 28
+  },
+  "measured_capstone": {
+    "evaluation_pass": 55,
+    "evaluation_fail": 0,
+    "evaluation_inconclusive": 2,
+    "deterministic_projection_p95_ms": 0.0097,
+    "shadow_domain_matches": 20,
+    "shadow_runs": 20,
+    "canary_success": 10,
+    "canary_runs": 10
+  },
+  "not_measured": [
+    "real vein-to-vein time",
+    "real avoidable delay",
+    "real on-time infusion",
+    "real labor savings",
+    "real user adoption or workload",
+    "human-factor benefit",
+    "live-model quality/cost",
+    "production TCO or ROI"
+  ],
+  "ai_increment_decision": "NOT PROVEN; keep AI off until controlled human and live-model comparison passes",
+  "claim_decision": "The POC demonstrates deterministic safety/control feasibility on synthetic cases; it does not demonstrate clinical, operational, regulatory or financial outcomes."
+}

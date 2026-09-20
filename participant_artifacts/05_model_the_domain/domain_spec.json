@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "name": "CGT Patient-to-Batch Canonical Domain Specification",
+    "version": "0.1.0-draft",
+    "status": "DRAFT_PENDING_DOMAIN_OWNER_APPROVAL",
+    "source_baseline_sha256": "74d31dc4694d52b0e9a9fb337e6ccda1086ad430b19287f9ca2b4b4e650ca979"
+  },
+  "assessment_outcomes": [
+    "SATISFIED",
+    "NOT_SATISFIED",
+    "UNKNOWN",
+    "NOT_APPLICABLE"
+  ],
+  "identifier_types": [
+    "JourneyId",
+    "SourceRecordId",
+    "PatientKey",
+    "MRNAssertion",
+    "ClinicalSubjectId",
+    "CollectionId",
+    "BagId",
+    "COIId",
+    "ShipmentId",
+    "SlotId",
+    "BatchId",
+    "DeviationId",
+    "EventId",
+    "CommandId"
+  ],
+  "rules": [
+    {
+      "id": "BR-EVD-001",
+      "severity": "P0",
+      "owner": "DataOwner",
+      "statement": "Preserve raw value, source record, occurred or effective time, and recorded time for each decision-relevant assertion."
+    },
+    {
+      "id": "BR-EVD-002",
+      "severity": "P0",
+      "owner": "JourneyOwner",
+      "statement": "Every canonical transition cites evidence and rule or policy versions."
+    },
+    {
+      "id": "BR-ID-001",
+      "severity": "P0",
+      "owner": "IdentityAuthority",
+      "statement": "No identity or lineage relation is created solely from one ambiguous identifier or model score."
+    },
+    {
+      "id": "BR-ID-002",
+      "severity": "P0",
+      "owner": "IdentityAuthority",
+      "statement": "MRNs are namespace-qualified assertions and are not assumed globally unique."
+    },
+    {
+      "id": "BR-STATE-001",
+      "severity": "P0",
+      "owner": "DomainOwner",
+      "statement": "Only a legal transition with satisfied guards changes canonical state."
+    },
+    {
+      "id": "BR-TIME-001",
+      "severity": "P0",
+      "owner": "DataOwner",
+      "statement": "Occurred and recorded time remain distinct."
+    },
+    {
+      "id": "BR-CMD-001",
+      "severity": "P0",
+      "owner": "ServiceOwner",
+      "statement": "An idempotency key binds one canonical payload and command type and scope."
+    },
+    {
+      "id": "BR-CMD-002",
+      "severity": "P0",
+      "owner": "ServiceOwner",
+      "statement": "An unknown external outcome is reconciled before retry or compensation."
+    },
+    {
+      "id": "BR-AUTH-001",
+      "severity": "P0",
+      "owner": "SecurityAndBusinessAuthority",
+      "statement": "Authority derives from authenticated identity and server-side policy."
+    },
+    {
+      "id": "BR-AUTH-002",
+      "severity": "P0",
+      "owner": "BusinessAuthority",
+      "statement": "Recommendation, approval, and execution are separate events."
+    },
+    {
+      "id": "BR-AI-001",
+      "severity": "P0",
+      "owner": "QualityClinicalAndSecurity",
+      "statement": "AI output never establishes identity, lineage, disposition, release, or clinical readiness."
+    }
+  ],
+  "event_envelope": {
+    "required_fields": [
+      "event_id",
+      "event_type",
+      "schema_version",
+      "aggregate_type",
+      "aggregate_id",
+      "sequence",
+      "occurred_at",
+      "recorded_at",
+      "source_system",
+      "evidence_refs",
+      "correlation_id",
+      "actor",
+      "data_quality",
+      "payload",
+      "payload_digest",
+      "classification",
+      "trace_id"
+    ],
+    "conditional_fields": [
+      "effective_from",
+      "effective_to",
+      "source_record_id",
+      "causation_id",
+      "authority",
+      "policy_versions",
+      "confidence",
+      "supersedes_event_id"
+    ]
+  },
+  "event_types": [
+    {"name": "IdentityConflictDetected", "authority_required": false},
+    {"name": "IdentityResolutionProposed", "authority_required": false},
+    {"name": "IdentityResolutionApproved", "authority_required": true},
+    {"name": "IdentityResolutionRejected", "authority_required": true},
+    {"name": "IdentityResolutionApplied", "authority_required": true},
+    {"name": "ProductReleased", "authority_required": true},
+    {"name": "ProductReleaseRejected", "authority_required": true},
+    {"name": "ReleaseDecisionSuperseded", "authority_required": true},
+    {"name": "RecommendationGenerated", "authority_required": false},
+    {"name": "ApprovalRecorded", "authority_required": true},
+    {"name": "AuthorizationDenied", "authority_required": false},
+    {"name": "IdempotencyConflictDetected", "authority_required": false},
+    {"name": "CommandAccepted", "authority_required": false},
+    {"name": "CommandDispatched", "authority_required": false},
+    {"name": "CommandSucceeded", "authority_required": false},
+    {"name": "CommandFailed", "authority_required": false},
+    {"name": "CommandOutcomeUnknown", "authority_required": false},
+    {"name": "CommandReconciled", "authority_required": false},
+    {"name": "ExceptionAssigned", "authority_required": false},
+    {"name": "ExceptionEscalated", "authority_required": false},
+    {"name": "ExceptionResolutionProposed", "authority_required": false},
+    {"name": "ExceptionResolved", "authority_required": false},
+    {"name": "ExceptionClosed", "authority_required": false},
+    {"name": "PatientEnrolled", "authority_required": false},
+    {"name": "EligibilityAccepted", "authority_required": true},
+    {"name": "MilestoneAssessmentSatisfied", "authority_required": false},
+    {"name": "CollectionStarted", "authority_required": true},
+    {"name": "CollectionCompleted", "authority_required": false},
+    {"name": "ShipmentDeparted", "authority_required": false},
+    {"name": "MaterialReceiptVerified", "authority_required": true},
+    {"name": "ManufacturingStarted", "authority_required": false},
+    {"name": "ManufacturingCompleted", "authority_required": false},
+    {"name": "ReleaseReviewStarted", "authority_required": true},
+    {"name": "ReleaseHeld", "authority_required": true},
+    {"name": "HoldResolved", "authority_required": true},
+    {"name": "ProductReceiptVerified", "authority_required": true},
+    {"name": "ClinicalReadinessAuthorized", "authority_required": true},
+    {"name": "InfusionRecorded", "authority_required": true},
+    {"name": "JourneyClosed", "authority_required": true},
+    {"name": "ReservationValidated", "authority_required": false},
+    {"name": "CommandPersisted", "authority_required": false},
+    {"name": "RetryAuthorized", "authority_required": false},
+    {"name": "ReconciliationStarted", "authority_required": false},
+    {"name": "EffectFound", "authority_required": false},
+    {"name": "NoEffectFound", "authority_required": false},
+    {"name": "PartialEffectFound", "authority_required": false},
+    {"name": "CompensationVerified", "authority_required": true},
+    {"name": "RecoveryFailed", "authority_required": false},
+    {"name": "EvidenceCheckFailed", "authority_required": false},
+    {"name": "EvidencePacketCompleted", "authority_required": false},
+    {"name": "EvidenceUpdated", "authority_required": false},
+    {"name": "MaterialEvidenceChanged", "authority_required": false},
+    {"name": "NewReleaseReviewOpened", "authority_required": true}
+  ],
+  "state_machines": {
+    "therapy_journey": {
+      "initial": "REGISTERED",
+      "states": [
+        "REGISTERED",
+        "ELIGIBILITY_PENDING",
+        "ELIGIBLE",
+        "PRE_COLLECTION_READY",
+        "COLLECTION_IN_PROGRESS",
+        "COLLECTED",
+        "OUTBOUND_IN_PROGRESS",
+        "MATERIAL_AT_MANUFACTURING",
+        "MANUFACTURING",
+        "QUALITY_REVIEW",
+        "QUALITY_HOLD",
+        "PRODUCT_RELEASED",
+        "RETURN_IN_PROGRESS",
+        "PRODUCT_AT_CENTER",
+        "INFUSION_READY",
+        "INFUSED",
+        "CLOSED"
+      ],
+      "transitions": [
+        {"from": "REGISTERED", "to": "ELIGIBILITY_PENDING", "event": "PatientEnrolled", "guard": "enrollment_evidence_valid", "authority_required": false},
+        {"from": "ELIGIBILITY_PENDING", "to": "ELIGIBLE", "event": "EligibilityAccepted", "guard": "eligibility_decision_valid", "authority_required": true},
+        {"from": "ELIGIBLE", "to": "PRE_COLLECTION_READY", "event": "MilestoneAssessmentSatisfied", "guard": "pre_collection_prerequisites_satisfied", "authority_required": false},
+        {"from": "PRE_COLLECTION_READY", "to": "COLLECTION_IN_PROGRESS", "event": "CollectionStarted", "guard": "collection_authorized", "authority_required": true},
+        {"from": "COLLECTION_IN_PROGRESS", "to": "COLLECTED", "event": "CollectionCompleted", "guard": "collection_evidence_valid", "authority_required": false},
+        {"from": "COLLECTED", "to": "OUTBOUND_IN_PROGRESS", "event": "ShipmentDeparted", "guard": "outbound_lineage_and_custody_valid", "authority_required": false},
+        {"from": "OUTBOUND_IN_PROGRESS", "to": "MATERIAL_AT_MANUFACTURING", "event": "MaterialReceiptVerified", "guard": "receipt_and_lineage_verified", "authority_required": true},
+        {"from": "MATERIAL_AT_MANUFACTURING", "to": "MANUFACTURING", "event": "ManufacturingStarted", "guard": "manufacturing_start_prerequisites_satisfied", "authority_required": false},
+        {"from": "MANUFACTURING", "to": "QUALITY_REVIEW", "event": "ManufacturingCompleted", "guard": "manufacturing_completion_evidence_valid", "authority_required": false},
+        {"from": "QUALITY_REVIEW", "to": "QUALITY_HOLD", "event": "ReleaseHeld", "guard": "quality_hold_decision_valid", "authority_required": true},
+        {"from": "QUALITY_HOLD", "to": "QUALITY_REVIEW", "event": "HoldResolved", "guard": "hold_resolution_valid", "authority_required": true},
+        {"from": "QUALITY_REVIEW", "to": "PRODUCT_RELEASED", "event": "ProductReleased", "guard": "quality_release_decision_valid", "authority_required": true},
+        {"from": "PRODUCT_RELEASED", "to": "RETURN_IN_PROGRESS", "event": "ShipmentDeparted", "guard": "return_shipment_prerequisites_satisfied", "authority_required": false},
+        {"from": "RETURN_IN_PROGRESS", "to": "PRODUCT_AT_CENTER", "event": "ProductReceiptVerified", "guard": "receipt_custody_and_identity_verified", "authority_required": true},
+        {"from": "PRODUCT_AT_CENTER", "to": "INFUSION_READY", "event": "ClinicalReadinessAuthorized", "guard": "infusion_readiness_prerequisites_satisfied", "authority_required": true},
+        {"from": "INFUSION_READY", "to": "INFUSED", "event": "InfusionRecorded", "guard": "infusion_evidence_and_authority_valid", "authority_required": true},
+        {"from": "INFUSED", "to": "CLOSED", "event": "JourneyClosed", "guard": "journey_closure_policy_satisfied", "authority_required": true}
+      ]
+    },
+    "identity_case": {
+      "initial": "OPEN",
+      "states": ["OPEN", "EVIDENCE_GATHERING", "PROPOSED", "AWAITING_APPROVAL", "APPROVED", "REJECTED", "APPLIED", "CLOSED"],
+      "transitions": [
+        {"from": "OPEN", "to": "EVIDENCE_GATHERING", "event": "ExceptionAssigned", "guard": "case_owner_valid", "authority_required": false},
+        {"from": "EVIDENCE_GATHERING", "to": "PROPOSED", "event": "IdentityResolutionProposed", "guard": "proposal_cites_evidence", "authority_required": false},
+        {"from": "PROPOSED", "to": "AWAITING_APPROVAL", "event": "EvidencePacketCompleted", "guard": "required_evidence_complete", "authority_required": false},
+        {"from": "AWAITING_APPROVAL", "to": "APPROVED", "event": "IdentityResolutionApproved", "guard": "resolver_authorized", "authority_required": true},
+        {"from": "AWAITING_APPROVAL", "to": "REJECTED", "event": "IdentityResolutionRejected", "guard": "resolver_authorized", "authority_required": true},
+        {"from": "APPROVED", "to": "APPLIED", "event": "IdentityResolutionApplied", "guard": "approved_payload_matches", "authority_required": true},
+        {"from": "APPLIED", "to": "CLOSED", "event": "ExceptionClosed", "guard": "effect_and_audit_verified", "authority_required": false},
+        {"from": "REJECTED", "to": "CLOSED", "event": "ExceptionClosed", "guard": "rejection_outcome_recorded", "authority_required": false},
+        {"from": "CLOSED", "to": "OPEN", "event": "IdentityConflictDetected", "guard": "new_material_evidence", "authority_required": false}
+      ]
+    },
+    "command_saga": {
+      "initial": "RECEIVED",
+      "states": ["RECEIVED", "REJECTED_CONFLICT", "REJECTED_POLICY", "VALIDATED", "DISPATCH_PENDING", "DISPATCHED", "SUCCEEDED", "FAILED_RETRYABLE", "FAILED_FINAL", "OUTCOME_UNKNOWN", "RECONCILING", "COMPENSATION_PENDING", "COMPENSATED"],
+      "transitions": [
+        {"from": "RECEIVED", "to": "REJECTED_CONFLICT", "event": "IdempotencyConflictDetected", "guard": "same_key_different_payload", "authority_required": false},
+        {"from": "RECEIVED", "to": "REJECTED_POLICY", "event": "AuthorizationDenied", "guard": "payload_or_authority_invalid", "authority_required": false},
+        {"from": "RECEIVED", "to": "VALIDATED", "event": "ReservationValidated", "guard": "payload_authority_and_policy_valid", "authority_required": false},
+        {"from": "VALIDATED", "to": "DISPATCH_PENDING", "event": "CommandPersisted", "guard": "outbox_commit_succeeded", "authority_required": false},
+        {"from": "DISPATCH_PENDING", "to": "DISPATCHED", "event": "CommandDispatched", "guard": "adapter_dispatch_accepted", "authority_required": false},
+        {"from": "DISPATCHED", "to": "SUCCEEDED", "event": "CommandSucceeded", "guard": "acknowledged_effect_verified", "authority_required": false},
+        {"from": "DISPATCHED", "to": "FAILED_RETRYABLE", "event": "CommandFailed", "guard": "explicit_retryable_failure", "authority_required": false},
+        {"from": "DISPATCHED", "to": "FAILED_FINAL", "event": "CommandFailed", "guard": "explicit_terminal_failure", "authority_required": false},
+        {"from": "DISPATCHED", "to": "OUTCOME_UNKNOWN", "event": "CommandOutcomeUnknown", "guard": "timeout_or_ambiguous_result", "authority_required": false},
+        {"from": "FAILED_RETRYABLE", "to": "DISPATCH_PENDING", "event": "RetryAuthorized", "guard": "attempt_limit_and_retry_policy_satisfied", "authority_required": false},
+        {"from": "OUTCOME_UNKNOWN", "to": "RECONCILING", "event": "ReconciliationStarted", "guard": "external_query_available", "authority_required": false},
+        {"from": "RECONCILING", "to": "SUCCEEDED", "event": "EffectFound", "guard": "external_effect_matches_payload", "authority_required": false},
+        {"from": "RECONCILING", "to": "FAILED_RETRYABLE", "event": "NoEffectFound", "guard": "retry_proven_safe", "authority_required": false},
+        {"from": "RECONCILING", "to": "COMPENSATION_PENDING", "event": "PartialEffectFound", "guard": "compensation_required", "authority_required": false},
+        {"from": "COMPENSATION_PENDING", "to": "COMPENSATED", "event": "CompensationVerified", "guard": "compensating_effect_verified", "authority_required": true},
+        {"from": "COMPENSATION_PENDING", "to": "FAILED_FINAL", "event": "RecoveryFailed", "guard": "recovery_exhausted_and_escalated", "authority_required": false}
+      ]
+    },
+    "quality_release": {
+      "initial": "NOT_ASSESSED",
+      "states": ["NOT_ASSESSED", "EVIDENCE_INCOMPLETE", "UNDER_REVIEW", "HOLD", "APPROVED", "REJECTED", "SUPERSEDED"],
+      "transitions": [
+        {"from": "NOT_ASSESSED", "to": "EVIDENCE_INCOMPLETE", "event": "EvidenceCheckFailed", "guard": "required_evidence_missing_or_unknown", "authority_required": false},
+        {"from": "NOT_ASSESSED", "to": "UNDER_REVIEW", "event": "ReleaseReviewStarted", "guard": "evidence_packet_complete", "authority_required": true},
+        {"from": "EVIDENCE_INCOMPLETE", "to": "UNDER_REVIEW", "event": "EvidenceUpdated", "guard": "evidence_packet_complete", "authority_required": false},
+        {"from": "UNDER_REVIEW", "to": "HOLD", "event": "ReleaseHeld", "guard": "quality_hold_decision_valid", "authority_required": true},
+        {"from": "HOLD", "to": "UNDER_REVIEW", "event": "HoldResolved", "guard": "authorized_disposition_and_evidence_update", "authority_required": true},
+        {"from": "UNDER_REVIEW", "to": "APPROVED", "event": "ProductReleased", "guard": "release_prerequisites_and_authority_valid", "authority_required": true},
+        {"from": "UNDER_REVIEW", "to": "REJECTED", "event": "ProductReleaseRejected", "guard": "quality_rejection_decision_valid", "authority_required": true},
+        {"from": "APPROVED", "to": "SUPERSEDED", "event": "ReleaseDecisionSuperseded", "guard": "material_evidence_changed_and_reassessment_required", "authority_required": true},
+        {"from": "REJECTED", "to": "SUPERSEDED", "event": "ReleaseDecisionSuperseded", "guard": "material_evidence_changed_and_reassessment_required", "authority_required": true},
+        {"from": "SUPERSEDED", "to": "UNDER_REVIEW", "event": "NewReleaseReviewOpened", "guard": "new_evidence_version_bound", "authority_required": true}
+      ]
+    }
+  }
+}
