@@ -13,7 +13,6 @@ from pathlib import Path
 
 from .source_cases import BASELINE, _rows
 
-
 OWNERS = {
     "INJ-001": "CLINICAL_OPERATIONS_AND_PLANNER",
     "INJ-002": "LOGISTICS_AND_QUALITY",

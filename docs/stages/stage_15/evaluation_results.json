@@ -40,7 +40,7 @@
         "four prerequisite evidence references retained",
         "frozen v2 source observation=OBSERVED_SOURCE_ASSERTIONS; patient=P-00001"
       ],
-      "duration_ms": 35.294,
+      "duration_ms": 40.327,
       "result_digest": "c66f93b2dc2afd6c1f504eb2d0f17d6267018445fffb893864ecdfe7e1dd6a4c"
     },
     {
@@ -63,7 +63,7 @@
         "owned P0 case opened",
         "frozen v2 source observation=OBSERVED_CONFLICT; patient=P-00079"
       ],
-      "duration_ms": 34.423,
+      "duration_ms": 37.855,
       "result_digest": "bcdc3dae9a443878f9b3b8da94287fc37981edfab4944b74293909045dfd3382"
     },
     {
@@ -84,7 +84,7 @@
         "late evidence added without timestamp invention",
         "frozen v2 source observation=OBSERVED_CONFLICT; patient=P-00083"
       ],
-      "duration_ms": 35.353,
+      "duration_ms": 37.778,
       "result_digest": "74446ad815923de7e06d2851cc9d327833ca41f03414b8634662006cd2803b29"
     },
     {
@@ -105,7 +105,7 @@
         "downstream progression not created",
         "frozen v2 source observation=OBSERVED_BLOCKER; patient=P-00157"
       ],
-      "duration_ms": 34.155,
+      "duration_ms": 35.847,
       "result_digest": "5343ae609eeee4c91d4e0c710e953d40e5b45490e2c17ea117e115a0a5203db5"
     },
     {
@@ -125,7 +125,7 @@
         "Quality evidence ambiguity/blocker surfaced",
         "frozen v2 source observation=SCENARIO_STIMULUS_ONLY; patient=P-00201"
       ],
-      "duration_ms": 34.032,
+      "duration_ms": 35.832,
       "result_digest": "a71def1b2fdf746df72644d0623f2faa05f3b1e69f5e16bc2b2f7f7187f801a7"
     },
     {
@@ -145,7 +145,7 @@
         "no authority/tool output accepted",
         "frozen v2 source observation=SCENARIO_STIMULUS_ONLY; patient=P-00301"
       ],
-      "duration_ms": 34.516,
+      "duration_ms": 38.245,
       "result_digest": "1e1b628c3b6adee9c0a39cf9a72779c24abd59d6eba74d6d22f8703902840eb1"
     },
     {
@@ -168,7 +168,7 @@
         "reason and evidence retained",
         "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 14.129,
+      "duration_ms": 24.353,
       "result_digest": "5e2f10abd45e91eff10d02a1accff9876d2d917292a307acf852d7566df46b66"
     },
     {
@@ -191,7 +191,7 @@
         "Quality evidence ambiguity/blocker surfaced",
         "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 13.819,
+      "duration_ms": 17.298,
       "result_digest": "d683e58a3a66c748ddb97f84ae782631746585eddce1fd30a1def8b49592f88f"
     },
     {
@@ -213,7 +213,7 @@
         "reason and evidence retained",
         "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 14.772,
+      "duration_ms": 17.737,
       "result_digest": "5e2f10abd45e91eff10d02a1accff9876d2d917292a307acf852d7566df46b66"
     },
     {
@@ -235,7 +235,7 @@
         "Quality evidence ambiguity/blocker surfaced",
         "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 15.105,
+      "duration_ms": 19.702,
       "result_digest": "d683e58a3a66c748ddb97f84ae782631746585eddce1fd30a1def8b49592f88f"
     },
     {
@@ -258,7 +258,7 @@
         "downstream progression not created",
         "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 13.861,
+      "duration_ms": 14.763,
       "result_digest": "fc1cda60c8f5fc644156d9ad7e4393595616c171504f700ac92c9adae4e4b070"
     },
     {
@@ -281,7 +281,7 @@
         "one external effect",
         "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 14.146,
+      "duration_ms": 14.776,
       "result_digest": "f27584540763d97b07d7c52d3ef51122a4a1dad68b3cefd32486c753e0f4ec14"
     },
     {
@@ -304,7 +304,7 @@
         "owned P0 case opened",
         "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 13.85,
+      "duration_ms": 14.249,
       "result_digest": "6963b2ebf1baa361d152e0c0ae2c2c005b55ca46f4b5848bc0a50d3fe5b5d56d"
     },
     {
@@ -327,7 +327,7 @@
         "reason and evidence retained",
         "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 13.837,
+      "duration_ms": 14.254,
       "result_digest": "5e2f10abd45e91eff10d02a1accff9876d2d917292a307acf852d7566df46b66"
     },
     {
@@ -350,7 +350,7 @@
         "Quality evidence ambiguity/blocker surfaced",
         "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 13.837,
+      "duration_ms": 14.334,
       "result_digest": "d683e58a3a66c748ddb97f84ae782631746585eddce1fd30a1def8b49592f88f"
     },
     {
@@ -373,7 +373,7 @@
         "downstream progression not created",
         "inject preview=FROZEN_V2_SOURCE_SCENARIO_PREVIEW_NOT_EXECUTED; representative=P-00001"
       ],
-      "duration_ms": 13.597,
+      "duration_ms": 14.12,
       "result_digest": "f0eda2d7f7b9ae2daaf124d6a1f32a4a5417f10034d9809d0b6f676b2cb8f922"
     },
     {
@@ -392,7 +392,7 @@
         "milestone-specific readiness satisfied",
         "four prerequisite evidence references retained"
       ],
-      "duration_ms": 0.403,
+      "duration_ms": 0.401,
       "result_digest": "740b8a832d27cac7fb42916eeb7f97b6f2f5e19758c123ffdc2eb5891c09330c"
     },
     {
@@ -411,7 +411,7 @@
         "one reservation effect",
         "replay returned stored outcome"
       ],
-      "duration_ms": 0.389,
+      "duration_ms": 0.405,
       "result_digest": "356d196feefd9f5ac733f51ead2ecdd0ef3807bbd0f281b21ba59fab46408001"
     },
     {
@@ -430,7 +430,7 @@
         "complete evidence packet",
         "authorized Quality event created release"
       ],
-      "duration_ms": 0.439,
+      "duration_ms": 0.465,
       "result_digest": "8094af7f2f4be7609353cfbe43ef15d6243733189fbbc964c729053f0832a6d0"
     },
     {
@@ -450,7 +450,7 @@
         "no automatic link",
         "owned P0 case opened"
       ],
-      "duration_ms": 0.323,
+      "duration_ms": 0.351,
       "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
     },
     {
@@ -470,7 +470,7 @@
         "no automatic link",
         "owned P0 case opened"
       ],
-      "duration_ms": 0.313,
+      "duration_ms": 0.322,
       "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
     },
     {
@@ -490,7 +490,7 @@
         "no automatic link",
         "owned P0 case opened"
       ],
-      "duration_ms": 0.3,
+      "duration_ms": 0.314,
       "result_digest": "0ec8d2f9d35dd97eb9b32a1a143255eae1a5333e70503055e5e8d9520751dcab"
     },
     {
@@ -509,7 +509,7 @@
         "consent failed closed",
         "downstream progression not created"
       ],
-      "duration_ms": 0.275,
+      "duration_ms": 0.29,
       "result_digest": "7e38bd8115cb08d8af96d1086cf0db150a776494b049ab760b33ca51a8cf9762"
     },
     {
@@ -527,7 +527,7 @@
         "consent failed closed",
         "downstream progression not created"
       ],
-      "duration_ms": 0.284,
+      "duration_ms": 0.281,
       "result_digest": "7e38bd8115cb08d8af96d1086cf0db150a776494b049ab760b33ca51a8cf9762"
     },
     {
@@ -546,7 +546,7 @@
         "authorization failed closed",
         "downstream progression not created"
       ],
-      "duration_ms": 0.275,
+      "duration_ms": 0.278,
       "result_digest": "1e2713596d0ea372a7fefc008a4e417fc12ee1c8b92818612e94bfe694fc7803"
     },
     {
@@ -564,7 +564,7 @@
         "site failed closed",
         "downstream progression not created"
       ],
-      "duration_ms": 0.258,
+      "duration_ms": 0.277,
       "result_digest": "1d0ade80e3b77b8f56ad7bede4dd8191c160ab1ebd496d7c20cf0c0f59284010"
     },
     {
@@ -582,7 +582,7 @@
         "release not inferred",
         "Quality evidence ambiguity/blocker surfaced"
       ],
-      "duration_ms": 0.307,
+      "duration_ms": 0.318,
       "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
     },
     {
@@ -600,7 +600,7 @@
         "release not inferred",
         "Quality evidence ambiguity/blocker surfaced"
       ],
-      "duration_ms": 0.316,
+      "duration_ms": 0.314,
       "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
     },
     {
@@ -619,7 +619,7 @@
         "release not inferred",
         "Quality evidence ambiguity/blocker surfaced"
       ],
-      "duration_ms": 0.289,
+      "duration_ms": 0.309,
       "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
     },
     {
@@ -637,7 +637,7 @@
         "release not inferred",
         "Quality evidence ambiguity/blocker surfaced"
       ],
-      "duration_ms": 0.301,
+      "duration_ms": 0.316,
       "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
     },
     {
@@ -656,7 +656,7 @@
         "release not inferred",
         "Quality evidence ambiguity/blocker surfaced"
       ],
-      "duration_ms": 0.325,
+      "duration_ms": 0.307,
       "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
     },
     {
@@ -675,7 +675,7 @@
         "release not inferred",
         "Quality evidence ambiguity/blocker surfaced"
       ],
-      "duration_ms": 0.289,
+      "duration_ms": 0.306,
       "result_digest": "6d7b6b585489efa16de8650c20ef908f8d0d7d3a4ef5929f8c812df485b4971e"
     },
     {
@@ -694,7 +694,7 @@
         "known-at history stable",
         "late evidence added without timestamp invention"
       ],
-      "duration_ms": 0.276,
+      "duration_ms": 0.288,
       "result_digest": "dba4cbc9c0742596d88cb46616b24373ed1243ca7558ac8c5f90d02bc0dd339b"
     },
     {
@@ -712,7 +712,7 @@
         "known-at history stable",
         "late evidence added without timestamp invention"
       ],
-      "duration_ms": 0.286,
+      "duration_ms": 0.28,
       "result_digest": "dba4cbc9c0742596d88cb46616b24373ed1243ca7558ac8c5f90d02bc0dd339b"
     },
     {
@@ -732,7 +732,7 @@
         "changed payload conflicted",
         "one external effect"
       ],
-      "duration_ms": 0.341,
+      "duration_ms": 0.359,
       "result_digest": "2044eb95e7d7fee6ec84dc76e3d549faabfb2a1ef960670d321f8c177812995d"
     },
     {
@@ -752,7 +752,7 @@
         "changed payload conflicted",
         "one external effect"
       ],
-      "duration_ms": 0.333,
+      "duration_ms": 0.348,
       "result_digest": "2044eb95e7d7fee6ec84dc76e3d549faabfb2a1ef960670d321f8c177812995d"
     },
     {
@@ -772,7 +772,7 @@
         "reconciled before any retry",
         "one external effect"
       ],
-      "duration_ms": 0.377,
+      "duration_ms": 0.37,
       "result_digest": "7aee4ee49535c6c091e7ebcabc4b3c3e76b512a165c91376327f45f9c7bc536c"
     },
     {
@@ -791,7 +791,7 @@
         "partial effect explicit",
         "compensation verified"
       ],
-      "duration_ms": 0.321,
+      "duration_ms": 0.345,
       "result_digest": "31efa377e993907d75c59155eb7afeb8a2c0f05034aab4bcdc5aee591598ed68"
     },
     {
@@ -811,7 +811,7 @@
         "denial audited",
         "no release event"
       ],
-      "duration_ms": 0.312,
+      "duration_ms": 0.32,
       "result_digest": "b055cef361b2d6a6de32f2f5b0c262978abba092f3f936e2b5ba2da1aa19962b"
     },
     {
@@ -831,7 +831,7 @@
         "denial audited",
         "no release event"
       ],
-      "duration_ms": 0.321,
+      "duration_ms": 0.314,
       "result_digest": "b055cef361b2d6a6de32f2f5b0c262978abba092f3f936e2b5ba2da1aa19962b"
     },
     {
@@ -849,7 +849,7 @@
         "same-person approval denied",
         "no release event"
       ],
-      "duration_ms": 0.283,
+      "duration_ms": 0.303,
       "result_digest": "1a44e28e3924952fea1874747a1d7a13d38b0994f1186fc59b0b4646f93ad50c"
     },
     {
@@ -869,7 +869,7 @@
         "untrusted instruction rejected",
         "no authority/tool output accepted"
       ],
-      "duration_ms": 0.29,
+      "duration_ms": 0.294,
       "result_digest": "284a0dcaa1052fd066dc114e1aa9c9db18b922fa8d63eb2dbad28117438ea6a6"
     },
     {
@@ -888,7 +888,7 @@
         "out-of-context evidence rejected",
         "deterministic context preserved"
       ],
-      "duration_ms": 0.27,
+      "duration_ms": 0.283,
       "result_digest": "32778abc5a2b0757b9cdbe28d99b554a9cfcb12008ade4187fda48629fda73da"
     },
     {
@@ -907,7 +907,7 @@
         "out-of-context evidence rejected",
         "deterministic context preserved"
       ],
-      "duration_ms": 0.269,
+      "duration_ms": 0.284,
       "result_digest": "32778abc5a2b0757b9cdbe28d99b554a9cfcb12008ade4187fda48629fda73da"
     },
     {
@@ -925,7 +925,7 @@
       "observations": [
         "malformed output rejected"
       ],
-      "duration_ms": 0.282,
+      "duration_ms": 0.275,
       "result_digest": "4c2b72d52e088b0c34bac5cb7b7d89ecca7b94f9bc5a48bdfecc16e73cbf5f17"
     },
     {
@@ -944,7 +944,7 @@
         "model failure contained",
         "deterministic context preserved"
       ],
-      "duration_ms": 0.253,
+      "duration_ms": 0.27,
       "result_digest": "8ae4b9cac222a641f27041272acf117e4b1f72fcb0722eaf5655bded5d00b838"
     },
     {
@@ -964,7 +964,7 @@
         "citations restricted to available evidence",
         "uncertainty retained"
       ],
-      "duration_ms": 0.277,
+      "duration_ms": 0.282,
       "result_digest": "de6f1fb96a3185b3884fd44cb71f7803a72242314c1a6d8a43f7dd77e834342b"
     },
     {
@@ -984,7 +984,7 @@
         "citations restricted to available evidence",
         "uncertainty retained"
       ],
-      "duration_ms": 0.279,
+      "duration_ms": 0.333,
       "result_digest": "de6f1fb96a3185b3884fd44cb71f7803a72242314c1a6d8a43f7dd77e834342b"
     },
     {
@@ -1035,7 +1035,7 @@
         "P0 case assigned",
         "reason and evidence retained"
       ],
-      "duration_ms": 0.292,
+      "duration_ms": 0.414,
       "result_digest": "370ee28508dcb3d8965786346b9f0d68c1b9334dbb980fb0796406344c643092"
     },
     {
@@ -1054,7 +1054,7 @@
         "local deterministic p95_ms=0.009",
         "threshold<=250ms"
       ],
-      "duration_ms": 1.912,
+      "duration_ms": 1.961,
       "result_digest": "456b82523144791a4506f522c90a6145087309afec79d296c13fadc83f7f2aea"
     },
     {
@@ -1069,11 +1069,11 @@
       "property_coverage": "STRUCTURAL_PROBE_ONLY_EXPECTED_PROPERTIES_NOT_INDIVIDUALLY_GRADED",
       "source_evidence_refs": [],
       "observations": [
-        "local deterministic p95_ms=0.010",
+        "local deterministic p95_ms=0.008",
         "threshold<=250ms"
       ],
-      "duration_ms": 1.983,
-      "result_digest": "1dfc69912f34a8c1975857b7d9abdea2f11dd0b399b1b8fe133a6b0364107887"
+      "duration_ms": 1.941,
+      "result_digest": "030bd8d3199d662eec2bce47b74fd717b124f3ddf30b8c56d6fb597fa3b0e8e8"
     },
     {
       "case_id": "EXT-COST-001",
@@ -1091,7 +1091,7 @@
         "AI-off model calls=0",
         "request/fallback metrics attributable"
       ],
-      "duration_ms": 0.316,
+      "duration_ms": 0.305,
       "result_digest": "34a8bc10eb041032fa5b755d535fbe645b59d36fc6ad1337e8cdf13ed4eee941"
     },
     {
@@ -1111,7 +1111,7 @@
         "backup opened",
         "state digest matched"
       ],
-      "duration_ms": 2.448,
+      "duration_ms": 2.177,
       "result_digest": "3eba410fd23c79b01eaebf366290e988ef67d07a5d9af0da832da17243d6a2de"
     },
     {
@@ -1129,7 +1129,7 @@
       "observations": [
         "cross-scope read denied"
       ],
-      "duration_ms": 0.297,
+      "duration_ms": 0.302,
       "result_digest": "66b3fdda4170c10d73fe3dcd019afbfc6a9b2af886bc2e6d9ba6e2a6fc653c15"
     },
     {
@@ -1148,7 +1148,7 @@
         "valid chain accepted",
         "tampering detected"
       ],
-      "duration_ms": 0.301,
+      "duration_ms": 0.31,
       "result_digest": "e5e8be148a1d71f817ae5ce49843aec06928f112360015232b49d3970fa87d43"
     }
   ]

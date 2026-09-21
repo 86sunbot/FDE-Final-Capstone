@@ -29,7 +29,7 @@ Open <http://127.0.0.1:8000>. API documentation remains available at <http://127
 7. Explain POC 3: manufacturing, QC, deviation and thermal evidence still leave release `UNKNOWN`; only the simulated Quality-authority decision makes it `SATISFIED`.
 8. Preview `INJ-001` or `INJ-008`: point to downstream dependency/route risk and owner. The zero-slack shift is a stated assumption; no route, slot, quality or clinical plan is committed.
 9. Show the evidence console: cited references, a valid audit chain, deterministic AI-off mode, metrics and a state digest.
-10. Close on calibrated assurance: **21/21 stages documented**, **92 local tests pass**, **55/57 catalog cases structurally pass** (only 7 original cases have full scoped property assertions, 9 partial, 39 extensions structural-only), and **29/31 requirements locally verified**. The two remaining requirements need controlled human studies; the registered 20-client/full-dataset NFR is not verified.
+10. Close on calibrated assurance: **21/21 stages documented**, **106 local tests pass**, **55/57 catalog cases structurally pass** (only 7 original cases have full scoped property assertions, 9 partial, 39 extensions structural-only), and **29/31 requirements locally verified**. The two remaining requirements need controlled human studies; the registered 20-client/full-dataset NFR is not verified.
 11. State the honest decision: **RESTRICT AND CHANGE**. The academic demo is built; production and real-data use remain prohibited until the seven CAPAs and accountable gates are closed.
 
 ## Optional bounded-assistant demonstration

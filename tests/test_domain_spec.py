@@ -3,7 +3,6 @@ from pathlib import Path
 
 from tools.validate_domain_spec import validate
 
-
 ROOT = Path(__file__).resolve().parents[1]
 SPEC_PATH = ROOT / "docs/stages/stage_05" / "domain_spec.json"
 

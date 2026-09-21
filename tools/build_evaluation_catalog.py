@@ -8,7 +8,6 @@ import json
 from collections import Counter
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_EVALS = ROOT / "source_baseline/evals/cases.csv"
 SOURCE_INJECTS = ROOT / "source_baseline/scenarios/inject_catalog.csv"

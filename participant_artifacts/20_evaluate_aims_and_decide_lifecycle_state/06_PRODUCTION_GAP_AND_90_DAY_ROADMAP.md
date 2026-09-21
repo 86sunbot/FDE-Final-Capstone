@@ -8,7 +8,7 @@
 
 ## 1. Decision to be made
 
-Leadership may accept the academic engineering evidence and fund a *separate* readiness program. It must not infer that a browser app, 21 prepared stage folders, 92 passing local tests or 55 structural evaluation probes establish real-world safety, value or validation. A real pilot requires accountable source, Clinical, Quality, Legal, Privacy, Security, Operations and independent-assurance owners.
+Leadership may accept the academic engineering evidence and fund a *separate* readiness program. It must not infer that a browser app, 21 prepared stage folders, 106 passing local tests or 55 structural evaluation probes establish real-world safety, value or validation. A real pilot requires accountable source, Clinical, Quality, Legal, Privacy, Security, Operations and independent-assurance owners.
 
 ## 2. Gap matrix and critical path
 

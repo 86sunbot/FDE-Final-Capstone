@@ -7,7 +7,6 @@ import csv
 import json
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG_PATH = ROOT / "docs/stages/stage_07/evaluation_catalog.json"
 REQUIRED_FIELDS = {

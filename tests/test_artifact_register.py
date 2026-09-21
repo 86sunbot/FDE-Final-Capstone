@@ -2,7 +2,6 @@ import csv
 from collections import Counter
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 REGISTER = ROOT / "docs/21_STAGE_ARTIFACT_REGISTER.csv"
 

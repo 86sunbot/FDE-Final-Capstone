@@ -6,7 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -125,7 +125,7 @@ def main() -> int:
     rows = reference + reproduced
     write_csv(args.csv, rows)
     payload = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "summary": {
             "supplied_not_reproduced": len(reference),
             "reproduced": len(reproduced),

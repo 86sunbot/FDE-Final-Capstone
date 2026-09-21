@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import json
-
 from ..model import Outcome, Principal
 from ..storage import Database
 from .common import authorize, correlation

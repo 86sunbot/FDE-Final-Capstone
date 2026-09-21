@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import Any
 
 from .application import CapstoneApplication
 from .model import Outcome, Principal
-
 
 T0 = "2026-01-01T10:00:00+00:00"
 
@@ -23,7 +23,7 @@ def principal(subject: str, role: str, scopes: set[str] | None = None) -> Princi
     return Principal(subject, frozenset({role}), frozenset(scopes or {"*"}))
 
 
-def register(app: CapstoneApplication, evidence_id: str, source: str, payload: dict) -> str:
+def register(app: CapstoneApplication, evidence_id: str, source: str, payload: dict[str, Any]) -> str:
     return app.evidence.register(evidence_id, source, f"synthetic://{evidence_id}", payload, T0, T0)
 
 
@@ -35,13 +35,14 @@ def run_demo(database_path: str | Path, ai_mode: str = "off") -> dict:
     quality_authority = principal("demo-quality-authority", "QUALITY_AUTHORITY")
     viewer = principal("demo-viewer", "VIEWER")
     try:
-        for evidence_id, source, payload in [
+        identity_evidence: list[tuple[str, str, dict[str, Any]]] = [
             ("EV-ID-MRN","CRM",{"mrn":"MRN-100","patient":"P-A"}),
             ("EV-ID-DOB","CLINICAL",{"dob":"1980-01-01","patient":"P-B"}),
             ("EV-CONSENT","CLINICAL",{"status":"CURRENT"}),
             ("EV-AUTH","PAYER",{"status":"APPROVED"}),
             ("EV-SITE","QMS",{"training":"CURRENT","equipment":"CURRENT"}),
-        ]:
+        ]
+        for evidence_id, source, payload in identity_evidence:
             register(app,evidence_id,source,payload)
 
         identity_case=app.identity.detect_conflict(coordinator,"P-A","P-B","MRN/DOB assertions conflict",["EV-ID-MRN","EV-ID-DOB"])
@@ -58,13 +59,14 @@ def run_demo(database_path: str | Path, ai_mode: str = "off") -> dict:
         reconciled=app.commands.reconcile(planner,slot["command_id"])
         replay=app.commands.reserve_slot(planner,"IDEMP-DEMO-1","P-A","SLOT-100")
 
-        for evidence_id, source, payload in [
+        quality_evidence: list[tuple[str, str, dict[str, Any]]] = [
             ("EV-MES","MES",{"status":"MFG_COMPLETE"}),
             ("EV-QC","LIMS",{"result":"PASS"}),
             ("EV-DEV","QMS",{"status":"CLOSED","blocking":False}),
             ("EV-THERMAL","LOGISTICS",{"status":"PROFILE_ACCEPTABLE"}),
             ("EV-QMS-DECISION","QMS",{"decision":"RELEASED","simulated":True}),
-        ]:
+        ]
+        for evidence_id, source, payload in quality_evidence:
             register(app,evidence_id,source,payload)
         app.quality.add_evidence("BATCH-100","EV-MES","MES_STATUS","MFG_COMPLETE")
         app.quality.add_evidence("BATCH-100","EV-QC","QC_RESULT","PASS",disposition="ACCEPTED")

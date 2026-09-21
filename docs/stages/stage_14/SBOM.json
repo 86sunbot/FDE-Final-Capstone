@@ -1,15 +1,15 @@
 {
   "format": "academic-capstone-sbom-v1",
-  "generated_at": "2026-09-15T13:06:51.111497+00:00",
+  "generated_at": "2026-09-21T02:37:36.459251+00:00",
   "runtime": {
     "python": "3.14.7",
     "sqlite": "3.53.4",
-    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O"
   },
   "application": {
     "name": "fde-final-capstone",
     "version": "1.2.0",
-    "source_tree_sha256": "768b77f8f15096e1318728d92a0eb0fc21a8fd672fc990b74f25b565c40840c8"
+    "source_tree_sha256": "94b90f9573fa7c35579f8d3538bd2f9af5b9e1516be444d34c4b1dd271f03616"
   },
   "dependencies": [
     {
@@ -23,9 +23,29 @@
       "scope": "optional API server"
     },
     {
+      "name": "httpx",
+      "version": "0.28.1",
+      "scope": "API test client"
+    },
+    {
+      "name": "mypy",
+      "version": "1.20.2",
+      "scope": "static type analysis"
+    },
+    {
       "name": "pytest",
       "version": "8.4.2",
       "scope": "test"
+    },
+    {
+      "name": "pytest-cov",
+      "version": "7.1.0",
+      "scope": "test coverage"
+    },
+    {
+      "name": "ruff",
+      "version": "0.16.8",
+      "scope": "lint"
     }
   ],
   "limitations": "Not a signed CycloneDX/SPDX production attestation."

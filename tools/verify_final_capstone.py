@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import csv
 import hashlib
 import json
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 ZIP = Path("/Users/suryap/Documents/FDE/Capstone/AI_FDE_CGT_Patient_to_Batch_Orchestration.zip")
@@ -76,7 +74,12 @@ def main() -> None:
     check(all(value > 0 for value in stage_counts.values()), "all_21_stage_directories_have_artifacts", stage_counts, checks)
 
     test_summary = json.loads((ROOT / "docs/stages/stage_15/test_summary.json").read_text(encoding="utf-8"))
-    check(test_summary["passed"] == 92 and test_summary["failures"] == test_summary["errors"] == 0, "automated_test_summary", test_summary, checks)
+    tests_green = (
+        test_summary["tests"] == test_summary["passed"]
+        and test_summary["passed"] >= 106
+        and test_summary["failures"] == test_summary["errors"] == test_summary["skipped"] == 0
+    )
+    check(tests_green, "automated_test_summary", test_summary, checks)
     evaluation = json.loads((ROOT / "docs/stages/stage_15/evaluation_results.json").read_text(encoding="utf-8"))["summary"]
     check(evaluation["executed"] == 57 and evaluation["pass"] == 55 and evaluation["fail"] == 0 and evaluation["inconclusive"] == 2, "evaluation_summary", evaluation, checks)
     check(evaluation.get("property_coverage") == {
@@ -104,7 +107,20 @@ def main() -> None:
     check(manifest["evaluation_catalog_sha256"] == sha(ROOT / "docs/stages/stage_07/evaluation_catalog.json"), "release_evaluation_digest", manifest["evaluation_catalog_sha256"], checks)
     check(manifest["requirements_sha256"] == sha(ROOT / "requirements/requirements.csv"), "release_requirements_digest", manifest["requirements_sha256"], checks)
 
-    runtime_databases = [path.relative_to(ROOT).as_posix() for path in ROOT.rglob("*.db") if "source_baseline" not in path.parts and ".git" not in path.parts]
+    ignored_database_parts = {
+        ".git",
+        ".mypy_cache",
+        ".pytest_cache",
+        ".ruff_cache",
+        ".venv",
+        "__pycache__",
+        "source_baseline",
+    }
+    runtime_databases = [
+        path.relative_to(ROOT).as_posix()
+        for path in ROOT.rglob("*.db")
+        if not ignored_database_parts.intersection(path.parts)
+    ]
     check(not runtime_databases, "no_disposable_runtime_database", runtime_databases, checks)
     handoff_files = [
         "docs/FINAL_CAPSTONE_REPORT.md",

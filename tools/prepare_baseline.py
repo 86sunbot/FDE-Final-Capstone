@@ -7,15 +7,13 @@ import argparse
 import csv
 import hashlib
 import json
-import os
 import shutil
 import stat
 import sys
 import tempfile
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path, PurePosixPath
 from zipfile import ZipFile, ZipInfo
-
 
 EXPECTED_ZIP_SHA256 = "74d31dc4694d52b0e9a9fb337e6ccda1086ad430b19287f9ca2b4b4e650ca979"
 PACKAGE_ROOT = "AI_FDE_CGT_Patient_to_Batch_Orchestration_v2/"
@@ -145,7 +143,7 @@ def write_outputs(
         writer.writeheader()
         writer.writerows(inventory)
     payload = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "source_zip": str(zip_path),
         "source_zip_size_bytes": zip_path.stat().st_size,
         "source_zip_sha256": sha256_file(zip_path),

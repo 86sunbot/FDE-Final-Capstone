@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import json
-from pathlib import Path
 
 from .application import CapstoneApplication
 from .demo import run_demo

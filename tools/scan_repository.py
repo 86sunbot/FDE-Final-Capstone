@@ -5,7 +5,6 @@ import json
 import re
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 PATTERNS = {
     "openai_style_key": re.compile(r"sk-[A-Za-z0-9_-]{16,}"),

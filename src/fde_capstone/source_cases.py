@@ -11,7 +11,6 @@ import hashlib
 from datetime import datetime
 from pathlib import Path
 
-
 REPO_ROOT = Path(__file__).resolve().parents[2]
 BASELINE = REPO_ROOT / "source_baseline"
 RAW = BASELINE / "data" / "raw"
@@ -51,6 +50,12 @@ def _date(value: str) -> datetime | None:
     if not value:
         return None
     return datetime.fromisoformat(value.replace("Z", "+00:00"))
+
+
+def _arrival_before_departure(row: dict) -> bool:
+    arrived = _date(row.get("arrived_at", ""))
+    departed = _date(row.get("departed_at", ""))
+    return arrived is not None and departed is not None and arrived < departed
 
 
 def load_eval_case(case_id: str, baseline: Path = BASELINE) -> dict:
@@ -122,11 +127,7 @@ def load_eval_case(case_id: str, baseline: Path = BASELINE) -> dict:
             "Do not merge or choose a DOB automatically; route an evidence-bound identity case.",
         )
     elif case_id == "EVAL-003":
-        impossible = [
-            item for item in records["shipments"]
-            if _date(item["row"]["arrived_at"]) and _date(item["row"]["departed_at"])
-            and _date(item["row"]["arrived_at"]) < _date(item["row"]["departed_at"])
-        ]
+        impossible = [item for item in records["shipments"] if _arrival_before_departure(item["row"])]
         observe(
             "arrival earlier than departure",
             "OBSERVED_CONFLICT" if impossible else "NOT_OBSERVED",
@@ -226,14 +227,19 @@ def reconstruct_source_journey(case_id: str, baseline: Path = BASELINE) -> dict:
                     "direction": item["row"]["direction"],
                     "authority": "SOURCE_ASSERTION_NOT_APPROVED_TRANSITION",
                 })
-    timeline.sort(key=lambda event: (_date(event["occurred_at"]), event["event_kind"], event["source_locator"]))
+    def timeline_key(event: dict) -> tuple[datetime, str, str]:
+        occurred_at = _date(event["occurred_at"])
+        if occurred_at is None:  # defensive: add() excludes missing/invalid timestamps
+            raise ValueError("TIMELINE_EVENT_REQUIRES_VALID_TIMESTAMP")
+        return occurred_at, event["event_kind"], event["source_locator"]
+
+    timeline.sort(key=timeline_key)
 
     temporal_conflicts = [
         {"shipment_id": item["row"]["shipment_id"], "source_locator": item["source_locator"],
          "conflict": "ARRIVAL_BEFORE_DEPARTURE_NO_TIME_CORRECTION_INFERRED"}
         for item in records["shipments"]
-        if _date(item["row"].get("arrived_at", "")) and _date(item["row"].get("departed_at", ""))
-        and _date(item["row"]["arrived_at"]) < _date(item["row"]["departed_at"])
+        if _arrival_before_departure(item["row"])
     ]
     withdrawn = [item for item in records["consents"] if item["row"].get("status") == "WITHDRAWN"]
     identity_conflict = any(item["property"] == "CRM versus clinical DOB conflict" and item["status"] == "OBSERVED_CONFLICT" for item in source["observations"])

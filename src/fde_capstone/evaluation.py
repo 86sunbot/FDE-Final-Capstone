@@ -6,7 +6,7 @@ import tempfile
 import time
 from collections import Counter
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
 from .adapters.assistant_fake import DeterministicAssistantFake, FailingAssistantFake
 from .application import CapstoneApplication
@@ -15,7 +15,6 @@ from .model import Outcome, Principal, digest_json
 from .security import AuthorizationError
 from .services.assistant import AssistantGateway
 from .source_cases import load_eval_case
-
 
 ROOT = Path(__file__).resolve().parents[2]
 CATALOG_PATH = ROOT / "docs/stages/stage_07/evaluation_catalog.json"
@@ -42,11 +41,11 @@ class ProbeHarness:
         if poc == "POC1":
             for item in ["EV-ID", "EV-CONSENT", "EV-AUTH", "EV-SITE"]:
                 self.evidence(item)
-            result = self.app.readiness.assess(
+            assessment = self.app.readiness.assess(
                 self.viewer, "P-1", "PRE_COLLECTION",
                 {name: (Outcome.SATISFIED, [evidence]) for name, evidence in {"identity": "EV-ID", "consent": "EV-CONSENT", "authorization": "EV-AUTH", "site": "EV-SITE"}.items()},
             )
-            assert result.outcome == Outcome.SATISFIED and len(result.evidence_refs) == 4
+            assert assessment.outcome == Outcome.SATISFIED and len(assessment.evidence_refs) == 4
             return ["milestone-specific readiness satisfied", "four prerequisite evidence references retained"]
         if poc == "POC2":
             first = self.app.commands.reserve_slot(self.planner, "KEY", "P-1", "S-1")
@@ -54,8 +53,8 @@ class ProbeHarness:
             assert first["state"] == "SUCCEEDED" and replay["dispatch"] is False
             return ["one reservation effect", "replay returned stored outcome"]
         self.add_quality_good()
-        result = self.app.quality.authorize_release(self.quality, "B-1", "EV-QMS")
-        assert result["released"] and self.app.quality.packet("B-1")["release_outcome"] == "SATISFIED"
+        release = self.app.quality.authorize_release(self.quality, "B-1", "EV-QMS")
+        assert release["released"] and self.app.quality.packet("B-1")["release_outcome"] == "SATISFIED"
         return ["complete evidence packet", "authorized Quality event created release"]
 
     def identity_conflict(self) -> list[str]:

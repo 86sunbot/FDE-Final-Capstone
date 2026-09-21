@@ -66,12 +66,12 @@
       "status": "PASS",
       "details": {
         "scope": "clean capstone automated pytest suite",
-        "tests": 92,
+        "tests": 106,
         "failures": 0,
         "errors": 0,
         "skipped": 0,
-        "passed": 92,
-        "time_seconds": 2.374,
+        "passed": 106,
+        "time_seconds": 3.32,
         "junit_evidence": "reports/generated/pytest-results.xml"
       }
     },
@@ -145,7 +145,7 @@
     {
       "check": "release_source_digest",
       "status": "PASS",
-      "details": "768b77f8f15096e1318728d92a0eb0fc21a8fd672fc990b74f25b565c40840c8"
+      "details": "94b90f9573fa7c35579f8d3538bd2f9af5b9e1516be444d34c4b1dd271f03616"
     },
     {
       "check": "release_evaluation_digest",

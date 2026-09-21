@@ -8,12 +8,11 @@ import csv
 import json
 import sqlite3
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from email import policy
 from email.parser import BytesParser
 from pathlib import Path
 from typing import Any
-
 
 TABLE_TO_CSV = {
     "patients": "data/raw/patients.csv",
@@ -74,7 +73,10 @@ def database_csv_parity(connection: sqlite3.Connection, baseline: Path) -> dict[
         csv_rows = read_csv(baseline / relative_csv)
         db_cursor = connection.execute(f"SELECT * FROM {table}")  # table names are fixed above
         columns = [item[0] for item in db_cursor.description]
-        db_rows = [dict(zip(columns, ["" if value is None else str(value) for value in row])) for row in db_cursor]
+        db_rows = [
+            dict(zip(columns, ["" if value is None else str(value) for value in row], strict=True))
+            for row in db_cursor
+        ]
         results[table] = {
             "csv_rows": len(csv_rows),
             "db_rows": len(db_rows),
@@ -220,7 +222,10 @@ def build_findings(baseline: Path) -> tuple[list[dict[str, Any]], dict[str, Any]
     inverted_patients: list[str] = []
     for patient_key, patient_events in by_patient.items():
         ordered = sorted(patient_events, key=lambda item: parse_time(item["recorded_at"]))
-        if any(parse_time(current["occurred_at"]) < parse_time(previous["occurred_at"]) for previous, current in zip(ordered, ordered[1:])):
+        if any(
+            parse_time(current["occurred_at"]) < parse_time(previous["occurred_at"])
+            for previous, current in zip(ordered, ordered[1:], strict=False)
+        ):
             inverted_patients.append(patient_key)
     add(findings, "F-TIME-002", "Volatility", "Patient histories whose recorded order inverts occurrence order", len(inverted_patients), "HIGH", "events grouped by patient and sorted by recorded_at; adjacent occurred_at inversion", "Recorded order and physical occurrence order are separate concepts.")
     add(findings, "F-TIME-003", "Uncertainty", "Maximum event recording lag in hours", max_lag_seconds / 3600.0, "MEDIUM", "max(recorded_at - occurred_at) across events.jsonl", "Late-arriving evidence can change a derived journey view.")
@@ -293,7 +298,7 @@ def write_markdown(path: Path, findings: list[dict[str, Any]], detail: dict[str,
     lines = [
         "# Stage 2 - Reproducible Forensic Baseline",
         "",
-        f"**Generated:** {datetime.now(timezone.utc).isoformat()}  ",
+        f"**Generated:** {datetime.now(UTC).isoformat()}  ",
         f"**Source:** `{source}` opened read-only with SQLite `mode=ro&immutable=1`  ",
         "**Status:** Measured baseline; interpretation remains subject to domain-owner review",
         "",
@@ -352,7 +357,7 @@ def main() -> int:
     baseline = args.baseline.resolve()
     findings, detail = build_findings(baseline)
     payload = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "source_baseline": str(baseline),
         "findings": findings,
         "detail": detail,

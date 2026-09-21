@@ -1,9 +1,9 @@
 {
   "format": "academic-capstone-release-manifest-v1",
   "version": "1.2.0",
-  "generated_at": "2026-09-15T13:06:51.111497+00:00",
+  "generated_at": "2026-09-21T02:37:36.459251+00:00",
   "scope": "synthetic local academic POC",
-  "source_tree_sha256": "768b77f8f15096e1318728d92a0eb0fc21a8fd672fc990b74f25b565c40840c8",
+  "source_tree_sha256": "94b90f9573fa7c35579f8d3538bd2f9af5b9e1516be444d34c4b1dd271f03616",
   "contract_tree_sha256": "98ad53553b08dc0e49691131f66c8b5156407c217787a5622293e4b2ac585f82",
   "evaluation_catalog_sha256": "6ab4b54354a0a6f2aa6c5182e2e5fb266700b147ad73149079dbc1519acd9535",
   "requirements_sha256": "826220533aa1535e46f0ff3eccb8ca094f181d1954fe94d73f6f74b7d2e89e95",
@@ -33,8 +33,8 @@
     },
     {
       "path": "src/fde_capstone/api.py",
-      "sha256": "631c6051b5c950b06ba8718dc24e515ee6dce34077adb75ca9c473d5112d1015",
-      "size_bytes": 6297
+      "sha256": "3dcae9ecabfb92df72177044d305b47c50c6c37d56e2854912fb1a43f6acd7b4",
+      "size_bytes": 10165
     },
     {
       "path": "src/fde_capstone/application.py",
@@ -43,28 +43,28 @@
     },
     {
       "path": "src/fde_capstone/cli.py",
-      "sha256": "360e1d5ee1d83b5dc864dee9f2d1c0cc85210a37a7ae3255b397910bce86cd6d",
-      "size_bytes": 1738
+      "sha256": "ab3c281ec87e801f8d69d7b323dddc0fe3244e47cdd6d4dff8b30de5fbdacc68",
+      "size_bytes": 1713
     },
     {
       "path": "src/fde_capstone/demo.py",
-      "sha256": "7de52537495d35c444d4bc7ccfb4c95cbd754e68f821d88a8ee0a72540254f2b",
-      "size_bytes": 5125
+      "sha256": "bb0f357f55c9e6ba6b3e697a54cd1e7ee02ce9706286f0d674a6be5705a8d37a",
+      "size_bytes": 11805
     },
     {
       "path": "src/fde_capstone/disruption_preview.py",
-      "sha256": "c877743d7b3d2a548a11b355078dc596bd15a04d85e8f7b5ac5e8656502b5840",
-      "size_bytes": 7698
+      "sha256": "eca213da059b3677020f2bdcacb0f266452b5fe83fd7d76500081cfeff406e56",
+      "size_bytes": 7697
     },
     {
       "path": "src/fde_capstone/evaluation.py",
-      "sha256": "d21b8ac5bd999f43d625a15dd8bddaee90f2aeabc12ddf6edefe7f65a0b14e22",
-      "size_bytes": 25267
+      "sha256": "b61496c634044cbfe174ba4bac51d826b556233162c619920fe42cf2781e2dfa",
+      "size_bytes": 25270
     },
     {
       "path": "src/fde_capstone/model.py",
-      "sha256": "6cedbfdcaef3b4ca12311e95f77f88a6d2ffa6d1df1f52290072d17d8f3f154f",
-      "size_bytes": 1366
+      "sha256": "5d894c24c30e4a528fe9a2a45d0e4f1c2c0f5533e1c8ae1b4dbc39a90453fa4b",
+      "size_bytes": 1352
     },
     {
       "path": "src/fde_capstone/security.py",
@@ -78,8 +78,8 @@
     },
     {
       "path": "src/fde_capstone/services/assistant.py",
-      "sha256": "bb1893b941bbea5e6cbc999c9085f2454719d0f55da7f0ba039d0cb6aadbfce0",
-      "size_bytes": 3346
+      "sha256": "a61020b02f2a196a6e1c7cbd24f9dc86882f8c36877d146ff5d9fc8cc722aa35",
+      "size_bytes": 3448
     },
     {
       "path": "src/fde_capstone/services/cases.py",
@@ -108,8 +108,8 @@
     },
     {
       "path": "src/fde_capstone/services/quality.py",
-      "sha256": "dec11a119750bc4b5d4752c82a075302f0fc164ae3238ae4def5a13ead79bf56",
-      "size_bytes": 5613
+      "sha256": "b70ce1e00f357462ae5053cc5467e9cbf3c2938f056d231fd891643045b1d820",
+      "size_bytes": 5600
     },
     {
       "path": "src/fde_capstone/services/readiness.py",
@@ -118,18 +118,18 @@
     },
     {
       "path": "src/fde_capstone/source_cases.py",
-      "sha256": "2b0b54e4d434abc74979c3bc86a79e13d6a69e3b2af3b96d53f22addaff5424c",
-      "size_bytes": 12889
+      "sha256": "0d623b531ab9f8fb726f831f9b59b3a88e00928d29b39194cec8cc4f33afdb46",
+      "size_bytes": 13106
     },
     {
       "path": "src/fde_capstone/storage.py",
-      "sha256": "47be5e9e8db90fb925fc3004b7e760394b6dd0f3f1fdefd37ee89ac1768417a5",
-      "size_bytes": 12448
+      "sha256": "e5da0ee6faf1bf58e110ca610187ad64996b56e97dcc20b116f8f0e049ce11e0",
+      "size_bytes": 12576
     },
     {
       "path": "src/fde_capstone/web/app.js",
-      "sha256": "50e14635d031f16a42f7edd9703f80bfd5faaeb0cc31742814629ed846a6d47b",
-      "size_bytes": 13095
+      "sha256": "b45979bc6c8eed94a70163fb88f6f31adea7f5f6812a66617d166949e2db2e28",
+      "size_bytes": 15894
     },
     {
       "path": "src/fde_capstone/web/favicon.svg",
@@ -138,13 +138,13 @@
     },
     {
       "path": "src/fde_capstone/web/index.html",
-      "sha256": "4e245d1d79534063d07a5d57aa2b7e7376eda1bf70f7570719f242b52ee78c6d",
-      "size_bytes": 16279
+      "sha256": "0e5ea2b150849b71a026c0b2440a9b010abd2863b789b02eff0f16b44c8d9c38",
+      "size_bytes": 19778
     },
     {
       "path": "src/fde_capstone/web/styles.css",
-      "sha256": "772e4557c61a1d6cc2963d2d2c1b5a120fa6b0e83f1880a74a8c77cce359c892",
-      "size_bytes": 22437
+      "sha256": "f4b2818d3dcb9bc6e27ce8c03a3499280ea0bd2b41964a96d681020f3030bf6f",
+      "size_bytes": 26330
     }
   ],
   "contract_files": [

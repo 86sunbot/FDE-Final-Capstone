@@ -5,9 +5,8 @@ import hashlib
 import importlib.metadata
 import json
 import platform
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -43,7 +42,7 @@ def version(name: str) -> str | None:
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = datetime.now(UTC).isoformat()
     source_digest, source_files = tree_digest([ROOT / "src"])
     contract_digest, contract_files = tree_digest([ROOT / "docs/stages/stage_09/contracts"])
     evaluation_catalog = ROOT / "docs/stages/stage_07/evaluation_catalog.json"
@@ -56,7 +55,11 @@ def main() -> None:
         "dependencies": [
             {"name": "fastapi", "version": version("fastapi"), "scope": "optional API"},
             {"name": "uvicorn", "version": version("uvicorn"), "scope": "optional API server"},
-            {"name": "pytest", "version": version("pytest"), "scope": "test"}
+            {"name": "httpx", "version": version("httpx"), "scope": "API test client"},
+            {"name": "mypy", "version": version("mypy"), "scope": "static type analysis"},
+            {"name": "pytest", "version": version("pytest"), "scope": "test"},
+            {"name": "pytest-cov", "version": version("pytest-cov"), "scope": "test coverage"},
+            {"name": "ruff", "version": version("ruff"), "scope": "lint"},
         ],
         "limitations": "Not a signed CycloneDX/SPDX production attestation."
     }

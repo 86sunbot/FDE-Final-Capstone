@@ -7,7 +7,6 @@ import csv
 import json
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "docs/stages/stage_08/option_scores.json"
 OUTPUT = ROOT / "docs/stages/stage_08/option_scores.csv"

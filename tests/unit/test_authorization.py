@@ -1,6 +1,5 @@
 import pytest
 
-from fde_capstone.model import Principal
 from fde_capstone.security import AuthorizationError, decide
 
 

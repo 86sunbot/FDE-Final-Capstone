@@ -2,7 +2,6 @@ import csv
 import json
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = json.loads((ROOT / "docs/stages/stage_07/evaluation_catalog.json").read_text(encoding="utf-8"))
 

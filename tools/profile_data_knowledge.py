@@ -9,10 +9,10 @@ import hashlib
 import json
 import re
 from collections import Counter
-from datetime import datetime, timezone
+from collections.abc import Iterable
+from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Iterable
-
+from typing import Any
 
 KEYS: dict[str, tuple[str, ...]] = {
     "data/raw/batches.csv": ("batch_id",),
@@ -184,7 +184,6 @@ def relationship_profile(root: Path) -> list[dict[str, Any]]:
     collection_by_id = {row["collection_id"]: row for row in collections}
     batches = rows("data/raw/batches.csv")
     batch_ids = ids(batches, "batch_id")
-    batch_by_id = {row["batch_id"]: row for row in batches}
     shipments = rows("data/raw/shipments.csv")
     shipment_ids = ids(shipments, "shipment_id")
     shipment_by_id = {row["shipment_id"]: row for row in shipments}
@@ -376,7 +375,7 @@ def main() -> int:
     knowledge = knowledge_inventory(source)
 
     payload = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "source": str(source),
         "source_zip_sha256": "74d31dc4694d52b0e9a9fb337e6ccda1086ad430b19287f9ca2b4b4e650ca979",
         "summary": {

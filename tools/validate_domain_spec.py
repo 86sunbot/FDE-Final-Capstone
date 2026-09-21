@@ -7,7 +7,6 @@ import argparse
 import json
 from pathlib import Path
 
-
 REQUIRED_ENVELOPE_FIELDS = {
     "event_id",
     "event_type",

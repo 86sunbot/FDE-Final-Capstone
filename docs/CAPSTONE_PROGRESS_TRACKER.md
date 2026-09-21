@@ -24,7 +24,7 @@
 | 12 | Design security and supplier controls | APPROVED FOR POC | `docs/stages/stage_12`; threat/control/SBOM/AIBOM/exit design |
 | 13 | Approve ADRs and delivery specification | INTERNAL BUILD GATE; PRD OWNER REVIEW PENDING | `docs/stages/stage_13`; 31 requirements; 12 ADRs; G3 record; PRD/migration |
 | 14 | Engineer | COMPLETE FOR ACADEMIC DEMO | `src`; `tests`; 3 integrated POCs; six source-timestamp journeys/inject preview; manifests |
-| 15 | Evaluate, attack and assure | INTERNAL TESTS PASS; FULL ASSURANCE OPEN | 92 automated passes; 55/57 structural passes; 7 original full scoped, 9 partial, 39 extension structural-only; G4 restricted |
+| 15 | Evaluate, attack and assure | INTERNAL TESTS PASS; FULL ASSURANCE OPEN | 106 automated passes; 55/57 structural passes; 7 original full scoped, 9 partial, 39 extension structural-only; G4 restricted |
 | 16 | Prepare operations and recovery | COMPLETE FOR SIMULATION | Runbooks/SLOs; successful local restore; G5 restricted |
 | 17 | Deploy progressively | COMPLETE AS SIMULATION | 20/20 shadow; 10/10 canary; rollback pass |
 | 18 | Monitor operational resilience | COMPLETE AS SIMULATION | Alerts/metrics/reconciliation/fallback exercised |
@@ -47,7 +47,7 @@
 
 | Check | Result |
 |---|---|
-| Clean automated suite | 92 passed; 0 failed/error/skipped |
+| Clean automated suite | 106 passed; 0 failed/error/skipped; 95.89% source coverage |
 | Frozen evaluation catalog | 57 executed: 55 structural pass, 0 fail, 2 inconclusive human studies; only 7 original cases have full scoped property assertions, 9 partial, 39 extension structural-only |
 | P0 catalog | 44 pass, 1 human-study inconclusive |
 | Requirements | 29 of 31 verified internal POC, 2 external-human-evidence required, 0 production verified |

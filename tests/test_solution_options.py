@@ -3,7 +3,6 @@ from pathlib import Path
 
 from tools.score_solution_options import calculate
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 

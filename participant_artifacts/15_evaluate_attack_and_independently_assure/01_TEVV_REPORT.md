@@ -7,7 +7,7 @@
 
 | Evidence | Result |
 |---|---:|
-| Clean automated pytest suite | 92 passed; 0 failed/error/skipped |
+| Clean automated pytest suite | 106 passed; 0 failed/error/skipped; 95.89% source coverage |
 | Frozen catalog | 57 executed |
 | Catalog structural passes | 55; **not** 55 fully graded scenarios |
 | Original supplied cases with full scoped property assertions | 7 of 16 |

@@ -30,7 +30,7 @@
 
 ## Verification snapshot
 
-- 92 automated tests passed.
+- 106 automated tests passed.
 - 57 frozen evaluation cases executed: 55 structural pass, 0 fail, 2 human-study inconclusive.
 - 29/31 requirements verified internally; 2 need external human evidence.
 - Recovery, deployment, monitoring and retirement simulations completed.

@@ -21,7 +21,7 @@
 
 ## Verification
 
-The 92-test suite covers inherited evidence integrity, domain/evaluation specifications, option spikes, contracts, foundation, three POCs, source journey explorer/inject preview, end-to-end behavior, concurrent replay, assistant attacks, recovery and a local micro-benchmark. Exact test evidence and the registered load-test gap are recorded in Stage 15.
+The 106-test suite covers inherited evidence integrity, domain/evaluation specifications, option spikes, contracts, foundation, three POCs, typed API validation/authentication/lifecycle, CLI behavior, source journey explorer/inject preview, end-to-end behavior, concurrent replay, assistant attacks, recovery and a local micro-benchmark. Exact test evidence and the registered load-test gap are recorded in Stage 15.
 
 ## Limits
 

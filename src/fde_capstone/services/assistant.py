@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 import uuid
 from typing import Any, Protocol
 
@@ -48,8 +47,8 @@ class AssistantGateway:
         recommendation_id = f"REC-{uuid.uuid4()}"
         available = set(deterministic_context.get("available_evidence", []))
         mode = "DETERMINISTIC_ONLY"
-        output = None
-        rejection = "AI_DISABLED"
+        output: Any | None = None
+        rejection: str | None = "AI_DISABLED"
         if self.provider is not None:
             try:
                 candidate = self.provider.recommend(deterministic_context)
@@ -58,7 +57,7 @@ class AssistantGateway:
                     mode = "BOUNDED_AI"
                     output = candidate
                     rejection = None
-            except Exception:
+            except Exception:  # noqa: BLE001 - provider isolation must convert every supplier failure to safe fallback
                 rejection = "AI_UNAVAILABLE"
         with self.db._lock, self.db.connection:
             self.db.connection.execute(

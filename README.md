@@ -15,7 +15,9 @@ The inherited environment had conflicting patient evidence, unsafe readiness/rel
 - owned exceptions and tamper-evident audit;
 - three integrated POCs;
 - six read-only original v2 source-timestamp patient journeys and non-authoritative disruption preview;
-- seven role/persona demo lenses across Patient Operations, Identity, Logistics/Planning, Manufacturing, Lab/QC, Quality and Executive views;\n- an automated deterministic cross-domain journey summary and visible workflow-automation trace;\n- one optional recommendation-only assistant, disabled by default.
+- seven role/persona demo lenses across Patient Operations, Identity, Logistics/Planning, Manufacturing, Lab/QC, Quality and Executive views;
+- an automated deterministic cross-domain journey summary and visible workflow-automation trace;
+- one optional recommendation-only assistant, disabled by default.
 
 ## Important boundary
 
@@ -52,7 +54,7 @@ Open <http://127.0.0.1:8000> for the Control Tower and <http://127.0.0.1:8000/do
 
 ## Results
 
-- 92 local automated tests passed.
+- 106 local automated tests passed with 95.89% source coverage.
 - 57 evaluation cases executed: 55 internal **structural** passes, 0 failures and 2 human-study cases inconclusive. Only 7 original cases have full scoped property assertions, 9 are partial, and 39 extension cases are structural probes only.
 - 29/31 requirements are internally verified; zero are production verified. The registered 20-client/27,507-row journey-projection NFR remains unverified.
 - 20/20 simulated shadow comparisons matched.
@@ -66,11 +68,20 @@ Open <http://127.0.0.1:8000> for the Control Tower and <http://127.0.0.1:8000/do
 python3 -m venv .venv
 .venv/bin/pip install -e '.[dev,api]'
 .venv/bin/python -m pytest -q
+.venv/bin/ruff check src tests tools
+.venv/bin/mypy src
 PYTHONPATH=src .venv/bin/python -m fde_capstone.cli demo --db runtime/demo.db
 PYTHONPATH=src .venv/bin/python -m fde_capstone.cli evaluate --db runtime/eval.db --output reports/evaluation.json
 ```
 
 The local `runtime/` folder contains disposable synthetic state. Stop the demo server before cleaning it; do not delete unrelated user files.
+
+### Mutating demo API authentication
+
+The slot-reservation API no longer trusts caller-supplied role headers. Configure opaque bearer
+tokens and their fixed server-side demo identities with `FDE_DEMO_IDENTITIES_JSON`; without that
+configuration, mutating routes fail closed with HTTP 503. See `.env.example`. The browser's
+read-only status/source views and isolated three-POC demo do not require a mutation token.
 
 ## Verification provenance
 

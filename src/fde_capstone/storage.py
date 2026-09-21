@@ -10,7 +10,6 @@ from typing import Any
 
 from .model import Principal, canonical_json, digest_json, utc_now
 
-
 SCHEMA_VERSION = "1"
 
 
@@ -222,7 +221,10 @@ class Database:
                 "INSERT INTO audit(recorded_at,principal,action,scope,outcome,details_json,correlation_id,previous_hash,record_hash) VALUES(?,?,?,?,?,?,?,?,?)",
                 (now, subject, action, scope, outcome, canonical_json(details), correlation_id, previous_hash, record_hash),
             )
-            return int(cursor.lastrowid)
+            audit_id = cursor.lastrowid
+            if audit_id is None:
+                raise RuntimeError("AUDIT_INSERT_DID_NOT_RETURN_ID")
+            return audit_id
 
     def verify_audit_chain(self) -> bool:
         previous_hash = "GENESIS"

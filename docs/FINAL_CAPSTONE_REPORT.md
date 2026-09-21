@@ -33,7 +33,7 @@ The current 1.2.0 app also exposes the original v2 `EVAL-001..006` source patien
 
 ## 5. Evidence
 
-- Clean suite: 92 passed, 0 failed/error/skipped.
+- Clean suite: 106 passed, 0 failed/error/skipped; 95.89% source coverage.
 - Frozen catalog: 57 executed; 55 **structural** pass; 0 fail; 2 inconclusive external human studies. Of the 16 supplied original cases, 7 have full *scoped* property assertions and 9 partial assertions; 39 extension cases are structural probes only, not fully graded against every expected property.
 - P0 catalog: 44 pass; one human-factor case inconclusive.
 - Requirements: 29 of 31 verified for internal POC; two require external human evidence; zero production verified.

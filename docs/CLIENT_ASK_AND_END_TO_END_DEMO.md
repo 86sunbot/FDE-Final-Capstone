@@ -201,7 +201,7 @@ Authoritative operational facts do not use RAG. They use typed adapters, evidenc
 ## 11. Demonstrated assurance
 
 - 21 of 21 FDE operating-model stages contain documented artifacts; this does not mean external stage approval.
-- 92 of 92 local automated tests pass.
+- 106 of 106 local automated tests pass.
 - 57 evaluation cases were executed.
 - 55 evaluation cases passed **structural probes** and none failed. Only 7 original cases have full scoped property assertions, 9 are partial, and 39 extension cases have ungraded expected properties.
 - Two controlled human-study cases remain inconclusive.

@@ -1,4 +1,3 @@
-import json
 
 from fde_capstone.evaluation import run_catalog
 
