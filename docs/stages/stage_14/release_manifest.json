@@ -1,9 +1,9 @@
 {
   "format": "academic-capstone-release-manifest-v1",
   "version": "1.2.0",
-  "generated_at": "2026-09-21T02:37:36.459251+00:00",
+  "generated_at": "2026-09-22T02:15:59.003565+00:00",
   "scope": "synthetic local academic POC",
-  "source_tree_sha256": "94b90f9573fa7c35579f8d3538bd2f9af5b9e1516be444d34c4b1dd271f03616",
+  "source_tree_sha256": "d3fb22ce83f60d477d93106ca63ce2df74b9761be2a1a895daa0a8880a62abd1",
   "contract_tree_sha256": "98ad53553b08dc0e49691131f66c8b5156407c217787a5622293e4b2ac585f82",
   "evaluation_catalog_sha256": "6ab4b54354a0a6f2aa6c5182e2e5fb266700b147ad73149079dbc1519acd9535",
   "requirements_sha256": "826220533aa1535e46f0ff3eccb8ca094f181d1954fe94d73f6f74b7d2e89e95",
@@ -33,8 +33,8 @@
     },
     {
       "path": "src/fde_capstone/api.py",
-      "sha256": "3dcae9ecabfb92df72177044d305b47c50c6c37d56e2854912fb1a43f6acd7b4",
-      "size_bytes": 10165
+      "sha256": "ca1a0d8bd8dd34360c0b1cec657b83a7a71634b4d89246f0b7a9fa353f7fc6ec",
+      "size_bytes": 11394
     },
     {
       "path": "src/fde_capstone/application.py",
@@ -65,6 +65,11 @@
       "path": "src/fde_capstone/model.py",
       "sha256": "5d894c24c30e4a528fe9a2a45d0e4f1c2c0f5533e1c8ae1b4dbc39a90453fa4b",
       "size_bytes": 1352
+    },
+    {
+      "path": "src/fde_capstone/patient_service.py",
+      "sha256": "2b822affbc1e3a6adae4f31f71f27372fba5f598a629f379cae5d73f22d022b9",
+      "size_bytes": 18508
     },
     {
       "path": "src/fde_capstone/security.py",
@@ -128,8 +133,8 @@
     },
     {
       "path": "src/fde_capstone/web/app.js",
-      "sha256": "b45979bc6c8eed94a70163fb88f6f31adea7f5f6812a66617d166949e2db2e28",
-      "size_bytes": 15894
+      "sha256": "a445b5d586080c482146f374bb5a12d89dc1cbdec6c47b9ba66a0ed991190b38",
+      "size_bytes": 16220
     },
     {
       "path": "src/fde_capstone/web/favicon.svg",
@@ -138,13 +143,18 @@
     },
     {
       "path": "src/fde_capstone/web/index.html",
-      "sha256": "0e5ea2b150849b71a026c0b2440a9b010abd2863b789b02eff0f16b44c8d9c38",
-      "size_bytes": 19778
+      "sha256": "03bb61fa34295acc821b97f891882d9d90d79cde9117d0d400d8855b6764d014",
+      "size_bytes": 20103
+    },
+    {
+      "path": "src/fde_capstone/web/patientDashboard.js",
+      "sha256": "225191c3fdf7321c0f04cdba11abd9e58dfe342ab669a6ce4bbdf03dfa9b8543",
+      "size_bytes": 40402
     },
     {
       "path": "src/fde_capstone/web/styles.css",
-      "sha256": "f4b2818d3dcb9bc6e27ce8c03a3499280ea0bd2b41964a96d681020f3030bf6f",
-      "size_bytes": 26330
+      "sha256": "764a9a608bf5ff2ecadc03224e08ea3e95532108e417199c540af5dda3550148",
+      "size_bytes": 48913
     }
   ],
   "contract_files": [
