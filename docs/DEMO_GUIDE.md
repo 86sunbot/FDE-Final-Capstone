@@ -18,6 +18,12 @@ FDE_DB=runtime/control-tower.db AI_MODE=off PYTHONPATH=src \
 
 Open <http://127.0.0.1:8000>. API documentation remains available at <http://127.0.0.1:8000/docs>.
 
+## Recorded 120-second Demo Video & Visual Assets
+
+- **1080p Video**: [`cgt_patient_to_batch_orchestration_demo.mp4`](../cgt_patient_to_batch_orchestration_demo.mp4) (120s executive and technical overview)
+- **Captions & Subtitles**: [`cgt_subtitles.srt`](../cgt_subtitles.srt) | [`cgt_subtitles.vtt`](../cgt_subtitles.vtt)
+- **Visual Slide Frames**: [`cgt_frames/`](../cgt_frames) (`scene01.png`–`scene09.png`)
+
 ## Presentation sequence (about eight minutes)
 
 1. Start at the hero and state the problem: fragmented systems cannot safely answer the current patient-to-batch state, why it is true, who can decide and what must happen next.

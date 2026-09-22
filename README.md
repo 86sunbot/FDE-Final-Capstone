@@ -52,6 +52,12 @@ FDE_DB=runtime/control-tower.db AI_MODE=off PYTHONPATH=src \
 
 Open <http://127.0.0.1:8000> for the Control Tower and <http://127.0.0.1:8000/docs> for the API. See [docs/DEMO_GUIDE.md](docs/DEMO_GUIDE.md) for the presentation sequence. The three-POC scripted fixture is separate from the six frozen v2 source-timestamp journeys and inject preview.
 
+### Demo Video & Visual Assets
+
+- **Full 1080p Walkthrough**: [`cgt_patient_to_batch_orchestration_demo.mp4`](cgt_patient_to_batch_orchestration_demo.mp4) (120-second narrated overview)
+- **Subtitles / Captions**: [`cgt_subtitles.srt`](cgt_subtitles.srt) | [`cgt_subtitles.vtt`](cgt_subtitles.vtt)
+- **Visual Slide Frames**: [`cgt_frames/`](cgt_frames) (high-resolution presentation slides `scene01.png`–`scene09.png`)
+
 ## Results
 
 - 106 local automated tests passed with 95.89% source coverage.
