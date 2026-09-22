@@ -24,6 +24,9 @@ Open <http://127.0.0.1:8000>. API documentation remains available at <http://127
 - **Captions & Subtitles**: [`cgt_subtitles.srt`](../cgt_subtitles.srt) | [`cgt_subtitles.vtt`](../cgt_subtitles.vtt)
 - **Visual Slide Frames**: [`cgt_frames/`](../cgt_frames) (`scene01.png`–`scene09.png`)
 
+## Fast 5-Minute Team Demo
+> **Need a fast 5-minute single-case presentation?** See the [5-Minute Executive UI Demo Guide](5_MINUTE_UI_DEMO_GUIDE.md) for a minute-by-minute script covering Journey P-A and the P-00013 safety catch.
+
 ## Presentation sequence (about eight minutes)
 
 1. Start at the hero and state the problem: fragmented systems cannot safely answer the current patient-to-batch state, why it is true, who can decide and what must happen next.

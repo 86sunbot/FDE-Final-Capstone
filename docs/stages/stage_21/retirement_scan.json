@@ -1,6 +1,6 @@
 {
   "scope": "pattern-based academic repository scan; not a production secret scanner",
-  "text_files_scanned": 571,
+  "text_files_scanned": 572,
   "credential_pattern_findings": [],
   "runtime_databases_outside_source_baseline": [],
   "live_model_credentials_expected": false,
