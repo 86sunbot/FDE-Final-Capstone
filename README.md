@@ -35,6 +35,7 @@ This is not a production, clinical, regulatory or validated system. It uses synt
 | [`reports`](reports) | Generated JUnit test evidence |
 | [`tests`](tests) | Unit, integration, end-to-end, recovery and performance tests |
 | [`tools`](tools) | Reproducible evidence, evaluation and verification utilities |
+| [`presentation`](presentation) | Executive 40-minute PowerPoint presentation deck, automated generator and speaker guide |
 | [`source_baseline`](source_baseline) | Frozen 132-file challenge extraction; do not modify |
 
 ## Browser demonstration
@@ -57,6 +58,12 @@ Open <http://127.0.0.1:8000> for the Control Tower and <http://127.0.0.1:8000/do
 - **Full 1080p Walkthrough**: [`cgt_patient_to_batch_orchestration_demo.mp4`](cgt_patient_to_batch_orchestration_demo.mp4) (120-second narrated overview)
 - **Subtitles / Captions**: [`cgt_subtitles.srt`](cgt_subtitles.srt) | [`cgt_subtitles.vtt`](cgt_subtitles.vtt)
 - **Visual Slide Frames**: [`cgt_frames/`](cgt_frames) (high-resolution presentation slides `scene01.png`–`scene09.png`)
+
+### Executive Presentation & Speaker Guide
+
+- **Master Slide Deck**: [`presentation/CGT_Patient_to_Batch_Orchestration_Elite_Presentation.pptx`](presentation/CGT_Patient_to_Batch_Orchestration_Elite_Presentation.pptx) (20-slide 16:9 widescreen presentation deck with high-res visual slide frames and embedded speaker notes)
+- **Speaker Script & Timing Guide**: [`presentation/SPEAKER_SCRIPT_AND_TIMING_GUIDE_40MIN.md`](presentation/SPEAKER_SCRIPT_AND_TIMING_GUIDE_40MIN.md) (Complete 40-minute presentation guide with minute-by-minute timing, word-for-word scripts, video cues, and executive Q&A responses)
+- **Deck Generator**: [`presentation/generate_presentation.py`](presentation/generate_presentation.py) (Reproducible PowerPoint generator script built with `python-pptx`)
 
 ## Results
 
