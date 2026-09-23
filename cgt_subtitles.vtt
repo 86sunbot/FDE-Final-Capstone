@@ -1,0 +1,58 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:07.500
+Our team’s capstone explores how to coordinate a patient-specific therapy journey across disconnected systems.
+
+2
+00:00:07.800 --> 00:00:15.500
+CGT means Cell and Gene Therapy. In this project, patient identity, collected material, and the manufactured product must remain correctly linked throughout the journey.
+
+3
+00:00:16.500 --> 00:00:23.500
+The client’s problem is conflicting information across patient operations, manufacturing, laboratories, Quality, and logistics.
+
+4
+00:00:23.800 --> 00:00:29.500
+Coordinators need to understand what is blocked, why, and who can decide next.
+
+5
+00:00:30.500 --> 00:00:44.500
+We followed a twenty-one stage FDE operating model, connecting discovery, domain and data modelling, architecture, requirements, engineering, evaluation, and operational planning.
+
+6
+00:00:45.500 --> 00:00:52.500
+The application brings source evidence, different user views, and disruption previews together. Three connected demonstrations show the central controls.
+
+7
+00:00:53.500 --> 00:01:02.500
+First, conflicting identity records become an owned case. Supporting evidence and an authorized decision are required before the proposed link is accepted.
+
+8
+00:01:03.500 --> 00:01:11.500
+Second, a slot reservation loses its response. The system records an unknown outcome and checks what happened before retrying.
+
+9
+00:01:12.500 --> 00:01:18.500
+Third, a Quality packet exposes missing evidence and blockers. Manufacturing completion alone cannot authorize release.
+
+10
+00:01:18.800 --> 00:01:24.500
+The demonstrated release requires the correct evidence and Quality permission.
+
+11
+00:01:25.500 --> 00:01:34.500
+The repository also contains automated tests, evaluation results, audit checks, integration contracts, security controls, continuous integration, monitoring exercises, and recovery plans.
+
+12
+00:01:35.000 --> 00:01:44.500
+The core workflow operates with AI off. The optional assistant is simulated, not a live model.
+
+13
+00:01:45.500 --> 00:01:53.000
+This is a synthetic academic demonstration. Real deployment still requires live integrations, enterprise access, approved policies, independent assurance, and measured business outcomes.
+
+14
+00:01:53.300 --> 00:01:59.500
+Our principle is simple: evidence before status, and human authority before automation.
+

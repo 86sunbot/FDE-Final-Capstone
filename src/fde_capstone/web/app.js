@@ -344,3 +344,13 @@ $('#show-source-case').addEventListener('click', inspectSourceCase);
 $('#show-source-inject').addEventListener('click', inspectSourceInject);
 loadStatus();
 loadSourceChoices();
+
+// Initialize Centralized Patient Status Dashboard modular component
+if (window.PatientStatusDashboard) {
+  const patientDashboard = new window.PatientStatusDashboard({
+    containerId: 'patient-dashboard-container',
+    apiBase: '/api',
+  });
+  patientDashboard.init();
+  window.activePatientDashboard = patientDashboard;
+}

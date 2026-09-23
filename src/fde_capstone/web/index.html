@@ -28,6 +28,7 @@
         </span>
       </a>
       <nav aria-label="Primary navigation">
+        <a href="#dashboard" class="nav-highlight">Patient Dashboard</a>
         <a href="#journey">Journey</a>
         <a href="#roles">Roles</a>
         <a href="#source-evidence">Source evidence</a>
@@ -108,6 +109,11 @@
         <div><strong id="evaluation-count">—</strong><span>Structural probes passed</span></div>
         <div><strong id="requirement-count">—</strong><span>Requirements verified locally</span></div>
         <div class="decision-stat"><strong>Restrict &amp; change</strong><span>Lifecycle decision</span></div>
+      </section>
+
+      <!-- Centralized Patient Status Dashboard -->
+      <section class="section-shell section-block" id="dashboard">
+        <div id="patient-dashboard-container"></div>
       </section>
 
       <section class="section-shell section-block" id="journey">
@@ -324,6 +330,7 @@
     </footer>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/assets/patientDashboard.js" defer></script>
     <script src="/assets/app.js" defer></script>
   </body>
 </html>

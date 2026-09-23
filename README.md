@@ -2,7 +2,7 @@
 
 This repository is a built **synthetic academic** Cell and Gene Therapy patient-to-batch orchestration demonstration. All 21 AI FDE stages have documented artifacts, but owner approvals, independently assured outputs, real-system deployment and observed business benefits are not implied.
 
-> **Start here:** [Client ask and end-to-end demo](docs/CLIENT_ASK_AND_END_TO_END_DEMO.md) · [Ten-deliverable acceptance matrix](docs/CLIENT_DELIVERABLE_ACCEPTANCE_MATRIX.md) · [Final report](docs/FINAL_CAPSTONE_REPORT.md) · [One-to-one 21-stage artifact register](docs/21_STAGE_ARTIFACT_REGISTER.md) · [Documentation hub](docs/README.md) · [Demo guide](docs/DEMO_GUIDE.md)
+> **Start here:** [Client ask and end-to-end demo](docs/CLIENT_ASK_AND_END_TO_END_DEMO.md) · [Ten-deliverable acceptance matrix](docs/CLIENT_DELIVERABLE_ACCEPTANCE_MATRIX.md) · [Final report](docs/FINAL_CAPSTONE_REPORT.md) · [5-Minute UI demo guide](docs/5_MINUTE_UI_DEMO_GUIDE.md) · [One-to-one 21-stage artifact register](docs/21_STAGE_ARTIFACT_REGISTER.md) · [Documentation hub](docs/README.md) · [Demo guide](docs/DEMO_GUIDE.md)
 
 ## What it solves
 
@@ -35,6 +35,7 @@ This is not a production, clinical, regulatory or validated system. It uses synt
 | [`reports`](reports) | Generated JUnit test evidence |
 | [`tests`](tests) | Unit, integration, end-to-end, recovery and performance tests |
 | [`tools`](tools) | Reproducible evidence, evaluation and verification utilities |
+| [`presentation`](presentation) | Executive 40-minute PowerPoint presentation deck, automated generator and speaker guide |
 | [`source_baseline`](source_baseline) | Frozen 132-file challenge extraction; do not modify |
 
 ## Browser demonstration
@@ -51,6 +52,19 @@ FDE_DB=runtime/control-tower.db AI_MODE=off PYTHONPATH=src \
 ```
 
 Open <http://127.0.0.1:8000> for the Control Tower and <http://127.0.0.1:8000/docs> for the API. See [docs/DEMO_GUIDE.md](docs/DEMO_GUIDE.md) for the presentation sequence. The three-POC scripted fixture is separate from the six frozen v2 source-timestamp journeys and inject preview.
+
+### Demo Video & Visual Assets
+
+- **Full 1080p Walkthrough**: [`cgt_patient_to_batch_orchestration_demo.mp4`](cgt_patient_to_batch_orchestration_demo.mp4) (120-second narrated overview)
+- **Subtitles / Captions**: [`cgt_subtitles.srt`](cgt_subtitles.srt) | [`cgt_subtitles.vtt`](cgt_subtitles.vtt)
+- **Visual Slide Frames**: [`cgt_frames/`](cgt_frames) (high-resolution presentation slides `scene01.png`–`scene09.png`)
+
+### Executive Presentation & Speaker Guide
+
+- **Master Slide Deck**: [`presentation/CGT_Patient_to_Batch_Orchestration_Elite_Presentation.pptx`](presentation/CGT_Patient_to_Batch_Orchestration_Elite_Presentation.pptx) (20-slide 16:9 widescreen presentation deck with high-res visual slide frames and embedded speaker notes)
+- **Speaker Script & Timing Guide**: [`presentation/SPEAKER_SCRIPT_AND_TIMING_GUIDE_40MIN.md`](presentation/SPEAKER_SCRIPT_AND_TIMING_GUIDE_40MIN.md) (Complete 40-minute presentation guide with minute-by-minute timing, word-for-word scripts, video cues, and executive Q&A responses)
+- **5-Minute Live UI Demo Script**: [`docs/5_MINUTE_UI_DEMO_GUIDE.md`](docs/5_MINUTE_UI_DEMO_GUIDE.md) (Fast 5-minute single-case live UI demo sequence for team walkthroughs)
+- **Deck Generator**: [`presentation/generate_presentation.py`](presentation/generate_presentation.py) (Reproducible PowerPoint generator script built with `python-pptx`)
 
 ## Results
 

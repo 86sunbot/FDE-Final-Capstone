@@ -20,6 +20,8 @@ def test_api_exposes_health_and_bounded_poc_routes(tmp_path):
         assert "/api/source/cases/{case_id}" in paths
         assert "/api/source/injects" in paths
         assert "/api/source/injects/{inject_id}/preview" in paths
+        assert "/api/patients" in paths
+        assert "/api/patients/{patient_key}" in paths
         assert "/quality/{batch_id}/packet" in paths
         assert "/slots/reservations" in paths
         assert not any("agent" in path or "release/auto" in path for path in paths)
@@ -228,3 +230,31 @@ def test_api_reports_missing_commands_and_forbidden_reservations(tmp_path):
     assert forbidden.status_code == 403
     assert packet.status_code == 200
     assert packet.json()["batch_id"] == "UNKNOWN"
+
+
+def test_api_patients_endpoints(tmp_path):
+    from fde_capstone.api import create_app
+
+    app = create_app(tmp_path / "patients-api.db")
+    with TestClient(app) as client:
+        # Default active list with camelCase query params
+        res = client.get("/api/patients?page=1&pageSize=5&statusFilter=active")
+        assert res.status_code == 200
+        data = res.json()
+        assert data["pagination"]["page"] == 1
+        assert data["pagination"]["page_size"] == 5
+        assert len(data["patients"]) == 5
+        assert data["kpis"]["total_patients"] == 800
+
+        # Detail for known patient
+        p13 = client.get("/api/patients/P-00013")
+        assert p13.status_code == 200
+        detail = p13.json()
+        assert detail["patient"]["patient_key"] == "P-00013"
+        assert detail["patient"]["has_hold"] is True
+        assert detail["patient"]["governing_readiness_code"] == "BLOCKED_QA_HOLD"
+        assert "shipments" in detail
+
+        # Detail for unknown patient returns 404
+        not_found = client.get("/api/patients/P-DOES-NOT-EXIST")
+        assert not_found.status_code == 404

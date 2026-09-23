@@ -1,6 +1,6 @@
 {
   "format": "academic-capstone-sbom-v1",
-  "generated_at": "2026-09-21T02:37:36.459251+00:00",
+  "generated_at": "2026-09-22T02:15:59.003565+00:00",
   "runtime": {
     "python": "3.14.7",
     "sqlite": "3.53.4",
@@ -9,7 +9,7 @@
   "application": {
     "name": "fde-final-capstone",
     "version": "1.2.0",
-    "source_tree_sha256": "94b90f9573fa7c35579f8d3538bd2f9af5b9e1516be444d34c4b1dd271f03616"
+    "source_tree_sha256": "d3fb22ce83f60d477d93106ca63ce2df74b9761be2a1a895daa0a8880a62abd1"
   },
   "dependencies": [
     {
@@ -29,7 +29,7 @@
     },
     {
       "name": "mypy",
-      "version": "1.20.2",
+      "version": "2.3.1",
       "scope": "static type analysis"
     },
     {
@@ -44,7 +44,7 @@
     },
     {
       "name": "ruff",
-      "version": "0.16.8",
+      "version": "0.16.7",
       "scope": "lint"
     }
   ],

@@ -21,6 +21,7 @@ from .application import CapstoneApplication
 from .demo import run_demo
 from .disruption_preview import list_injects, preview_inject
 from .model import Principal
+from .patient_service import get_patient_detail, get_patients_list
 from .security import AuthorizationError
 from .source_cases import list_eval_cases, load_eval_case, reconstruct_source_journey
 
@@ -213,6 +214,41 @@ def create_app(
             raise HTTPException(404, "inject or representative patient not found") from exc
         except FileNotFoundError as exc:
             raise HTTPException(503, str(exc)) from exc
+
+    @app.get("/api/patients")
+    def list_patients(
+        search: str | None = None,
+        phase: str | None = None,
+        product: str | None = None,
+        center: str | None = None,
+        statusFilter: str | None = "active",
+        status_filter: str | None = None,
+        page: int = 1,
+        pageSize: int = 15,
+        page_size: int | None = None,
+        sortBy: str = "patient_key",
+        sort_by: str | None = None,
+        sortDir: str = "asc",
+        sort_dir: str | None = None,
+    ) -> dict[str, Any]:
+        return get_patients_list(
+            search=search,
+            phase=phase,
+            product=product,
+            center=center,
+            status_filter=status_filter or statusFilter or "active",
+            page=page,
+            page_size=page_size or pageSize,
+            sort_by=sort_by or sortBy,
+            sort_dir=sort_dir or sortDir,
+        )
+
+    @app.get("/api/patients/{patient_key}")
+    def patient_detail(patient_key: str) -> dict[str, Any]:
+        try:
+            return get_patient_detail(patient_key)
+        except KeyError as exc:
+            raise HTTPException(404, str(exc)) from exc
 
     @app.get("/quality/{batch_id}/packet")
     def quality_packet(batch_id: str) -> dict[str, Any]:
