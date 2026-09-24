@@ -2,7 +2,7 @@
 
 This repository is a built **synthetic academic** Cell and Gene Therapy patient-to-batch orchestration demonstration. All 21 AI FDE stages have documented artifacts, but owner approvals, independently assured outputs, real-system deployment and observed business benefits are not implied.
 
-> **Start here:** [Client ask and end-to-end demo](docs/CLIENT_ASK_AND_END_TO_END_DEMO.md) · [Ten-deliverable acceptance matrix](docs/CLIENT_DELIVERABLE_ACCEPTANCE_MATRIX.md) · [Final report](docs/FINAL_CAPSTONE_REPORT.md) · [5-Minute UI demo guide](docs/5_MINUTE_UI_DEMO_GUIDE.md) · [One-to-one 21-stage artifact register](docs/21_STAGE_ARTIFACT_REGISTER.md) · [Documentation hub](docs/README.md) · [Demo guide](docs/DEMO_GUIDE.md)
+> **Start here:** [Client ask and end-to-end demo](docs/CLIENT_ASK_AND_END_TO_END_DEMO.md) · [Final report](docs/FINAL_CAPSTONE_REPORT.md) · [Run the demo](docs/5_MINUTE_UI_DEMO_GUIDE.md) · [21-stage artifact register](docs/21_STAGE_ARTIFACT_REGISTER.md) · [Repository map](docs/REPOSITORY_ORGANIZATION.md)
 
 ## What it solves
 
@@ -36,6 +36,10 @@ This is not a production, clinical, regulatory or validated system. It uses synt
 | [`tests`](tests) | Unit, integration, end-to-end, recovery and performance tests |
 | [`tools`](tools) | Reproducible evidence, evaluation and verification utilities |
 | [`presentation`](presentation) | Executive 40-minute PowerPoint presentation deck, automated generator and speaker guide |
+| [`presentation/media`](presentation/media) | Current demo video, captions and slide frames |
+| [`reference`](reference) | Source framework used for the 21-stage mapping |
+| [`archive`](archive) | Historical assessments, draft presentation material and PDF render previews |
+| [`output/pdf`](output/pdf) | Final personal study guide PDF |
 | [`source_baseline`](source_baseline) | Frozen 132-file challenge extraction; do not modify |
 
 ## Browser demonstration
@@ -55,9 +59,9 @@ Open <http://127.0.0.1:8000> for the Control Tower and <http://127.0.0.1:8000/do
 
 ### Demo Video & Visual Assets
 
-- **Full 1080p Walkthrough**: [`cgt_patient_to_batch_orchestration_demo.mp4`](cgt_patient_to_batch_orchestration_demo.mp4) (120-second narrated overview)
-- **Subtitles / Captions**: [`cgt_subtitles.srt`](cgt_subtitles.srt) | [`cgt_subtitles.vtt`](cgt_subtitles.vtt)
-- **Visual Slide Frames**: [`cgt_frames/`](cgt_frames) (high-resolution presentation slides `scene01.png`–`scene09.png`)
+- **Full 1080p Walkthrough**: [`cgt_patient_to_batch_orchestration_demo.mp4`](presentation/media/cgt_patient_to_batch_orchestration_demo.mp4) (120-second narrated overview)
+- **Subtitles / Captions**: [`cgt_subtitles.srt`](presentation/media/cgt_subtitles.srt) | [`cgt_subtitles.vtt`](presentation/media/cgt_subtitles.vtt)
+- **Visual Slide Frames**: [`presentation/media/frames/`](presentation/media/frames) (`scene01.png`–`scene09.png`)
 
 ### Executive Presentation & Speaker Guide
 
@@ -68,7 +72,7 @@ Open <http://127.0.0.1:8000> for the Control Tower and <http://127.0.0.1:8000/do
 
 ## Results
 
-- 106 local automated tests passed with 95.89% source coverage.
+- 118 local automated tests passed with 96% source coverage (rechecked in this organization pass).
 - 57 evaluation cases executed: 55 internal **structural** passes, 0 failures and 2 human-study cases inconclusive. Only 7 original cases have full scoped property assertions, 9 are partial, and 39 extension cases are structural probes only.
 - 29/31 requirements are internally verified; zero are production verified. The registered 20-client/27,507-row journey-projection NFR remains unverified.
 - 20/20 simulated shadow comparisons matched.

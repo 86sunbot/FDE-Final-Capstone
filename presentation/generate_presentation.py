@@ -4,8 +4,8 @@
 Features:
 - Widescreen 16:9 layout (13.333" x 7.5")
 - Enterprise pharmaceutical & biotech aesthetic matching the CGT Control Tower
-- Direct embedding of high-resolution visual slide frames from cgt_frames/
-- Integrated presentation of the 120-second 1080p demo video (cgt_patient_to_batch_orchestration_demo.mp4)
+- Direct embedding of high-resolution visual slide frames from presentation/media/frames/
+- Presentation cue for the 120-second 1080p demo video (presentation/media/cgt_patient_to_batch_orchestration_demo.mp4)
 - Comprehensive minute-by-minute speaker notes with transition scripts and Q&A prep on every slide
 """
 
@@ -20,7 +20,7 @@ from pptx.enum.text import PP_ALIGN
 from pptx.enum.shapes import MSO_SHAPE
 
 ROOT = Path(__file__).resolve().parents[1]
-FRAMES_DIR = ROOT / "cgt_frames"
+FRAMES_DIR = ROOT / "presentation" / "media" / "frames"
 OUTPUT_PPTX = ROOT / "presentation" / "CGT_Patient_to_Batch_Orchestration_Elite_Presentation.pptx"
 
 # Colors
@@ -520,7 +520,7 @@ Crucially, selecting a role lens in our UI changes what is highlighted, but it d
     p.space_after = Pt(6)
 
     p = tf.add_paragraph()
-    p.text = "File: cgt_patient_to_batch_orchestration_demo.mp4\nDuration: 120 Seconds · Format: 1080p Widescreen (60 fps)\nCaptions: Full English Subtitles (.srt & .vtt committed)"
+    p.text = "File: presentation/media/cgt_patient_to_batch_orchestration_demo.mp4\nDuration: 120 Seconds · Format: 1080p Widescreen (60 fps)\nCaptions: Full English Subtitles (.srt & .vtt committed)"
     p.font.size = Pt(11)
     p.font.color.rgb = RGBColor(203, 213, 225)
     p.space_after = Pt(14)
@@ -551,7 +551,7 @@ Crucially, selecting a role lens in our UI changes what is highlighted, but it d
 SPEAKER SCRIPT:
 "At this point in our presentation, we transition to our featured 120-second executive demonstration video.
 
-[ACTION: Play video 'cgt_patient_to_batch_orchestration_demo.mp4' or narrate along with the slides]
+[ACTION: Play video 'presentation/media/cgt_patient_to_batch_orchestration_demo.mp4' or narrate along with the slides]
 
 Notice how the video establishes the living drug challenge in the first 30 seconds. At the 53-second mark, it demonstrates POC 1: when conflicting MRN records arrive from clinic feeds, the system refuses to guess; it creates an owned exception.
 
@@ -1148,7 +1148,7 @@ This roadmap gives the enterprise a clear, accountable path to clinical producti
     delivs = [
         "1. Canonical FastAPI Python Engine (118 tests, 96.22% coverage)",
         "2. Centralized Patient Operations Dashboard (800 global cohort)",
-        "3. 1080p Narrated Demo Video (cgt_patient_to_batch_orchestration_demo.mp4)",
+        "3. 1080p Narrated Demo Video (presentation/media/cgt_patient_to_batch_orchestration_demo.mp4)",
         "4. Synchronized Subtitles (.srt and .vtt) & Visual Slide Frames",
         "5. Complete 21-Stage Artifact Register (185 tracked artifacts)",
         "6. Master Executive Presentation Deck (.pptx) & Speaker Guide",
@@ -1191,7 +1191,7 @@ This roadmap gives the enterprise a clear, accountable path to clinical producti
 
     add_notes(s20, """[TIMING: 39:00 - 40:00 | 1 Minute + Transition to Q&A]
 SPEAKER SCRIPT:
-"In summary: We have delivered a complete, mathematically verified, and GxP-disciplined Cell and Gene Therapy orchestration platform.
+"In summary: We have delivered a synthetic academic proof of concept for Cell and Gene Therapy orchestration, with a deterministic workflow, documented evidence and explicit human decision boundaries. It is not a validated clinical or GxP production platform.
 
 All code, tests, documentation, video walkthroughs, and presentation assets are committed and verified green on GitHub. 
 

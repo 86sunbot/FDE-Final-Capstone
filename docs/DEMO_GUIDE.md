@@ -20,9 +20,9 @@ Open <http://127.0.0.1:8000>. API documentation remains available at <http://127
 
 ## Recorded 120-second Demo Video & Visual Assets
 
-- **1080p Video**: [`cgt_patient_to_batch_orchestration_demo.mp4`](../cgt_patient_to_batch_orchestration_demo.mp4) (120s executive and technical overview)
-- **Captions & Subtitles**: [`cgt_subtitles.srt`](../cgt_subtitles.srt) | [`cgt_subtitles.vtt`](../cgt_subtitles.vtt)
-- **Visual Slide Frames**: [`cgt_frames/`](../cgt_frames) (`scene01.png`–`scene09.png`)
+- **1080p Video**: [`cgt_patient_to_batch_orchestration_demo.mp4`](../presentation/media/cgt_patient_to_batch_orchestration_demo.mp4) (120s executive and technical overview)
+- **Captions & Subtitles**: [`cgt_subtitles.srt`](../presentation/media/cgt_subtitles.srt) | [`cgt_subtitles.vtt`](../presentation/media/cgt_subtitles.vtt)
+- **Visual Slide Frames**: [`presentation/media/frames/`](../presentation/media/frames) (`scene01.png`–`scene09.png`)
 
 ## Fast 5-Minute Team Demo
 > **Need a fast 5-minute single-case presentation?** See the [5-Minute Executive UI Demo Guide](5_MINUTE_UI_DEMO_GUIDE.md) for a minute-by-minute script covering Journey P-A and the P-00013 safety catch.

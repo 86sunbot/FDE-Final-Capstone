@@ -11,6 +11,7 @@ This directory contains the human-readable capstone record. Runtime code, tests 
 5. [Demo Guide](DEMO_GUIDE.md) — setup and presentation sequence.
 6. [Artifact Index](ARTIFACT_INDEX.md) and [21-Stage Index](stages/README.md) — fast navigation.
 7. [Progress Tracker](CAPSTONE_PROGRESS_TRACKER.md) — local status, evidence and remaining external work.
+8. [Repository Organization](REPOSITORY_ORGANIZATION.md) — current paths, evidence boundaries and archived material.
 
 ## Planning and governance
 

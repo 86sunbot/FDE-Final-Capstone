@@ -1,7 +1,7 @@
 # One-to-One 21-Stage Artifact Register
 
 **Canonical machine-readable register:** `21_STAGE_ARTIFACT_REGISTER.csv`
-**Framework source:** `FDE_PDF.pdf`, Operating Model pages headed Surya 2-12
+**Framework source:** [`reference/FDE_PDF.pdf`](../reference/FDE_PDF.pdf), Operating Model pages headed Surya 2-12
 **Challenge deliverables source:** `source_baseline/participant/CHALLENGE_BRIEF.md`
 **Scope of assessment:** Synthetic academic capstone; not live deployment or independent assurance
 

@@ -5,14 +5,14 @@
 
 ## Purpose
 
-Implement the CGT Patient-to-Batch capstone using Codex and the 21-stage AI FDE Operating Model described in `FDE_PDF.pdf`.
+Implement the CGT Patient-to-Batch capstone using Codex and the 21-stage AI FDE Operating Model in [`reference/FDE_PDF.pdf`](../reference/FDE_PDF.pdf).
 
 The capstone will be delivered as an evidence-driven, integrated proof of concept. It must not claim production deployment, regulatory compliance, independent assurance, savings, approval, or legacy retirement without supporting evidence.
 
 ## Source baselines
 
 - Original immutable challenge package: `/Users/suryap/Documents/FDE/Capstone/AI_FDE_CGT_Patient_to_Batch_Orchestration.zip`
-- FDE framework: `/Users/suryap/Library/Mobile Documents/com~apple~CloudDocs/FDE_PDF.pdf`
+- FDE framework: the repository copy at [`reference/FDE_PDF.pdf`](../reference/FDE_PDF.pdf); original supplied from `/Users/suryap/Library/Mobile Documents/com~apple~CloudDocs/FDE_PDF.pdf`.
 - Existing AntiGravity prototype: `https://github.com/86sunbot/AI-FDE-Capstone-AG`
 - Previous repository audit: `/Users/suryap/Documents/Codex/2026-09-11/i/outputs/AntiGravity_Delivery_Recheck_143a48c.md`
 

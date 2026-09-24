@@ -47,7 +47,7 @@ Part V: Governance, Assurance & The Enterprise Roadmap (34:30 – 40:00 | 5.5 mi
 ## 2. Slide-by-Slide Detailed Speaker Script
 
 ### Slide 01: Title Slide [00:00 – 02:00]
-- **Visual**: `cgt_frames/scene01.png`
+- **Visual**: `presentation/media/frames/scene01.png`
 - **Slide Title**: *Cell & Gene Therapy (CGT) Patient-to-Batch Orchestration*
 - **Speaker Script**:
   > "Good morning, members of the executive steering committee, colleagues, and evaluation board. Welcome to our final capstone defense for the Cell and Gene Therapy Patient-to-Batch Orchestration Engine.
@@ -74,7 +74,7 @@ Part V: Governance, Assurance & The Enterprise Roadmap (34:30 – 40:00 | 5.5 mi
 ---
 
 ### Slide 03: Four Disconnected Enterprise Siloes [04:00 – 06:00]
-- **Visual**: `cgt_frames/scene02.png` (Four siloed systems architecture diagram)
+- **Visual**: `presentation/media/frames/scene02.png` (Four siloed systems architecture diagram)
 - **Speaker Script**:
   > "When our team performed the Stage 1 forensic investigation on the brownfield baseline, we discovered that the client's commercial operations were fractured across four completely disconnected software siloes:
   >
@@ -103,7 +103,7 @@ Part V: Governance, Assurance & The Enterprise Roadmap (34:30 – 40:00 | 5.5 mi
 ---
 
 ### Slide 05: The 21-Stage Operating Architecture [08:00 – 10:00]
-- **Visual**: `cgt_frames/scene03.png` (21-stage FDE operating roadmap)
+- **Visual**: `presentation/media/frames/scene03.png` (21-stage FDE operating roadmap)
 - **Speaker Script**:
   > "Rather than jumping straight to prototype code, we executed this project under the disciplined 21-stage Forward Deployed Engineering operating model:
   >
@@ -163,8 +163,8 @@ Part V: Governance, Assurance & The Enterprise Roadmap (34:30 – 40:00 | 5.5 mi
 ---
 
 ### Slide 09: Featured 120s Demo Video Walkthrough [15:00 – 18:00]
-- **Visual**: `cgt_frames/scene04.png` + Embedded Video Artifact Specifications
-- **Action**: **Play video [`cgt_patient_to_batch_orchestration_demo.mp4`](cgt_patient_to_batch_orchestration_demo.mp4)**
+- **Visual**: `presentation/media/frames/scene04.png` + video artifact specifications
+- **Action**: **Play video [`cgt_patient_to_batch_orchestration_demo.mp4`](media/cgt_patient_to_batch_orchestration_demo.mp4)**
 - **Speaker Script**:
   > "We now transition to our featured 120-second executive demonstration video. This video, recorded in full 1080p high definition with synchronized subtitles, demonstrates the Control Tower and our three technical proofs running in real time against synthetic state.
   >
@@ -182,7 +182,7 @@ Part V: Governance, Assurance & The Enterprise Roadmap (34:30 – 40:00 | 5.5 mi
 ---
 
 ### Slide 10: POC 01 Deep Dive: Identity Conflict & Readiness [18:00 – 21:00]
-- **Visual**: `cgt_frames/scene05.png` (POC 01 execution card and exception flow)
+- **Visual**: `presentation/media/frames/scene05.png` (POC 01 execution card and exception flow)
 - **Speaker Script**:
   > "Let's examine Proof of Concept 1: Identity Resolution.
   >
@@ -197,7 +197,7 @@ Part V: Governance, Assurance & The Enterprise Roadmap (34:30 – 40:00 | 5.5 mi
 ---
 
 ### Slide 11: POC 02 Deep Dive: Safe Slot Orchestration [21:00 – 24:00]
-- **Visual**: `cgt_frames/scene06.png` (POC 02 state machine and reconciliation sequence)
+- **Visual**: `presentation/media/frames/scene06.png` (POC 02 state machine and reconciliation sequence)
 - **Speaker Script**:
   > "Proof of Concept 2 addresses external system communication failures.
   >
@@ -210,7 +210,7 @@ Part V: Governance, Assurance & The Enterprise Roadmap (34:30 – 40:00 | 5.5 mi
 ---
 
 ### Slide 12: POC 03 Deep Dive: Quality Release Sovereignty [24:00 – 27:00]
-- **Visual**: `cgt_frames/scene07.png` (POC 03 pre-release evidence packet and Quality sign-off)
+- **Visual**: `presentation/media/frames/scene07.png` (POC 03 pre-release evidence packet and Quality sign-off)
 - **Speaker Script**:
   > "Proof of Concept 3 solves the most dangerous operational hazard: premature or automated batch release.
   >
@@ -225,7 +225,7 @@ Part V: Governance, Assurance & The Enterprise Roadmap (34:30 – 40:00 | 5.5 mi
 ---
 
 ### Slide 13: Centralized Patient Operations Dashboard [27:00 – 29:30]
-- **Visual**: `cgt_frames/scene08.png` (Full Centralized Patient Dashboard interface)
+- **Visual**: `presentation/media/frames/scene08.png` (Full Centralized Patient Dashboard interface)
 - **Speaker Script**:
   > "Now let us examine the Centralized Patient Operations Dashboard, integrated directly into our FastAPI control tower.
   >
@@ -287,7 +287,7 @@ Part V: Governance, Assurance & The Enterprise Roadmap (34:30 – 40:00 | 5.5 mi
 ---
 
 ### Slide 17: Calibrated Assurance & Verification [34:30 – 36:00]
-- **Visual**: `cgt_frames/scene09.png` (Verification scorecard and test matrix)
+- **Visual**: `presentation/media/frames/scene09.png` (Verification scorecard and test matrix)
 - **Speaker Script**:
   > "Let's examine our automated verification posture.
   >
@@ -338,7 +338,7 @@ Part V: Governance, Assurance & The Enterprise Roadmap (34:30 – 40:00 | 5.5 mi
 ### Slide 20: Summary, Business Value & Q&A [39:00 – 40:00]
 - **Visual**: Core Deliverables Box on Left + The Governing Axiom on Right
 - **Speaker Script**:
-  > "In summary: We have delivered a complete, mathematically verified, and GxP-disciplined Cell and Gene Therapy orchestration platform.
+  > "In summary: We have delivered a synthetic academic proof of concept for Cell and Gene Therapy orchestration, with a deterministic workflow, documented evidence and explicit human decision boundaries. It is not a validated clinical or GxP production platform.
   >
   > All code, tests, documentation, video walkthroughs, and presentation assets are committed and verified green on GitHub.
   >

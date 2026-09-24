@@ -9,6 +9,7 @@ build/
 *.egg-info/
 .env
 runtime/
+tmp/
 *.db
 *.db-shm
 *.db-wal
