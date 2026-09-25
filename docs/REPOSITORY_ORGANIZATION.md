@@ -24,7 +24,7 @@ The previous root mixed those essential paths with presentation media, a framewo
 
 ## Navigation and maintenance rules
 
-- The root [README](../README.md) is the landing page. It links directly to the submission, stage evidence, app, tests, presentation, frozen baseline and archive so these folders remain reachable in GitHub Mobile.
+- The root [README](../README.md) is the landing page. Its three paths cover the story, 21-stage submission and runnable solution; the [documentation hub](README.md) and this map expose the supporting folders for readers who need them.
 - [The documentation hub](README.md) is the index for reports and decisions. [The participant index](../participant_artifacts/README.md) is the index for the 21-stage hand-in. [The presentation index](../presentation/README.md) identifies the current talk track and media.
 - Keep the supplied `source_baseline/` unchanged. Add derived analysis under `docs/`, `requirements/`, `tools/` or `evidence/` with a source reference and explicit scope.
 - Keep a historical result tied to the report that produced it. A later test rerun does not silently rewrite an earlier Stage 15 result or turn an internal check into independent assurance.

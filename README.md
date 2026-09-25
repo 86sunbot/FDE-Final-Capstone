@@ -4,19 +4,15 @@
 
 This repository is a built **synthetic academic** Cell and Gene Therapy patient-to-batch orchestration demonstration. All 21 AI FDE stages have documented artifacts, but owner approvals, independently assured outputs, real-system deployment and observed business benefits are not implied.
 
-## Open the repository
+## Start here
 
-These links open the folders directly, including from the GitHub app on an iPad:
+Choose one path; each link opens directly in GitHub, including on an iPad:
 
-- [Participant submission — all 21 stages](participant_artifacts/README.md) — the stage-by-stage hand-in.
-- [Detailed stage evidence](docs/stages/README.md) — the engineering record and review decisions.
-- [Application and browser UI](src/fde_capstone) — the implemented product.
-- [Demo and presentation](presentation/README.md) — the deck, video and presenter guides.
-- [Tests and evidence](tests) — automated checks, with [verification results](evidence/final_verification.json).
-- [Frozen brownfield baseline](source_baseline/README.md) — supplied synthetic challenge material.
-- [Historical archive](archive/README.md) — earlier reports and superseded presentation drafts.
+1. **Understand and present:** [client ask and end-to-end story](docs/CLIENT_ASK_AND_END_TO_END_DEMO.md) → [final report](docs/FINAL_CAPSTONE_REPORT.md) → [Version 2 talk track](docs/FDE_10_MIN_PRESENTATION_TALK_TRACK.md).
+2. **Review the hand-in:** [21-stage participant submission](participant_artifacts/README.md) → [one-to-one artifact register](docs/21_STAGE_ARTIFACT_REGISTER.md).
+3. **Try the solution:** [five-minute browser demo](docs/5_MINUTE_UI_DEMO_GUIDE.md) → [application source](src/fde_capstone) and [tests](tests).
 
-For the business story, read the [client ask and end-to-end demo](docs/CLIENT_ASK_AND_END_TO_END_DEMO.md), then the [final report](docs/FINAL_CAPSTONE_REPORT.md). For a live walkthrough, use the [five-minute demo guide](docs/5_MINUTE_UI_DEMO_GUIDE.md). The [artifact register](docs/21_STAGE_ARTIFACT_REGISTER.md) maps every required deliverable to its evidence and status.
+For every folder, use the [documentation hub](docs/README.md) or the [full repository map](docs/REPOSITORY_ORGANIZATION.md). Historical material and the frozen source baseline remain separated from the active product.
 
 ## What it solves
 
@@ -37,25 +33,6 @@ The inherited environment had conflicting patient evidence, unsafe readiness/rel
 
 This is not a production, clinical, regulatory or validated system. It uses synthetic data and simulated authorities/integrations. No live AI model is included. The final lifecycle decision is **restrict and change**: accept the academic POC, keep AI off and do not pilot with real data until the seven CAPAs in Stage 20 are closed.
 
-## Repository layout
-
-| Path | Purpose |
-|---|---|
-| [`src/fde_capstone`](src/fde_capstone) | Application, services, adapters, API, CLI and browser frontend |
-| [`docs`](docs/README.md) | Final report, plan, progress, traceability, demo guide and documentation index |
-| [`docs/stages`](docs/stages/README.md) | Academic stage folders; the 185-row register states each artifact's exact status |
-| [`requirements`](requirements) | Requirements and machine-readable verification/traceability matrices |
-| [`evidence`](evidence) | Local academic repository-verification result; not independent assurance |
-| [`reports`](reports) | Generated JUnit test evidence |
-| [`tests`](tests) | Unit, integration, end-to-end, recovery and performance tests |
-| [`tools`](tools) | Reproducible evidence, evaluation and verification utilities |
-| [`presentation`](presentation) | Executive 40-minute PowerPoint presentation deck, automated generator and speaker guide |
-| [`presentation/media`](presentation/media) | Current demo video, captions and slide frames |
-| [`reference`](reference) | Source framework used for the 21-stage mapping |
-| [`archive`](archive) | Historical assessments, draft presentation material and PDF render previews |
-| [`output/pdf`](output/pdf) | Final personal study guide PDF |
-| [`source_baseline`](source_baseline) | Frozen 132-file challenge extraction; do not modify |
-
 ## Browser demonstration
 
 On macOS, double-click `START_DEMO.command`, keep its terminal window open, and use the Control Tower page that opens automatically. The browser executes all three POCs against isolated synthetic state; it is not a disconnected mockup.
@@ -71,18 +48,7 @@ FDE_DB=runtime/control-tower.db AI_MODE=off PYTHONPATH=src \
 
 Open <http://127.0.0.1:8000> for the Control Tower and <http://127.0.0.1:8000/docs> for the API. See [docs/DEMO_GUIDE.md](docs/DEMO_GUIDE.md) for the presentation sequence. The three-POC scripted fixture is separate from the six frozen v2 source-timestamp journeys and inject preview.
 
-### Demo Video & Visual Assets
-
-- **Full 1080p Walkthrough**: [`cgt_patient_to_batch_orchestration_demo.mp4`](presentation/media/cgt_patient_to_batch_orchestration_demo.mp4) (120-second narrated overview)
-- **Subtitles / Captions**: [`cgt_subtitles.srt`](presentation/media/cgt_subtitles.srt) | [`cgt_subtitles.vtt`](presentation/media/cgt_subtitles.vtt)
-- **Visual Slide Frames**: [`presentation/media/frames/`](presentation/media/frames) (`scene01.png`–`scene09.png`)
-
-### Executive Presentation & Speaker Guide
-
-- **Master Slide Deck**: [`presentation/CGT_Patient_to_Batch_Orchestration_Elite_Presentation.pptx`](presentation/CGT_Patient_to_Batch_Orchestration_Elite_Presentation.pptx) (20-slide 16:9 widescreen presentation deck with high-res visual slide frames and embedded speaker notes)
-- **Speaker Script & Timing Guide**: [`presentation/SPEAKER_SCRIPT_AND_TIMING_GUIDE_40MIN.md`](presentation/SPEAKER_SCRIPT_AND_TIMING_GUIDE_40MIN.md) (Complete 40-minute presentation guide with minute-by-minute timing, word-for-word scripts, video cues, and executive Q&A responses)
-- **5-Minute Live UI Demo Script**: [`docs/5_MINUTE_UI_DEMO_GUIDE.md`](docs/5_MINUTE_UI_DEMO_GUIDE.md) (Fast 5-minute single-case live UI demo sequence for team walkthroughs)
-- **Deck Generator**: [`presentation/generate_presentation.py`](presentation/generate_presentation.py) (Reproducible PowerPoint generator script built with `python-pptx`)
+The [presentation index](presentation/README.md) links the slide deck, speaker guide, video, captions and slide frames. The [Version 2 talk track](docs/FDE_10_MIN_PRESENTATION_TALK_TRACK.md) is the current script for Stages 5–8 and 12.
 
 ## Results
 
