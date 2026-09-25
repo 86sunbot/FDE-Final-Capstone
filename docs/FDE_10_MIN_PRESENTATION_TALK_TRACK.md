@@ -169,3 +169,65 @@ That's the FDE capability I wanted this work to demonstrate:
 AI is part of the solution.
 
 **It is not the foundation of trust.**”
+
+
+---
+
+## Stage 12 — Safety Boundaries for a Connected Journey | ~2.5 min
+
+“Now that we have the architecture, the next question is: **what stops a source note, a user request, or an AI suggestion from becoming an unauthorized action?**
+
+We started with the **threat model**.
+
+We used the OWASP LLM and Agentic risk categories as **threat prompts**, and mapped scenarios such as **role spoofing, cross-patient access, prompt injection, tool misuse, replay and audit tampering**.
+
+For example, what if a source note contains instructions telling the AI to bypass a release rule? Or what if an AI confidently recommends a Quality decision without sufficient evidence?
+
+Our answer is not to trust the AI to behave correctly. We enforce the boundary **outside the AI**.
+
+That's the second part of the slide — **server and human controls**.
+
+The server validates **authentication, role, scope, state and evidence** before a consequential action. We also enforce input validation, idempotency and auditability at that deterministic layer.
+
+The assistant operates with **least privilege**. It can read and recommend, but it has **no mutating or release tools**.
+
+So even if we get a persuasive but incorrect AI response, it cannot simply turn that response into a shipment, batch or Quality action.
+
+And **named human roles retain approval authority** for consequential decisions.
+
+We also considered **privacy and data protection**. In this POC, we're using synthetic data, scoped fields, and **no external AI provider**. We deliberately avoid sending an entire repository or unrestricted patient context into a prompt.
+
+For auditability, actions are captured in an **append-only logical ledger with a hash chain**. Again, that's the POC implementation — production would require controls such as validated immutable storage, enterprise identity, encryption, DLP and formal retention.
+
+The third area is **supplier and exit risk**.
+
+We maintain **SBOM and AIBOM** records, there is no dynamic tool registry, and no live AI provider has been selected.
+
+And importantly, AI is **off by default**.
+
+If AI becomes unavailable, unsafe, or simply doesn't add enough value, we can turn it off and **the deterministic workflow still operates**.
+
+That's what the diagram on the right is showing.
+
+**Source systems provide claims. AI provides suggestions. Humans provide approval. The server enforces the guards.**
+
+And there is an important limitation here.
+
+This is an **internal security design mapping for a synthetic academic POC**. It is not an OWASP certification, penetration test, or proof that live LLM security has passed.
+
+In fact, because we deliberately use off and fake modes today, **live-model red teaming, production IAM, DLP, supplier assurance and penetration testing remain production gates**.
+
+So the security principle behind this stage is very simple:
+
+**external content carries no authority, AI carries no authority, authorized people decide, and deterministic server controls enforce the decision.**”
+
+### Evidence / artifacts — not spoken
+
+- `docs/stages/stage_12/01_THREAT_MODEL.md` — security threat model.
+- `docs/stages/stage_12/02_SECURITY_PRIVACY_AND_GUARDRAIL_CONTROLS.md` — authentication, authorization, least privilege, data minimization, audit, input/output guardrails, DLP, availability and secure-delivery mapping.
+- `docs/stages/stage_12/03_SUPPLIER_SBOM_AIBOM_AND_EXIT_PLAN.md` — supplier controls, SBOM/AIBOM and AI exit strategy.
+- `docs/stages/stage_12/05_OWASP_2026_RISK_MAPPING.md` — OWASP LLM/Agentic risk-family mapping used as threat prompts; not a certification.
+- `docs/stages/stage_12/06_ACADEMIC_AI_SYSTEM_CARD.md` — academic system boundary and limitations.
+- `docs/stages/stage_07/04_RISK_HARMS_AND_TREATMENT_REGISTER.md` — upstream risk evidence covering unauthorized actions, prompt injection, disclosure, hallucination, outage, audit integrity and human over-reliance.
+
+> **Evidence boundary:** Stage 12 is an internal design mapping for the local synthetic demonstrator. Live-model red teaming, enterprise IAM/DLP, supplier assurance, immutable production audit storage and penetration testing remain production gates.
