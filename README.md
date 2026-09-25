@@ -1,5 +1,7 @@
 # FDE Final Capstone
 
+> **Presenting the capstone?** Open the [final talk track and slide-number guide](docs/FDE_10_MIN_PRESENTATION_TALK_TRACK.md) for the Stage 5–8 story, Stage 12 security narration, and source-backed answers to questions about slide figures.
+
 This repository is a built **synthetic academic** Cell and Gene Therapy patient-to-batch orchestration demonstration. All 21 AI FDE stages have documented artifacts, but owner approvals, independently assured outputs, real-system deployment and observed business benefits are not implied.
 
 > **Start here:** [Client ask and end-to-end demo](docs/CLIENT_ASK_AND_END_TO_END_DEMO.md) · [Final report](docs/FINAL_CAPSTONE_REPORT.md) · [Run the demo](docs/5_MINUTE_UI_DEMO_GUIDE.md) · [21-stage artifact register](docs/21_STAGE_ARTIFACT_REGISTER.md) · [Repository map](docs/REPOSITORY_ORGANIZATION.md)
