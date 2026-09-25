@@ -30,7 +30,7 @@
 
 ## Verification snapshot
 
-- 106 automated tests passed.
+- The frozen Stage 15 report records 106 passing tests at that evaluation snapshot. The current repository suite was rerun locally on 2026-09-25: 118 passed. The current run does not update the Stage 15 assurance claims.
 - 57 frozen evaluation cases executed: 55 structural pass, 0 fail, 2 human-study inconclusive.
 - 29/31 requirements verified internally; 2 need external human evidence.
 - Recovery, deployment, monitoring and retirement simulations completed.

@@ -4,7 +4,19 @@
 
 This repository is a built **synthetic academic** Cell and Gene Therapy patient-to-batch orchestration demonstration. All 21 AI FDE stages have documented artifacts, but owner approvals, independently assured outputs, real-system deployment and observed business benefits are not implied.
 
-> **Start here:** [Client ask and end-to-end demo](docs/CLIENT_ASK_AND_END_TO_END_DEMO.md) · [Final report](docs/FINAL_CAPSTONE_REPORT.md) · [Run the demo](docs/5_MINUTE_UI_DEMO_GUIDE.md) · [21-stage artifact register](docs/21_STAGE_ARTIFACT_REGISTER.md) · [Repository map](docs/REPOSITORY_ORGANIZATION.md)
+## Open the repository
+
+These links open the folders directly, including from the GitHub app on an iPad:
+
+- [Participant submission — all 21 stages](participant_artifacts/README.md) — the stage-by-stage hand-in.
+- [Detailed stage evidence](docs/stages/README.md) — the engineering record and review decisions.
+- [Application and browser UI](src/fde_capstone) — the implemented product.
+- [Demo and presentation](presentation/README.md) — the deck, video and presenter guides.
+- [Tests and evidence](tests) — automated checks, with [verification results](evidence/final_verification.json).
+- [Frozen brownfield baseline](source_baseline/README.md) — supplied synthetic challenge material.
+- [Historical archive](archive/README.md) — earlier reports and superseded presentation drafts.
+
+For the business story, read the [client ask and end-to-end demo](docs/CLIENT_ASK_AND_END_TO_END_DEMO.md), then the [final report](docs/FINAL_CAPSTONE_REPORT.md). For a live walkthrough, use the [five-minute demo guide](docs/5_MINUTE_UI_DEMO_GUIDE.md). The [artifact register](docs/21_STAGE_ARTIFACT_REGISTER.md) maps every required deliverable to its evidence and status.
 
 ## What it solves
 
@@ -74,7 +86,7 @@ Open <http://127.0.0.1:8000> for the Control Tower and <http://127.0.0.1:8000/do
 
 ## Results
 
-- 118 local automated tests passed with 96% source coverage (rechecked in this organization pass).
+- 118 local automated tests passed when rerun on 2026-09-25; 96% source coverage was recorded in the earlier repository-organization verification. The frozen Stage 15 report is a separate 106-test snapshot.
 - 57 evaluation cases executed: 55 internal **structural** passes, 0 failures and 2 human-study cases inconclusive. Only 7 original cases have full scoped property assertions, 9 are partial, and 39 extension cases are structural probes only.
 - 29/31 requirements are internally verified; zero are production verified. The registered 20-client/27,507-row journey-projection NFR remains unverified.
 - 20/20 simulated shadow comparisons matched.

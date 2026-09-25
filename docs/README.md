@@ -6,12 +6,22 @@ This directory contains the human-readable capstone record. Runtime code, tests 
 
 1. [Final Capstone Report](FINAL_CAPSTONE_REPORT.md) — context, problem, achievement, evidence, limitations and lifecycle decision.
 2. [Client Ask and End-to-End Demo](CLIENT_ASK_AND_END_TO_END_DEMO.md) — simple business explanation of the client need, solution and demonstrated flow.
-3. [Client Deliverable Acceptance Matrix](CLIENT_DELIVERABLE_ACCEPTANCE_MATRIX.md) — the brief's ten asks, exact answer locations and remaining proof.
-4. [One-to-One 21-Stage Artifact Register](21_STAGE_ARTIFACT_REGISTER.md) — 185 exact mappings and honest status vocabulary.
-5. [Demo Guide](DEMO_GUIDE.md) — setup and presentation sequence.
-6. [Artifact Index](ARTIFACT_INDEX.md) and [21-Stage Index](stages/README.md) — fast navigation.
-7. [Progress Tracker](CAPSTONE_PROGRESS_TRACKER.md) — local status, evidence and remaining external work.
-8. [Repository Organization](REPOSITORY_ORGANIZATION.md) — current paths, evidence boundaries and archived material.
+3. [Presentation Talk Track — Version 2](FDE_10_MIN_PRESENTATION_TALK_TRACK.md) — Stage 5–8 and Stage 12 narration, plus a source-linked guide to slide figures.
+4. [Client Deliverable Acceptance Matrix](CLIENT_DELIVERABLE_ACCEPTANCE_MATRIX.md) — the brief's ten asks, exact answer locations and remaining proof.
+5. [One-to-One 21-Stage Artifact Register](21_STAGE_ARTIFACT_REGISTER.md) — 185 exact mappings and honest status vocabulary.
+6. [Demo Guide](DEMO_GUIDE.md) — setup and presentation sequence.
+7. [Artifact Index](ARTIFACT_INDEX.md) and [21-Stage Index](stages/README.md) — fast navigation.
+8. [Progress Tracker](CAPSTONE_PROGRESS_TRACKER.md) — local status, evidence and remaining external work.
+9. [Repository Organization](REPOSITORY_ORGANIZATION.md) — current paths, evidence boundaries and archived material.
+
+## Browse by deliverable
+
+- [Participant submission](../participant_artifacts/README.md) — the folder-level 21-stage hand-in.
+- [Product requirements document](stages/stage_13/06_PRODUCT_REQUIREMENTS_DOCUMENT.md) — approved academic build scope and acceptance criteria.
+- [Application source](../src/fde_capstone) and [tests](../tests) — code and checks.
+- [Presentation materials](../presentation/README.md) — slide deck, media and speaking guides.
+- [Frozen source baseline](../source_baseline/README.md) — synthetic brownfield inputs.
+- [Historical archive](../archive/README.md) — earlier drafts and assessment reports.
 
 ## Planning and governance
 

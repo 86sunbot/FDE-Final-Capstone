@@ -22,6 +22,15 @@ The previous root mixed those essential paths with presentation media, a framewo
 
 `docs/stages/` and `participant_artifacts/` are intentionally separate: the former holds the detailed engineering record; the latter is the participant-facing 21-stage hand-in. They are related through the [185-row artifact register](21_STAGE_ARTIFACT_REGISTER.md), so collapsing or renaming either tree would break evidence links.
 
+## Navigation and maintenance rules
+
+- The root [README](../README.md) is the landing page. It links directly to the submission, stage evidence, app, tests, presentation, frozen baseline and archive so these folders remain reachable in GitHub Mobile.
+- [The documentation hub](README.md) is the index for reports and decisions. [The participant index](../participant_artifacts/README.md) is the index for the 21-stage hand-in. [The presentation index](../presentation/README.md) identifies the current talk track and media.
+- Keep the supplied `source_baseline/` unchanged. Add derived analysis under `docs/`, `requirements/`, `tools/` or `evidence/` with a source reference and explicit scope.
+- Keep a historical result tied to the report that produced it. A later test rerun does not silently rewrite an earlier Stage 15 result or turn an internal check into independent assurance.
+- Put superseded drafts in `archive/` and keep current presenter-facing material linked from the landing page. Before moving any canonical file, update the artifact register and links that depend on its path.
+- Production claims require the owner approvals and gates recorded in Stage 20. The completed academic capstone remains `RESTRICT_AND_CHANGE` for real-world use.
+
 ## Archive decision
 
 - Moved earlier assessments, the previous 10-slide PDF and the obsolete video-transcript draft to `archive/`.
